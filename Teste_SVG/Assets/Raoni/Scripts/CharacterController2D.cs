@@ -129,6 +129,7 @@ public class CharacterController2D : MonoBehaviour
 		{
 			// Add a vertical force to the player.
 			m_Grounded = false;
+            m_Rigidbody2D.velocity = new Vector2( m_Rigidbody2D.velocity.x, 0f);
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 		}
 
@@ -141,10 +142,10 @@ public class CharacterController2D : MonoBehaviour
         // Character is grounded, and no axis pressed: 
         if (m_Grounded && axisRaw == 0 && !jump)
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 10, m_WhatIsGround);
+            //RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 10, m_WhatIsGround);
 
             // Check if we are on the slope
-            if (hit && Mathf.Abs(hit.normal.x) > 0.1f)
+            //if (hit && Mathf.Abs(hit.normal.x) > 0.1f)
             {
 
                 // We freeze all the rigidbody constraints and put velocity to 0
