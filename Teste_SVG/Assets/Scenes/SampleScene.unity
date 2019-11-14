@@ -373,6 +373,42 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 55280624}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &55280626 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2877758298462429146, guid: f20409e36ad0bf4448e394967f193b29,
+    type: 3}
+  m_PrefabInstance: {fileID: 55280624}
+  m_PrefabAsset: {fileID: 0}
+--- !u!60 &55280627
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55280626}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 2.9628105, y: -6.5657377}
+      - {x: 2.9190264, y: -6.8143024}
+      - {x: 3.0093498, y: -7.1031885}
+      - {x: 4.1938562, y: -6.7000694}
+      - {x: 4.1978235, y: -6.5310984}
 --- !u!1 &55795715
 GameObject:
   m_ObjectHideFlags: 0
@@ -1380,12 +1416,6 @@ Transform:
 --- !u!1 &148232794 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6442122366347904524, guid: 76b3e81422c0f0241b0ff25778f5a2b2,
-    type: 3}
-  m_PrefabInstance: {fileID: 455096242}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &148232795 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 739140410389500205, guid: 76b3e81422c0f0241b0ff25778f5a2b2,
     type: 3}
   m_PrefabInstance: {fileID: 455096242}
   m_PrefabAsset: {fileID: 0}
@@ -4812,11 +4842,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 276989732}
     m_Modifications:
-    - target: {fileID: 6625609726806653415, guid: f2a881d34f0e3de43b9274feacd55d4c,
-        type: 3}
-      propertyPath: m_Name
-      value: Vida 3
-      objectReference: {fileID: 0}
     - target: {fileID: -8670065852210751618, guid: f2a881d34f0e3de43b9274feacd55d4c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4886,6 +4911,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 26.124998
+      objectReference: {fileID: 0}
+    - target: {fileID: 6625609726806653415, guid: f2a881d34f0e3de43b9274feacd55d4c,
+        type: 3}
+      propertyPath: m_Name
+      value: Vida 3
       objectReference: {fileID: 0}
     - target: {fileID: 1743663584451509947, guid: f2a881d34f0e3de43b9274feacd55d4c,
         type: 3}
@@ -5172,6 +5202,11 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 7243324766535440047, guid: 76b3e81422c0f0241b0ff25778f5a2b2,
     type: 3}
+--- !u!4 &455096243 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 455096242}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &465061532
 GameObject:
   m_ObjectHideFlags: 0
@@ -6025,7 +6060,7 @@ Sprite:
       - stream: 0
         offset: 0
         format: 0
-        dimension: 0
+        dimension: 3
       - stream: 0
         offset: 0
         format: 0
@@ -6034,14 +6069,14 @@ Sprite:
         offset: 0
         format: 0
         dimension: 0
-      - stream: 0
+      - stream: 1
         offset: 0
+        format: 2
+        dimension: 4
+      - stream: 1
+        offset: 4
         format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
+        dimension: 2
       - stream: 0
         offset: 0
         format: 0
@@ -6090,7 +6125,7 @@ Sprite:
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 320
-    uvTransform: {x: 1, y: 0, z: 1, w: 0}
+    uvTransform: {x: 50, y: 0, z: 50, w: 0}
     downscaleMultiplier: 1
   m_PhysicsShape: []
   m_Bones: []
@@ -10364,7 +10399,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 148232795}
+  - {fileID: 455096243}
   - {fileID: 346244524}
   - {fileID: 765749438}
   - {fileID: 658073623}
@@ -11490,11 +11525,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 276989732}
     m_Modifications:
-    - target: {fileID: 6625609726806653415, guid: f2a881d34f0e3de43b9274feacd55d4c,
-        type: 3}
-      propertyPath: m_Name
-      value: Vida 5
-      objectReference: {fileID: 0}
     - target: {fileID: -8670065852210751618, guid: f2a881d34f0e3de43b9274feacd55d4c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11564,6 +11594,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 26.124998
+      objectReference: {fileID: 0}
+    - target: {fileID: 6625609726806653415, guid: f2a881d34f0e3de43b9274feacd55d4c,
+        type: 3}
+      propertyPath: m_Name
+      value: Vida 5
       objectReference: {fileID: 0}
     - target: {fileID: 1743663584451509947, guid: f2a881d34f0e3de43b9274feacd55d4c,
         type: 3}
@@ -12655,11 +12690,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 276989732}
     m_Modifications:
-    - target: {fileID: 6625609726806653415, guid: f2a881d34f0e3de43b9274feacd55d4c,
-        type: 3}
-      propertyPath: m_Name
-      value: Vida 4
-      objectReference: {fileID: 0}
     - target: {fileID: -8670065852210751618, guid: f2a881d34f0e3de43b9274feacd55d4c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12729,6 +12759,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 26.124998
+      objectReference: {fileID: 0}
+    - target: {fileID: 6625609726806653415, guid: f2a881d34f0e3de43b9274feacd55d4c,
+        type: 3}
+      propertyPath: m_Name
+      value: Vida 4
       objectReference: {fileID: 0}
     - target: {fileID: 1743663584451509947, guid: f2a881d34f0e3de43b9274feacd55d4c,
         type: 3}
@@ -14144,7 +14179,7 @@ PrefabInstance:
     - target: {fileID: 2011815232028954968, guid: 39b216fec18e29248939e8ed99cb8739,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2011815232028954968, guid: 39b216fec18e29248939e8ed99cb8739,
         type: 3}
@@ -19115,11 +19150,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 276989732}
     m_Modifications:
-    - target: {fileID: 6625609726806653415, guid: f2a881d34f0e3de43b9274feacd55d4c,
-        type: 3}
-      propertyPath: m_Name
-      value: Vida 1
-      objectReference: {fileID: 0}
     - target: {fileID: -8670065852210751618, guid: f2a881d34f0e3de43b9274feacd55d4c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19189,6 +19219,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 26.124998
+      objectReference: {fileID: 0}
+    - target: {fileID: 6625609726806653415, guid: f2a881d34f0e3de43b9274feacd55d4c,
+        type: 3}
+      propertyPath: m_Name
+      value: Vida 1
       objectReference: {fileID: 0}
     - target: {fileID: 1743663584451509947, guid: f2a881d34f0e3de43b9274feacd55d4c,
         type: 3}
@@ -22495,11 +22530,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 276989732}
     m_Modifications:
-    - target: {fileID: 6625609726806653415, guid: f2a881d34f0e3de43b9274feacd55d4c,
-        type: 3}
-      propertyPath: m_Name
-      value: Vida 2
-      objectReference: {fileID: 0}
     - target: {fileID: -8670065852210751618, guid: f2a881d34f0e3de43b9274feacd55d4c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22569,6 +22599,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 26.124998
+      objectReference: {fileID: 0}
+    - target: {fileID: 6625609726806653415, guid: f2a881d34f0e3de43b9274feacd55d4c,
+        type: 3}
+      propertyPath: m_Name
+      value: Vida 2
       objectReference: {fileID: 0}
     - target: {fileID: 1743663584451509947, guid: f2a881d34f0e3de43b9274feacd55d4c,
         type: 3}
