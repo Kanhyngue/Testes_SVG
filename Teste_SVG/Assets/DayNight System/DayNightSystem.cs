@@ -8,15 +8,13 @@ public class DayNightSystem : MonoBehaviour
     public UnityEngine.Experimental.Rendering.LWRP.Light2D globalLight;
     public float dayTime = 300.0f;
 
-    public SpriteRenderer daySkybox, nightSkybox, twilightSkybox, morningSkybox;
+    public SpriteRenderer daySkybox, nightSkybox;
 
     private int dayPeriod; // 0 -> Manhã / 1 -> Dia / 2 -> Crepúsculo / 3 -> Noite
     private Color mood; // RGB - 126, 141, 217 -> Manhã / 255, 255, 255 -> Dia / 253, 176, 68 -> Crepúsculo / 91, 84, 209 -> Noite 
     private float r=1.0f, g=1.0f, b=1.0f;
-    private float skyDayA=1.0f;
-    private float skyNightA=0.0f;
-    private float skyTwilightA=0.0f;
-    private float skyMorningA=0.0f;
+    private float skyDayR=1.0f, skyDayG=1.0f, skyDayB=1.0f, skyDayA=1.0f;
+    private float skyNightR=1.0f, skyNightG=1.0f, skyNightB=1.0f, skyNightA=0.0f;
     private float lightIntensity;
 
     // Start is called before the first frame update
@@ -35,91 +33,126 @@ public class DayNightSystem : MonoBehaviour
             r=1.0f;
             g=1.0f;
             b=1.0f;
+            skyDayR=1.0f;
+            skyDayG=1.0f;
+            skyDayB=1.0f;
             skyDayA=1.0f;
+            skyNightR=1.0f;
+            skyNightG=1.0f;
+            skyNightB=1.0f;
             skyNightA=0.0f;
-            skyTwilightA = 0.0f;
-            skyMorningA = 0.0f;
         }
         else if(dayTime <= 240.0f && dayTime > 225.0f)
         {
             r=1.0f;
             g=1.0f;
             b=1.0f;
+            skyDayR=1.0f;
+            skyDayG=1.0f;
+            skyDayB=1.0f;
             skyDayA=1.0f;
+            skyNightR=1.0f;
+            skyNightG=1.0f;
+            skyNightB=1.0f;
             skyNightA=0.0f;
-            skyTwilightA = 0.0f;
-            skyMorningA = 0.0f;
         }
         else if(dayTime <= 225.0f && dayTime > 165.0f)
         {
             r=0.992157f;
             g=0.690196f;
             b=0.266667f;
-            skyDayA=0.0f;
+            skyDayR=1.0f;
+            skyDayG=1.0f;
+            skyDayB=1.0f;
+            skyDayA=1.0f;
+            skyNightR=1.0f;
+            skyNightG=1.0f;
+            skyNightB=1.0f;
             skyNightA=0.0f;
-            skyTwilightA = 1.0f;
-            skyMorningA = 0.0f;
-
         }
         else if(dayTime <= 165.0f && dayTime > 150.0f)
         {
             r=0.992157f;
             g=0.690196f;
             b=0.266667f;
-            skyDayA=0.0f;
+            skyDayR=1.0f;
+            skyDayG=1.0f;
+            skyDayB=1.0f;
+            skyDayA=1.0f;
+            skyNightR=1.0f;
+            skyNightG=1.0f;
+            skyNightB=1.0f;
             skyNightA=0.0f;
-            skyTwilightA = 1.0f;
-            skyMorningA = 0.0f;
         }
         else if(dayTime <= 150.0f && dayTime > 90.0f)
         {
             r=0.356863f;
             g=0.329412f;
             b=0.819608f;
+            skyDayR=1.0f;
+            skyDayG=1.0f;
+            skyDayB=1.0f;
             skyDayA=0.0f;
+            skyNightR=1.0f;
+            skyNightG=1.0f;
+            skyNightB=1.0f;
             skyNightA=1.0f;
-            skyTwilightA = 0.0f;
-            skyMorningA = 0.0f;
         }
         else if(dayTime <= 90.0f && dayTime > 75.0f)
         {
             r=0.356863f;
             g=0.329412f;
             b=0.819608f;
+            skyDayR=1.0f;
+            skyDayG=1.0f;
+            skyDayB=1.0f;
             skyDayA=0.0f;
+            skyNightR=1.0f;
+            skyNightG=1.0f;
+            skyNightB=1.0f;
             skyNightA=1.0f;
-            skyTwilightA = 0.0f;
-            skyMorningA = 0.0f;
         }
         else if(dayTime <= 75.0f && dayTime > 15.0f)
         {
             r=0.494118f;
             g=0.552941f;
             b=0.850980f;
-            skyDayA=0.0f;
+            skyDayR=1.0f;
+            skyDayG=1.0f;
+            skyDayB=1.0f;
+            skyDayA=1.0f;
+            skyNightR=1.0f;
+            skyNightG=1.0f;
+            skyNightB=1.0f;
             skyNightA=0.0f;
-            skyTwilightA = 0.0f;
-            skyMorningA = 1.0f;
         }
         else if(dayTime <= 15.0f && dayTime > 0.0f)
         {
             r=0.494118f;
             g=0.552941f;
             b=0.850980f;
-            skyDayA=0.0f;
+            skyDayR=1.0f;
+            skyDayG=1.0f;
+            skyDayB=1.0f;
+            skyDayA=1.0f;
+            skyNightR=1.0f;
+            skyNightG=1.0f;
+            skyNightB=1.0f;
             skyNightA=0.0f;
-            skyTwilightA = 0.0f;
-            skyMorningA = 1.0f;
         }
         else if(dayTime <= 0.0f)
         {
             r=1.0f;
             g=1.0f;
             b=1.0f;
+            skyDayR=1.0f;
+            skyDayG=1.0f;
+            skyDayB=1.0f;
             skyDayA=1.0f;
+            skyNightR=1.0f;
+            skyNightG=1.0f;
+            skyNightB=1.0f;
             skyNightA=0.0f;
-            skyTwilightA = 0.0f;
-            skyMorningA = 0.0f;
         }
     }
 
@@ -180,14 +213,11 @@ public class DayNightSystem : MonoBehaviour
 
         // Mudança do Skybox - Coloração muda para R-255 G-180 B-109 A-255
         // Sem necessidade de mudar a cor Red e o Alpha, então só se muda o Green e o Blue
-
-        skyDayA = Mathf.Clamp(skyDayA, 0.0f, 1.0f);
-        skyDayA -= 0.0025f;
-        daySkybox.color = new Color(1.0f, 1.0f, 1.0f, skyDayA);
-        skyTwilightA = Mathf.Clamp(skyTwilightA, 0, 1.0f);
-        skyTwilightA += 0.0025f;
-        twilightSkybox.color = new Color(1.0f, 1.0f, 1.0f, skyTwilightA);
-
+        skyDayG = Mathf.Clamp(skyDayG, 0.705882f, 1.0f);
+        skyDayG -= 0.001f;
+        skyDayB = Mathf.Clamp(skyDayB, 0.427451f, 1.0f);
+        skyDayB -= 0.001f;
+        daySkybox.color = new Color(skyDayR, skyDayG, skyDayB, skyDayA);
     }
 
     // Transição entre o período Crepúsculo e a Noite
@@ -212,12 +242,12 @@ public class DayNightSystem : MonoBehaviour
 
         // Mudança do Skybox - A skybox Day some, e a skybox Night aparece
         // Sem necessidade de mudar as cores, somente os alphas
-        skyTwilightA = Mathf.Clamp(skyTwilightA, 0.0f, 1.0f);
-        skyTwilightA -= 0.0025f;
-        twilightSkybox.color = new Color(1.0f, 1.0f, 1.0f, skyTwilightA);
+        skyDayA = Mathf.Clamp(skyDayA, 0.0f, 1.0f);
+        skyDayA -= 0.0025f;
+        daySkybox.color = new Color(skyDayR, skyDayG, skyDayB, skyDayA);
         skyNightA = Mathf.Clamp(skyNightA, 0.0f, 1.0f);
         skyNightA += 0.0025f;
-        nightSkybox.color = new Color(1.0f, 1.0f, 1.0f, skyNightA);
+        nightSkybox.color = new Color(skyNightR, skyNightG, skyNightB, skyNightA);
     }
 
     // Transição entre o período Noite e a Manhã
@@ -242,12 +272,15 @@ public class DayNightSystem : MonoBehaviour
 
         // Mudança do Skybox - A skybox Day aparece, e a skybox Night Some
         // Sem necessidade de mudar as cores, somente os alphas
-        skyMorningA = Mathf.Clamp(skyMorningA, 0.0f, 1.0f);
-        skyMorningA += 0.0025f;
-        morningSkybox.color = new Color(1.0f, 1.0f, 1.0f, skyMorningA);
+        skyDayR = 1.0f;
+        skyDayG = 1.0f;
+        skyDayB = 0.541176f;
+        skyDayA = Mathf.Clamp(skyDayA, 0.0f, 1.0f);
+        skyDayA += 0.0025f;
+        daySkybox.color = new Color(skyDayR, skyDayG, skyDayB, skyDayA);
         skyNightA = Mathf.Clamp(skyNightA, 0.0f, 1.0f);
         skyNightA -= 0.0025f;
-        nightSkybox.color = new Color(1.0f, 1.0f, 1.0f, skyNightA);
+        nightSkybox.color = new Color(skyNightR, skyNightG, skyNightB, skyNightA);
     }
 
     // Transição entre o período Manhã e o Dia
@@ -272,12 +305,9 @@ public class DayNightSystem : MonoBehaviour
 
         // Mudança do Skybox
         // Sem necessidade de mudar a cor Red, Green e o Alpha, então só se muda o Blue
-        skyMorningA = Mathf.Clamp(1.0f, 1.0f, skyMorningA);
-        skyMorningA -= 0.0025f;
-        morningSkybox.color = new Color(1.0f, 1.0f, 1.0f, skyMorningA);
-        skyDayA = Mathf.Clamp(1.0f,1.0f, skyDayA);
-        skyDayA += 0.0025f;
-        daySkybox.color = new Color(1.0f, 1.0f, 1.0f, skyDayA);
+        skyDayB = Mathf.Clamp(skyDayB, 0.541176f, 1.0f);
+        skyDayB += 0.001f;
+        daySkybox.color = new Color(skyDayR, skyDayG, skyDayB, skyDayA);
     }
 
    
