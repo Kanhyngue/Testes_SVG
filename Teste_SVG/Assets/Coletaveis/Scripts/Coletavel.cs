@@ -6,12 +6,35 @@ public class Coletavel : MonoBehaviour
 {
     public Transform pullingArea;
 
-    void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
         if(col.gameObject.CompareTag("Player"))
         {
-            transform.position = pullingArea.transform.position;
-            Debug.Log("Tocou!");
+            if(this.gameObject.CompareTag("Cachimbo"))
+            {
+                transform.position = pullingArea.transform.position;
+                InventorySystem.cachimbos++; 
+            }
+            else if(this.gameObject.CompareTag("Chave"))
+            {
+                transform.position = pullingArea.transform.position;
+                InventorySystem.chave = true; 
+            }
+            else if(this.gameObject.CompareTag("Dash"))
+            {
+                transform.position = pullingArea.transform.position;
+                InventorySystem.dashPower = true; 
+            }
+            else if(this.gameObject.CompareTag("Fire"))
+            {
+                transform.position = pullingArea.transform.position;
+                InventorySystem.firePower = true; 
+            }
+            else if(this.gameObject.CompareTag("Neblina"))
+            {
+                transform.position = pullingArea.transform.position;
+                InventorySystem.fogPower = true; 
+            }
         }
     }
 }
