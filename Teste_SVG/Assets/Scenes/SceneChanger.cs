@@ -165,7 +165,7 @@ public class SceneChanger : MonoBehaviour
         telasLoad[i].gameObject.SetActive(true);
 
         //Transiciona o alpha de 0 para 1 (transparente -> opaco)
-        StartCoroutine(AlphaTelaIn(1.0f, 1.0f, i));
+        StartCoroutine(AlphaTela(1.0f, 1.0f, i));
 
         //Mantém o canvas ligado por  segundos
         yield return new WaitForSeconds(3);
@@ -173,7 +173,9 @@ public class SceneChanger : MonoBehaviour
         telasLoad[i].color = new Color(1, 1, 1, 1);
         panelLoad.color = new Color(0, 0, 0, 1);
 
-        StartCoroutine(AlphaTelaOut(0.0f, 2.0f, i));
+        StartCoroutine(AlphaPanel(0.0f, 2.0f, i));
+
+        StartCoroutine(AlphaPanel(0.0f, 1.0f));
 
         yield return new WaitForSeconds(3.0f);
 
@@ -183,7 +185,7 @@ public class SceneChanger : MonoBehaviour
         telasLoad[i].gameObject.SetActive(false);
     }
 
-    IEnumerator AlphaTelaIn(float aValue, float aTime, int indice)
+    IEnumerator AlphaTela(float aValue, float aTime, int indice)
     {
         float alpha = telasLoad[indice].color.a;
         for(float t = 0.0f; t < 1.0f; t += Time.deltaTime / aTime)
@@ -195,18 +197,34 @@ public class SceneChanger : MonoBehaviour
         
     }
 
-    IEnumerator AlphaTelaOut(float aValue, float aTime, int indice)
+    IEnumerator AlphaPanel(float aValue, float aTime)
+    {
+        float alpha = panelLoad.color.a;
+        for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / aTime)
+        {
+            Color corAlpha = new Color(0, 0, 0, Mathf.Lerp(alpha, aValue, t));
+            //telasLoad[indice].color = corAlpha;
+            panelLoad.color = corAlpha;
+            yield return null;
+        }
+
+    }
+
+    IEnumerator AlphaPanel(float aValue, float aTime, int indice)
     {
         float alpha = telasLoad[indice].color.a;
         for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / aTime)
         {
             Color corAlpha = new Color(1, 1, 1, Mathf.Lerp(alpha, aValue, t));
             telasLoad[indice].color = corAlpha;
-            panelLoad.color = corAlpha;
+            //panelLoad.color = corAlpha;
             yield return null;
         }
 
     }
+
+
+
 
     public bool GetPanelState()
     {
