@@ -5,19 +5,27 @@ using UnityEngine.Experimental.Rendering.LWRP;
 
 public class DayNightSystem : MonoBehaviour
 {
-    public UnityEngine.Experimental.Rendering.LWRP.Light2D globalLight;
-    public float dayTime = 300.0f;
+    // Classes públicas
+    public UnityEngine.Experimental.Rendering.LWRP.Light2D globalLight; // Luz 2D GLOBAL
+    public SpriteRenderer daySkybox, nightSkybox, twilightSkybox, morningSkybox; // Renderers dos Sprites das Skybox
 
-    public SpriteRenderer daySkybox, nightSkybox, twilightSkybox, morningSkybox;
+    // Globais
+    public static int dayPeriod; // 0 -> Manhã / 1 -> Dia / 2 -> Crepúsculo / 3 -> Noite
 
-    private int dayPeriod; // 0 -> Manhã / 1 -> Dia / 2 -> Crepúsculo / 3 -> Noite
-    private Color mood; // RGB - 126, 141, 217 -> Manhã / 255, 255, 255 -> Dia / 253, 176, 68 -> Crepúsculo / 91, 84, 209 -> Noite 
-    private float r=1.0f, g=1.0f, b=1.0f;
-    private float skyDayA=1.0f;
-    private float skyNightA=0.0f;
-    private float skyTwilightA=0.0f;
-    private float skyMorningA=0.0f;
-    private float lightIntensity;
+    // Variáveis Públicas - Editáveis no Editor
+    public float dayTime = 300.0f; // Timer para saber o horário do dia
+
+    // Classes privadas
+    private Color mood; // Coloração da Luz 2D Global 
+    // RGB - 126, 141, 217 -> Manhã / 255, 255, 255 -> Dia / 253, 176, 68 -> Crepúsculo / 91, 84, 209 -> Noite 
+
+    // Variáveis Privadas
+    private float r=1.0f, g=1.0f, b=1.0f; // Red, Green, Blue - Necessários para fazer a transição de cor da Luz 2D Global
+    private float skyDayA=1.0f; // Alpha do Skybox DIA
+    private float skyNightA=0.0f; // Alpha do Skybox NOITE
+    private float skyTwilightA=0.0f; // Alpha do Skybox CREPÚSCULO
+    private float skyMorningA=0.0f; // Alpha do Skybox MANHÃ
+    private float lightIntensity; // Intensidade de Luz - Necessário para fazer a transição da intensidade da Luz 2D Global
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +40,9 @@ public class DayNightSystem : MonoBehaviour
         // Impede de bugar
         if(dayTime > 240.0f)
         {
+            // Parâmetro do Período do Dia
+            dayPeriod = 1;
+
             // Parâmetros iniciais de coloração da Luz Global
             mood = new Color(1.0f, 1.0f, 1.0f); // Cor desse periodo do dia
             globalLight.color = mood; // Aplicando essas mudanças na cor da Luz Global
@@ -47,6 +58,9 @@ public class DayNightSystem : MonoBehaviour
         }
         else if(dayTime <= 240.0f && dayTime > 225.0f)
         {
+            // Parâmetro do Período do Dia
+            dayPeriod = 2;
+
             // Parâmetros iniciais de coloração da Luz Global
             mood = new Color(0.992157f, 0.690196f, 0.266667f); // Cor desse periodo do dia
             globalLight.color = mood; // Aplicando essas mudanças na cor da Luz Global
@@ -62,6 +76,9 @@ public class DayNightSystem : MonoBehaviour
         }
         else if(dayTime <= 225.0f && dayTime > 165.0f)
         {
+            // Parâmetro do Período do Dia
+            dayPeriod = 2;
+
             // Parâmetros iniciais de coloração da Luz Global
             mood = new Color(0.992157f, 0.690196f, 0.266667f); // Cor desse periodo do dia
             globalLight.color = mood; // Aplicando essas mudanças na cor da Luz Global
@@ -78,6 +95,9 @@ public class DayNightSystem : MonoBehaviour
         }
         else if(dayTime <= 165.0f && dayTime > 150.0f)
         {
+            // Parâmetro do Período do Dia
+            dayPeriod = 3;
+
             // Parâmetros iniciais de coloração da Luz Global
             mood = new Color(0.356863f, 0.329412f, 0.819608f); // Cor desse periodo do dia
             globalLight.color = mood; // Aplicando essas mudanças na cor da Luz Global
@@ -93,6 +113,9 @@ public class DayNightSystem : MonoBehaviour
         }
         else if(dayTime <= 150.0f && dayTime > 90.0f)
         {
+            // Parâmetro do Período do Dia
+            dayPeriod = 3;
+
             // Parâmetros iniciais de coloração da Luz Global
             mood = new Color(0.356863f, 0.329412f, 0.819608f); // Cor desse periodo do dia
             globalLight.color = mood; // Aplicando essas mudanças na cor da Luz Global
@@ -108,6 +131,9 @@ public class DayNightSystem : MonoBehaviour
         }
         else if(dayTime <= 90.0f && dayTime > 75.0f)
         {
+            // Parâmetro do Período do Dia
+            dayPeriod = 0;
+
             // Parâmetros iniciais de coloração da Luz Global
             mood = new Color(0.494118f, 0.552941f, 0.850980f); // Cor desse periodo do dia
             globalLight.color = mood; // Aplicando essas mudanças na cor da Luz Global
@@ -123,6 +149,9 @@ public class DayNightSystem : MonoBehaviour
         }
         else if(dayTime <= 75.0f && dayTime > 15.0f)
         {
+            // Parâmetro do Período do Dia
+            dayPeriod = 0;
+
             // Parâmetros iniciais de coloração da Luz Global
             mood = new Color(0.494118f, 0.552941f, 0.850980f); // Cor desse periodo do dia
             globalLight.color = mood; // Aplicando essas mudanças na cor da Luz Global
@@ -138,6 +167,9 @@ public class DayNightSystem : MonoBehaviour
         }
         else if(dayTime <= 15.0f && dayTime > 0.0f)
         {
+            // Parâmetro do Período do Dia
+            dayPeriod = 1;
+
             // Parâmetros iniciais de coloração da Luz Global
             mood = new Color(1.0f, 1.0f, 1.0f); // Cor desse periodo do dia
             globalLight.color = mood; // Aplicando essas mudanças na cor da Luz Global
@@ -153,6 +185,9 @@ public class DayNightSystem : MonoBehaviour
         }
         else if(dayTime <= 0.0f)
         {
+            // Parâmetro do Período do Dia
+            dayPeriod = 1;
+
             // Parâmetros iniciais de coloração da Luz Global
             mood = new Color(1.0f, 1.0f, 1.0f); // Cor desse periodo do dia
             globalLight.color = mood; // Aplicando essas mudanças na cor da Luz Global
