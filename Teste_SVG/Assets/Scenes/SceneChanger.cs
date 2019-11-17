@@ -6,7 +6,7 @@ public class SceneChanger : MonoBehaviour
 {
     public GameObject sceneHub, sceneCerrado, sceneFloresta, sceneCaverna, sceneOca, sceneArena; // Scenes
 
-    public static int _cenaAtual; // 0 -> HUB / 1 -> Cerrado / 2 -> Floresta / 3 -> Caverna / 4 -> Oca do Jogador / 5 -> Arena Final
+    //public static int _cenaAtual; // 0 -> HUB / 1 -> Cerrado / 2 -> Floresta / 3 -> Caverna / 4 -> Oca do Jogador / 5 -> Arena Final
     public static int _mudarParaCena; // 0 -> HUB / 1 -> Cerrado / 2 -> Floresta / 3 -> Caverna / 4 -> Oca do Jogador / 5 -> Arena Final
 
     public static bool accepted = false;
