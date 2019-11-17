@@ -49,6 +49,8 @@ public class SceneEntrance : MonoBehaviour
         {
             keyUpInterface.SetActive(false);
             SceneChanger.triggered = false;
+            SceneChanger._cenaAtual = cenaAtual;
+            SceneChanger._mudarParaCena = mudarParaCena;
         }
     }
 }
