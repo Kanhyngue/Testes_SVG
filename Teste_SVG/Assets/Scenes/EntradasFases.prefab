@@ -13,11 +13,11 @@ GameObject:
   - component: {fileID: 1671295727616432705}
   - component: {fileID: 1239469694622874618}
   m_Layer: 0
-  m_Name: Entrada-Cerrado
+  m_Name: EntradasFases
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &6130635631508435864
 Transform:
@@ -70,7 +70,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1407870975
   m_SortingLayer: -1
-  m_SortingOrder: -4
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 35351ca284397504f811a5c41ca35816, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -122,11 +122,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyUpInterface: {fileID: 0}
   sceneChangeMessage: {fileID: 0}
-  sceneMessageCerrado: {fileID: 0}
-  sceneMessageFloresta: {fileID: 0}
-  sceneMessageCaverna: {fileID: 0}
-  sceneMessageAldeia: {fileID: 0}
-  sceneMessageOca: {fileID: 0}
-  sceneMessageArena: {fileID: 0}
-  cenaAtual: 0
+  sceneMessageFase: {fileID: 0}
   mudarParaCena: 0
