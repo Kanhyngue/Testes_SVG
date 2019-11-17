@@ -5,10 +5,7 @@ using UnityEngine;
 public class Parallax : MonoBehaviour
 {
     public Transform cameraTransform;
-    public Transform parallaxLayer1;
-    public Transform parallaxLayer2;
-    public Transform parallaxLayer3;
-    public Transform parallaxLayer4;
+    [SerializeField] private Transform[] parallaxLayers;
 
     public float parallaxSpeed;
     public float betweenFactor;
@@ -30,16 +27,33 @@ public class Parallax : MonoBehaviour
             betweenFactor = 1f; // Fator de Sensação de Distanciamento
         }
         float deltaX = cameraTransform.position.x - lastCameraX; // Cálculo da diferença entre a camera e sua ultima posição no eixo X
-        parallaxLayer1.transform.position += Vector3.right * deltaX * -parallaxSpeed; // Primeira camada do Parallax no eixo X
-        parallaxLayer2.transform.position += Vector3.right * deltaX * (-parallaxSpeed * (2f/betweenFactor)); // Segunda camada do Parallax no eixo X
-        parallaxLayer3.transform.position += Vector3.right * deltaX * (-parallaxSpeed * (4f/betweenFactor)); // Terceira camada do Parallax no eixo X
-        parallaxLayer4.transform.position += Vector3.right * deltaX * (-parallaxSpeed * (6f/betweenFactor)); // Quarta camada do Parallax no eixo X
+        for (int i = 0; i < parallaxLayers.Length; i++)
+        {
+            if (i == 0)
+            {
+                parallaxLayers[i].transform.position += Vector3.right * deltaX * -parallaxSpeed;
+            }
+            else
+            {
+                parallaxLayers[i].transform.position += Vector3.right * deltaX * (-parallaxSpeed * ((i * 2) / betweenFactor)); // Segunda camada do Parallax no eixo X
+            }
+        }
+
         lastCameraX = cameraTransform.transform.position.x; // Pega a posição da camera no eixo X
         float deltaY = cameraTransform.position.y - lastCameraY; // Cálculo da diferença entre a camera e sua ultima posição no eixo Y
-        parallaxLayer1.transform.position += Vector3.up * (deltaY * -parallaxSpeed/(10f * betweenFactor)); // Primeira camada do Parallax no eixo Y
-        parallaxLayer2.transform.position += Vector3.up * (deltaY * -parallaxSpeed/(3f * betweenFactor)); // Segunda camada do Parallax no eixo Y
-        parallaxLayer3.transform.position += Vector3.up * (deltaY * -parallaxSpeed/betweenFactor); // Terceira camada do Parallax no eixo Y
-        parallaxLayer4.transform.position += Vector3.up * (deltaY * -parallaxSpeed); // Quarta camada do Parallax no eixo Y
+        for (int i = 0; i < parallaxLayers.Length; i++)
+        {
+            if (i == parallaxLayers.Length)
+            {
+                parallaxLayers[i].transform.position += Vector3.up * (deltaX * -parallaxSpeed); 
+            }
+            else 
+            {
+                parallaxLayers[i].transform.position += Vector3.up * (deltaY * -parallaxSpeed / (((parallaxLayers.Length-i)*3)*betweenFactor)); 
+            }
+        }
         lastCameraY = cameraTransform.transform.position.y; // Pega a posição da camera no eixo X
+
+       
     }
 }
