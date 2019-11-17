@@ -127,9 +127,9 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5677294388294146944}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &80847548 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6060765160817555795, guid: 8129f15201cfdeb44962c6d8ba9781be,
+--- !u!212 &80847550 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2578413028238944420, guid: 8129f15201cfdeb44962c6d8ba9781be,
     type: 3}
   m_PrefabInstance: {fileID: 5509749643829302940}
   m_PrefabAsset: {fileID: 0}
@@ -262,9 +262,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8633648794210303194}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &238841380 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5647123887285745025, guid: 8129f15201cfdeb44962c6d8ba9781be,
+--- !u!212 &238841382 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4146381978670081142, guid: 8129f15201cfdeb44962c6d8ba9781be,
     type: 3}
   m_PrefabInstance: {fileID: 5509749643829302940}
   m_PrefabAsset: {fileID: 0}
@@ -949,37 +949,37 @@ PrefabInstance:
         type: 3}
       propertyPath: telasLoad.Array.data[0]
       value: 
-      objectReference: {fileID: 1812315139}
+      objectReference: {fileID: 1812315141}
     - target: {fileID: 472043198931101559, guid: ad573ec065f2a9346901d140a8f86878,
         type: 3}
       propertyPath: telasLoad.Array.data[1]
       value: 
-      objectReference: {fileID: 80847548}
+      objectReference: {fileID: 80847550}
     - target: {fileID: 472043198931101559, guid: ad573ec065f2a9346901d140a8f86878,
         type: 3}
       propertyPath: telasLoad.Array.data[2]
       value: 
-      objectReference: {fileID: 238841380}
+      objectReference: {fileID: 238841382}
     - target: {fileID: 472043198931101559, guid: ad573ec065f2a9346901d140a8f86878,
         type: 3}
       propertyPath: telasLoad.Array.data[3]
       value: 
-      objectReference: {fileID: 1055058454}
+      objectReference: {fileID: 1055058456}
     - target: {fileID: 472043198931101559, guid: ad573ec065f2a9346901d140a8f86878,
         type: 3}
       propertyPath: telasLoad.Array.data[4]
       value: 
-      objectReference: {fileID: 676443066}
+      objectReference: {fileID: 1055058456}
     - target: {fileID: 472043198931101559, guid: ad573ec065f2a9346901d140a8f86878,
         type: 3}
       propertyPath: panelLoad
       value: 
-      objectReference: {fileID: 445055706}
+      objectReference: {fileID: 445055707}
     - target: {fileID: 472043198931101559, guid: ad573ec065f2a9346901d140a8f86878,
         type: 3}
       propertyPath: telasLoad.Array.data[5]
       value: 
-      objectReference: {fileID: 1055058454}
+      objectReference: {fileID: 676443068}
     m_RemovedComponents:
     - {fileID: 1993445548736771955, guid: ad573ec065f2a9346901d140a8f86878, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ad573ec065f2a9346901d140a8f86878, type: 3}
@@ -1001,6 +1001,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5509749643829302940}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &445055707 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7825133713390160185, guid: 8129f15201cfdeb44962c6d8ba9781be,
+    type: 3}
+  m_PrefabInstance: {fileID: 5509749643829302940}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445055706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &558893509
 GameObject:
   m_ObjectHideFlags: 0
@@ -1081,9 +1093,9 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &676443066 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3274836580542642148, guid: 8129f15201cfdeb44962c6d8ba9781be,
+--- !u!212 &676443068 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6532185066457458195, guid: 8129f15201cfdeb44962c6d8ba9781be,
     type: 3}
   m_PrefabInstance: {fileID: 5509749643829302940}
   m_PrefabAsset: {fileID: 0}
@@ -1465,9 +1477,9 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8633648794210303194}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1055058454 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6787236177875772627, guid: 8129f15201cfdeb44962c6d8ba9781be,
+--- !u!212 &1055058456 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3018940511618282788, guid: 8129f15201cfdeb44962c6d8ba9781be,
     type: 3}
   m_PrefabInstance: {fileID: 5509749643829302940}
   m_PrefabAsset: {fileID: 0}
@@ -6585,9 +6597,9 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
---- !u!1 &1812315139 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2827876626409078120, guid: 8129f15201cfdeb44962c6d8ba9781be,
+--- !u!212 &1812315141 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5830710155859340447, guid: 8129f15201cfdeb44962c6d8ba9781be,
     type: 3}
   m_PrefabInstance: {fileID: 5509749643829302940}
   m_PrefabAsset: {fileID: 0}
@@ -14213,6 +14225,31 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2827876626409078120, guid: 8129f15201cfdeb44962c6d8ba9781be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7825133713390160185, guid: 8129f15201cfdeb44962c6d8ba9781be,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7825133713390160185, guid: 8129f15201cfdeb44962c6d8ba9781be,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7825133713390160185, guid: 8129f15201cfdeb44962c6d8ba9781be,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7825133713390160185, guid: 8129f15201cfdeb44962c6d8ba9781be,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653230184350067134, guid: 8129f15201cfdeb44962c6d8ba9781be,
         type: 3}
       propertyPath: m_IsActive
       value: 0
