@@ -59,10 +59,12 @@ public class CharacterController2D : MonoBehaviour
 					OnLandEvent.Invoke();
 			}
 		}
-	}
+
+        
+    }
 
 
-	public void Move(float move, bool crouch, bool jump)
+	public void Move(float move, bool crouch, bool jump, bool shoot)
 	{
 		// If crouching, check to see if the character can stand up
 		if (!crouch)
@@ -74,8 +76,13 @@ public class CharacterController2D : MonoBehaviour
 			}
 		}
 
-		//only control the player if grounded or airControl is turned on
-		if (m_Grounded || m_AirControl)
+        if (shoot && m_Grounded)
+        {
+            m_Rigidbody2D.velocity = new Vector3(0, 0, 0);
+        }
+
+        //only control the player if grounded or airControl is turned on
+        if (m_Grounded || m_AirControl)
 		{
 
 			// If crouching
@@ -168,11 +175,11 @@ public class CharacterController2D : MonoBehaviour
 		m_FacingRight = !m_FacingRight;
 
         // Multiply the player's x local scale by -1.
-        //Vector3 theScale = transform.localScale;
-        //theScale.x *= -1;
-        //transform.localScale = theScale;
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
 
-        transform.Rotate(0, 180f, 0);
+        //transform.Rotate(0, 180f, 0);
 	}
 
 }

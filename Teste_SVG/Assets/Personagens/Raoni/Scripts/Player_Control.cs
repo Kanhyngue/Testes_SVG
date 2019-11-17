@@ -15,7 +15,7 @@ public class Player_Control : MonoBehaviour
 
     private bool jump = false;
     private bool crouch = false;
-
+    private bool shooting = false;
     [SerializeField] SceneChanger changer;
 
     // Start is called before the first frame update
@@ -28,7 +28,7 @@ public class Player_Control : MonoBehaviour
     private void Update()
     {
 
-        if (!changer.GetPanelState())
+        if (!changer.GetPanelState() && !shooting)
         {
             h_Move = Input.GetAxisRaw("Horizontal") * run_Speed;
             anim.SetFloat("Speed", Mathf.Abs(h_Move));
@@ -47,13 +47,37 @@ public class Player_Control : MonoBehaviour
             {
                 crouch = false;
             }
+
+            if (Input.GetButtonDown("Tiro"))
+            {
+                anim.SetBool("IsShooting", true);
+                anim.SetTrigger("Shoot");
+                shooting = true;
+            }
+            else if (Input.GetButtonUp("Crouch"))
+            {
+                anim.SetBool("IsShooting", false);   
+                shooting = false;
+            }
         }
     }
 
     private void FixedUpdate()
     {
-        ctrl.Move(h_Move * Time.fixedDeltaTime, crouch, jump);
+        ctrl.Move(h_Move * Time.fixedDeltaTime, crouch, jump, shooting);
         jump = false;
+
+        if (Input.GetButtonDown("Tiro"))
+        {
+            anim.SetBool("IsShooting", true);
+            anim.SetTrigger("Shoot");
+            shooting = true;
+        }
+        else if (Input.GetButtonUp("Crouch"))
+        {
+            anim.SetBool("IsShooting", false);
+            shooting = false;
+        }
     }
 
     public void IsLanding ()
@@ -64,5 +88,13 @@ public class Player_Control : MonoBehaviour
     public void IsCrouching(bool isCrouching)
     {
         anim.SetBool("IsCrouching", isCrouching);
+    }
+
+    public void NoShooting()
+    {
+        
+        anim.SetBool("IsShooting", false);
+        shooting = false;
+        Debug.Log(shooting);
     }
 }
