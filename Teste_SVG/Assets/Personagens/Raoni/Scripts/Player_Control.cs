@@ -16,6 +16,8 @@ public class Player_Control : MonoBehaviour
     private bool jump = false;
     private bool crouch = false;
 
+    [SerializeField] SceneChanger changer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,21 +27,26 @@ public class Player_Control : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        h_Move = Input.GetAxisRaw("Horizontal") * run_Speed;
-        anim.SetFloat("Speed", Mathf.Abs(h_Move));
 
-        if (Input.GetButtonDown("Jump"))
+        if (!changer.GetPanelState())
         {
-            jump = true;
-            anim.SetBool("IsJumping", jump);
-        }
+            h_Move = Input.GetAxisRaw("Horizontal") * run_Speed;
+            anim.SetFloat("Speed", Mathf.Abs(h_Move));
 
-        if(Input.GetButtonDown("Crouch"))
-        {
-            crouch = true;
-        } else if(Input.GetButtonUp("Crouch"))
+            if (Input.GetButtonDown("Jump"))
             {
-            crouch = false;
+                jump = true;
+                anim.SetBool("IsJumping", jump);
+            }
+
+            if (Input.GetButtonDown("Crouch"))
+            {
+                crouch = true;
+            }
+            else if (Input.GetButtonUp("Crouch"))
+            {
+                crouch = false;
+            }
         }
     }
 

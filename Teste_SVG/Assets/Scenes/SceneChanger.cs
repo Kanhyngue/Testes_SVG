@@ -172,7 +172,11 @@ public class SceneChanger : MonoBehaviour
         //telasLoad[4].SetActive(false);
         //telasLoad[5].SetActive(false);
         //telasLoad[6].SetActive(false);
+    }
 
+    public bool GetPanelState()
+    {
+        return panelLoad.active;
     }
 }
 
