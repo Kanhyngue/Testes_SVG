@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1993445548736771965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1993445548736771964}
+  - component: {fileID: 1993445548736771955}
+  - component: {fileID: 472043198931101559}
+  m_Layer: 0
+  m_Name: SceneController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1993445548736771964
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993445548736771965}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1993445548736771955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993445548736771965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e6a0af45df894d4d8b0207772507cff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &472043198931101559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993445548736771965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a27c20653a63fb47ad5ac0f6d8b0468, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyUpInterface: {fileID: 0}
+  sceneChangeMessage: {fileID: 0}
+  sceneMessageCerrado: {fileID: 0}
+  sceneMessageFloresta: {fileID: 0}
+  sceneMessageCaverna: {fileID: 0}
+  sceneMessageAldeia: {fileID: 0}
+  sceneMessageOca: {fileID: 0}
+  sceneMessageArena: {fileID: 0}
+  sceneHub: {fileID: 0}
+  sceneCerrado: {fileID: 0}
+  sceneFloresta: {fileID: 0}
+  sceneCaverna: {fileID: 0}
+  sceneOca: {fileID: 0}
+  sceneArena: {fileID: 0}
+  cenaAtual: 0
+  mudarParaCena: 0

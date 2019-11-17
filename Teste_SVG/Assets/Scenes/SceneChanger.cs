@@ -4,75 +4,120 @@ using UnityEngine;
 
 public class SceneChanger : MonoBehaviour
 {
-    public GameObject keyUpInterface;
-    public GameObject sceneHub;
-    public GameObject sceneCerrado;
-    public GameObject sceneFloresta;
-    public GameObject sceneCaverna;
-    public GameObject sceneOca;
+    public GameObject sceneHub, sceneCerrado, sceneFloresta, sceneCaverna, sceneOca, sceneArena; // Scenes
 
-    public int cenaAtual; // 0 -> HUB / 1 -> Cerrado / 2 -> Floresta / 3 -> Caverna / 4 -> Oca do Jogador / 5 -> Menu / 6 -> Créditos
-    public int mudarParaCena; // 0 -> HUB / 1 -> Cerrado / 2 -> Floresta / 3 -> Caverna / 4 -> Oca do Jogador / 5 -> Menu / 6 -> Créditos
+    //public static int _cenaAtual; // 0 -> HUB / 1 -> Cerrado / 2 -> Floresta / 3 -> Caverna / 4 -> Oca do Jogador / 5 -> Arena Final
+    public static int _mudarParaCena; // 0 -> HUB / 1 -> Cerrado / 2 -> Floresta / 3 -> Caverna / 4 -> Oca do Jogador / 5 -> Arena Final
 
-    private bool triggered;
+    public static bool accepted = false;
+    public static bool triggered = false;
+
+    public static bool underProcess = false;
+
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.UpArrow) && triggered == true)
+        // Se o Jogador clicar em sim
+        // Muda de cena
+        if(accepted)
         {
-            if(cenaAtual == 0)
+            switch(_mudarParaCena)
             {
-                switch (mudarParaCena)
-                {
-                    case 0:
-                        // Faz nada, não tem como entrar na cena já carregada
-                    break;
-                    case 1:
-                        sceneHub.SetActive(false);
-                        sceneCerrado.SetActive(true);
-                    break;
-                    case 2:
-                        sceneHub.SetActive(false);
-                        sceneFloresta.SetActive(true);
-                    break;
-                    case 3:
-                        sceneHub.SetActive(false);
-                        sceneCaverna.SetActive(true);
-                    break;
-                    case 4:
-                        sceneHub.SetActive(false);
-                        sceneOca.SetActive(true);
-                    break;
-                    default:
-                        // Faz nada também
-                    break;
-                }
+                case 0:
+                    // Cenas ativadas
+                    sceneHub.SetActive(true);
+
+                    // Cenas desativadas
+                    sceneCerrado.SetActive(false);
+                    sceneFloresta.SetActive(false);
+                    sceneCaverna.SetActive(false);
+                    sceneOca.SetActive(false);
+                    sceneArena.SetActive(false);
+                    accepted = false;
+                    underProcess = false;
+                break;
+                case 1:
+                    // Cenas ativadas
+                    sceneCerrado.SetActive(true);
+
+                    // Cenas desativadas
+                    sceneHub.SetActive(false);
+                    sceneFloresta.SetActive(false);
+                    sceneCaverna.SetActive(false);
+                    sceneOca.SetActive(false);
+                    sceneArena.SetActive(false);
+                    accepted = false;
+                    underProcess = false;
+                break;
+                case 2:
+                    // Cenas ativadas
+                    sceneFloresta.SetActive(true);
+
+                    // Cenas desativadas
+                    sceneHub.SetActive(false);
+                    sceneCerrado.SetActive(false);
+                    sceneCaverna.SetActive(false);
+                    sceneOca.SetActive(false);
+                    sceneArena.SetActive(false);
+                    accepted = false;
+                    underProcess = false;
+                break;
+                case 3:
+                    // Cenas ativadas
+                    sceneCaverna.SetActive(true);
+
+                    // Cenas desativadas
+                    sceneHub.SetActive(false);
+                    sceneFloresta.SetActive(false);
+                    sceneCerrado.SetActive(false);
+                    sceneOca.SetActive(false);
+                    sceneArena.SetActive(false);
+                    accepted = false;
+                    underProcess = false;
+                break;
+                case 4:
+                    // Cenas ativadas
+                    sceneOca.SetActive(true);
+
+                    // Cenas desativadas
+                    sceneHub.SetActive(false);
+                    sceneFloresta.SetActive(false);
+                    sceneCerrado.SetActive(false);
+                    sceneCaverna.SetActive(false);
+                    sceneArena.SetActive(false);
+                    accepted = false;
+                    underProcess = false;
+                break;
+                case 5:
+                    // Cenas ativadas
+                    sceneArena.SetActive(true);
+
+                    // Cenas desativadas
+                    sceneHub.SetActive(false);
+                    sceneFloresta.SetActive(false);
+                    sceneCerrado.SetActive(false);
+                    sceneCaverna.SetActive(false);
+                    sceneOca.SetActive(false);
+                    accepted = false;
+                    underProcess = false;
+                break;
+                default:
+                    accepted = false;
+                    underProcess = false;
+                break;
             }
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D entrada)
+    public void Acceptance()
     {
-        if (entrada.gameObject.CompareTag("Player"))
-        {
-            keyUpInterface.SetActive(true);
-            triggered = true;
-        }
+        accepted = true;
     }
-    private void OnTriggerStay2D(Collider2D entrada)
+
+    public void NotAcceptance()
     {
-        if (entrada.gameObject.CompareTag("Player"))
-        {
-            keyUpInterface.SetActive(true);
-            triggered = true;
-        }
+        accepted = false;
+        underProcess = false;
     }
-    private void OnTriggerExit2D(Collider2D entrada)
-    {
-        if (entrada.gameObject.CompareTag("Player"))
-        {
-            keyUpInterface.SetActive(false);
-            triggered = false;
-        }
-    }
+
 }
