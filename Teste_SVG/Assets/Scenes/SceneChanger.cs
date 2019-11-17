@@ -114,4 +114,10 @@ public class SceneChanger : MonoBehaviour
         accepted = true;
     }
 
+    public void NotAcceptance()
+    {
+        accepted = false;
+        underProcess = false;
+    }
+
 }
