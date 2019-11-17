@@ -3402,11 +3402,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraTransform: {fileID: 0}
-  parallaxLayer1: {fileID: 8802674267458954619}
-  parallaxLayer2: {fileID: 7754745365960826895}
-  parallaxLayer3: {fileID: 225386167106828052}
-  parallaxLayer4: {fileID: 5082316324414500599}
-  parallaxLayer5: {fileID: 7981455347724183664}
+  parallaxLayers:
+  - {fileID: 8802674267458954619}
+  - {fileID: 7754745365960826895}
+  - {fileID: 225386167106828052}
+  - {fileID: 5082316324414500599}
+  - {fileID: 7981455347724183664}
   parallaxSpeed: -0.2
   betweenFactor: 2
 --- !u!1 &8210750337619771047
@@ -3506,12 +3507,12 @@ PrefabInstance:
     - target: {fileID: 5564306617487433265, guid: 7cf0ddf7631292849815c0092de53f3d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.8
+      value: -7.14
       objectReference: {fileID: 0}
     - target: {fileID: 5564306617487433265, guid: 7cf0ddf7631292849815c0092de53f3d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.7
+      value: 3.1
       objectReference: {fileID: 0}
     - target: {fileID: 5564306617487433265, guid: 7cf0ddf7631292849815c0092de53f3d,
         type: 3}
@@ -3656,12 +3657,12 @@ PrefabInstance:
     - target: {fileID: 3236088366605932603, guid: 224205bd7c0aca44dbf1d7e84cda8478,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.5
+      value: -1.45
       objectReference: {fileID: 0}
     - target: {fileID: 3236088366605932603, guid: 224205bd7c0aca44dbf1d7e84cda8478,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.3
+      value: 3.6
       objectReference: {fileID: 0}
     - target: {fileID: 3236088366605932603, guid: 224205bd7c0aca44dbf1d7e84cda8478,
         type: 3}
