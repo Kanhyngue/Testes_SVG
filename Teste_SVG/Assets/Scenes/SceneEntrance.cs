@@ -30,7 +30,14 @@ public class SceneEntrance : MonoBehaviour
     {
         if (entrada.gameObject.CompareTag("Player"))
         {
-
+            if(SceneChanger.accepted)
+            {
+                keyUpInterface.SetActive(true);
+            }
+            else
+            {
+                keyUpInterface.SetActive(false);
+            }
             keyUpInterface.SetActive(true);
             SceneChanger.triggered = true;
             //SceneChanger._cenaAtual = cenaAtual;
