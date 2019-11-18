@@ -21,7 +21,7 @@ public class MenuToScene : MonoBehaviour
 
     IEnumerator LoadToNewGame()
     {
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(0);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(1);
         while(!asyncLoad.isDone)
         {
             yield return null;
@@ -30,7 +30,7 @@ public class MenuToScene : MonoBehaviour
 
     IEnumerator LoadToExistingGame()
     {
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(0);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(1);
         while(!asyncLoad.isDone)
         {
             yield return null;
