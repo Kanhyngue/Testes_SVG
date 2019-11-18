@@ -4,19 +4,59 @@ using UnityEngine;
 
 public class InventorySystem : MonoBehaviour
 {
-    public static int cachimbos = 0;
-    public static bool chave = false;
-    public static bool dashPower = false;
-    public static bool firePower = false;
-    public static bool fogPower = false;
+    public int cachimbos;
+    public bool chave;
+    public bool dashPower;
+    public bool firePower;
+    public bool fogPower;
+
+    public static int cachimboColetados;
+    public static bool chaveColetada;
+    public static bool dashPowerColetado;
+    public static bool firePowerColetado;
+    public static bool fogPowerColetado;
+
+    void Start()
+    {
+        if(MenuToScene.loadGame)
+        {
+            LoadInventory();
+        }
+        else
+        {
+            SaveInventory();
+        }
+    }
 
     void Update()
     {
-        Debug.Log("Cachimbos: " + cachimbos);
-        Debug.Log("Chave? " + chave);
-        Debug.Log("Dash? " + dashPower);
-        Debug.Log("Fogo? " + firePower);
-        Debug.Log("Neblina? " + fogPower);
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            SaveInventory();
+        }
+        
+        Debug.Log("Cachimbos:" + cachimbos);
+    }
+
+    public void SaveInventory()
+    {
+        cachimbos = cachimboColetados;
+        chave = chaveColetada;
+        dashPower = dashPowerColetado;
+        firePower = firePowerColetado;
+        fogPower = fogPowerColetado;
+        SaveSystem.SaveData(this);
+    }
+
+    public void LoadInventory()
+    {
+        AllData data = SaveSystem.LoadData();
+
+        cachimbos = data.cachimbosSave;
+        chave = data.chaveSave;
+        dashPower = data.dashPower;
+        firePower = data.firePower;
+        fogPower = data.fogPower;
     }
 
 }
