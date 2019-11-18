@@ -6,7 +6,6 @@ public class BolaFogo : MonoBehaviour
 {
 
     [SerializeField] private float speed;
-    [SerializeField] private LayerMask m_WhatIsGround;
     private Rigidbody2D rb2D;
     // Start is called before the first frame update
     void Start()
@@ -25,22 +24,9 @@ public class BolaFogo : MonoBehaviour
     }
 
 
-    /*    private void OnCollisionEnter2D(Collision2D collision)
-        {
-            Debug.Log(collision.gameObject.name);
-            Destroy(gameObject);
-        }*/
-
     private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            Debug.Log(collision.gameObject.name);
-            Destroy(gameObject);
-        }else
-        {
-            Destroy(gameObject, 3f);
-        }
+    {            
+        Destroy(gameObject, 3f);
     }
 
 }

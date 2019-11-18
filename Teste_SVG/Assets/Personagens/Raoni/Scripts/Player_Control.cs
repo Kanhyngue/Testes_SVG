@@ -48,17 +48,16 @@ public class Player_Control : MonoBehaviour
                 crouch = false;
             }
 
-            if (Input.GetButtonDown("Tiro"))
-            {
-                anim.SetBool("IsShooting", true);
-                anim.SetTrigger("Shoot");
-                shooting = true;
-            }
-            else if (Input.GetButtonUp("Crouch"))
-            {
-                anim.SetBool("IsShooting", false);   
-                shooting = false;
-            }
+            //if (Input.GetButtonDown("Tiro"))
+            //{
+            //    anim.SetBool("IsShooting", true);
+            //    shooting = true;
+            //}
+            //else if (Input.GetButtonUp("Crouch"))
+            //{
+            //    anim.SetBool("IsShooting", false);   
+            //    shooting = false;
+            //}
         }
     }
 
@@ -70,7 +69,6 @@ public class Player_Control : MonoBehaviour
         if (Input.GetButtonDown("Tiro"))
         {
             anim.SetBool("IsShooting", true);
-            anim.SetTrigger("Shoot");
             shooting = true;
         }
         else if (Input.GetButtonUp("Crouch"))
