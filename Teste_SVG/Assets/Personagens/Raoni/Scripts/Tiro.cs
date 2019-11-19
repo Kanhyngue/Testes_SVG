@@ -11,13 +11,12 @@ public class Tiro : MonoBehaviour
     private Transform player;
     [SerializeField]
     private Transform tiroPoint;
-    private Player_Control pl;
     private Animator anim;
+    private BoxCollider2D machadada;
 
     // Start is called before the first frame update
     private void Start()
     {
-        pl = player.gameObject.GetComponent<Player_Control>();
         anim = player.gameObject.GetComponent<Animator>();
     }
     public void Atirar()
@@ -34,16 +33,11 @@ public class Tiro : MonoBehaviour
         }
     }
 
-    public void FimAtirar()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        pl.NoShooting();
-    }
-
-    public void FimTiroPulo()
-    {
-       
-        pl.NoShooting();
-        
+        if (collision.gameObject.CompareTag("Inimigo"))
+        {
+            //contagem de dano aqui
+        }
     }
 }

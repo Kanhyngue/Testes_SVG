@@ -8,16 +8,28 @@ public class Player : MonoBehaviour
     private CharacterPlatformer2D _controller;
     private float _normalizedHorizontalSpeed;
     private float h_Move;
+    private ControllerPhsyicsVolume2D dash;
 
     public float maxSpeed = 8f;
+    public float DashFactor = 2f;
+    public float DashTime = 2f;
     public float speedAccelerationOnGround = 10f;
     public float speedAccelerationInAir = 5f;
     private GameObject changer;
     private SceneChanger _changer;
+    public float RateTiro = .5f;
+    public float RateMachado = .5f;
+    public float RateDash = 2f;
+    public float RateNeblina = 2f;
 
     [SerializeField] private Animator anim;
+    private float _canFireIn, _canMachado, _canDash, _canNeblina, _dashTime;
+
+
     public void Start()
     {
+        _dashTime = DashTime;
+        dash = GetComponent < ControllerPhsyicsVolume2D > ();
         _controller = GetComponent<CharacterPlatformer2D>();
         _isFacingRight = transform.localScale.x > 0;
         changer = GameObject.FindWithTag("SceneChanger");
@@ -28,22 +40,41 @@ public class Player : MonoBehaviour
 
     public void Update()
     {
+        _canFireIn -= Time.deltaTime;
+        _canMachado -= Time.deltaTime;
+        _canDash -= Time.deltaTime;
+        _canNeblina -= Time.deltaTime;
+
+
         if (!_changer.GetPanelState())
         {
             HandleInput();
         }
-
-        var movementFactor = _controller.State.IsGrounded ? speedAccelerationOnGround : speedAccelerationInAir;
+        if (!anim.GetBool("Dash"))
+        {
+            var movementFactor = _controller.State.IsGrounded ? speedAccelerationOnGround : speedAccelerationInAir;
             _controller.SetHorizontalForce(Mathf.Lerp(_controller.Velocity.x, _normalizedHorizontalSpeed * maxSpeed, Time.deltaTime * movementFactor));
-
-            anim.SetBool("IsGrounded", _controller.State.IsGrounded);
+        }
+        else
+        {
+            _dashTime -= Time.deltaTime;
+            //var movementFactor = _controller.State.IsGrounded ? speedAccelerationOnGround : speedAccelerationInAir;
+            _controller.SetHorizontalForce(Mathf.Lerp(_controller.Velocity.x, _normalizedHorizontalSpeed * maxSpeed * DashFactor, Time.deltaTime /** movementFactor*/));
+            if(_dashTime <= 0)
+            {
+                anim.SetBool("Dash", false);
+                _controller.EndDash(dash);
+                _dashTime = DashTime;
+            }
+        }
+        anim.SetBool("IsGrounded", _controller.State.IsGrounded);
             anim.SetFloat("Speed", Mathf.Abs(_controller.Velocity.x) / maxSpeed);
-   
     }
 
     private void HandleInput()
     {
-        h_Move = Input.GetAxisRaw("Horizontal");
+        if(!anim.GetBool("Dash"))
+            h_Move = Input.GetAxisRaw("Horizontal");
         
         if (h_Move > 0f)
         {
@@ -79,6 +110,47 @@ public class Player : MonoBehaviour
             anim.SetBool("IsCrouching", false);
         }
 
+        if(Input.GetButton("Tiro"))
+        {
+            if (_canFireIn > 0)
+                return;
+            anim.SetTrigger("IsShooting");
+  
+            _canFireIn = RateTiro;
+
+        }
+
+        if (Input.GetButton("Machadada"))
+        {
+            if (_canMachado > 0)
+                return;
+            anim.SetTrigger("Machadada");
+            _canMachado = RateTiro;
+
+        }
+
+        if (Input.GetButtonDown("Dash"))
+        {
+            if (_canDash > 0)
+                return;
+            anim.SetBool("Dash", true);
+            Debug.Log("SwoOoSH");
+
+            _controller.Dashing (dash);
+            _canDash = RateDash;
+
+            
+        }
+
+        if (Input.GetButton("Neblina"))
+        {
+            if (_canNeblina > 0)
+                return;
+            //anim.SetTrigger("Machadada");
+            Debug.Log("WhoOosh");
+            _canNeblina = RateNeblina;
+
+        }
     }
 
     private void Flip()
