@@ -13,37 +13,28 @@ public class Coletavel : MonoBehaviour
             if(this.gameObject.CompareTag("Cachimbo"))
             {
                 transform.position = pullingArea.transform.position;
-                InventorySystem.cachimboColetados++;
+                DataSystem.cachimbos++;
             }
             else if(this.gameObject.CompareTag("Chave"))
             {
                 transform.position = pullingArea.transform.position;
-                InventorySystem.chaveColetada = true;
+                DataSystem.chave = true;
             }
             else if(this.gameObject.CompareTag("Dash"))
             {
                 transform.position = pullingArea.transform.position;
-                InventorySystem.dashPowerColetado = true;
+                DataSystem.dashPower = true;
             }
             else if(this.gameObject.CompareTag("Fire"))
             {
                 transform.position = pullingArea.transform.position;
-                InventorySystem.firePowerColetado = true;
+                DataSystem.firePower = true;
             }
             else if(this.gameObject.CompareTag("Neblina"))
             {
                 transform.position = pullingArea.transform.position;
-                InventorySystem.fogPowerColetado = true;
+                DataSystem.fogPower = true;
             }
         }
     }
-
-    /* public Coletavel (InventorySystem inventory)
-    {
-        inventory.cachimbos = cachimboColetados;
-        inventory.chave = chaveColetada;
-        inventory.dashPower = dashPowerColetado;
-        inventory.firePower = firePowerColetado;
-        inventory.fogPower = fogPowerColetado;
-    }*/
 }
