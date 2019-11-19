@@ -12,23 +12,33 @@ public class Player : MonoBehaviour
     public float maxSpeed = 8f;
     public float speedAccelerationOnGround = 10f;
     public float speedAccelerationInAir = 5f;
+    private GameObject changer;
+    private SceneChanger _changer;
 
     [SerializeField] private Animator anim;
     public void Start()
     {
         _controller = GetComponent<CharacterPlatformer2D>();
         _isFacingRight = transform.localScale.x > 0;
+        changer = GameObject.FindWithTag("SceneChanger");
+        if (changer != null)
+            _changer = changer.GetComponent<SceneChanger>();
+            
     }
 
     public void Update()
     {
-        HandleInput();
+        if (!_changer.GetPanelState())
+        {
+            HandleInput();
+        }
 
         var movementFactor = _controller.State.IsGrounded ? speedAccelerationOnGround : speedAccelerationInAir;
-        _controller.SetHorizontalForce(Mathf.Lerp(_controller.Velocity.x, _normalizedHorizontalSpeed * maxSpeed, Time.deltaTime * movementFactor));
+            _controller.SetHorizontalForce(Mathf.Lerp(_controller.Velocity.x, _normalizedHorizontalSpeed * maxSpeed, Time.deltaTime * movementFactor));
 
-        anim.SetBool("IsGrounded", _controller.State.IsGrounded);
-        anim.SetFloat("Speed", Mathf.Abs(_controller.Velocity.x) / maxSpeed);
+            anim.SetBool("IsGrounded", _controller.State.IsGrounded);
+            anim.SetFloat("Speed", Mathf.Abs(_controller.Velocity.x) / maxSpeed);
+   
     }
 
     private void HandleInput()
@@ -57,6 +67,16 @@ public class Player : MonoBehaviour
             
             _controller.Jump();
            
+        }
+
+        if (Input.GetButtonDown("Crouch"))
+        {
+            _controller.Crouch(true);
+            anim.SetBool("IsCrouching", true);
+        }else if (Input.GetButtonUp("Crouch"))
+        {
+            _controller.Crouch(false);
+            anim.SetBool("IsCrouching", false);
         }
 
     }

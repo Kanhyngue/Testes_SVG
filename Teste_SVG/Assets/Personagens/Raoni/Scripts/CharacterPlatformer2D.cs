@@ -3,14 +3,14 @@ using System.Collections;
 
 public class CharacterPlatformer2D : MonoBehaviour
 {
-	private const float SkinWidth = .02f;
-	private const int TotalHorizontalRays = 8;
-	private const int TotalVerticalRays = 4;
+	private const float SkinWidth = .05f;
+	private const int TotalHorizontalRays = 16;
+	private const int TotalVerticalRays = 8;
 
 	private static readonly float SlopeLimitTangant = Mathf.Tan(75f * Mathf.Deg2Rad);
 
 	public LayerMask PlatformMask;
-	public ControllerParameters2D DefaultParameters;
+	[SerializeField] private ControllerParameters2D DefaultParameters;
 
 	public ControllerState2D State { get; private set; }
 	public Vector2 Velocity { get { return _velocity; } }
@@ -96,6 +96,32 @@ public class CharacterPlatformer2D : MonoBehaviour
 		_jumpIn = Parameters.JumpFrequency;
 	}
 
+    public void Crouch(bool isCrouching)
+    {
+        if (isCrouching)
+        {
+            _capsuleCollider.size = new Vector2(_capsuleCollider.size.x, _capsuleCollider.size.y / 2);
+            _capsuleCollider.offset = new Vector2(_capsuleCollider.offset.x, _capsuleCollider.offset.y * 4);
+
+            var colliderWidth = _capsuleCollider.size.x * Mathf.Abs(transform.localScale.x) - (2 * SkinWidth);
+            _horizontalDistanceBetweenRays = colliderWidth / (TotalVerticalRays - 1);
+            var colliderHeight = _capsuleCollider.size.y * Mathf.Abs(transform.localScale.y) - (2 * SkinWidth);
+            _verticalDistanceBetweenRays = colliderHeight / (TotalHorizontalRays - 1);
+            State.IsCrouching = true;
+        }
+        else
+        {
+            _capsuleCollider.size = new Vector2(_capsuleCollider.size.x, _capsuleCollider.size.y*2);
+            _capsuleCollider.offset = new Vector2(_capsuleCollider.offset.x, _capsuleCollider.offset.y / 4);
+
+            var colliderWidth = _capsuleCollider.size.x * Mathf.Abs(transform.localScale.x) - (2 * SkinWidth);
+            _horizontalDistanceBetweenRays = colliderWidth / (TotalVerticalRays - 1);
+            var colliderHeight = _capsuleCollider.size.y * Mathf.Abs(transform.localScale.y) - (2 * SkinWidth);
+            _verticalDistanceBetweenRays = colliderHeight / (TotalHorizontalRays - 1);
+            State.IsCrouching = false;
+        }
+    }
+
 	public void LateUpdate()
 	{
 		_jumpIn -= Time.deltaTime;
@@ -125,12 +151,12 @@ public class CharacterPlatformer2D : MonoBehaviour
 			CorrectHorizontalPlacement(ref deltaMovement, false);
 		}
 
-		_transform.Translate(deltaMovement, Space.World);
+        if(State.IsCollidingAbove)
+            Crouch(State.IsCrouching);
 
-		if (Time.deltaTime > 0)
-			_velocity = deltaMovement / Time.deltaTime;
+        _transform.Translate(deltaMovement, Space.World);
 
-		_velocity.x = Mathf.Min(_velocity.x, Parameters.MaxVelocity.x);
+        _velocity.x = Mathf.Min(_velocity.x, Parameters.MaxVelocity.x);
 		_velocity.y = Mathf.Min(_velocity.y, Parameters.MaxVelocity.y);
 
 		if (State.IsMovingUpSlope)
@@ -179,7 +205,7 @@ public class CharacterPlatformer2D : MonoBehaviour
 
 	private void CorrectHorizontalPlacement(ref Vector2 deltaMovement, bool isRight)
 	{
-		var halfWidth = (_capsuleCollider.size.x * _localScale.x) / 2f;
+		var halfWidth = (_capsuleCollider.size.x * _localScale.x) / 2;
 		var rayOrigin = isRight ? _raycastBottomRight : _raycastBottomLeft;
 
 		if (isRight)
@@ -256,7 +282,7 @@ public class CharacterPlatformer2D : MonoBehaviour
 	private void MoveVertically(ref Vector2 deltaMovement)
 	{
 		var isGoingUp = deltaMovement.y > 0;
-		var rayDistance = Mathf.Abs(deltaMovement.y) + SkinWidth;
+		var rayDistance = (Mathf.Abs(deltaMovement.y) + SkinWidth);
 		var rayDirection = isGoingUp ? Vector2.up : -Vector2.up;
 		var rayOrigin = isGoingUp ? _raycastTopLeft : _raycastBottomLeft;
 
@@ -353,6 +379,8 @@ public class CharacterPlatformer2D : MonoBehaviour
 		State.IsCollidingBellow = true;
 		return true;
 	}
+
+
 
 	public void OnTriggerEnter2D(Collider2D other)
 	{

@@ -11,6 +11,7 @@ public class ControllerState2D
     public bool IsMovingDownSlope { get; set; }
     public bool IsMovingUpSlope { get; set; }
     public bool IsGrounded { get { return IsCollidingBellow; } }
+    public bool IsCrouching { get; set; }
     public float SlopeAngle { get; set; }
 
     public bool HasCollisions { get { return IsCollidingRight || IsCollidingLeft || IsCollidingAbove || IsCollidingBellow; } }
@@ -22,6 +23,7 @@ public class ControllerState2D
             IsCollidingLeft =
             IsCollidingRight =
             IsCollidingAbove =
+            IsCrouching =
             IsCollidingBellow = false;
 
         SlopeAngle = 0.0f;
@@ -30,13 +32,14 @@ public class ControllerState2D
     public override string ToString()
     {
         return string.Format(
-            "(controller: r:{0} l:{1} a:{2} b:{3} down-slope:{4} up-slope: {5} angle:{6})",
+            "(controller: r:{0} l:{1} a:{2} b:{3} down-slope:{4} up-slope: {5} c: {6} angle:{7})",
             IsCollidingRight,
             IsCollidingLeft,
             IsCollidingAbove,
             IsCollidingBellow,
             IsMovingDownSlope,
             IsMovingUpSlope,
+            IsCrouching,
             SlopeAngle);
     }
 }
