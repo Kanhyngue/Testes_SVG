@@ -20,12 +20,6 @@ public class SceneChanger : MonoBehaviour
     [SerializeField] Image panelLoad;
     private float telasLoadA;
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void Acceptance()
 {
     accepted = true;
