@@ -9,10 +9,13 @@ public class Player : MonoBehaviour
     private float _normalizedHorizontalSpeed;
     private float h_Move;
     private ControllerPhsyicsVolume2D dash;
+    private bool Dead = false;
+    private bool isDashing = false;
 
     public float maxSpeed = 8f;
     public float DashFactor = 2f;
     public float DashTime = 2f;
+    public float NeblinaTime = 2f;
     public float speedAccelerationOnGround = 10f;
     public float speedAccelerationInAir = 5f;
     private GameObject changer;
@@ -23,12 +26,13 @@ public class Player : MonoBehaviour
     public float RateNeblina = 2f;
 
     [SerializeField] private Animator anim;
-    private float _canFireIn, _canMachado, _canDash, _canNeblina, _dashTime;
+    private float _canFireIn, _canMachado, _canDash, _canNeblina, _dashTime, _neblinaTime;
 
 
     public void Start()
     {
         _dashTime = DashTime;
+        _neblinaTime = NeblinaTime;
         dash = GetComponent < ControllerPhsyicsVolume2D > ();
         _controller = GetComponent<CharacterPlatformer2D>();
         _isFacingRight = transform.localScale.x > 0;
@@ -45,11 +49,27 @@ public class Player : MonoBehaviour
         _canDash -= Time.deltaTime;
         _canNeblina -= Time.deltaTime;
 
+      /*  Debug.Log(NeblinaTime);*/
+        //Debug.Log(_controller.State.IsNeblina);
 
-        if (!_changer.GetPanelState())
+        if (!_changer.GetPanelState() && !Dead )
         {
             HandleInput();
         }
+
+        if (isDashing)
+        {
+            _neblinaTime -= Time.deltaTime;
+            if (_neblinaTime <= 0)
+            {
+                _neblinaTime = NeblinaTime;
+                Debug.Log("NaoNeblina");
+                _controller.EntraNeblina();
+                isDashing = false;
+            }
+        }
+
+
         if (!anim.GetBool("Dash"))
         {
             var movementFactor = _controller.State.IsGrounded ? speedAccelerationOnGround : speedAccelerationInAir;
@@ -58,7 +78,6 @@ public class Player : MonoBehaviour
         else
         {
             _dashTime -= Time.deltaTime;
-            //var movementFactor = _controller.State.IsGrounded ? speedAccelerationOnGround : speedAccelerationInAir;
             _controller.SetHorizontalForce(Mathf.Lerp(_controller.Velocity.x, _normalizedHorizontalSpeed * maxSpeed * DashFactor, Time.deltaTime /** movementFactor*/));
             if(_dashTime <= 0)
             {
@@ -67,8 +86,8 @@ public class Player : MonoBehaviour
                 _dashTime = DashTime;
             }
         }
-        anim.SetBool("IsGrounded", _controller.State.IsGrounded);
-            anim.SetFloat("Speed", Mathf.Abs(_controller.Velocity.x) / maxSpeed);
+        anim.SetBool("IsGrounded", _controller.State.IsGrounded);            
+        anim.SetFloat("Speed", Mathf.Abs(_controller.Velocity.x) / maxSpeed);
     }
 
     private void HandleInput()
@@ -94,10 +113,8 @@ public class Player : MonoBehaviour
         }
 
         if(_controller.CanJump && Input.GetButtonDown("Jump"))
-        {
-            
-            _controller.Jump();
-           
+        {     
+            _controller.Jump();           
         }
 
         if (Input.GetButtonDown("Crouch"))
@@ -117,7 +134,6 @@ public class Player : MonoBehaviour
             anim.SetTrigger("IsShooting");
   
             _canFireIn = RateTiro;
-
         }
 
         if (Input.GetButton("Machadada"))
@@ -126,7 +142,6 @@ public class Player : MonoBehaviour
                 return;
             anim.SetTrigger("Machadada");
             _canMachado = RateTiro;
-
         }
 
         if (Input.GetButtonDown("Dash"))
@@ -134,22 +149,20 @@ public class Player : MonoBehaviour
             if (_canDash > 0)
                 return;
             anim.SetBool("Dash", true);
-            Debug.Log("SwoOoSH");
 
             _controller.Dashing (dash);
-            _canDash = RateDash;
-
-            
+            _canDash = RateDash;            
         }
 
-        if (Input.GetButton("Neblina"))
+        if (Input.GetButtonDown("Neblina"))
         {
             if (_canNeblina > 0)
                 return;
-            //anim.SetTrigger("Machadada");
-            Debug.Log("WhoOosh");
+            _controller.EntraNeblina();
+            isDashing = true;
             _canNeblina = RateNeblina;
-
+            _neblinaTime = NeblinaTime;
+            Debug.Log("Neblina");
         }
     }
 

@@ -396,7 +396,7 @@ public class CharacterPlatformer2D : MonoBehaviour
     {
 
         _overrideParameters = other.Parameters;
-        //if (!State.IsGrounded)
+        
             _velocity.y = 0f;
     }
 
@@ -405,4 +405,11 @@ public class CharacterPlatformer2D : MonoBehaviour
 
         _overrideParameters = null;
     }
+
+    public void EntraNeblina()
+    {
+        PlatformMask ^= 1 << LayerMask.NameToLayer(layerName: "Pedra");
+    }
+
+
 }
