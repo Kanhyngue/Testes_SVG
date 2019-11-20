@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     public float RateNeblina = 2f;
 
     [SerializeField] private Animator anim;
+    [SerializeField] private ParticleSystem[] _particulasNeblina;
     private float _canFireIn, _canMachado, _canDash, _canNeblina, _dashTime, _neblinaTime;
 
 
@@ -63,9 +64,9 @@ public class Player : MonoBehaviour
             if (_neblinaTime <= 0)
             {
                 _neblinaTime = NeblinaTime;
-                Debug.Log("NaoNeblina");
                 _controller.EntraNeblina();
                 isDashing = false;
+                ToggleNeblina();
             }
         }
 
@@ -162,7 +163,7 @@ public class Player : MonoBehaviour
             isDashing = true;
             _canNeblina = RateNeblina;
             _neblinaTime = NeblinaTime;
-            Debug.Log("Neblina");
+            ToggleNeblina();
         }
     }
 
@@ -170,5 +171,23 @@ public class Player : MonoBehaviour
     {
         transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
         _isFacingRight = transform.localScale.x > 0;
+    }
+
+    private void ToggleNeblina()
+    {
+        if(isDashing)
+        {
+            for(int i = 0; i < _particulasNeblina.Length; i++)
+            {
+                _particulasNeblina[i].Play();
+            }
+        }
+        else
+        {
+            for (int i = 0; i < _particulasNeblina.Length; i++)
+            {
+                _particulasNeblina[i].Stop();
+            }
+        }
     }
 }
