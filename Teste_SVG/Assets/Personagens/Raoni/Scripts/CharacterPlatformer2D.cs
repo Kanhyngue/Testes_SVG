@@ -60,7 +60,7 @@ public class CharacterPlatformer2D : MonoBehaviour
         State = new ControllerState2D();
         _transform = transform;
         _localScale = transform.localScale;
-        _capsuleCollider = GetComponent<CapsuleCollider2D>();
+        _capsuleCollider = GetComponentInChildren<CapsuleCollider2D>();
 
         var colliderWidth = _capsuleCollider.size.x * Mathf.Abs(transform.localScale.x) - (2 * SkinWidth);
         _horizontalDistanceBetweenRays = colliderWidth / (TotalVerticalRays - 1);
@@ -392,12 +392,15 @@ public class CharacterPlatformer2D : MonoBehaviour
         return true;
     }
 
-    public void Dashing(ControllerPhsyicsVolume2D other)
+    public void Dashing(ControllerPhsyicsVolume2D other, float forcaDash)
     {
 
         _overrideParameters = other.Parameters;
         
             _velocity.y = 0f;
+            _velocity.x = forcaDash;
+
+            
     }
 
     public void EndDash(ControllerPhsyicsVolume2D other)

@@ -47,6 +47,14 @@ public class BolaFogo : MonoBehaviour
             Destroy(gameObject, 1.4f);
             Destroy(eff.gameObject, 1.4f);
         }
+        else if(collision.gameObject.CompareTag("TochaApagada"))
+        {
+            GameObject eff = Instantiate(hitEffect, transform.position, transform.rotation);
+            gameObject.SetActive(false);
+            rb2D.velocity = Vector2.zero;
+            Destroy(gameObject, 1.4f);
+            Destroy(eff.gameObject, 1.4f);
+        }
     }
 
 }

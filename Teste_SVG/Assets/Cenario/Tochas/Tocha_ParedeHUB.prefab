@@ -11,12 +11,11 @@ GameObject:
   - component: {fileID: 8485411505099401275}
   - component: {fileID: 5756459321995927193}
   - component: {fileID: 7127635578536189032}
-  - component: {fileID: 3597488725702988904}
-  - component: {fileID: 2780150849520488228}
-  - component: {fileID: 4628353937339058049}
+  - component: {fileID: 5295761685641901518}
+  - component: {fileID: 7709114560832847748}
   m_Layer: 0
   m_Name: Tocha_ParedeHUB
-  m_TagString: Untagged
+  m_TagString: TochaApagada
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,8 +104,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &3597488725702988904
-BoxCollider2D:
+--- !u!114 &5295761685641901518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766959706444364805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a567c9b35f2f7bc409a6c68ac817aa93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &7709114560832847748
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -118,50 +129,9 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.05546999, y: 2.092156}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.72, y: 5.88}
-    newSize: {x: 1.15, y: 4.09}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: 2}
   serializedVersion: 2
-  m_Size: {x: 1.6365767, y: 1.6401129}
-  m_EdgeRadius: 0
---- !u!114 &2780150849520488228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1766959706444364805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e35f00de85d02f245995976915ab6311, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxReduction: 0.2
-  MaxIncrease: 0.2
-  RateDamping: 0.1
-  Strength: 300
-  StopFlickering: 0
---- !u!114 &4628353937339058049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1766959706444364805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c2bd5e2d3f5fd24d95164bb59d8cd72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _lightSource: {fileID: 2157599033398487239}
-  programacaoHoraria: 0
+  m_Radius: 1
 --- !u!1 &4388707989124664655
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,7 +242,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8498385127712597768}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_Name: 

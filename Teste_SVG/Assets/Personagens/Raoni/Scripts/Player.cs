@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     public float RateNeblina = 2f;
 
     [SerializeField] private Animator anim;
+    [SerializeField] private float velocidadeDash;
     [SerializeField] private ParticleSystem[] _particulasNeblina;
     private float _canFireIn, _canMachado, _canDash, _canNeblina, _dashTime, _neblinaTime;
 
@@ -149,9 +150,17 @@ public class Player : MonoBehaviour
         {
             if (_canDash > 0)
                 return;
-            anim.SetBool("Dash", true);
-
-            _controller.Dashing (dash);
+            
+            if(_isFacingRight)
+            {
+                anim.SetBool("Dash", true);
+                _controller.Dashing (dash, velocidadeDash);
+            }
+            else
+            {
+                anim.SetBool("Dash", true);
+                _controller.Dashing (dash, -velocidadeDash);
+            }
             _canDash = RateDash;            
         }
 

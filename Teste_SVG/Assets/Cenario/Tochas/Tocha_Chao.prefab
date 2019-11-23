@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2540803662114066079}
   - component: {fileID: 2540803662114066078}
   - component: {fileID: 6901126772676015626}
-  - component: {fileID: 184835515161025256}
   m_Layer: 0
   m_Name: Tocha_Chao
   m_TagString: Untagged
@@ -129,20 +128,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6130428, y: 1.6188507}
   m_EdgeRadius: 0
---- !u!114 &184835515161025256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2540803662114066077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c2bd5e2d3f5fd24d95164bb59d8cd72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _lightSource: {fileID: 7519834759762962656}
-  programacaoHoraria: 0
 --- !u!1 &7166785788354834468
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,7 +138,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7883510258133161127}
   - component: {fileID: 7519834759762962656}
-  - component: {fileID: 8133486885055333921}
   m_Layer: 0
   m_Name: Luz da Tocha
   m_TagString: Untagged
@@ -214,20 +198,3 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!114 &8133486885055333921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7166785788354834468}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e35f00de85d02f245995976915ab6311, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxReduction: 0.2
-  MaxIncrease: 0.2
-  RateDamping: 0.1
-  Strength: 300
-  StopFlickering: 0

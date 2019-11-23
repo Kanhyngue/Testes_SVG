@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6668855162737506038}
   - component: {fileID: 5472679664811599741}
-  - component: {fileID: 4638625411892574704}
   m_Layer: 0
   m_Name: Luz da Tocha-0
   m_TagString: Untagged
@@ -71,23 +70,6 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!114 &4638625411892574704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 172855574274338294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e35f00de85d02f245995976915ab6311, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxReduction: 0.2
-  MaxIncrease: 0.2
-  RateDamping: 0.1
-  Strength: 300
-  StopFlickering: 0
 --- !u!1 &2961638250102299783
 GameObject:
   m_ObjectHideFlags: 0
@@ -100,10 +82,10 @@ GameObject:
   - component: {fileID: 2961638250102299785}
   - component: {fileID: 2961638250102299784}
   - component: {fileID: 5480581786749077850}
-  - component: {fileID: 7538194040936385587}
+  - component: {fileID: 7067181832785452129}
   m_Layer: 0
   m_Name: Tocha_Parede
-  m_TagString: Untagged
+  m_TagString: TochaApagada
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -217,7 +199,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6365767, y: 1.6401129}
   m_EdgeRadius: 0
---- !u!114 &7538194040936385587
+--- !u!114 &7067181832785452129
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -226,8 +208,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2961638250102299783}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c2bd5e2d3f5fd24d95164bb59d8cd72, type: 3}
+  m_Script: {fileID: 11500000, guid: a567c9b35f2f7bc409a6c68ac817aa93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lightSource: {fileID: 5472679664811599741}
-  programacaoHoraria: 0
