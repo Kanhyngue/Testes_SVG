@@ -6,6 +6,7 @@ using UnityEngine.Experimental.Rendering.LWRP;
 public class FlameHour : MonoBehaviour
 {
     public UnityEngine.Experimental.Rendering.LWRP.Light2D _lightSource;
+    public ParticleSystem fireParticle, smokeParticle;
 
     public bool programacaoHoraria;
 
@@ -29,30 +30,39 @@ public class FlameHour : MonoBehaviour
         if(programacaoHoraria)
         {
             periodo = DayNightSystem.dayPeriod;
-        }
-
-        switch (periodo)
-        {
-            case 0:
-                anim.SetBool("Aceso", false);
-                _lightSource.enabled = false;
-            break;
-            case 1:
-                anim.SetBool("Aceso", false);
-                _lightSource.enabled = false;
-            break;
-            case 2:
-                anim.SetBool("Aceso", true);
-                _lightSource.enabled = true;
-            break;
-            case 3:
-                anim.SetBool("Aceso", true);
-                _lightSource.enabled = true;
-            break;
-            default:
-                anim.SetBool("Aceso", false);
-                _lightSource.enabled = false;
-            break;
+            switch (periodo)
+            {
+                case 0:
+                    anim.SetBool("Aceso", false);
+                    _lightSource.enabled = false;
+                    fireParticle.Stop();
+                    smokeParticle.Play();
+                break;
+                case 1:
+                    anim.SetBool("Aceso", false);
+                    _lightSource.enabled = false;
+                    fireParticle.Stop();
+                    smokeParticle.Stop();
+                break;
+                case 2:
+                    anim.SetBool("Aceso", true);
+                    _lightSource.enabled = true;
+                    fireParticle.Play();
+                    smokeParticle.Stop();
+                break;
+                case 3:
+                    anim.SetBool("Aceso", true);
+                    _lightSource.enabled = true;
+                    fireParticle.Play();
+                    smokeParticle.Stop();
+                break;
+                default:
+                    anim.SetBool("Aceso", false);
+                    _lightSource.enabled = false;
+                    fireParticle.Stop();
+                    smokeParticle.Stop();
+                break;
+            }
         }
     }
 }

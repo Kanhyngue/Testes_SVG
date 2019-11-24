@@ -28,20 +28,18 @@
          _lightSource = GetComponent<Light2D>();
          if (_lightSource == null || _lightSource.enabled == false)
          {
-             Debug.LogError("Flicker script must have a Light Component on the same GameObject or must be enabled.");
-             return;
+            Debug.LogError("Flicker script must have a Light Component on the same GameObject or must be enabled.");
+            return;
          }
-         else if(_lightSource != null || _lightSource.enabled == true)
+         else
          {
             _baseIntensity = _lightSource.intensity;
-            StartCoroutine(DoFlicker());
          }
-         
      }
  
      void Update()
      {
-         if (!StopFlickering && !_flickering && _lightSource != null || _lightSource.enabled == true)
+         if (!StopFlickering && !_flickering && _lightSource != null && _lightSource.enabled)
          {
              StartCoroutine(DoFlicker());
          }
