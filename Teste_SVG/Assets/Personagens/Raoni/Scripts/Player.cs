@@ -129,7 +129,7 @@ public class Player : MonoBehaviour
             anim.SetBool("IsCrouching", false);
         }
 
-        if(Input.GetButton("Tiro"))
+        if(Input.GetButton("Tiro") && DataSystem.firePower)
         {
             if (_canFireIn > 0)
                 return;
@@ -146,7 +146,7 @@ public class Player : MonoBehaviour
             _canMachado = RateTiro;
         }
 
-        if (Input.GetButtonDown("Dash"))
+        if (Input.GetButtonDown("Dash") && DataSystem.dashPower)
         {
             if (_canDash > 0)
                 return;
@@ -164,7 +164,7 @@ public class Player : MonoBehaviour
             _canDash = RateDash;            
         }
 
-        if (Input.GetButtonDown("Neblina"))
+        if (Input.GetButtonDown("Neblina") && DataSystem.fogPower)
         {
             if (_canNeblina > 0)
                 return;

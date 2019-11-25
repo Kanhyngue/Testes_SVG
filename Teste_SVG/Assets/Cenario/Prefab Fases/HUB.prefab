@@ -381,6 +381,86 @@ PolygonCollider2D:
       - {x: -3.032444, y: 6.917517}
       - {x: -2.1130564, y: 6.460601}
       - {x: -0.8498335, y: 7.459143}
+--- !u!1 &2121469123
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2121469124}
+  - component: {fileID: 2121469125}
+  m_Layer: 2
+  m_Name: New Sprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2121469124
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121469123}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.6, y: -2.26, z: 0}
+  m_LocalScale: {x: 246.3087, y: 13.969718, z: 2.18032}
+  m_Children: []
+  m_Father: {fileID: 8546734549720348117}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &2121469125
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121469123}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -249589451
+  m_SortingLayer: -2
+  m_SortingOrder: -41
+  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Color: {r: 0.1254902, g: 0.15686275, b: 0.15686275, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.16, y: 0.16}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &216836385716734211
 GameObject:
   m_ObjectHideFlags: 0
@@ -1039,10 +1119,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2129792711282602607}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.7, y: -4.5, z: 0}
+  m_LocalPosition: {x: -19.7, y: -5, z: 0}
   m_LocalScale: {x: 1.75, y: 1.75, z: 1}
   m_Children:
   - {fileID: 354347087}
+  - {fileID: 2121469124}
   m_Father: {fileID: 7669415133868448653}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2138,42 +2219,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1727390632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6094037345838653845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a567c9b35f2f7bc409a6c68ac817aa93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2110511087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6094037345896910504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a567c9b35f2f7bc409a6c68ac817aa93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1581785938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6094037346839077283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a567c9b35f2f7bc409a6c68ac817aa93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6108061642928146412
 GameObject:
   m_ObjectHideFlags: 0
@@ -2200,7 +2245,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6108061642928146412}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.39, y: 1.9900055, z: -10}
+  m_LocalPosition: {x: -16.6, y: -8.599998, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5398256445010831759}
@@ -3031,6 +3076,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.19999999
       objectReference: {fileID: 0}
+    - target: {fileID: 229050132856153579, guid: d75b4f2ea9a48a549b5c8666ea4840e3,
+        type: 3}
+      propertyPath: programacaoHoraria
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5472679664811599741, guid: d75b4f2ea9a48a549b5c8666ea4840e3,
         type: 3}
       propertyPath: m_Enabled
@@ -3125,6 +3175,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.19999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 229050132856153579, guid: d75b4f2ea9a48a549b5c8666ea4840e3,
+        type: 3}
+      propertyPath: programacaoHoraria
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5472679664811599741, guid: d75b4f2ea9a48a549b5c8666ea4840e3,
         type: 3}
@@ -3582,11 +3637,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tocha_Chao (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_TagString
-      value: TochaApagada
-      objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3652,15 +3702,15 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 418677675155157806, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: programacaoHoraria
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.size
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -3749,12 +3799,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
---- !u!1 &6094037345838653845 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-    type: 3}
-  m_PrefabInstance: {fileID: 8633648793348173576}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6094037345838653840 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
@@ -3772,11 +3816,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tocha_Chao (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_TagString
-      value: TochaApagada
       objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -3843,15 +3882,15 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 418677675155157806, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: programacaoHoraria
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.size
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -3940,12 +3979,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
---- !u!1 &6094037345896910504 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-    type: 3}
-  m_PrefabInstance: {fileID: 8633648793808814133}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6094037345896910509 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
@@ -3963,11 +3996,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tocha_Chao (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_TagString
-      value: TochaApagada
       objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -4034,15 +4062,15 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 418677675155157806, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: programacaoHoraria
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.size
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -4129,14 +4157,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 1.196
       objectReference: {fileID: 0}
+    - target: {fileID: 7989889899791635566, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.03
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
---- !u!1 &6094037346839077283 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-    type: 3}
-  m_PrefabInstance: {fileID: 8633648794474164030}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6094037346839077286 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
@@ -4214,6 +4241,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 229050132856153579, guid: d75b4f2ea9a48a549b5c8666ea4840e3,
+        type: 3}
+      propertyPath: programacaoHoraria
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5472679664811599741, guid: d75b4f2ea9a48a549b5c8666ea4840e3,
         type: 3}

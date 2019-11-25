@@ -29,7 +29,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2564792422332809406}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1182578866
 MonoBehaviour:
@@ -119,7 +119,7 @@ Transform:
   - {fileID: 6559230270978839854}
   - {fileID: 6448176867872408570}
   m_Father: {fileID: 2564792422332809406}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &176238394350112095
 GameObject:
@@ -451,13 +451,13 @@ Transform:
   - {fileID: 1512225852218831991}
   - {fileID: 3373648185888444162}
   - {fileID: 4765543727299952097}
-  - {fileID: 5065796581047252677}
   - {fileID: 4000385610430833228}
   - {fileID: 1246454135}
   - {fileID: 3414309800380161006}
   - {fileID: 2094909444007672485}
   - {fileID: 2603683826644504531}
   - {fileID: 1182578867}
+  - {fileID: 7484066463234090218}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1524,7 +1524,7 @@ Transform:
   m_LocalScale: {x: 8, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 2564792422332809406}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3832022061386882865
 SpriteRenderer:
@@ -1602,7 +1602,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4645953132065277602}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -62.899998, y: 13.290001, z: -10}
+  m_LocalPosition: {x: -71.770004, y: 32.23, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6116177427532051504}
@@ -1721,6 +1721,41 @@ Transform:
   m_Father: {fileID: 1512225852218831991}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5326834268704057415
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7484066463234090218}
+  m_Layer: 0
+  m_Name: "Colet\xE1veis"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7484066463234090218
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5326834268704057415}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6428277726652892502}
+  - {fileID: 1173483445706086048}
+  - {fileID: 2939313472871758956}
+  - {fileID: 3003156903553002806}
+  - {fileID: 2215220130921455712}
+  m_Father: {fileID: 2564792422332809406}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5400330720077238929
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,7 +1789,7 @@ Transform:
   - {fileID: 1578190231366037203}
   - {fileID: 408022011043264233}
   m_Father: {fileID: 2564792422332809406}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8198811366938029515
 MonoBehaviour:
@@ -3120,11 +3155,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tocha_Chao (14)
       objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_TagString
-      value: TochaApagada
-      objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3189,31 +3219,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.19999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 812784789
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -3293,7 +3298,7 @@ PrefabInstance:
     - target: {fileID: 3458710725332231981, guid: 1855f2c10fa2ff74d8f63e197417ac42,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3458710725332231981, guid: 1855f2c10fa2ff74d8f63e197417ac42,
         type: 3}
@@ -3329,11 +3334,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tocha_Chao (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_TagString
-      value: TochaApagada
       objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -3400,31 +3400,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.19999999
       objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 812784789
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &445182917266291912 stripped
@@ -3444,11 +3419,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tocha_Chao (17)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_TagString
-      value: TochaApagada
       objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -3515,31 +3485,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.19999999
       objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 812784789
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &326283744727497079 stripped
@@ -3559,11 +3504,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tocha_Chao (16)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_TagString
-      value: TochaApagada
       objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -3630,31 +3570,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.19999999
       objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 812784789
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_PointLightOuterRadius
@@ -3689,11 +3604,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tocha_Chao (11)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_TagString
-      value: TochaApagada
       objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -3759,31 +3669,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.19999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 812784789
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
@@ -3904,6 +3789,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4554122566594224305}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5037601996899155460
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7484066463234090218}
+    m_Modifications:
+    - target: {fileID: 6581767500443606634, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_Name
+      value: Cachimbo (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.6399994
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4cdb8093923f1904488ca4a90f86507d, type: 3}
+--- !u!4 &2215220130921455712 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+    type: 3}
+  m_PrefabInstance: {fileID: 5037601996899155460}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5215886625178569774
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3915,11 +3875,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tocha_Chao (12)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_TagString
-      value: TochaApagada
       objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -3986,31 +3941,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.19999999
       objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 812784789
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &7719224978052793014 stripped
@@ -4019,80 +3949,80 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5215886625178569774}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &5333226657362371930
+--- !u!1001 &5412814733901957316
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 2564792422332809406}
+    m_TransformParent: {fileID: 7484066463234090218}
     m_Modifications:
-    - target: {fileID: 886714646857241501, guid: e8ea4d2addadddc408c1c2c1addd3899,
+    - target: {fileID: 6581767500443606634, guid: 4cdb8093923f1904488ca4a90f86507d,
         type: 3}
       propertyPath: m_Name
-      value: Neblina - Cena
+      value: Cachimbo
       objectReference: {fileID: 0}
-    - target: {fileID: 886714646857241503, guid: e8ea4d2addadddc408c1c2c1addd3899,
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.10926
+      value: -67.32
       objectReference: {fileID: 0}
-    - target: {fileID: 886714646857241503, guid: e8ea4d2addadddc408c1c2c1addd3899,
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.719149
+      value: -16.2
       objectReference: {fileID: 0}
-    - target: {fileID: 886714646857241503, guid: e8ea4d2addadddc408c1c2c1addd3899,
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 886714646857241503, guid: e8ea4d2addadddc408c1c2c1addd3899,
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 886714646857241503, guid: e8ea4d2addadddc408c1c2c1addd3899,
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 886714646857241503, guid: e8ea4d2addadddc408c1c2c1addd3899,
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 886714646857241503, guid: e8ea4d2addadddc408c1c2c1addd3899,
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 886714646857241503, guid: e8ea4d2addadddc408c1c2c1addd3899,
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 886714646857241503, guid: e8ea4d2addadddc408c1c2c1addd3899,
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 886714646857241503, guid: e8ea4d2addadddc408c1c2c1addd3899,
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 886714646857241503, guid: e8ea4d2addadddc408c1c2c1addd3899,
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e8ea4d2addadddc408c1c2c1addd3899, type: 3}
---- !u!4 &5065796581047252677 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 4cdb8093923f1904488ca4a90f86507d, type: 3}
+--- !u!4 &1173483445706086048 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 886714646857241503, guid: e8ea4d2addadddc408c1c2c1addd3899,
+  m_CorrespondingSourceObject: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
     type: 3}
-  m_PrefabInstance: {fileID: 5333226657362371930}
+  m_PrefabInstance: {fileID: 5412814733901957316}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5422518662543572811
 PrefabInstance:
@@ -4105,11 +4035,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tocha_Chao (15)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_TagString
-      value: TochaApagada
       objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -4176,31 +4101,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.19999999
       objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 812784789
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &7494579695322132947 stripped
@@ -4220,11 +4120,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tocha_Chao (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_TagString
-      value: TochaApagada
       objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -4281,31 +4176,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 812784789
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &8016140196272147859 stripped
@@ -4325,11 +4195,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tocha_Chao (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_TagString
-      value: TochaApagada
       objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -4386,31 +4251,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 812784789
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &8016140196223792647 stripped
@@ -4430,11 +4270,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tocha_Chao (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_TagString
-      value: TochaApagada
       objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -4501,31 +4336,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.19999999
       objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 812784789
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &8016140196609895082 stripped
@@ -4545,11 +4355,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tocha_Chao (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_TagString
-      value: TochaApagada
       objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -4606,31 +4411,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 812784789
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &8016140196485224073 stripped
@@ -4650,11 +4430,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tocha_Chao (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_TagString
-      value: TochaApagada
       objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -4711,31 +4486,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 812784789
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &8016140196927793467 stripped
@@ -4755,11 +4505,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tocha_Chao (11)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_TagString
-      value: TochaApagada
       objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -4826,31 +4571,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.19999999
       objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 812784789
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &8016140197433178607 stripped
@@ -4870,11 +4590,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tocha_Chao (13)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_TagString
-      value: TochaApagada
       objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -4941,31 +4656,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.19999999
       objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 812784789
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &8016140197349669676 stripped
@@ -4985,11 +4675,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tocha_Chao (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_TagString
-      value: TochaApagada
       objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -5046,31 +4731,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 812784789
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &8016140197607532577 stripped
@@ -5090,11 +4750,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tocha_Chao (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_TagString
-      value: TochaApagada
       objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -5151,31 +4806,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 812784789
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &8016140197817502470 stripped
@@ -5195,11 +4825,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tocha_Chao (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_TagString
-      value: TochaApagada
       objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -5256,31 +4881,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 812784789
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &8016140197859172384 stripped
@@ -5300,11 +4900,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tocha_Chao (12)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_TagString
-      value: TochaApagada
       objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -5371,31 +4966,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.19999999
       objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 812784789
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &8016140198216128637 stripped
@@ -5415,11 +4985,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tocha_Chao (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_TagString
-      value: TochaApagada
       objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -5476,31 +5041,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 812784789
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &8016140198196940594 stripped
@@ -5520,11 +5060,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tocha_Chao (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_TagString
-      value: TochaApagada
       objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -5579,31 +5114,6 @@ PrefabInstance:
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 812784789
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5725,6 +5235,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5678547911015973361}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6159775083053995721
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7484066463234090218}
+    m_Modifications:
+    - target: {fileID: 886714646857241501, guid: e8ea4d2addadddc408c1c2c1addd3899,
+        type: 3}
+      propertyPath: m_Name
+      value: Neblina - Cena
+      objectReference: {fileID: 0}
+    - target: {fileID: 886714646857241503, guid: e8ea4d2addadddc408c1c2c1addd3899,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 32.11381
+      objectReference: {fileID: 0}
+    - target: {fileID: 886714646857241503, guid: e8ea4d2addadddc408c1c2c1addd3899,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -12.703247
+      objectReference: {fileID: 0}
+    - target: {fileID: 886714646857241503, guid: e8ea4d2addadddc408c1c2c1addd3899,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 886714646857241503, guid: e8ea4d2addadddc408c1c2c1addd3899,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 886714646857241503, guid: e8ea4d2addadddc408c1c2c1addd3899,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 886714646857241503, guid: e8ea4d2addadddc408c1c2c1addd3899,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 886714646857241503, guid: e8ea4d2addadddc408c1c2c1addd3899,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 886714646857241503, guid: e8ea4d2addadddc408c1c2c1addd3899,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 886714646857241503, guid: e8ea4d2addadddc408c1c2c1addd3899,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 886714646857241503, guid: e8ea4d2addadddc408c1c2c1addd3899,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 886714646857241503, guid: e8ea4d2addadddc408c1c2c1addd3899,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e8ea4d2addadddc408c1c2c1addd3899, type: 3}
+--- !u!4 &6428277726652892502 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 886714646857241503, guid: e8ea4d2addadddc408c1c2c1addd3899,
+    type: 3}
+  m_PrefabInstance: {fileID: 6159775083053995721}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7102279024201290196
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5775,7 +5360,7 @@ PrefabInstance:
     - target: {fileID: 6130635631508435864, guid: b54eb5f7321534a46a3e5b0c0b2227d7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6130635631508435864, guid: b54eb5f7321534a46a3e5b0c0b2227d7,
         type: 3}
@@ -5811,11 +5396,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tocha_Chao (13)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_TagString
-      value: TochaApagada
       objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -5882,31 +5462,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.19999999
       objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 812784789
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &5600197488249832167 stripped
@@ -5914,6 +5469,156 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
     type: 3}
   m_PrefabInstance: {fileID: 7995396261336878207}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8285068473305871186
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7484066463234090218}
+    m_Modifications:
+    - target: {fileID: 6581767500443606634, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_Name
+      value: Cachimbo (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 33.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.299999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4cdb8093923f1904488ca4a90f86507d, type: 3}
+--- !u!4 &3003156903553002806 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+    type: 3}
+  m_PrefabInstance: {fileID: 8285068473305871186}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8331000343604011528
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7484066463234090218}
+    m_Modifications:
+    - target: {fileID: 6581767500443606634, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_Name
+      value: Cachimbo (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.619999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -17.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4cdb8093923f1904488ca4a90f86507d, type: 3}
+--- !u!4 &2939313472871758956 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
+    type: 3}
+  m_PrefabInstance: {fileID: 8331000343604011528}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8666524741562850230
 PrefabInstance:
@@ -5926,11 +5631,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tocha_Chao (18)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_TagString
-      value: TochaApagada
       objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -5997,31 +5697,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.19999999
       objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 812784789
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &6559230270978839854 stripped
@@ -6041,11 +5716,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tocha_Chao (19)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_TagString
-      value: TochaApagada
       objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -6111,31 +5781,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.19999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 812784789
-      objectReference: {fileID: 0}
-    - target: {fileID: 2540803662114066079, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}

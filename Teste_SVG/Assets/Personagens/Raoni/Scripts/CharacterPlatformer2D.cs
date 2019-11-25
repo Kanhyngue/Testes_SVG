@@ -60,7 +60,7 @@ public class CharacterPlatformer2D : MonoBehaviour
         State = new ControllerState2D();
         _transform = transform;
         _localScale = transform.localScale;
-        _capsuleCollider = GetComponentInChildren<CapsuleCollider2D>();
+        _capsuleCollider = GetComponent<CapsuleCollider2D>();
 
         var colliderWidth = _capsuleCollider.size.x * Mathf.Abs(transform.localScale.x) - (2 * SkinWidth);
         _horizontalDistanceBetweenRays = colliderWidth / (TotalVerticalRays - 1);
