@@ -6,42 +6,57 @@ using UnityEngine.UI;
 public class  ColetavelUI : MonoBehaviour
 {
         public Text cachimboText;
-        public Text powerText;
-        public Text chaveText;
+        public Transform panel;
         public static bool activated;
+
+        private float sizeX;
+        private bool resize = false;
+        private Transform panelTransform;
+
+    void Start()
+    {
+        sizeX = 0.0f;
+    }
 
     void LateUpdate()
     {
         if(activated)
         {
             cachimboText.text = DataSystem.cachimbos + " / 16";
+            Resizer();
+        }
+    }
 
-            if(DataSystem.dashPower)
-            {
-                powerText.text = "1 / 3";
-            }
-            else if(DataSystem.firePower)
-            {
-                powerText.text = "2 / 3";
-            }
-            else if(DataSystem.fogPower)
-            {
-                powerText.text = "3 / 3";
-            }
-            else
-            {
-                powerText.text = "0 / 3";
-            }
+    void Resizer()
+    {
+        
+        if(!resize)
+        {
+            panel.transform.localScale = new Vector2(Mathf.Clamp(sizeX, 0f, 1f), 1.0f);
+            sizeX += 0.1f;
+        }
+        else
+        {
+            panel.transform.localScale = new Vector2(Mathf.Clamp(sizeX, 0f, 1f), 1.0f);
+            sizeX -= 0.1f;
+        }
 
-            if(DataSystem.chave)
-            {
-                chaveText.text = "1 / 1";
-            }
-            else
-            {
-                chaveText.text = "0 / 1";
-            }
+
+        if(sizeX >= 1.0f)
+        {
+            StartCoroutine(Desresizer());
+        }
+        else if(sizeX <= 0.1f)
+        {
+            sizeX = 0.0f;
+            resize = false;
             activated = false;
         }
+    }
+
+    IEnumerator Desresizer()
+    {
+        yield return new WaitForSeconds(3);
+        resize = true;
     }
 }
