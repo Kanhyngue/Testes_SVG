@@ -106,7 +106,7 @@ public class DataSystem : MonoBehaviour
         }
         
         // Debug para ver se a quantidade de cachimbos coletados foram salvos
-        Debug.Log("Cachimbos:" + cachimbos);
+        //Debug.Log("Cachimbos:" + cachimbos);
     }
 
     // Método SaveGame - Realiza um Save

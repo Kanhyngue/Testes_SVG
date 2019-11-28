@@ -39,17 +39,15 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void FixedUpdate()
     {
-        dir = Input.GetAxisRaw("Horizontal") * speed;
-        anim.SetFloat("Speed", Mathf.Abs(dir));
-        Vector3 targetVelocity = new Vector2(dir * 10f, rb2D.velocity.y);
+        if (Time.frameCount % 2 == 0)
+        {
+            dir = Input.GetAxisRaw("Horizontal") * speed;
+            anim.SetFloat("Speed", Mathf.Abs(dir));
+            Vector3 targetVelocity = new Vector2(dir * 10f, rb2D.velocity.y);
+        }
+        
         // And then smoothing it out and applying it to the character
 
     }

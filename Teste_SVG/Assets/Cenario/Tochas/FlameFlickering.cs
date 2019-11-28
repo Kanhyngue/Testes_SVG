@@ -39,10 +39,13 @@
  
      void Update()
      {
-         if (!StopFlickering && !_flickering && _lightSource != null && _lightSource.enabled)
-         {
+        if (Time.frameCount % 2 == 0)
+        {
+            if (!StopFlickering && !_flickering && _lightSource != null && _lightSource.enabled)
+            {
              StartCoroutine(DoFlicker());
-         }
+            }
+        }
      }
  
      private IEnumerator DoFlicker()

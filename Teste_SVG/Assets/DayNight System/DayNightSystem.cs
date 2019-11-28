@@ -207,28 +207,30 @@ public class DayNightSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dayTime -= Time.deltaTime;
+        
+            dayTime -= Time.deltaTime;
 
-        if(dayTime <= 240.0f && dayTime > 225.0f)
-        {
-            DayToTwilight();
-        }
-        else if(dayTime <= 165.0f && dayTime > 150.0f)
-        {
-            TwilightToNight();
-        }
-        else if(dayTime <= 90.0f && dayTime > 75.0f)
-        {
-            NightToEvening();
-        }
-        else if(dayTime <= 15.0f && dayTime > 0.0f)
-        {
-            EveningToDay();
-        }
-        else if(dayTime <= 0.0f)
-        {
-            TimerReset();
-        }
+            if(dayTime <= 240.0f && dayTime > 225.0f)
+            {
+                DayToTwilight();
+            }
+            else if(dayTime <= 165.0f && dayTime > 150.0f)
+            {
+                TwilightToNight();
+            }
+            else if(dayTime <= 90.0f && dayTime > 75.0f)
+            {
+                NightToEvening();
+            }
+            else if(dayTime <= 15.0f && dayTime > 0.0f)
+            {
+                EveningToDay();
+            }
+            else if(dayTime <= 0.0f)
+            {
+                TimerReset();
+            }
+        
 
         //Debug.Log(dayTime);
     }
