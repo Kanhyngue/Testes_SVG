@@ -10,6 +10,9 @@ public class FollowPlayer : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        keyUpArrow.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 1.5f, 0.0f);
+        if (Time.frameCount % 3 == 0)
+        {
+            keyUpArrow.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 1.5f, 0.0f);
+        }
     }
 }

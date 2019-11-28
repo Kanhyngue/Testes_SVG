@@ -27,41 +27,44 @@ public class FlameHour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(programacaoHoraria)
+        if (Time.frameCount % 2 == 0)
         {
-            periodo = DayNightSystem.dayPeriod;
-            switch (periodo)
+            if(programacaoHoraria)
             {
-                case 0:
-                    anim.SetBool("Aceso", false);
-                    _lightSource.enabled = false;
-                    fireParticle.Stop();
-                    smokeParticle.Play();
-                break;
-                case 1:
-                    anim.SetBool("Aceso", false);
-                    _lightSource.enabled = false;
-                    fireParticle.Stop();
-                    smokeParticle.Stop();
-                break;
-                case 2:
-                    anim.SetBool("Aceso", true);
-                    _lightSource.enabled = true;
-                    fireParticle.Play();
-                    smokeParticle.Stop();
-                break;
-                case 3:
-                    anim.SetBool("Aceso", true);
-                    _lightSource.enabled = true;
-                    fireParticle.Play();
-                    smokeParticle.Stop();
-                break;
-                default:
-                    anim.SetBool("Aceso", false);
-                    _lightSource.enabled = false;
-                    fireParticle.Stop();
-                    smokeParticle.Stop();
-                break;
+                periodo = DayNightSystem.dayPeriod;
+                switch (periodo)
+                {
+                    case 0:
+                        anim.SetBool("Aceso", false);
+                        _lightSource.enabled = false;
+                        fireParticle.Stop();
+                        smokeParticle.Play();
+                    break;
+                    case 1:
+                        anim.SetBool("Aceso", false);
+                        _lightSource.enabled = false;
+                        fireParticle.Stop();
+                        smokeParticle.Stop();
+                    break;
+                    case 2:
+                        anim.SetBool("Aceso", true);
+                        _lightSource.enabled = true;
+                        fireParticle.Play();
+                        smokeParticle.Stop();
+                    break;
+                    case 3:
+                        anim.SetBool("Aceso", true);
+                        _lightSource.enabled = true;
+                        fireParticle.Play();
+                        smokeParticle.Stop();
+                    break;
+                    default:
+                        anim.SetBool("Aceso", false);
+                        _lightSource.enabled = false;
+                        fireParticle.Stop();
+                        smokeParticle.Stop();
+                    break;
+                }
             }
         }
     }

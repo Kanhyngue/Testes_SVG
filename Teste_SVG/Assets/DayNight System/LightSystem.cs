@@ -16,13 +16,13 @@ public class LightSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(caverna.activeSelf)
-        {
-            lightGeral.intensity = 0.0f;
-        }
-        else
-        {
-            lightGeral.intensity = 1.0f;
-        }
+            if(caverna.activeSelf)
+            {
+                lightGeral.intensity = 0.0f;
+            }
+            else
+            {
+                //lightGeral.intensity = 1.0f;
+            }
     }
 }

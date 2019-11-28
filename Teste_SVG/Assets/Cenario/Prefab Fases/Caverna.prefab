@@ -136,7 +136,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7557345843292380818
 Transform:
@@ -194,7 +194,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6417936726958310867
 Transform:
@@ -561,7 +561,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3399825504939467174
 Transform:
@@ -619,7 +619,7 @@ GameObject:
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4060677996111368038
 Transform:
@@ -1232,7 +1232,7 @@ GameObject:
   m_TagString: Occlusion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1565846467315639862
 Transform:
@@ -1381,7 +1381,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2876015716718607810
 Transform:
@@ -1510,7 +1510,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2094909444007672485
 Transform:
@@ -1602,7 +1602,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4645953132065277602}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -71.770004, y: 32.23, z: -10}
+  m_LocalPosition: {x: -36.3, y: 20.929996, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6116177427532051504}
@@ -2179,7 +2179,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5481387452001161974
 Transform:
@@ -2353,7 +2353,7 @@ GameObject:
   m_TagString: Occlusion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3804065690209938548
 Transform:
@@ -2750,7 +2750,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2758549223795548108
 Transform:
@@ -2807,7 +2807,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3730612762550673414
 Transform:
@@ -3020,7 +3020,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2497835478339905070
 Transform:
@@ -3069,11 +3069,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1246454135}
     m_Modifications:
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Name
-      value: Tocha_Chao (14)
-      objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3139,10 +3134,30 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.19999999
       objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_Name
+      value: Tocha_Chao (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_PointLightOuterRadius
       value: 12.937257
+      objectReference: {fileID: 0}
+    - target: {fileID: 9049326844028154859, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048097503110120706, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7883510258133161127, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -3153,6 +3168,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9998538
+      objectReference: {fileID: 0}
+    - target: {fileID: 2041598125107852973, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832152892650811576, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166785788354834468, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
@@ -3249,11 +3279,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1246454135}
     m_Modifications:
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Name
-      value: Tocha_Chao (10)
-      objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3319,6 +3344,41 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.19999999
       objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_Name
+      value: Tocha_Chao (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 9049326844028154859, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048097503110120706, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2041598125107852973, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832152892650811576, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166785788354834468, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &445182917266291912 stripped
@@ -3334,11 +3394,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1246454135}
     m_Modifications:
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Name
-      value: Tocha_Chao (17)
-      objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3404,6 +3459,41 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.19999999
       objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_Name
+      value: Tocha_Chao (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 9049326844028154859, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048097503110120706, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2041598125107852973, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832152892650811576, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166785788354834468, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &326283744727497079 stripped
@@ -3419,11 +3509,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1246454135}
     m_Modifications:
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Name
-      value: Tocha_Chao (16)
-      objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3489,10 +3574,30 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.19999999
       objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_Name
+      value: Tocha_Chao (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_PointLightOuterRadius
       value: 16.196892
+      objectReference: {fileID: 0}
+    - target: {fileID: 9049326844028154859, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048097503110120706, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7883510258133161127, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -3503,6 +3608,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9995965
+      objectReference: {fileID: 0}
+    - target: {fileID: 2041598125107852973, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832152892650811576, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166785788354834468, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
@@ -3519,11 +3639,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1246454135}
     m_Modifications:
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Name
-      value: Tocha_Chao (11)
-      objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3588,6 +3703,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.19999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_Name
+      value: Tocha_Chao (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 9049326844028154859, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048097503110120706, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2041598125107852973, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832152892650811576, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166785788354834468, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
@@ -3790,11 +3940,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1246454135}
     m_Modifications:
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Name
-      value: Tocha_Chao (12)
-      objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3859,6 +4004,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.19999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_Name
+      value: Tocha_Chao (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 9049326844028154859, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048097503110120706, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2041598125107852973, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832152892650811576, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166785788354834468, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
@@ -3950,11 +4130,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1246454135}
     m_Modifications:
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Name
-      value: Tocha_Chao (15)
-      objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4020,6 +4195,41 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.19999999
       objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_Name
+      value: Tocha_Chao (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 9049326844028154859, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048097503110120706, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2041598125107852973, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832152892650811576, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166785788354834468, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &7494579695322132947 stripped
@@ -4035,11 +4245,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6617453085344839548}
     m_Modifications:
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Name
-      value: Tocha_Chao (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4095,6 +4300,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_Name
+      value: Tocha_Chao (2)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &8016140196272147859 stripped
@@ -4110,11 +4320,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1246454135}
     m_Modifications:
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Name
-      value: Tocha_Chao (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4170,6 +4375,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_Name
+      value: Tocha_Chao (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 9049326844028154859, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048097503110120706, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2041598125107852973, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832152892650811576, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166785788354834468, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &8016140196223792647 stripped
@@ -4185,11 +4425,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1246454135}
     m_Modifications:
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Name
-      value: Tocha_Chao (10)
-      objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4255,6 +4490,41 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.19999999
       objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_Name
+      value: Tocha_Chao (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 9049326844028154859, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048097503110120706, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2041598125107852973, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832152892650811576, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166785788354834468, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &8016140196609895082 stripped
@@ -4270,11 +4540,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1246454135}
     m_Modifications:
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Name
-      value: Tocha_Chao (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4330,6 +4595,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_Name
+      value: Tocha_Chao (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 9049326844028154859, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048097503110120706, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2041598125107852973, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832152892650811576, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166785788354834468, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &8016140196485224073 stripped
@@ -4345,11 +4645,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1246454135}
     m_Modifications:
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Name
-      value: Tocha_Chao (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4405,6 +4700,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_Name
+      value: Tocha_Chao (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 9049326844028154859, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048097503110120706, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2041598125107852973, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832152892650811576, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166785788354834468, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &8016140196927793467 stripped
@@ -4420,11 +4750,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1246454135}
     m_Modifications:
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Name
-      value: Tocha_Chao (11)
-      objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4490,6 +4815,41 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.19999999
       objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_Name
+      value: Tocha_Chao (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 9049326844028154859, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048097503110120706, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2041598125107852973, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832152892650811576, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166785788354834468, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &8016140197433178607 stripped
@@ -4505,11 +4865,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1246454135}
     m_Modifications:
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Name
-      value: Tocha_Chao (13)
-      objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4575,6 +4930,41 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.19999999
       objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_Name
+      value: Tocha_Chao (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 9049326844028154859, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048097503110120706, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2041598125107852973, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832152892650811576, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166785788354834468, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &8016140197349669676 stripped
@@ -4590,11 +4980,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1246454135}
     m_Modifications:
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Name
-      value: Tocha_Chao (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4650,6 +5035,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_Name
+      value: Tocha_Chao (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 9049326844028154859, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048097503110120706, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2041598125107852973, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832152892650811576, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166785788354834468, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &8016140197607532577 stripped
@@ -4665,11 +5085,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1246454135}
     m_Modifications:
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Name
-      value: Tocha_Chao (7)
-      objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4725,6 +5140,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_Name
+      value: Tocha_Chao (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 9049326844028154859, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048097503110120706, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2041598125107852973, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832152892650811576, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166785788354834468, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &8016140197817502470 stripped
@@ -4740,11 +5190,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1246454135}
     m_Modifications:
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Name
-      value: Tocha_Chao (9)
-      objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4800,6 +5245,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_Name
+      value: Tocha_Chao (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 9049326844028154859, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048097503110120706, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2041598125107852973, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832152892650811576, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166785788354834468, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &8016140197859172384 stripped
@@ -4815,11 +5295,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1246454135}
     m_Modifications:
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Name
-      value: Tocha_Chao (12)
-      objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4885,6 +5360,41 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.19999999
       objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_Name
+      value: Tocha_Chao (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 9049326844028154859, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048097503110120706, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2041598125107852973, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832152892650811576, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166785788354834468, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &8016140198216128637 stripped
@@ -4900,11 +5410,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1246454135}
     m_Modifications:
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Name
-      value: Tocha_Chao (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4960,6 +5465,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_Name
+      value: Tocha_Chao (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 9049326844028154859, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048097503110120706, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2041598125107852973, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832152892650811576, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166785788354834468, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &8016140198196940594 stripped
@@ -4975,11 +5515,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7949592612461127273}
     m_Modifications:
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Name
-      value: Tocha_Chao (8)
-      objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5034,6 +5569,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_Name
+      value: Tocha_Chao (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
@@ -5236,11 +5776,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2564792422332809406}
     m_Modifications:
-    - target: {fileID: 1419712288328671758, guid: b54eb5f7321534a46a3e5b0c0b2227d7,
-        type: 3}
-      propertyPath: m_Name
-      value: Entrada-HUB
-      objectReference: {fileID: 0}
     - target: {fileID: 6130635631508435864, guid: b54eb5f7321534a46a3e5b0c0b2227d7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5296,6 +5831,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1419712288328671758, guid: b54eb5f7321534a46a3e5b0c0b2227d7,
+        type: 3}
+      propertyPath: m_Name
+      value: Entrada-HUB
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419712288328671758, guid: b54eb5f7321534a46a3e5b0c0b2227d7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b54eb5f7321534a46a3e5b0c0b2227d7, type: 3}
 --- !u!4 &4000385610430833228 stripped
@@ -5311,11 +5856,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1246454135}
     m_Modifications:
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Name
-      value: Tocha_Chao (13)
-      objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5380,6 +5920,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.19999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_Name
+      value: Tocha_Chao (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 9049326844028154859, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048097503110120706, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2041598125107852973, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832152892650811576, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166785788354834468, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
@@ -5546,11 +6121,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1246454135}
     m_Modifications:
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Name
-      value: Tocha_Chao (18)
-      objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5616,6 +6186,41 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.19999999
       objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_Name
+      value: Tocha_Chao (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 9049326844028154859, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048097503110120706, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2041598125107852973, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832152892650811576, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166785788354834468, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &6559230270978839854 stripped
@@ -5631,11 +6236,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1246454135}
     m_Modifications:
-    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_Name
-      value: Tocha_Chao (19)
-      objectReference: {fileID: 0}
     - target: {fileID: 2540803662114066072, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5701,10 +6301,30 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.19999999
       objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_Name
+      value: Tocha_Chao (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2540803662114066077, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_PointLightOuterRadius
       value: 12.937257
+      objectReference: {fileID: 0}
+    - target: {fileID: 9049326844028154859, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048097503110120706, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7883510258133161127, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -5715,6 +6335,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9998538
+      objectReference: {fileID: 0}
+    - target: {fileID: 2041598125107852973, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832152892650811576, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166785788354834468, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}

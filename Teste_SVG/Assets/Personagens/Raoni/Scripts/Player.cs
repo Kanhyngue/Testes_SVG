@@ -35,6 +35,8 @@ public class Player : MonoBehaviour
     {
         _dashTime = DashTime;
         _neblinaTime = NeblinaTime;
+        _canMachado = RateMachado;
+        _canFireIn = RateTiro;
         dash = GetComponent < ControllerPhsyicsVolume2D > ();
         _controller = GetComponent<CharacterPlatformer2D>();
         _isFacingRight = transform.localScale.x > 0;
@@ -54,7 +56,7 @@ public class Player : MonoBehaviour
       /*  Debug.Log(NeblinaTime);*/
         //Debug.Log(_controller.State.IsNeblina);
 
-        if (!_changer.GetPanelState() && !Dead )
+        if (!_changer.GetPanelState() && _canMachado < 0 && !Dead )
         {
             HandleInput();
         }
@@ -88,6 +90,12 @@ public class Player : MonoBehaviour
                 _dashTime = DashTime;
             }
         }
+
+        /*if(_canMachado < 0 && !isDashing)
+        {
+            _controller.EndDash(dash);
+        }*/
+
         anim.SetBool("IsGrounded", _controller.State.IsGrounded);            
         anim.SetFloat("Speed", Mathf.Abs(_controller.Velocity.x) / maxSpeed);
     }
@@ -142,8 +150,9 @@ public class Player : MonoBehaviour
         {
             if (_canMachado > 0)
                 return;
+            //_controller.Dashing(dash, 0f);
             anim.SetTrigger("Machadada");
-            _canMachado = RateTiro;
+            _canMachado = RateMachado;
         }
 
         if (Input.GetButtonDown("Dash") && DataSystem.dashPower)

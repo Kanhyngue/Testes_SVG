@@ -13,48 +13,50 @@ public class PlataformaMovel : MonoBehaviour
     private bool moveUp = true;
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        if(horizontal)
+        if (Time.frameCount % 2 == 0)
         {
-            if(transform.position.x > limiteUp.position.x)
+            if(horizontal)
             {
-                moveUp = false;
-            }
-            else if (transform.position.x < limiteDown.position.x)
-            {
-                moveUp = true;
-            }
+                if(transform.position.x > limiteUp.position.x)
+                {
+                    moveUp = false;
+                }
+                else if (transform.position.x < limiteDown.position.x)
+                {
+                    moveUp = true;
+                }
 
-            if(moveUp)
-            {
-                transform.position = new Vector2(transform.position.x + moveSpeed * Time.deltaTime, transform.position.y);
+                if(moveUp)
+                {
+                    transform.position = new Vector2(transform.position.x + moveSpeed * Time.deltaTime, transform.position.y);
+                }
+                else
+                {
+                    transform.position = new Vector2(transform.position.x - moveSpeed * Time.deltaTime, transform.position.y);
+                }
             }
             else
             {
-                transform.position = new Vector2(transform.position.x - moveSpeed * Time.deltaTime, transform.position.y);
-            }
-        }
-        else
-        {
-            if(transform.position.y > limiteUp.position.y)
-            {
-                moveUp = false;
-            }
-            else if (transform.position.y < limiteDown.position.y)
-            {
-                moveUp = true;
-            }
+                if(transform.position.y > limiteUp.position.y)
+                {
+                    moveUp = false;
+                }
+                else if (transform.position.y < limiteDown.position.y)
+                {
+                    moveUp = true;
+                }
 
-            if(moveUp)
-            {
-                transform.position = new Vector2(transform.position.x, transform.position.y + moveSpeed * Time.deltaTime);
-            }
-            else
-            {
-                transform.position = new Vector2(transform.position.x, transform.position.y - moveSpeed * Time.deltaTime);
+                if(moveUp)
+                {
+                    transform.position = new Vector2(transform.position.x, transform.position.y + moveSpeed * Time.deltaTime);
+                }
+                else
+                {
+                    transform.position = new Vector2(transform.position.x, transform.position.y - moveSpeed * Time.deltaTime);
+                }
             }
         }
-        
     }
 }
