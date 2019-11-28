@@ -31,7 +31,7 @@ public class DataSystem : MonoBehaviour
     public static int level;
     public static bool checkpoint;
     // Player
-    public static int health;
+    public static int health = 5;
 
     // Checkpoints position
     public Transform hub;

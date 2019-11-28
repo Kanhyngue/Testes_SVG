@@ -30,6 +30,8 @@ public class Player : MonoBehaviour
     [SerializeField] private ParticleSystem[] _particulasNeblina;
     private float _canFireIn, _canMachado, _canDash, _canNeblina, _dashTime, _neblinaTime;
 
+    public static bool gameOver = false;
+
 
     public void Start()
     {
@@ -56,11 +58,21 @@ public class Player : MonoBehaviour
       /*  Debug.Log(NeblinaTime);*/
         //Debug.Log(_controller.State.IsNeblina);
 
+        // Se o Jogador não estiver atacando com o machado, não estiver morto, e não estiver em algum menu ou interface então os controles ficam habilitados
         if (!_changer.GetPanelState() && _canMachado < 0 && !Dead )
         {
             HandleInput();
         }
 
+        // Se a vida do jogador chegar a zero, ele morre
+        if(DataSystem.health <= 0)
+        {
+            Dead = true; // Booleana que verifica a morte
+            anim.SetBool("IsDead", true); // Animação de morte ativada
+            gameOver = true;
+        }
+
+        // 
         if (isDashing)
         {
             _neblinaTime -= Time.deltaTime;
@@ -206,6 +218,20 @@ public class Player : MonoBehaviour
             {
                 _particulasNeblina[i].Stop();
             }
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.gameObject.CompareTag("Espinhos"))
+        {
+            DataSystem.health = 0;
+        }
+
+        if(col.gameObject.CompareTag("HitInimigo"))
+        {
+            DataSystem.health -= 1;
+            anim.SetTrigger("GotHit");
         }
     }
 }

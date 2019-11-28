@@ -10,9 +10,6 @@ public class OcclusionFollower : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Time.frameCount % 4 == 0)
-        {
-            occlusion.transform.position = player.transform.position;
-        }
+        occlusion.transform.position = player.transform.position;
     }
 }
