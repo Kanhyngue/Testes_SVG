@@ -7,6 +7,8 @@ public class CharacterPlatformer2D : MonoBehaviour
     private const int TotalHorizontalRays = 8;
     private const int TotalVerticalRays = 4;
 
+    private LayerMask _PlataformMask;
+
     private static readonly float SlopeLimitTangant = Mathf.Tan(75f * Mathf.Deg2Rad);
 
     public LayerMask PlatformMask;
@@ -56,11 +58,12 @@ public class CharacterPlatformer2D : MonoBehaviour
 
     public void Awake()
     {
+        _PlataformMask = PlatformMask;
         HandleCollisions = true;
         State = new ControllerState2D();
         _transform = transform;
         _localScale = transform.localScale;
-        _capsuleCollider = GetComponentInChildren<CapsuleCollider2D>();
+        _capsuleCollider = GetComponent<CapsuleCollider2D>();
 
         var colliderWidth = _capsuleCollider.size.x * Mathf.Abs(transform.localScale.x) - (2 * SkinWidth);
         _horizontalDistanceBetweenRays = colliderWidth / (TotalVerticalRays - 1);
@@ -414,5 +417,14 @@ public class CharacterPlatformer2D : MonoBehaviour
         PlatformMask ^= 1 << LayerMask.NameToLayer(layerName: "Pedra");
     }
 
-
+    public void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.gameObject.CompareTag("Plat") && _PlataformMask == PlatformMask)
+            PlatformMask ^= 1 << LayerMask.NameToLayer(layerName: "Plat");
+    }
+    public void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("Plat") && _PlataformMask != PlatformMask)
+            PlatformMask ^= 1 << LayerMask.NameToLayer(layerName: "Plat");
+    }
 }

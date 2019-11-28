@@ -26,6 +26,7 @@ public class Parallax : MonoBehaviour
         {
             betweenFactor = 1f; // Fator de Sensação de Distanciamento
         }
+
         float deltaX = cameraTransform.position.x - lastCameraX; // Cálculo da diferença entre a camera e sua ultima posição no eixo X
         for (int i = 0; i < parallaxLayers.Length; i++)
         {
@@ -40,16 +41,17 @@ public class Parallax : MonoBehaviour
         }
 
         lastCameraX = cameraTransform.transform.position.x; // Pega a posição da camera no eixo X
+
         float deltaY = cameraTransform.position.y - lastCameraY; // Cálculo da diferença entre a camera e sua ultima posição no eixo Y
         for (int i = 0; i < parallaxLayers.Length; i++)
         {
             if (i == parallaxLayers.Length)
             {
-                parallaxLayers[i].transform.position += Vector3.up * (deltaX * -parallaxSpeed); 
+                parallaxLayers[i].transform.position += Vector3.up * (deltaY * -parallaxSpeed * 0.8f); 
             }
             else 
             {
-                parallaxLayers[i].transform.position += Vector3.up * (deltaY * -parallaxSpeed / (((parallaxLayers.Length-i)*3)*betweenFactor)); 
+                parallaxLayers[i].transform.position += Vector3.up * deltaY * (-parallaxSpeed * ((i / betweenFactor))); 
             }
         }
         lastCameraY = cameraTransform.transform.position.y; // Pega a posição da camera no eixo X
