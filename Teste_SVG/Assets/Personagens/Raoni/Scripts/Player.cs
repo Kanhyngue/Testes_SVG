@@ -195,6 +195,15 @@ public class Player : MonoBehaviour
             _neblinaTime = NeblinaTime;
             ToggleNeblina();
         }
+
+        if(Input.GetButtonDown("Cheat"))
+        {
+            Debug.Log("Trocou Bedindo");
+            DataSystem.fogPower = !DataSystem.fogPower;
+            DataSystem.firePower = !DataSystem.firePower;
+            DataSystem.dashPower = !DataSystem.dashPower;
+
+        }
     }
 
     private void Flip()
