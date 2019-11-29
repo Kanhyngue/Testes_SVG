@@ -11,6 +11,7 @@ public class DeathScreen : MonoBehaviour
         Time.timeScale = 1f;
         DataSystem.health = 5;
         SceneManager.LoadScene("Menu");
+        Player.gameOver = false;
     }
 
     public void Reset()
@@ -18,6 +19,7 @@ public class DeathScreen : MonoBehaviour
         Time.timeScale = 1f;
         DataSystem.health = 5;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Player.gameOver = false;
     }
 
     void Update()
