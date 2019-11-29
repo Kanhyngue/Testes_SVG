@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class InimigoMelee : MonoBehaviour
 {
-   
     public Transform player;
     public float enemySpeed;
+    public float hitKnockback = 10.0f;
     private bool chase;
+    private bool hit;
     private Animator anim;
+    private int enemyHealth = 20;
+    private Rigidbody2D rig;
+    private bool dead = false;
+    private bool loopAttack = false;
+    private bool dontWalk = false;
 
     void Start()
     {
         anim = GetComponentInChildren<Animator>();
+        rig = GetComponent<Rigidbody2D>();
     }
 
     // Se o jogador entrar do campo de visão do inimigo ele deixa de o perseguir
@@ -21,6 +28,12 @@ public class InimigoMelee : MonoBehaviour
         if(col.gameObject.CompareTag("Player"))
         {
            chase = true;
+        }
+
+        if(col.gameObject.CompareTag("PlayerHit") && Vector2.Distance(transform.position,player.position) < 1.5f)
+        {
+            hit = true;
+            Debug.Log(enemyHealth);
         }
     }
 
@@ -35,36 +48,70 @@ public class InimigoMelee : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Persegue o Jogador
-        if(chase)
+        if(enemyHealth <= 0 && !dead)
         {
-            anim.SetBool("perseguir", true);
-            if(transform.position.x > player.position.x)
+            anim.SetTrigger("Death");
+            anim.SetBool("isDead", true);
+            dead = true;
+            //Debug.Log("Ele morreu!");
+        }
+        else if(!dead)
+        {
+            if(hit)
             {
-                transform.localScale = new Vector3(1,1,1);
+                anim.SetTrigger("GotHit");
+                enemyHealth--;
+                rig.AddForce(transform.right * hitKnockback);
+                StartCoroutine(Stun());
             }
             else
             {
-                transform.localScale = new Vector3(-1,1,1);
-            }
-            transform.position = Vector2.MoveTowards(transform.position, player.position, enemySpeed * Time.deltaTime);
-            
-            // Ataca o jogador se ele estiver perto
-            if(Vector2.Distance(transform.position, player.position) < 1.5f)
-            {
-                anim.SetBool("perseguir", false);
-                anim.SetBool("atacar", true);
-            }
-            else
-            {
-                anim.SetBool("perseguir", true);
-                anim.SetBool("atacar", false);
-            }
-        
+                // Persegue o Jogador
+                if(chase)
+                {
+                    if(transform.position.x > player.position.x)
+                    {
+                        transform.localScale = new Vector3(1,1,1);
+                    }
+                    else
+                    {
+                        transform.localScale = new Vector3(-1,1,1);
+                    }
+
+                    // Ataca o jogador se ele estiver perto
+                    if(Vector2.Distance(transform.position, player.position) < 1.35f && !loopAttack)
+                    {
+                        anim.SetBool("perseguir", false);
+                        anim.SetBool("atacar", true);
+                        loopAttack = true;
+                        dontWalk = true;
+                        StartCoroutine(LoopAttack());
+                    }
+                    else if(!dontWalk)
+                    {
+                        anim.SetBool("perseguir", true);
+                        anim.SetBool("atacar", false);
+                        transform.position = Vector2.MoveTowards(transform.position, player.position, enemySpeed * Time.deltaTime);
+                    }
+                }
+                else
+                {
+                    anim.SetBool("perseguir", false);
+                }
+            }       
         }
-        else
-        {
-            anim.SetBool("perseguir", false);
-        }
+    }
+
+    IEnumerator Stun()
+    {
+        yield return new WaitForSeconds(0.2f);
+        hit = false;
+    }
+
+    IEnumerator LoopAttack()
+    {
+        yield return new WaitForSeconds(0.5f);
+        loopAttack = false;
+        dontWalk = false;
     }
 }

@@ -231,6 +231,7 @@ public class Player : MonoBehaviour
         if(col.gameObject.CompareTag("HitInimigo"))
         {
             DataSystem.health -= 1;
+            Mathf.Clamp(DataSystem.health, 0, 5);
             anim.SetTrigger("GotHit");
         }
     }

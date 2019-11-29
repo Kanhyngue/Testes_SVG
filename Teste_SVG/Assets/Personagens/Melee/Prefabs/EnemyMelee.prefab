@@ -112,6 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   enemySpeed: 4
+  hitKnockback: 25
 --- !u!1 &3340382117199703042
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,7 +127,7 @@ GameObject:
   - component: {fileID: 3340382117199703068}
   m_Layer: 2
   m_Name: Rendering
-  m_TagString: Untagged
+  m_TagString: HitInimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -10,6 +10,8 @@ public class DayNightSystem : MonoBehaviour
 
     public SpriteRenderer daySkybox, nightSkybox, twilightSkybox, morningSkybox; // Renderers dos Sprites das Skybox
 
+    public GameObject caverna;
+
     // Globais
     public static int dayPeriod; // 0 -> Manhã / 1 -> Dia / 2 -> Crepúsculo / 3 -> Noite
 
@@ -207,7 +209,12 @@ public class DayNightSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(caverna.activeSelf)
+        {
+            // Do anything
+        }
+        else{
+            
             dayTime -= Time.deltaTime;
 
             if(dayTime <= 240.0f && dayTime > 225.0f)
@@ -230,9 +237,7 @@ public class DayNightSystem : MonoBehaviour
             {
                 TimerReset();
             }
-        
-
-        //Debug.Log(dayTime);
+        }
     }
 
     // Reseta o timer de 5 minutos
