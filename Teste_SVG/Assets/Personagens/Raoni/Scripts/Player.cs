@@ -5,51 +5,65 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private bool _isFacingRight;
-    private CharacterPlatformer2D _controller;
     private float _normalizedHorizontalSpeed;
     private float h_Move;
-    private ControllerPhsyicsVolume2D dash;
     private bool Dead = false;
-    private bool isDashing = false;
+    private bool isNeblina, isMachado = false;
+    private float _canFireIn, _canMachado, _canDash, _canNeblina, _dashTime, _neblinaTime;
+
+    private CharacterPlatformer2D _controller;
     private DayNightSystem dns;
+    private SceneChanger _changer;
+    private ControllerPhsyicsVolume2D dash;
+    public GameObject panel;
 
     public float maxSpeed = 8f;
     public float DashFactor = 2f;
     public float DashTime = 2f;
     public float NeblinaTime = 2f;
     public float speedAccelerationOnGround = 10f;
-    public float speedAccelerationInAir = 5f;
-    private GameObject changer;
-    private SceneChanger _changer;
+    public float speedAccelerationInAir = 5f;    
     public float RateTiro = .5f;
     public float RateMachado = .5f;
     public float RateDash = 2f;
     public float RateNeblina = 2f;
 
-    [SerializeField] private Animator anim;
-    [SerializeField] private float velocidadeDash;
-    [SerializeField] private ParticleSystem[] _particulasNeblina;
-    private float _canFireIn, _canMachado, _canDash, _canNeblina, _dashTime, _neblinaTime;
+    [SerializeField] 
+    private Animator anim;
 
+    [SerializeField] 
+    private float velocidadeDash;
+
+    [SerializeField] 
+    private ParticleSystem[] _particulasNeblina;
+
+    [SerializeField]
+    private GameObject Pool;
     public static bool gameOver = false;
 
+    [Range(1, 5)]
+    [SerializeField]
+    private float playbackspeed;
 
     public void Start()
     {
-        GameObject _dns;
-        _dns = GameObject.FindWithTag("DNS");
-        dns = _dns.GetComponent<DayNightSystem>();
         _dashTime = DashTime;
         _neblinaTime = NeblinaTime;
         _canMachado = RateMachado;
         _canFireIn = RateTiro;
-        dash = GetComponent < ControllerPhsyicsVolume2D > ();
-        _controller = GetComponent<CharacterPlatformer2D>();
+
         _isFacingRight = transform.localScale.x > 0;
-        changer = GameObject.FindWithTag("SceneChanger");
-        if (changer != null)
-            _changer = changer.GetComponent<SceneChanger>();
-            
+
+        GameObject _dns;
+        _dns = GameObject.FindWithTag("DNS");
+        dns = _dns.GetComponent<DayNightSystem>();
+        _dns = GameObject.FindWithTag("SceneChanger");
+        if (dns != null)
+            _changer = _dns.GetComponent<SceneChanger>();
+
+        //panel = GameObject.FindWithTag("MsgBase");
+        dash = GetComponent<ControllerPhsyicsVolume2D>();
+        _controller = GetComponent<CharacterPlatformer2D>();
     }
 
     public void Update()
@@ -63,7 +77,7 @@ public class Player : MonoBehaviour
         //Debug.Log(_controller.State.IsNeblina);
 
         // Se o Jogador não estiver atacando com o machado, não estiver morto, e não estiver em algum menu ou interface então os controles ficam habilitados
-        if (!_changer.GetPanelState() && _canMachado < 0 && !Dead )
+        if (!_changer.GetPanelState() && !panel.activeInHierarchy  && !Dead && _canMachado < 0 )
         {
             HandleInput();
         }
@@ -77,15 +91,15 @@ public class Player : MonoBehaviour
         }
 
         // 
-        if (isDashing)
+        if (isNeblina)
         {
             _neblinaTime -= Time.deltaTime;
             if (_neblinaTime <= 0)
             {
                 _neblinaTime = NeblinaTime;
                 _controller.EntraNeblina();
-                isDashing = false;
-                ToggleNeblina();
+                isNeblina = false;
+                StartCoroutine(ToggleNeblina());
             }
         }
 
@@ -114,6 +128,17 @@ public class Player : MonoBehaviour
 
         anim.SetBool("IsGrounded", _controller.State.IsGrounded);            
         anim.SetFloat("Speed", Mathf.Abs(_controller.Velocity.x) / maxSpeed);
+    }
+
+    public void LateUpdate()
+    {
+        if (isMachado)
+        {
+            _controller.SetForce(Vector2.zero);
+            anim.SetTrigger("Machadada");
+            _canMachado = RateMachado;
+            isMachado = false;
+        }
     }
 
     private void HandleInput()
@@ -167,8 +192,10 @@ public class Player : MonoBehaviour
             if (_canMachado > 0)
                 return;
             //_controller.Dashing(dash, 0f);
-            anim.SetTrigger("Machadada");
-            _canMachado = RateMachado;
+            /*            _controller.SetForce(Vector2.zero);
+                        anim.SetTrigger("Machadada");
+                        _canMachado = RateMachado;*/
+            isMachado = true;
         }
 
         if (Input.GetButtonDown("Dash") && DataSystem.dashPower)
@@ -194,10 +221,10 @@ public class Player : MonoBehaviour
             if (_canNeblina > 0)
                 return;
             _controller.EntraNeblina();
-            isDashing = true;
+            isNeblina = true;
             _canNeblina = RateNeblina;
             _neblinaTime = NeblinaTime;
-            ToggleNeblina();
+            StartCoroutine(ToggleNeblina());
         }
 
         if(Input.GetButtonDown("Cheat"))
@@ -228,23 +255,35 @@ public class Player : MonoBehaviour
         _isFacingRight = transform.localScale.x > 0;
     }
 
-    private void ToggleNeblina()
+    /*private void ToggleNeblina()
     {
-        if(isDashing)
+        if(isNeblina)
         {
             for(int i = 0; i < _particulasNeblina.Length; i++)
             {
+
+                var main = _particulasNeblina[i].main;
+                main.simulationSpeed = playbackspeed;
+
                 _particulasNeblina[i].Play();
+
+                
+
+
             }
+
+            StartCoroutine(SimulatePart());
         }
         else
         {
             for (int i = 0; i < _particulasNeblina.Length; i++)
             {
+                //_particulasNeblina[i].transform.position = Pool.transform.position;
                 _particulasNeblina[i].Stop();
+                
             }
         }
-    }
+    }*/
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -259,5 +298,51 @@ public class Player : MonoBehaviour
             Mathf.Clamp(DataSystem.health, 0, 5);
             anim.SetTrigger("GotHit");
         }
+    }
+
+    IEnumerator SimulatePart()
+    {
+        yield return new WaitForSeconds(.5f);
+        for (int i = 0; i < _particulasNeblina.Length; i++)
+        {
+            var main = _particulasNeblina[i].main;
+            main.simulationSpeed = 1;
+            //_particulasNeblina[i].transform.position = Pool.transform.position;
+            //_particulasNeblina[i].Simulate(1f);
+            //_particulasNeblina[i].Clear();
+        }
+        yield return null;
+    }
+
+    IEnumerator ToggleNeblina()
+    {
+        if (isNeblina)
+        {
+            for (int i = 0; i < _particulasNeblina.Length; i++)
+            {
+
+                var main = _particulasNeblina[i].main;
+                main.simulationSpeed = playbackspeed;
+
+                _particulasNeblina[i].Play();
+
+
+
+
+            }
+
+            StartCoroutine(SimulatePart());
+        }
+        else
+        {
+            for (int i = 0; i < _particulasNeblina.Length; i++)
+            {
+                //_particulasNeblina[i].transform.position = Pool.transform.position;
+                _particulasNeblina[i].Stop();
+
+            }
+        }
+        yield return null;
+
     }
 }
