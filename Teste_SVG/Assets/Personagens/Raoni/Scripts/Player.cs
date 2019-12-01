@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     private ControllerPhsyicsVolume2D dash;
     private bool Dead = false;
     private bool isDashing = false;
+    private DayNightSystem dns;
 
     public float maxSpeed = 8f;
     public float DashFactor = 2f;
@@ -35,6 +36,9 @@ public class Player : MonoBehaviour
 
     public void Start()
     {
+        GameObject _dns;
+        _dns = GameObject.FindWithTag("DNS");
+        dns = _dns.GetComponent<DayNightSystem>();
         _dashTime = DashTime;
         _neblinaTime = NeblinaTime;
         _canMachado = RateMachado;
@@ -203,6 +207,18 @@ public class Player : MonoBehaviour
             DataSystem.firePower = !DataSystem.firePower;
             DataSystem.dashPower = !DataSystem.dashPower;
 
+        }
+
+        if (Input.GetButtonDown("Cachimbos"))
+        {
+            Debug.Log("Porra Moises");
+            DataSystem.cachimbos += 2;
+        }
+
+        if (Input.GetButtonDown("DayNightCheat"))
+        {
+            Debug.Log("Mudou o dia BENINO");
+            dns.dayTime -= 10;
         }
     }
 

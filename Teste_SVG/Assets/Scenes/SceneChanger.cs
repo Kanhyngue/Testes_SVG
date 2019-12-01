@@ -13,6 +13,8 @@ public class SceneChanger : MonoBehaviour
     public static bool accepted = false;
     public static bool triggered = false;
 
+    [SerializeField] private GameObject auraPlayer;
+
     public static bool underProcess = false;
 
     [SerializeField] SpriteRenderer[] telasLoad;  //0 -> HUB / 1 -> Cerrado / 2 -> Floresta / 3 -> Caverna / 4 -> Oca do Jogador / 5 -> Arena Final
@@ -30,6 +32,7 @@ public class SceneChanger : MonoBehaviour
             case 0:
             // Cenas ativadas
             sceneHub.SetActive(true);
+               auraPlayer.SetActive(false);
 
             // Cenas desativadas
                 sceneCerrado.SetActive(false);
@@ -84,6 +87,7 @@ public class SceneChanger : MonoBehaviour
             case 3:
                 // Cenas ativadas
                 sceneCaverna.SetActive(true);
+                auraPlayer.SetActive(true);
 
                 // Cenas desativadas
                 sceneHub.SetActive(false);
@@ -121,6 +125,7 @@ public class SceneChanger : MonoBehaviour
             case 5:
                 // Cenas ativadas
                 sceneArena.SetActive(true);
+                auraPlayer.SetActive(false);
 
                 // Cenas desativadas
                 sceneHub.SetActive(false);
