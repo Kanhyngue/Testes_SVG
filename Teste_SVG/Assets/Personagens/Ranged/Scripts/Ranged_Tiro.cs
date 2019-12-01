@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class Ranged_Tiro : MonoBehaviour
 {
-    private Transform braco;
-    
+    [SerializeField] private Transform braco;
+    private bool dead;
     private Vector3 p_Pos;
+
+    //[SerializeField]
+    private Animator _anim;
+    private bool isFacingLeft = true;
+    public bool hit { get; private set; }
+    public static int enemyHealth = 20;
 
     [SerializeField]
     private int vel;
@@ -20,50 +26,63 @@ public class Ranged_Tiro : MonoBehaviour
     [SerializeField]
     private Transform player;
 
-    private Animator _anim;
-    private bool isFacingLeft = true;
-    private bool hit;
-    private int enemyHealth = 20;
+
 
     private void Start()
     {
-        braco = transform.GetChild(0);
-        _anim = GetComponent<Animator>();
+        //braco = transform.Find("Braco");
+        _anim = GetComponentInChildren<Animator>();
         isFacingLeft = transform.localScale.x > 0;
     }
 
     private void Update()
     {
-        p_Pos = new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z) ;
-
-        //ajuste de mira, dependendo do lado que estiver olhando
-        if(isFacingLeft)
-            braco.transform.right = (p_Pos - braco.transform.position) * -1;
-        else
-            braco.transform.right = (p_Pos - braco.transform.position);
-
-        //Flip, dependendo da posição do jogador
-        if (isFacingLeft && player.transform.position.x > transform.position.x)
+        if (enemyHealth <= 0 && !dead)
         {
-            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-            isFacingLeft = transform.localScale.x > 0;
-        }else if (!isFacingLeft && player.transform.position.x < transform.position.x)
+            _anim.SetTrigger("Death");
+            _anim.SetBool("isDead", true);
+            dead = true;
+            //Debug.Log("Ele morreu!");
+        }
+        else if (!dead)
         {
-            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-            isFacingLeft = transform.localScale.x > 0;
+                p_Pos = new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z);
+
+                //ajuste de mira, dependendo do lado que estiver olhando
+                if (isFacingLeft)
+                    braco.transform.right = (p_Pos - braco.transform.position) * -1;
+                else
+                    braco.transform.right = (p_Pos - braco.transform.position);
+
+                //Flip, dependendo da posição do jogador
+                if (isFacingLeft && player.transform.position.x > transform.position.x)
+                {
+                    transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+                    isFacingLeft = transform.localScale.x > 0;
+                }
+                else if (!isFacingLeft && player.transform.position.x < transform.position.x)
+                {
+                    transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+                    isFacingLeft = transform.localScale.x > 0;
+                }
         }
     }
-
     //
     public void Atira()
     {
-        Vector2 dir = new Vector2(-emissor.position.x, emissor.position.y);
-        Rigidbody2D mao = Instantiate(projetil, emissor.position, emissor.rotation.normalized);
+        //Vector2 dir = new Vector2(-emissor.position.x, emissor.position.y);
+        //Rigidbody2D mao = Instantiate(projetil, emissor.position, emissor.rotation.normalized);
         if (isFacingLeft)
+        {
+            Rigidbody2D mao = Instantiate(projetil, emissor.position, emissor.rotation.normalized);
             mao.AddForce(braco.transform.right.normalized * -vel, ForceMode2D.Impulse);
+        }
         else
+        {
+            Rigidbody2D mao = Instantiate(projetil, emissor.position, emissor.rotation.normalized);
+            mao.transform.localScale = new Vector3(-mao.transform.localScale.x, mao.transform.localScale.y, mao.transform.localScale.z);
             mao.AddForce(braco.transform.right.normalized * vel, ForceMode2D.Impulse);
-
+        }
     }
 
     //compo de visão
@@ -77,13 +96,24 @@ public class Ranged_Tiro : MonoBehaviour
     }
 
     //Contato
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void Dano ()
     {
-        //Dano de jogador
-        if (collision.gameObject.CompareTag("PlayerHit"))
-        {
-            hit = true;
-            Debug.Log(enemyHealth);
-        }
+        hit = true;
+        _anim.SetTrigger("GotHit");
+        enemyHealth--;
+        //rig.AddForce(transform.right * hitKnockback);
+        StartCoroutine(Stun());
+        Debug.Log(enemyHealth);
+    }
+
+    IEnumerator Stun()
+    {
+        yield return new WaitForSeconds(0.2f);
+        hit = false;
+    }
+
+    public void Destroi()
+    {
+        Destroy(gameObject);
     }
 }

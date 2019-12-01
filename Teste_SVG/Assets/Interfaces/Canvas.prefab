@@ -2056,7 +2056,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1887598993
   m_SortingLayer: 6
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: a8c2f599c75e21c44a460f7cdb642aad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2136,7 +2136,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1887598993
   m_SortingLayer: 6
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_Sprite: {fileID: 3286163911610860551, guid: 632312ec898e01243af7386d29f7ba72,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2941,6 +2941,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachimboText: {fileID: 7167746090005976109}
   panel: {fileID: 2853365172405322690}
+  panelTransform: {fileID: 2853365172405322690}
+  desbloqueios:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &5647123887285745025
 GameObject:
   m_ObjectHideFlags: 0
@@ -3009,7 +3018,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1887598993
   m_SortingLayer: 6
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: ed4942a693f42db41ae1af3c39ec9027, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3239,7 +3248,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1887598993
   m_SortingLayer: 6
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 1117c7ac70bfe17458be302798af2f18, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3396,7 +3405,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1887598993
   m_SortingLayer: 6
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 4007e24969582c145ab888478d6471ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4003,7 +4012,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2853365172405322690
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4178,11 +4187,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5041168867833695964, guid: 2f01289b66397bb4b97483aedee25e52,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5041168867033873569, guid: 2f01289b66397bb4b97483aedee25e52,
         type: 3}

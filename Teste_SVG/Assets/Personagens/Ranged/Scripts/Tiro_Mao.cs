@@ -8,6 +8,7 @@ public class Tiro_Mao : MonoBehaviour
     void Start()
     {
         Destroy(gameObject, 2.0f);
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

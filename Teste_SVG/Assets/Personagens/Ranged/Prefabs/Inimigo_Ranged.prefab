@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8604027119173308939}
   m_Layer: 2
   m_Name: Braco
-  m_TagString: Untagged
+  m_TagString: Inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,10 +95,9 @@ GameObject:
   - component: {fileID: 8604027119866792939}
   - component: {fileID: 8604027119866792937}
   - component: {fileID: 8604027119866792936}
-  - component: {fileID: 573562739}
   m_Layer: 2
   m_Name: Inimigo_Ranged
-  m_TagString: Untagged
+  m_TagString: Inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -198,6 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39fcc9ff28027784c8f49f5550fa4e4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  braco: {fileID: 0}
   vel: 10
   projetil: {fileID: 5543271714820597723, guid: 0ad074cf382b1ab49b7bfd6e5d5e5153,
     type: 3}
@@ -240,22 +240,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.29, y: 0.39}
   m_Size: {x: 0.71, y: 2.38}
   m_Direction: 0
---- !u!58 &573562739
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8604027119866792943}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 6.72
 --- !u!1 &8604027120431622067
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,7 +251,7 @@ GameObject:
   - component: {fileID: 8604027120431622064}
   m_Layer: 2
   m_Name: EmissorTiro
-  m_TagString: Untagged
+  m_TagString: Inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
