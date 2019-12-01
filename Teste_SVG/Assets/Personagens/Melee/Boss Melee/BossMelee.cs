@@ -25,7 +25,7 @@ public class BossMelee : MonoBehaviour
 
         if(col.gameObject.CompareTag("PlayerHit"))
         {
-            hit = true;
+            _hit = true;
             Debug.Log(bossHealth);
         }
     }
