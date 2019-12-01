@@ -29,11 +29,10 @@ public class ColetavelUI : MonoBehaviour
     {
         waitTime -= Time.deltaTime;
 
-        Debug.Log(waitTime);
+        //Debug.Log(waitTime);
         if (activated)
         {
             cachimboText.text = DataSystem.cachimbos + " / 16";
-            //           anim.SetTrigger("In");
             SlideIn();
         }
 
@@ -88,10 +87,10 @@ public class ColetavelUI : MonoBehaviour
 
     void SlideIn()
     {
-        Debug.Log(panelTransform.anchoredPosition);
+        //Debug.Log(panelTransform.anchoredPosition);
         if (panelTransform.anchoredPosition.x <= 0)
         {
-            Debug.Log("IfResizer");
+            //Debug.Log("IfResizer");
             panelTransform.gameObject.SetActive(true);
             panelTransform.anchoredPosition += Vector2.right * 2;
             waitTime = 3;
