@@ -13,10 +13,10 @@ public class FolhasDesaparecer : MonoBehaviour
     public SpriteRenderer folhas;
 
     [SerializeField]
-    private Material iluminacaoMat;
+    private Material iluminacaoMat = null;
 
     [SerializeField]
-    private Material alphaMat;
+    private Material alphaMat = null;
 
     void OnTriggerEnter2D(Collider2D col)
     {

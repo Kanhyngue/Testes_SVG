@@ -11,6 +11,8 @@ public class DayNightSystem : MonoBehaviour
     public SpriteRenderer daySkybox, nightSkybox, twilightSkybox, morningSkybox; // Renderers dos Sprites das Skybox
 
     public GameObject caverna;
+    public GameObject luzGlobal; // Luz 2D GLOBAL GameObject
+    public GameObject luzCaverna;  // Luz 2D GLOBAL da Caverna GameObject
 
     // Globais
     public static int dayPeriod; // 0 -> Manhã / 1 -> Dia / 2 -> Crepúsculo / 3 -> Noite
@@ -39,6 +41,13 @@ public class DayNightSystem : MonoBehaviour
         lightIntensity = 1f;
         globalLight.intensity = lightIntensity;
 
+        LightReset();
+    }
+
+    // verifica o horário e ajusta a luz de acordo com o horário
+    private void LightReset()
+    {
+ 
         // Parâmetros iniciais para mudança em Editor
         // Impede de bugar
         if(dayTime > 240.0f)
@@ -211,9 +220,12 @@ public class DayNightSystem : MonoBehaviour
     {
         if(caverna.activeSelf)
         {
-            // Do anything
+            luzGlobal.SetActive(false);
+            luzCaverna.SetActive(true);
         }
         else{
+            luzGlobal.SetActive(true);
+            luzCaverna.SetActive(false);
             
             dayTime -= Time.deltaTime;
 

@@ -7,7 +7,7 @@ public class BolaFogo : MonoBehaviour
 
     [SerializeField] private float speed;
     private Rigidbody2D rb2D;
-    [SerializeField] private GameObject hitEffect;
+    [SerializeField] private GameObject hitEffect = null;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,18 +35,14 @@ public class BolaFogo : MonoBehaviour
             Destroy(gameObject, 1.4f);
             Destroy(eff.gameObject, 1.4f);
         }
-        else if (collision.gameObject.CompareTag("Inimigo"))
+        /*else if (collision.gameObject.CompareTag("Inimigo"))
         {
-            /*
-              contagem de dano aqui
-            */
-
             GameObject eff = Instantiate(hitEffect, transform.position, transform.rotation);
             gameObject.SetActive(false);
             rb2D.velocity = Vector2.zero;
             Destroy(gameObject, 1.4f);
             Destroy(eff.gameObject, 1.4f);
-        }
+        }*/
         else if(collision.gameObject.CompareTag("TochaApagada"))
         {
             GameObject eff = Instantiate(hitEffect, transform.position, transform.rotation);
