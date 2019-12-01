@@ -9,4 +9,12 @@ public class Tiro_Mao : MonoBehaviour
     {
         Destroy(gameObject, 2.0f);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }

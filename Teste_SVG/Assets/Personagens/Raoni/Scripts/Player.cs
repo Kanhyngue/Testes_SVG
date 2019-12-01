@@ -153,7 +153,7 @@ public class Player : MonoBehaviour
             anim.SetBool("IsCrouching", false);
         }
 
-        if(Input.GetButton("Tiro") && DataSystem.firePower)
+        if(Input.GetButton("Tiro") && DataSystem.firePower && !anim.GetBool("IsCrouching"))
         {
             if (_canFireIn > 0)
                 return;
@@ -162,7 +162,7 @@ public class Player : MonoBehaviour
             _canFireIn = RateTiro;
         }
 
-        if (Input.GetButton("Machadada"))
+        if (Input.GetButton("Machadada") && !anim.GetBool("IsCrouching"))
         {
             if (_canMachado > 0)
                 return;
