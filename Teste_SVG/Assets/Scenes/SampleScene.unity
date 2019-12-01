@@ -230,11 +230,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8778695177515735066, guid: a6061adc0ffc3b045b04861fd37136f3,
+    - target: {fileID: 3122672537947862424, guid: a6061adc0ffc3b045b04861fd37136f3,
         type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: panel
+      value: 
+      objectReference: {fileID: 5509749643829302945}
     - target: {fileID: 2264397264971764552, guid: a6061adc0ffc3b045b04861fd37136f3,
         type: 3}
       propertyPath: m_LocalRotation.z
@@ -274,11 +274,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9807994
-      objectReference: {fileID: 0}
-    - target: {fileID: 3495059966984454150, guid: a6061adc0ffc3b045b04861fd37136f3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -382.492
       objectReference: {fileID: 0}
     - target: {fileID: 1764046505313177117, guid: a6061adc0ffc3b045b04861fd37136f3,
         type: 3}
@@ -390,11 +385,6 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.9999915
       objectReference: {fileID: 0}
-    - target: {fileID: 7428201487113152481, guid: a6061adc0ffc3b045b04861fd37136f3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -0.47400004
-      objectReference: {fileID: 0}
     - target: {fileID: 649810350388821905, guid: a6061adc0ffc3b045b04861fd37136f3,
         type: 3}
       propertyPath: m_LocalRotation.z
@@ -430,8 +420,7 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.9856576
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5402338104119585574, guid: a6061adc0ffc3b045b04861fd37136f3, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6061adc0ffc3b045b04861fd37136f3, type: 3}
 --- !u!1 &349705085 stripped
 GameObject:
@@ -1759,6 +1748,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 389784218}
+    - target: {fileID: 7137102011358103565, guid: 8129f15201cfdeb44962c6d8ba9781be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7137102011358103565, guid: 8129f15201cfdeb44962c6d8ba9781be,
+        type: 3}
+      propertyPath: m_TagString
+      value: MsgBase
+      objectReference: {fileID: 0}
     - target: {fileID: 1361022440, guid: 8129f15201cfdeb44962c6d8ba9781be, type: 3}
       propertyPath: desbloqueios.Array.data[0]
       value: 
@@ -1787,6 +1786,11 @@ PrefabInstance:
       propertyPath: desbloqueios.Array.data[6]
       value: 
       objectReference: {fileID: 1780179604}
+    - target: {fileID: 1653230184350067134, guid: 8129f15201cfdeb44962c6d8ba9781be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8129f15201cfdeb44962c6d8ba9781be, type: 3}
 --- !u!1 &5509749643829302941 stripped
