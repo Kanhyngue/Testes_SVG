@@ -14,7 +14,7 @@ public class Ranged_Tiro : MonoBehaviour
     private Rigidbody2D projetil;
 
     [SerializeField]
-    private Transform emissor;
+    private Transform emissor = null;
 
     [SerializeField]
     private Transform player;

@@ -15,6 +15,7 @@ public class InimigoMelee : MonoBehaviour
     private bool dead = false;
     private bool loopAttack = false;
     private bool dontWalk = false;
+    public BoxCollider2D box;
 
     void Start()
     {
@@ -99,6 +100,10 @@ public class InimigoMelee : MonoBehaviour
                     anim.SetBool("perseguir", false);
                 }
             }       
+        }
+        else if(dead)
+        {
+            box.enabled = false;
         }
     }
 
