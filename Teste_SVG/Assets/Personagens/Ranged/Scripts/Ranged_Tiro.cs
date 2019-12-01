@@ -44,7 +44,6 @@ public class Ranged_Tiro : MonoBehaviour
         mao.transform.position = Vector2.MoveTowards(mao.transform.position, p_Pos.normalized, vel);
  //       mao.transform.rotation = new Quaternion(0,0,0,0);
         mao.AddForce((p_Pos.normalized), ForceMode2D.Impulse);
-        Destroy.(mao, 2f);
     }
 
     void OnTriggerStay2D(Collider2D col)
