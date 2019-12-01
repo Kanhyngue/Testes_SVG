@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843797831877768346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.422499, y: 69.42899, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1096092949438337884}
@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   braco: {fileID: 1096092947982502587}
+  enemyHealth: 20
   vel: 10
   projetil: {fileID: 5543271714820597723, guid: 0ad074cf382b1ab49b7bfd6e5d5e5153,
     type: 3}
@@ -152,8 +153,7 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8604027119866792939, guid: da5539ac8b5edb840a5f8ea7763a1b70, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da5539ac8b5edb840a5f8ea7763a1b70, type: 3}
 --- !u!1 &1096092949438337881 stripped
 GameObject:
