@@ -1255,6 +1255,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floresta
       objectReference: {fileID: 0}
+    - target: {fileID: 921385346208888539, guid: 9d8e53a7fc1713e47b834e9f11140225,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9183251822273707588, guid: 9d8e53a7fc1713e47b834e9f11140225,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1385,6 +1390,16 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1282043505}
+    - target: {fileID: 864482203999535331, guid: 9d8e53a7fc1713e47b834e9f11140225,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -158.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 864482203999535331, guid: 9d8e53a7fc1713e47b834e9f11140225,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.6300049
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d8e53a7fc1713e47b834e9f11140225, type: 3}
 --- !u!1001 &2592891279604147414
@@ -1398,6 +1413,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Music Source HUB
+      objectReference: {fileID: 0}
+    - target: {fileID: 2592891281080949533, guid: fbbd1ed013e80914886697aceddaa1b5,
+        type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2592891281080949533, guid: fbbd1ed013e80914886697aceddaa1b5,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2592891281080949530, guid: fbbd1ed013e80914886697aceddaa1b5,
         type: 3}
@@ -1452,16 +1477,6 @@ PrefabInstance:
     - target: {fileID: 2592891281080949530, guid: fbbd1ed013e80914886697aceddaa1b5,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2592891281080949533, guid: fbbd1ed013e80914886697aceddaa1b5,
-        type: 3}
-      propertyPath: m_Volume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2592891281080949533, guid: fbbd1ed013e80914886697aceddaa1b5,
-        type: 3}
-      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2713,6 +2728,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HUB
+      objectReference: {fileID: 0}
+    - target: {fileID: 6056302188287593266, guid: 0ccd16928aab9e243b09c293b0059a81,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4856569339250235073, guid: 0ccd16928aab9e243b09c293b0059a81,
         type: 3}
