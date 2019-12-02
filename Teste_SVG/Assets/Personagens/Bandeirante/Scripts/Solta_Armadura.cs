@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Solta_Armadura : MonoBehaviour
+public class Solta_Armadura : Controlador_Bandeirante
 {
 
     public Rigidbody2D armadura;
@@ -15,61 +15,58 @@ public class Solta_Armadura : MonoBehaviour
     public Transform solta_garrucha;
     public Transform solta_facao;
 
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //Dano de jogador
+        if (collision.gameObject.CompareTag("PlayerHit") )
+        {
+            Debug.Log("Coll BAnd");
+            base.Dano();
+        }
+    }
+
     // Start is called before the first frame update
-    void Update()
+    void Start()
     {
         Physics2D.IgnoreLayerCollision(8, 9, true);
     }
 
+
+/*    public void Tiro()
+    {
+        base.Atira();
+    }*/
+
     public void SoltaArmadura()
     {
-        Rigidbody2D armadura_solta = Instantiate(armadura, solta_armadura.transform.position, solta_armadura.transform.rotation);
-        if (transform.localScale.x == -1)
-        {
-            armadura_solta.transform.localScale = new Vector3(1.0f , 1.0f , 1.0f);
-            //armadura_solta.AddForce(Vector2.left * 5);
-        }
-        else if (transform.localScale.x == -1)
-        {
-            armadura_solta.transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
-            //armadura_solta.AddForce(Vector2.right * 5);
-        }
+        Rigidbody2D armadura_solta = Instantiate(armadura, solta_armadura.transform.position, Quaternion.identity);
+        armadura_solta.AddForce(Vector2.left * 01f, ForceMode2D.Impulse); ;
     }
 
     public void SoltaCapacete()
     {
-        Rigidbody2D capacete_solto = Instantiate(capacete, solta_capacete.transform.position, solta_capacete.transform.rotation);
-        if (transform.localScale.x == 1)
-        {
-            capacete_solto.AddForce(Vector2.left * 500);
-        }
-        else if (transform.localScale.x == -1)
-        {
-            capacete_solto.AddForce(Vector2.right * 500);
-        }
+        Rigidbody2D capacete_solto = Instantiate(capacete, solta_capacete.transform.position, Quaternion.identity);
+        capacete_solto.AddForce(Vector2.right * 5, ForceMode2D.Impulse);
+
     }
+
     public void SoltaGarrucha()
     {
-        Rigidbody2D garrucha_solta = Instantiate(garrucha, solta_garrucha.transform.position, solta_garrucha.transform.rotation);
-        if (transform.localScale.x == 1)
-        {
-            garrucha_solta.AddForce(Vector2.right * 500);
-        }
-        else if (transform.localScale.x == -1)
-        {
-            garrucha_solta.AddForce(Vector2.left * 500);
-        }
+        Rigidbody2D garrucha_solta = Instantiate(garrucha, solta_garrucha.transform.position, Quaternion.identity);
+        garrucha_solta.AddForce(Vector2.right * 5, ForceMode2D.Impulse);
+ 
     }
+
     public void SoltaFacao()
     {
-        Rigidbody2D facao_solto = Instantiate(facao, solta_facao.transform.position, solta_facao.transform.rotation);
-        if (transform.localScale.x == 1)
-        {
-            facao_solto.AddForce(Vector2.left * 100);
-        }
-        else if (transform.localScale.x == -1)
-        {
-            facao_solto.AddForce(Vector2.right * 100);
-        }
+        Rigidbody2D facao_solto = Instantiate(facao, solta_facao.transform.position, Quaternion.identity);
+        facao_solto.AddForce(Vector2.right * 5, ForceMode2D.Impulse);
+    }
+
+    public void EndTiro()
+    {
+        hit = false;
+        _anim.SetBool("Dano", hit);
     }
 }
