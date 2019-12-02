@@ -31,7 +31,13 @@ public class InimigoMelee : MonoBehaviour
            chase = true;
         }
 
-        if(col.gameObject.CompareTag("PlayerHit") && Vector2.Distance(transform.position,player.position) < 1.5f)
+        if((col.gameObject.CompareTag("PlayerHit")) && Vector2.Distance(transform.position,player.position) < 1.5f)
+        {
+            hit = true;
+            Debug.Log(enemyHealth);
+        }
+
+        if(col.gameObject.CompareTag("Tiro") && Vector2.Distance(transform.position, col.gameObject.transform.position) < 1.5f)
         {
             hit = true;
             Debug.Log(enemyHealth);

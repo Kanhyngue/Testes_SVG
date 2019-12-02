@@ -19,7 +19,7 @@ public class ColetavelUI : MonoBehaviour
 
     void Start()
     {
-        sizeX = 0.0f;
+        waitTime = 3f;
         //       anim = GetComponent<Animator>();
     }
 
