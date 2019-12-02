@@ -19022,7 +19022,6 @@ GameObject:
   m_Component:
   - component: {fileID: 468365360424504546}
   - component: {fileID: 4930809631829126867}
-  - component: {fileID: 4916992398952129741}
   - component: {fileID: 3811815709225727743}
   m_Layer: 0
   m_Name: Bola de Fogo Bandeirante
@@ -19040,7 +19039,7 @@ Transform:
   m_GameObject: {fileID: 468365360424504547}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 468365359020433440}
   - {fileID: 468365360358540541}
@@ -19072,21 +19071,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &4916992398952129741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 468365360424504547}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89e44722d05c8814fa85f52ec7cf1f7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 15
-  hitEffect: {fileID: 5509418724583239531, guid: f3bf1520ba775ea4490addd735fa2bf6,
-    type: 3}
 --- !u!61 &3811815709225727743
 BoxCollider2D:
   m_ObjectHideFlags: 0

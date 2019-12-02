@@ -14,6 +14,9 @@ public class DayNightSystem : MonoBehaviour
     public GameObject luzGlobal; // Luz 2D GLOBAL GameObject
     public GameObject luzCaverna;  // Luz 2D GLOBAL da Caverna GameObject
 
+    [SerializeField]
+    private GameObject aura;
+
     // Globais
     public static int dayPeriod; // 0 -> Manhã / 1 -> Dia / 2 -> Crepúsculo / 3 -> Noite
 
@@ -54,6 +57,7 @@ public class DayNightSystem : MonoBehaviour
         {
             // Parâmetro do Período do Dia
             dayPeriod = 1;
+            aura.SetActive(false);
 
             // Parâmetros iniciais de coloração da Luz Global
             mood = new Color(1.0f, 1.0f, 1.0f); // Cor desse periodo do dia
@@ -109,6 +113,7 @@ public class DayNightSystem : MonoBehaviour
         {
             // Parâmetro do Período do Dia
             dayPeriod = 3;
+            aura.SetActive(true);
 
             // Parâmetros iniciais de coloração da Luz Global
             mood = new Color(0.356863f, 0.329412f, 0.819608f); // Cor desse periodo do dia
@@ -127,6 +132,7 @@ public class DayNightSystem : MonoBehaviour
         {
             // Parâmetro do Período do Dia
             dayPeriod = 3;
+            aura.SetActive(true);
 
             // Parâmetros iniciais de coloração da Luz Global
             mood = new Color(0.356863f, 0.329412f, 0.819608f); // Cor desse periodo do dia
@@ -145,6 +151,7 @@ public class DayNightSystem : MonoBehaviour
         {
             // Parâmetro do Período do Dia
             dayPeriod = 0;
+            aura.SetActive(false);
 
             // Parâmetros iniciais de coloração da Luz Global
             mood = new Color(0.494118f, 0.552941f, 0.850980f); // Cor desse periodo do dia
@@ -295,6 +302,7 @@ public class DayNightSystem : MonoBehaviour
     {
         // Mudando o Período do Dia
         dayPeriod = 3; // É de noite
+        aura.SetActive(true);
 
         // Mudando coloração
         r = Mathf.Clamp(r, 0.356863f, 0.992157f);
@@ -325,6 +333,7 @@ public class DayNightSystem : MonoBehaviour
     {
         // Mudando o Período do Dia
         dayPeriod = 0; // É de manhã
+        aura.SetActive(false);
 
         // Mudando coloração
         r = Mathf.Clamp(r, 0.356863f, 0.494118f);

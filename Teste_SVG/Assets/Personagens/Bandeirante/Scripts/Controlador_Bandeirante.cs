@@ -6,15 +6,15 @@ public class Controlador_Bandeirante : MonoBehaviour
 {
     private bool isFacingLeft = true;
     private float canShoot = 3f;
-
-   
+    protected bool isShooting = false;
+    
 
     protected Animator _anim;
 
     protected bool hit;
 
     [SerializeField]
-    protected int HP;
+    protected int HP = 5;
 
     [SerializeField]
     private Rigidbody2D projetil;
@@ -29,7 +29,7 @@ public class Controlador_Bandeirante : MonoBehaviour
     private int vel;
 
     [SerializeField]
-    private float ShootRate = 3f;
+    private float ShootRate = 10f;
 
     // Start is called before the first frame update
     void Start()
@@ -46,7 +46,7 @@ public class Controlador_Bandeirante : MonoBehaviour
 
         if (HP <= 0)
         {
-            _anim.SetBool("isDead", true);
+            //_anim.SetBool("isDead", true);
             //Debug.Log("Ele morreu!");
         }
         else if (HP > 0 && HP <= 5)
@@ -62,12 +62,14 @@ public class Controlador_Bandeirante : MonoBehaviour
                 transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
                 isFacingLeft = transform.localScale.x > 0;
             }
-            Debug.Log(canShoot);
+            // Debug.Log(canShoot);
+
             //Atira a cada "SootRate" segundos
             if ( canShoot < 0)
             {
-                _anim.SetBool("Atira", true);
+                _anim.SetTrigger("Atira");
                 canShoot = ShootRate;
+                isShooting = true;
             }
 
         }
@@ -79,17 +81,19 @@ public class Controlador_Bandeirante : MonoBehaviour
         //Rigidbody2D mao = Instantiate(projetil, emissor.position, emissor.rotation.normalized);
         if (isFacingLeft)
         {
-            Rigidbody2D mao = Instantiate(projetil, emissor.position, emissor.rotation.normalized);
+            Rigidbody2D mao = Instantiate(projetil, emissor.position, Quaternion.identity);
             mao.AddForce(transform.right.normalized * -vel, ForceMode2D.Impulse);
+
         }
     }
+
+
 
 
     protected void Dano()
     {
         if (!hit)
         {
-            hit = true;
             _anim.SetBool("Dano", hit);
             HP--;
             //rig.AddForce(transform.right * hitKnockback);

@@ -19,11 +19,15 @@ public class Solta_Armadura : Controlador_Bandeirante
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Dano de jogador
-        if (collision.gameObject.CompareTag("PlayerHit") )
+        if (collision.gameObject.CompareTag("Tiro") && base._anim.GetBool("Recarrega"))
         {
             Debug.Log("Coll BAnd");
             base.Dano();
+        }else if (collision.gameObject.CompareTag("Tiro") && (base._anim.GetBool("Idle") || isShooting))
+        {
+            _anim.SetBool("Defesa", true);
         }
+
     }
 
     // Start is called before the first frame update
@@ -41,13 +45,13 @@ public class Solta_Armadura : Controlador_Bandeirante
     public void SoltaArmadura()
     {
         Rigidbody2D armadura_solta = Instantiate(armadura, solta_armadura.transform.position, Quaternion.identity);
-        armadura_solta.AddForce(Vector2.left * 01f, ForceMode2D.Impulse); ;
+        armadura_solta.AddForce(Vector2.left, ForceMode2D.Impulse); ;
     }
 
     public void SoltaCapacete()
     {
         Rigidbody2D capacete_solto = Instantiate(capacete, solta_capacete.transform.position, Quaternion.identity);
-        capacete_solto.AddForce(Vector2.right * 5, ForceMode2D.Impulse);
+        capacete_solto.AddForce(Vector2.left *2, ForceMode2D.Impulse);
 
     }
 
@@ -64,9 +68,16 @@ public class Solta_Armadura : Controlador_Bandeirante
         facao_solto.AddForce(Vector2.right * 5, ForceMode2D.Impulse);
     }
 
-    public void EndTiro()
+    public void EndAtira()
     {
-        hit = false;
-        _anim.SetBool("Dano", hit);
+        //base._anim.SetBool("Recarrega", true);
+        base.isShooting = false;
     }
+
+    public void EndRecarga()
+    {
+        base._anim.SetBool("Recarga", false);
+        
+    }
+       
 }
