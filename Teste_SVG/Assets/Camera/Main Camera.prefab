@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9078536767828667816}
   - component: {fileID: 9078536767828667819}
   - component: {fileID: 2455995554503814204}
+  - component: {fileID: 980289838}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -142,6 +143,31 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &980289838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9078536767828667817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39de2876d24149148b91e3dbd94b798a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hubAmbient: {fileID: 0}
+  cerradoAmbient: {fileID: 0}
+  florestaAmbient: {fileID: 0}
+  cavernaAmbient: {fileID: 0}
+  hubSource: {fileID: 0}
+  cerradoSource: {fileID: 0}
+  florestaSource: {fileID: 0}
+  cavernaSource: {fileID: 0}
+  hub: {fileID: 0}
+  cerrado: {fileID: 0}
+  floresta: {fileID: 0}
+  caverna: {fileID: 0}
+  fadeOffDuration: 2
 --- !u!1 &9078536768362380944
 GameObject:
   m_ObjectHideFlags: 0

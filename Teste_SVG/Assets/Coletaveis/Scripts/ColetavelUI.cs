@@ -17,11 +17,9 @@ public class ColetavelUI : MonoBehaviour
 
     [SerializeField] private GameObject[] desbloqueios;
 
-    private Animator anim;
-
     void Start()
     {
-        sizeX = 0.0f;
+        waitTime = 3f;
         //       anim = GetComponent<Animator>();
     }
 
@@ -92,7 +90,7 @@ public class ColetavelUI : MonoBehaviour
         {
             //Debug.Log("IfResizer");
             panelTransform.gameObject.SetActive(true);
-            panelTransform.anchoredPosition += Vector2.right * 2;
+            panelTransform.anchoredPosition += Vector2.right * 5;
             waitTime = 3;
         }
         else
@@ -132,7 +130,7 @@ public class ColetavelUI : MonoBehaviour
     {
         if (panelTransform.anchoredPosition.x >= -170)
         {
-            panelTransform.anchoredPosition -= Vector2.right * 2;
+            panelTransform.anchoredPosition -= Vector2.right * 5;
         }else
         {
             panelTransform.gameObject.SetActive(false);
