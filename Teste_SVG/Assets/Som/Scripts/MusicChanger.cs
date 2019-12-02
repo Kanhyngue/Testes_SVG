@@ -4,19 +4,43 @@ using UnityEngine;
 
 public class MusicChanger : MonoBehaviour
 {
+    // Variáveis AudioSource da Ambientação
+    public AudioSource hubAmbient, cerradoAmbient, florestaAmbient, cavernaAmbient;
+    // Variáveis AudioSource de música
     public AudioSource hubSource, cerradoSource, florestaSource, cavernaSource;
+    // Cenários
     public GameObject hub, cerrado, floresta, caverna;
+    // Duração do FadeOff
     public float fadeOffDuration;
-    private float startTime = 1f;
+    // Timer do fade off
     private float currentTime = 0f;
+    // Variável da cena atual ativada
     private int cena;
+    // Booleana de ativação da troca de música
     private bool change = false;
+    private bool changeToChange = false;
 
+    // ----- Método Update ----- //
     void Update()
     {
-        VerificarCena();
+        VerificarCena(); // Método para verificar a cena atual ativada
+        if(change)
+        {
+            change = false;
+        }
     }
 
+    void Start()
+    {
+        cena = 0;
+        if(hub.activeSelf)
+        {
+            hubSource.Play();
+            hubAmbient.Play();
+        }
+    }
+
+    // ----- Método para verificar a cena atual ativada ----- //
     void VerificarCena()
     {
         if(hub.activeSelf && cena != 0)
@@ -24,11 +48,25 @@ public class MusicChanger : MonoBehaviour
             if(change)
             {
                 cena = 0;
-                AtribuirSource(0);
+                AtribuirSource(cena);
+
+                hubSource.volume = 1f;
+                hubAmbient.volume = 1f;
             }
             else
             {
-                FadeMusic();
+                if(cena == 1)
+                {
+                    FadeMusic(cena);
+                }
+                else if(cena == 2)
+                {
+                    FadeMusic(cena);
+                }
+                else if(cena == 3)
+                {
+                    FadeMusic(cena);
+                }     
             }
         }
         else if(cerrado.activeSelf && cena != 1)
@@ -36,11 +74,25 @@ public class MusicChanger : MonoBehaviour
             if(change)
             {
                 cena = 1;
-                AtribuirSource(1);
+                AtribuirSource(cena);
+
+                cerradoSource.volume = 1f;
+                cerradoAmbient.volume = 1f;
             }
             else
             {
-                FadeMusic();
+                if(cena == 0)
+                {
+                    FadeMusic(cena);
+                }
+                else if(cena == 2)
+                {
+                    FadeMusic(cena);
+                }
+                else if(cena == 3)
+                {
+                    FadeMusic(cena);
+                }
             }
         }
         else if(floresta.activeSelf && cena != 2)
@@ -48,11 +100,25 @@ public class MusicChanger : MonoBehaviour
             if(change)
             {
                 cena = 2;
-                AtribuirSource(2);
+                AtribuirSource(cena);
+
+                florestaSource.volume = 1f;
+                florestaAmbient.volume = 1f;
             }
             else
             {
-                FadeMusic();
+                if(cena == 0)
+                {
+                    FadeMusic(cena);
+                }
+                else if(cena == 1)
+                {
+                    FadeMusic(cena);
+                }
+                else if(cena == 3)
+                {
+                    FadeMusic(cena);
+                }
             }
         }
         else if(caverna.activeSelf && cena != 3)
@@ -60,24 +126,40 @@ public class MusicChanger : MonoBehaviour
             if(change)
             {
                 cena = 3;
-                AtribuirSource(3);
+                AtribuirSource(cena);
+
+                cavernaSource.volume = 1f;
+                cavernaAmbient.volume = 1f;
             }
             else
             {
-                FadeMusic();
+                if(cena == 0)
+                {
+                    FadeMusic(cena);
+                }
+                else if(cena == 1)
+                {
+                    FadeMusic(cena);
+                }
+                else if(cena == 2)
+                {
+                    FadeMusic(cena);
+                }
             }
         }
     }
 
-    public void FadeMusic()
+    // ----- Método para realizar o Fade Off da Música da cena que está sendo desativada ----- //
+    public void FadeMusic(int _cena)
     {   
-        switch(cena)
+        switch(_cena)
         {
             case 0:
                 if(currentTime < fadeOffDuration)
                 {
                     currentTime += Time.deltaTime;
-                    hubSource.volume = Mathf.Lerp(startTime, 0f, currentTime / fadeOffDuration);
+                    hubSource.volume = Mathf.Lerp(1f, 0f, currentTime / fadeOffDuration);
+                    hubAmbient.volume = Mathf.Lerp(1f, 0f, currentTime / fadeOffDuration);
                 }
                 else
                 {
@@ -88,7 +170,8 @@ public class MusicChanger : MonoBehaviour
                 if(currentTime < fadeOffDuration)
                 {
                     currentTime += Time.deltaTime;
-                    cerradoSource.volume = Mathf.Lerp(startTime, 0f, currentTime / fadeOffDuration);
+                    cerradoSource.volume = Mathf.Lerp(1f, 0f, currentTime / fadeOffDuration);
+                    cerradoAmbient.volume = Mathf.Lerp(1f, 0f, currentTime / fadeOffDuration);
                 }
                 else
                 {
@@ -99,7 +182,8 @@ public class MusicChanger : MonoBehaviour
                 if(currentTime < fadeOffDuration)
                 {
                     currentTime += Time.deltaTime;
-                    florestaSource.volume = Mathf.Lerp(startTime, 0f, currentTime / fadeOffDuration);
+                    florestaSource.volume = Mathf.Lerp(1f, 0f, currentTime / fadeOffDuration);
+                    florestaAmbient.volume = Mathf.Lerp(1f, 0f, currentTime / fadeOffDuration);
                 }
                 else
                 {
@@ -110,7 +194,8 @@ public class MusicChanger : MonoBehaviour
                 if(currentTime < fadeOffDuration)
                 {
                     currentTime += Time.deltaTime;
-                    cavernaSource.volume = Mathf.Lerp(startTime, 0f, currentTime / fadeOffDuration);
+                    cavernaSource.volume = Mathf.Lerp(1f, 0f, currentTime / fadeOffDuration);
+                    cavernaAmbient.volume = Mathf.Lerp(1f, 0f, currentTime / fadeOffDuration);
                 }
                 else
                 {
@@ -118,11 +203,12 @@ public class MusicChanger : MonoBehaviour
                 }
             break;
             default:
-                // do anything
+                // não faz porra nenhuma.
             break;
         }
     }
 
+    // ---- Método para trocar a Música e Ambientação ----- //
     public void AtribuirSource(int _cena)
     {
         switch(_cena)
@@ -132,62 +218,75 @@ public class MusicChanger : MonoBehaviour
                 cerradoSource.Stop();
                 florestaSource.Stop();
                 cavernaSource.Stop();
-                change = false;
-                hubSource.volume = 1f;
-                cerradoSource.volume = 1f;
-                florestaSource.volume = 1f;
-                cavernaSource.volume = 1f;
+                
+                hubAmbient.Play();
+                cerradoAmbient.Stop();
+                florestaAmbient.Stop();
+                cavernaSource.Stop();
+
+                currentTime = 0f;
             break;
             case 1:
                 cerradoSource.Play();
                 hubSource.Stop();
                 florestaSource.Stop();
                 cavernaSource.Stop();
-                change = false;
-                hubSource.volume = 1f;
-                cerradoSource.volume = 1f;
-                florestaSource.volume = 1f;
-                cavernaSource.volume = 1f;
+
+                hubAmbient.Stop();
+                cerradoAmbient.Play();
+                florestaAmbient.Stop();
+                cavernaSource.Stop();
+
+                currentTime = 0f;
             break;
             case 2:
                 florestaSource.Play();
                 cerradoSource.Stop();
                 hubSource.Stop();
                 cavernaSource.Stop();
-                change = false;
-                hubSource.volume = 1f;
-                cerradoSource.volume = 1f;
-                florestaSource.volume = 1f;
-                cavernaSource.volume = 1f;
+
+                hubAmbient.Stop();
+                cerradoAmbient.Stop();
+                florestaAmbient.Play();
+                cavernaSource.Stop();
+
+                currentTime = 0f;
             break;
             case 3:
                 cavernaSource.Play();
                 cerradoSource.Stop();
                 florestaSource.Stop();
                 hubSource.Stop();
-                change = false;
-                hubSource.volume = 1f;
-                cerradoSource.volume = 1f;
-                florestaSource.volume = 1f;
-                cavernaSource.volume = 1f;
+
+                hubAmbient.Stop();
+                cerradoAmbient.Stop();
+                florestaAmbient.Stop();
+                cavernaSource.Play();
+
+                currentTime = 0f;
             break;
             default:
                 hubSource.Stop();
                 cerradoSource.Stop();
                 florestaSource.Stop();
                 cavernaSource.Stop();
-                change = false;
-                hubSource.volume = 1f;
-                cerradoSource.volume = 1f;
-                florestaSource.volume = 1f;
-                cavernaSource.volume = 1f;
+
+                hubAmbient.Stop();
+                cerradoAmbient.Stop();
+                florestaAmbient.Stop();
+                cavernaSource.Stop();
+
+                currentTime = 0f;
             break;
         }
+        
     }
 
+    // Delay para iniciar a próxima música
     IEnumerator Delay()
     {
-        yield return new WaitForSeconds(1.25f);
-        change = true;
+        yield return new WaitForSeconds(1.25f); // O delay demora 125.0 ms (ou 1.25 segundos)
+        change = true; // Variável de ativação para troca de música é ativada
+        currentTime = 0f;
     }
 }
