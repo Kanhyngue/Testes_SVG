@@ -22,12 +22,15 @@ public class Solta_Armadura : Controlador_Bandeirante
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Dano de jogador
-        if (collision.gameObject.CompareTag("Tiro") &&  _anim.GetCurrentAnimatorStateInfo(0).IsName("Bandeirante_Recarrega"))
+        if (collision.gameObject.CompareTag("Tiro") && _anim.GetCurrentAnimatorStateInfo(0).IsName("Bandeirante_Recarrega"))
         {
             Debug.Log("Coll BAnd");
             hit = true;
             base.Dano();
-        } else if ((collision.gameObject.CompareTag("Tiro") && (_anim.GetCurrentAnimatorStateInfo(0).IsName("Bandeirante_Idle") || _anim.GetCurrentAnimatorStateInfo(0).IsName("Bandeirante_Atira"))))
+        }
+        else if ((collision.gameObject.CompareTag("Tiro") && (_anim.GetCurrentAnimatorStateInfo(0).IsName("Bandeirante_Idle") ||
+                                                              _anim.GetCurrentAnimatorStateInfo(0).IsName("Bandeirante_Atira") ||
+                                                              _anim.GetCurrentAnimatorStateInfo(0).IsName("Bandeirante_Defesa_Loop"))))
         {
             Debug.Log("Idle");
             _anim.SetTrigger("Defesa");

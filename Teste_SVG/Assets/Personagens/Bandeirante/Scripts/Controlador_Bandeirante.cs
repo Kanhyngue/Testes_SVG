@@ -11,7 +11,7 @@ public class Controlador_Bandeirante : MonoBehaviour
 
 
     [SerializeField]
-    private Transform[] posioesFase2;
+    private Transform[] posicoesFase2;
 
     [SerializeField]
     protected Animator _anim;
