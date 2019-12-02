@@ -7,8 +7,13 @@ public class Controlador_Bandeirante : MonoBehaviour
     private bool isFacingLeft = true;
     private float canShoot = 3f;
     protected bool isShooting = false;
-    
+    protected bool canReload = false;
 
+
+    [SerializeField]
+    private Transform[] posioesFase2;
+
+    [SerializeField]
     protected Animator _anim;
 
     protected bool hit;
@@ -34,7 +39,6 @@ public class Controlador_Bandeirante : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _anim = GetComponentInChildren<Animator>();
         _anim.SetInteger("HP", HP);
     }
 
@@ -71,7 +75,6 @@ public class Controlador_Bandeirante : MonoBehaviour
                 canShoot = ShootRate;
                 isShooting = true;
             }
-
         }
     }
 
@@ -87,16 +90,29 @@ public class Controlador_Bandeirante : MonoBehaviour
         }
     }
 
+    public void EndAtira()
+    {
+        _anim.SetTrigger("Recarrega");
+        canReload = true;
+        isShooting = false;
+    }
 
+    public void EndRecarga()
+    {
+        _anim.SetBool("Recarga", false);
+        canReload = false;
+    }
 
 
     protected void Dano()
     {
-        if (!hit)
+        if (canReload)
         {
-            _anim.SetBool("Dano", hit);
+            _anim.SetTrigger("Dano");
+            if (canReload)
+                canReload = false;
             HP--;
-            //rig.AddForce(transform.right * hitKnockback);
+            _anim.SetInteger("HP", HP);
             StartCoroutine(Stun());
         }
     }
@@ -107,4 +123,5 @@ public class Controlador_Bandeirante : MonoBehaviour
         hit = false;
             
     }
+
 }
