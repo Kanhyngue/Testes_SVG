@@ -1407,6 +1407,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bandeirante_Container
       objectReference: {fileID: 0}
+    - target: {fileID: 5511940591603876932, guid: 493d51cc3bd66ea44a95cd2dc30d06d3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Inimigo
+      objectReference: {fileID: 0}
     - target: {fileID: 5511940591603876934, guid: 493d51cc3bd66ea44a95cd2dc30d06d3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1464,9 +1469,49 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5511940591603876933, guid: 493d51cc3bd66ea44a95cd2dc30d06d3,
         type: 3}
+      propertyPath: posicoesFase2.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5511940591603876933, guid: 493d51cc3bd66ea44a95cd2dc30d06d3,
+        type: 3}
+      propertyPath: posicoesFase2.Array.data[0]
+      value: 
+      objectReference: {fileID: 5205604549778522331}
+    - target: {fileID: 5511940591603876933, guid: 493d51cc3bd66ea44a95cd2dc30d06d3,
+        type: 3}
+      propertyPath: posicoesFase2.Array.data[1]
+      value: 
+      objectReference: {fileID: 7989203948001412984}
+    - target: {fileID: 5511940591603876933, guid: 493d51cc3bd66ea44a95cd2dc30d06d3,
+        type: 3}
+      propertyPath: posicoesFase2.Array.data[2]
+      value: 
+      objectReference: {fileID: 2346528828179735639}
+    - target: {fileID: 5511940591603876933, guid: 493d51cc3bd66ea44a95cd2dc30d06d3,
+        type: 3}
+      propertyPath: posicoesFase2.Array.data[3]
+      value: 
+      objectReference: {fileID: 5532739966590969811}
+    - target: {fileID: 5511940591603876933, guid: 493d51cc3bd66ea44a95cd2dc30d06d3,
+        type: 3}
       propertyPath: _anim
       value: 
       objectReference: {fileID: 6530429881031595774}
+    - target: {fileID: 5511940591603876933, guid: 493d51cc3bd66ea44a95cd2dc30d06d3,
+        type: 3}
+      propertyPath: vel
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6320910268869029103, guid: 493d51cc3bd66ea44a95cd2dc30d06d3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Inimigo
+      objectReference: {fileID: 0}
+    - target: {fileID: 7412908328306495299, guid: 493d51cc3bd66ea44a95cd2dc30d06d3,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5168308862345721056, guid: 493d51cc3bd66ea44a95cd2dc30d06d3,
         type: 3}
       propertyPath: m_LocalRotation.z
@@ -1506,6 +1551,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.87755036
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322033701244446964, guid: 493d51cc3bd66ea44a95cd2dc30d06d3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -57.303
       objectReference: {fileID: 0}
     - target: {fileID: 6239449243718324636, guid: 493d51cc3bd66ea44a95cd2dc30d06d3,
         type: 3}
@@ -1558,12 +1608,32 @@ PrefabInstance:
       value: 0.027743526
       objectReference: {fileID: 0}
     - target: {fileID: 711931512, guid: 493d51cc3bd66ea44a95cd2dc30d06d3, type: 3}
+      propertyPath: posicoesFase2.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 711931512, guid: 493d51cc3bd66ea44a95cd2dc30d06d3, type: 3}
+      propertyPath: posicoesFase2.Array.data[0]
+      value: 
+      objectReference: {fileID: 5205604549778522331}
+    - target: {fileID: 711931512, guid: 493d51cc3bd66ea44a95cd2dc30d06d3, type: 3}
+      propertyPath: posicoesFase2.Array.data[1]
+      value: 
+      objectReference: {fileID: 7989203948001412984}
+    - target: {fileID: 711931512, guid: 493d51cc3bd66ea44a95cd2dc30d06d3, type: 3}
+      propertyPath: posicoesFase2.Array.data[2]
+      value: 
+      objectReference: {fileID: 2346528828179735639}
+    - target: {fileID: 711931512, guid: 493d51cc3bd66ea44a95cd2dc30d06d3, type: 3}
+      propertyPath: posicoesFase2.Array.data[3]
+      value: 
+      objectReference: {fileID: 5532739966590969811}
+    - target: {fileID: 711931512, guid: 493d51cc3bd66ea44a95cd2dc30d06d3, type: 3}
       propertyPath: _anim
       value: 
       objectReference: {fileID: 6530429881031595774}
     - target: {fileID: 711931512, guid: 493d51cc3bd66ea44a95cd2dc30d06d3, type: 3}
       propertyPath: HP
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 493d51cc3bd66ea44a95cd2dc30d06d3, type: 3}

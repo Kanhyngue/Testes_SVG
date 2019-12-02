@@ -22,15 +22,16 @@ public class Solta_Armadura : Controlador_Bandeirante
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Dano de jogador
-        if (collision.gameObject.CompareTag("Tiro") && _anim.GetCurrentAnimatorStateInfo(0).IsName("Bandeirante_Recarrega"))
+        if (collision.gameObject.CompareTag("Tiro") && _anim.GetCurrentAnimatorStateInfo(0).IsTag("Abertura"))
         {
-            Debug.Log("Coll BAnd");
+            
             hit = true;
             base.Dano();
         }
-        else if ((collision.gameObject.CompareTag("Tiro") && (_anim.GetCurrentAnimatorStateInfo(0).IsName("Bandeirante_Idle") ||
-                                                              _anim.GetCurrentAnimatorStateInfo(0).IsName("Bandeirante_Atira") ||
-                                                              _anim.GetCurrentAnimatorStateInfo(0).IsName("Bandeirante_Defesa_Loop"))))
+        else if (collision.gameObject.CompareTag("Tiro") && (_anim.GetCurrentAnimatorStateInfo(0).IsTag("Idle") ||
+                                                              _anim.GetCurrentAnimatorStateInfo(0).IsTag("Ataque") ||
+                                                              _anim.GetCurrentAnimatorStateInfo(0).IsTag("Defesa") ||
+                                                              _anim.GetCurrentAnimatorStateInfo(0).IsTag("Movimento")))
         {
             Debug.Log("Idle");
             _anim.SetTrigger("Defesa");
@@ -76,15 +77,11 @@ public class Solta_Armadura : Controlador_Bandeirante
         facao_solto.AddForce(Vector2.right * 5, ForceMode2D.Impulse);
     }
 
-    public void EndAtiraArm()
+    public void EndTira()
     {
-        base.EndAtira();
-    }
-
-    public void EndRecargaArm()
-    {
-        base.EndRecarga();
+        _anim.SetTrigger("IsMoving");
+        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
         
     }
-       
+     
 }
