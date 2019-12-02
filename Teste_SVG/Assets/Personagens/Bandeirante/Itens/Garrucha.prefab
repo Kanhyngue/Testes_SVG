@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6188706031692663792}
   - component: {fileID: 8367977987952804655}
-  - component: {fileID: 4940176673454383016}
-  - component: {fileID: 6380326060513900282}
-  m_Layer: 0
+  - component: {fileID: 7045162258508123940}
+  - component: {fileID: 2440702197864817075}
+  m_Layer: 13
   m_Name: Garrucha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3796468469466496098}
-  m_LocalRotation: {x: 0, y: 0, z: 0.9781476, w: 0.20791169}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 156}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8367977987952804655
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -82,33 +82,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &4940176673454383016
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3796468469466496098}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.4479167, y: 0.9375}
-    newSize: {x: 2.4479167, y: 0.9375}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.4479167, y: 0.9375}
-  m_EdgeRadius: 0
---- !u!50 &6380326060513900282
+--- !u!50 &7045162258508123940
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -129,3 +103,39 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &2440702197864817075
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3796468469466496098}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5875, y: 0.225}
+    newSize: {x: 2.4479167, y: 0.9375}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.22677994, y: 0.028526306}
+      - {x: 0.15551949, y: 0.0869751}
+      - {x: -0.2896881, y: 0.08905792}
+      - {x: -0.29145813, y: 0.055732727}
+      - {x: -0.24511147, y: 0.04938507}
+      - {x: -0.18875027, y: 0.008232117}
+      - {x: 0.047187805, y: 0.008232117}
+      - {x: 0.09624958, y: -0.029472351}
+      - {x: 0.1780262, y: -0.04270172}
+      - {x: 0.21177292, y: -0.11364746}
+      - {x: 0.30062675, y: -0.11187744}

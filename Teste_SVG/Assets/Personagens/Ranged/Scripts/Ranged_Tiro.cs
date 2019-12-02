@@ -11,6 +11,7 @@ public class Ranged_Tiro : MonoBehaviour
     //[SerializeField]
     private Animator _anim;
     private bool isFacingLeft = true;
+
     public bool hit { get; private set; }
     public int enemyHealth = 20;
 
