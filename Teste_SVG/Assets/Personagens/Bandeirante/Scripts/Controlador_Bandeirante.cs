@@ -89,14 +89,6 @@ public class Controlador_Bandeirante : MonoBehaviour
                         p_pos = player.position;
                         canShoot = 10f;
                     }
-                    /*
-                    else if (!_anim.GetBool("IsMoving") && !_anim.GetBool("IsMoving"))
-                    {
-
-                        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-                        _anim.SetBool("IsMoving", true);
-                    }*/
-
                     break;
                 case 3:
                     if (_anim.GetBool("IsMoving"))
@@ -128,6 +120,7 @@ public class Controlador_Bandeirante : MonoBehaviour
                         canShoot = 20;
                     }
                     break;
+
                 case 2:
                     if (_anim.GetBool("IsMoving"))
                     {
@@ -158,6 +151,7 @@ public class Controlador_Bandeirante : MonoBehaviour
                         canShoot = 20;
                     }
                     break;
+
                 case 1:
                     if (_anim.GetBool("IsMoving"))
                     {
@@ -187,6 +181,7 @@ public class Controlador_Bandeirante : MonoBehaviour
                         canShoot = 10;
                     }
                     break;
+
                 case 0:
                     
                     break;
@@ -272,6 +267,7 @@ public class Controlador_Bandeirante : MonoBehaviour
             if (HP == 0)
             {
                 _anim.SetBool("IsDead", true);
+                return;
             }
 
             StartCoroutine(Stun2());
