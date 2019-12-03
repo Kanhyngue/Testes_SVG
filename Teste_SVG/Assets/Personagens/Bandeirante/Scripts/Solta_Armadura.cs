@@ -15,16 +15,11 @@ public class Solta_Armadura : Controlador_Bandeirante
     public Transform solta_garrucha;
     public Transform solta_facao;
 
-
-    
-
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Dano de jogador
         if (collision.gameObject.CompareTag("Tiro") && _anim.GetCurrentAnimatorStateInfo(0).IsTag("Abertura"))
         {
-            
             hit = true;
             base.Dano();
         }
@@ -36,20 +31,7 @@ public class Solta_Armadura : Controlador_Bandeirante
             Debug.Log("Idle");
             _anim.SetTrigger("Defesa");
         }
-
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        Physics2D.IgnoreLayerCollision(8, 9, true);
-    }
-
-
-/*    public void Tiro()
-    {
-        base.Atira();
-    }*/
 
     public void SoltaArmadura()
     {

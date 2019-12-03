@@ -47,7 +47,7 @@ public class Controlador_Bandeirante : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        checkPlayerOver();
 
         if ((HP > 0 && HP <= 5) && !fase1 && !_anim.GetCurrentAnimatorStateInfo(0).IsTag("Defesa"))
         {
@@ -147,7 +147,7 @@ public class Controlador_Bandeirante : MonoBehaviour
                     if (canShoot < 0)
                     {
                         _anim.SetBool("IsRunning", true);
-                        p_pos = player.position;
+                        p_pos = new Vector3 (player.position.x, 0.9663032f, 0f);
                         canShoot = 20;
                     }
                     break;
@@ -280,6 +280,16 @@ public class Controlador_Bandeirante : MonoBehaviour
         _anim.SetBool("IsMoving", true);
     }
 
+    private void checkPlayerOver()
+    {
+        if (player.transform.position.y >= 4.5f && ((player.transform.position.x - transform.position.x) <= 1.5f) )
+        {
+            if (_anim.GetCurrentAnimatorStateInfo(0).IsTag("Idle"))
+            {
+                _anim.SetTrigger("Bloqueio");
+            }
+        }
+    }
     IEnumerator Stun()
     {
         yield return new WaitForSeconds(0.2f);
