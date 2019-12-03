@@ -12,17 +12,10 @@ public class FolhasDesaparecer : MonoBehaviour
 
     public SpriteRenderer folhas;
 
-    [SerializeField]
-    private Material iluminacaoMat = null;
-
-    [SerializeField]
-    private Material alphaMat = null;
-
     void OnTriggerEnter2D(Collider2D col)
     {
         if(col.gameObject.CompareTag("Player"))
         {
-            folhas.material = alphaMat;
             alphaChannel = 1f;
             entered = true;
             active = true;
@@ -56,7 +49,6 @@ public class FolhasDesaparecer : MonoBehaviour
             if(alphaChannel >= 1.0f)
             {
                 active = false;
-                folhas.material = iluminacaoMat;
             }
         }
     }
