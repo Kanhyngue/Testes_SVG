@@ -79,14 +79,8 @@ public class Player : MonoBehaviour
         //Debug.Log(_controller.State.IsNeblina);
 
         // Se o Jogador não estiver atacando com o machado, não estiver morto, e não estiver em algum menu ou interface então os controles ficam habilitados
-        foreach (GameObject panel in panels)
-        {
-            if (!_changer.GetPanelState() && !panel.activeInHierarchy && !Dead && _canMachado < 0 && !boxAnimator.GetBool("IsOpen"))
-            {
-                HandleInput();
-                Debug.Log("InPut");
-            }
-        }
+
+        HandleInput();
 
         // Se a vida do jogador chegar a zero, ele morre
         if (DataSystem.health <= 0)
@@ -145,8 +139,104 @@ public class Player : MonoBehaviour
 
     private void HandleInput()
     {
-        if(!anim.GetBool("Dash") )
+
+        if (!_changer.GetPanelState() && !panels[0].activeInHierarchy && !panels[1].activeInHierarchy && !Dead && _canMachado < 0 && !boxAnimator.GetBool("IsOpen") && !anim.GetBool("Dash"))
+        {
+
             h_Move = Input.GetAxisRaw("Horizontal");
+
+            if (_controller.CanJump && Input.GetButtonDown("Jump"))
+            {
+                _controller.Jump();
+            }
+
+
+
+
+            if (Input.GetButton("Tiro") && DataSystem.firePower && !anim.GetBool("IsCrouching"))
+            {
+                if (_canFireIn > 0)
+                    return;
+                anim.SetTrigger("IsShooting");
+
+                _canFireIn = RateTiro;
+            }
+
+            if (Input.GetButton("Machadada") && DataSystem.machadinha && !anim.GetBool("IsCrouching"))
+            {
+                if (_canMachado > 0)
+                    return;
+                isMachado = true;
+            }
+
+            if (Input.GetButtonDown("Dash") && DataSystem.dashPower)
+            {
+                if (_canDash > 0)
+                    return;
+
+                if (_isFacingRight)
+                {
+                    anim.SetBool("Dash", true);
+                    _controller.Dashing(dash, velocidadeDash);
+                }
+                else
+                {
+                    anim.SetBool("Dash", true);
+                    _controller.Dashing(dash, -velocidadeDash);
+                }
+                _canDash = RateDash;
+            }
+
+            if (Input.GetButtonDown("Neblina") && DataSystem.fogPower)
+            {
+                if (_canNeblina > 0)
+                    return;
+                _controller.EntraNeblina();
+                isNeblina = true;
+                _canNeblina = RateNeblina;
+                _neblinaTime = NeblinaTime;
+                StartCoroutine(ToggleNeblina());
+            }
+
+            if (Input.GetButtonDown("Cheat"))
+            {
+                Debug.Log("Trocou Bedindo");
+                DataSystem.fogPower = !DataSystem.fogPower;
+                DataSystem.firePower = !DataSystem.firePower;
+                DataSystem.dashPower = !DataSystem.dashPower;
+                DataSystem.machadinha = !DataSystem.machadinha;
+
+            }
+
+            if (Input.GetButtonDown("Cachimbos"))
+            {
+                Debug.Log("Porra Moises");
+                DataSystem.cachimbos += 2;
+            }
+
+            if (Input.GetButtonDown("Crouch"))
+            {
+                _controller.Crouch(true);
+                anim.SetBool("IsCrouching", true);
+            }
+            else if (Input.GetButtonUp("Crouch"))
+            {
+                _controller.Crouch(false);
+                anim.SetBool("IsCrouching", false);
+            }
+
+            if (Input.GetButtonDown("DayNightCheat"))
+            {
+                Debug.Log("Mudou o dia BENINO");
+                dns.dayTime -= 10;
+            }
+        }
+        else
+        {
+            h_Move = 0f;
+        }
+               
+        
         
         if (h_Move > 0f)
         {
@@ -165,87 +255,8 @@ public class Player : MonoBehaviour
             _normalizedHorizontalSpeed = 0;
         }
 
-        if(_controller.CanJump && Input.GetButtonDown("Jump"))
-        {     
-            _controller.Jump();           
-        }
 
-        if (Input.GetButtonDown("Crouch"))
-        {
-            _controller.Crouch(true);
-            anim.SetBool("IsCrouching", true);
-        }else if (Input.GetButtonUp("Crouch"))
-        {
-            _controller.Crouch(false);
-            anim.SetBool("IsCrouching", false);
-        }
-
-        if(Input.GetButton("Tiro") && DataSystem.firePower && !anim.GetBool("IsCrouching"))
-        {
-            if (_canFireIn > 0)
-                return;
-            anim.SetTrigger("IsShooting");
-  
-            _canFireIn = RateTiro;
-        }
-
-        if (Input.GetButton("Machadada") && DataSystem.machadinha && !anim.GetBool("IsCrouching"))
-        {
-            if (_canMachado > 0)
-                return;
-            isMachado = true;
-        }
-
-        if (Input.GetButtonDown("Dash") && DataSystem.dashPower)
-        {
-            if (_canDash > 0)
-                return;
-            
-            if(_isFacingRight)
-            {
-                anim.SetBool("Dash", true);
-                _controller.Dashing (dash, velocidadeDash);
-            }
-            else
-            {
-                anim.SetBool("Dash", true);
-                _controller.Dashing (dash, -velocidadeDash);
-            }
-            _canDash = RateDash;            
-        }
-
-        if (Input.GetButtonDown("Neblina") && DataSystem.fogPower)
-        {
-            if (_canNeblina > 0)
-                return;
-            _controller.EntraNeblina();
-            isNeblina = true;
-            _canNeblina = RateNeblina;
-            _neblinaTime = NeblinaTime;
-            StartCoroutine(ToggleNeblina());
-        }
-
-        if(Input.GetButtonDown("Cheat"))
-        {
-            //Debug.Log("Trocou Bedindo");
-            DataSystem.fogPower = !DataSystem.fogPower;
-            DataSystem.firePower = !DataSystem.firePower;
-            DataSystem.dashPower = !DataSystem.dashPower;
-            DataSystem.machadinha = !DataSystem.machadinha;
-
-        }
-
-        if (Input.GetButtonDown("Cachimbos"))
-        {
-            //Debug.Log("Porra Moises");
-            DataSystem.cachimbos += 2;
-        }
-
-        if (Input.GetButtonDown("DayNightCheat"))
-        {
-            //Debug.Log("Mudou o dia BENINO");
-            dns.dayTime -= 10;
-        }
+        
     }
 
     private void Flip()

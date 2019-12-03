@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
+
 public class DialogManager : MonoBehaviour
 {
 
@@ -16,7 +18,18 @@ public class DialogManager : MonoBehaviour
     private Animator animator;
 
 
+    [System.Serializable]
+    public class IntEvent : UnityEvent<int> { }
 
+
+    public IntEvent NextSentenceEvent;
+
+    private void Awake()
+    {
+
+        if (NextSentenceEvent == null)
+            NextSentenceEvent = new IntEvent();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +37,7 @@ public class DialogManager : MonoBehaviour
         sentences = new Queue<string>();
     }
 
-    public void StartDialog(Dialog _dialog)
+    public void StartDialog(Dialog _dialog, int source)
     {
         animator.SetBool("IsOpen", true);
         nameText.text = _dialog.name;
@@ -38,42 +51,59 @@ public class DialogManager : MonoBehaviour
             sentences.Enqueue(sentence);
         }
         contador = 0;
-        DisplayNextSentence();
+        DisplayNextSentence(source);
     }
 
 
-    public void DisplayNextSentence()
+    public void DisplayNextSentence(int source)
     {
-        if (sentences.Count == 0 && contador == 0)
+        Debug.Log(source);
+        switch (source)
         {
-            EndDialog();
-            if (Paje_Controller.seletorFalaPaje == 0)
-            {
-                DataSystem.machadinha = true;
-                Paje_Controller.seletorFalaPaje++;
-            }
-                if (Paje_Controller.seletorFalaPaje % 2 == 0)
-                Paje_Controller.seletorFalaPaje++;
-            return;
-        }
+            case 0://Pop Up
+                Debug.Log("Fonte foi pop up");
+                break;
 
-        if (contador == 0)
-        {
-            dialogText.text = "";
-            sentence = sentences.Dequeue();
-            contador++;
+            case 1://Pajé
+                if (sentences.Count == 0 && contador == 0)
+                {
+                    EndDialog();
+                    if (Paje_Controller.seletorFalaPaje == 0)
+                    {
+                        DataSystem.machadinha = true;
+                        Paje_Controller.seletorFalaPaje++;
+                    }
+                    if (Paje_Controller.seletorFalaPaje % 2 == 0)
+                        Paje_Controller.seletorFalaPaje++;
+                    return;
+                }
+
+                if (contador == 0)
+                {
+                    dialogText.text = "";
+                    sentence = sentences.Dequeue();
+                    contador++;
+                }
+                else if (contador == 1)
+                {
+                    StartCoroutine(TypeSentence(sentence));
+                    contador++;
+                }
+                else if (contador == 2)
+                {
+                    StopAllCoroutines();
+                    dialogText.text = sentence;
+                    contador = 0;
+                }
+                break;
+            case 2://Pescador
+
+                break;
+            default:
+                break;
         }
-        else if (contador == 1)
-        {
-            StartCoroutine(TypeSentence(sentence));            
-            contador++;
-        }
-        else if (contador == 2)
-        {
-            StopAllCoroutines();
-            dialogText.text = sentence;
-            contador = 0;
-        }
+            
+    
     }
     //string sentence = sentences.Dequeue();
 

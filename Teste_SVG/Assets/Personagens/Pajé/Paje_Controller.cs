@@ -8,16 +8,14 @@ public class Paje_Controller : MonoBehaviour
 
     [SerializeField]
     private Transform ponto1, ponto2;
-
     [SerializeField]
-    private float velocidade = 5;
-
+    private float velocidade = 2;
     [SerializeField]
     private GameObject keyUpInterface; // Icone de Interação
-
     [SerializeField]
     private Animator boxAnimator;
 
+    
     private DialogTrigger trigger;
     private Animator animator;
     private bool canMove, isFacingLeft;
@@ -95,7 +93,7 @@ public class Paje_Controller : MonoBehaviour
                 canMove = false;
                 animator.SetBool("IsMoving", canMove);
                 animator.SetBool("IsTalking", true);
-                trigger.TriggerDialog(seletorFalaPaje);
+                trigger.TriggerDialog(seletorFalaPaje, 1);
             }
         }
     }

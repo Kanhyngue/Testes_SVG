@@ -9,8 +9,13 @@ public class NPC_Controller : MonoBehaviour
     [SerializeField]
     private Transform ponto1, ponto2;
     [SerializeField]
-    private float velocidade = 5;
+    private float velocidade = 2;
+    [SerializeField]
+    private GameObject keyUpInterface; // Icone de Interação
+    [SerializeField]
+    private Animator boxAnimator;
 
+    private DialogTrigger trigger;
     private Animator animator;
     private bool canMove, isFacingLeft;
 
@@ -20,6 +25,7 @@ public class NPC_Controller : MonoBehaviour
         canMove = true;
         animator = GetComponentInChildren<Animator>();
         animator.SetBool("IsMoving", canMove);
+        trigger = GetComponent<DialogTrigger>();
     }
 
     // Update is called once per frame
@@ -71,5 +77,29 @@ public class NPC_Controller : MonoBehaviour
     {
         transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
         isFacingLeft = transform.localScale.x > 0;
+    }
+
+    private void OnTriggerStay2D(Collider2D entrada)
+    {
+        if (entrada.gameObject.CompareTag("Player"))
+        {
+            keyUpInterface.SetActive(true);
+            if (Input.GetButtonDown("Interacao"))
+            {
+                canMove = false;
+                animator.SetBool("IsMoving", canMove);
+                animator.SetBool("IsTalking", true);
+                trigger.TriggerDialog(0, 1);
+            }
+        }
+    }
+
+
+    private void OnTriggerExit2D(Collider2D entrada)
+    {
+        if (entrada.gameObject.CompareTag("Player"))
+        {
+            keyUpInterface.SetActive(false);
+        }
     }
 }
