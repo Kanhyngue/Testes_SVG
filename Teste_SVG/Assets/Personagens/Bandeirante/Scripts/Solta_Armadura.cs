@@ -15,32 +15,23 @@ public class Solta_Armadura : Controlador_Bandeirante
     public Transform solta_garrucha;
     public Transform solta_facao;
 
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Dano de jogador
-        if (collision.gameObject.CompareTag("Tiro") && base._anim.GetBool("Recarrega"))
+        if (collision.gameObject.CompareTag("Tiro") && _anim.GetCurrentAnimatorStateInfo(0).IsTag("Abertura"))
         {
-            Debug.Log("Coll BAnd");
+            hit = true;
             base.Dano();
-        }else if (collision.gameObject.CompareTag("Tiro") && (base._anim.GetBool("Idle") || isShooting))
-        {
-            _anim.SetBool("Defesa", true);
         }
-
+        else if (collision.gameObject.CompareTag("Tiro") && (_anim.GetCurrentAnimatorStateInfo(0).IsTag("Idle") ||
+                                                              _anim.GetCurrentAnimatorStateInfo(0).IsTag("Ataque") ||
+                                                              _anim.GetCurrentAnimatorStateInfo(0).IsTag("Defesa") ||
+                                                              _anim.GetCurrentAnimatorStateInfo(0).IsTag("Movimento")))
+        {
+            Debug.Log("Idle");
+            _anim.SetTrigger("Defesa");
+        }
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        Physics2D.IgnoreLayerCollision(8, 9, true);
-    }
-
-
-/*    public void Tiro()
-    {
-        base.Atira();
-    }*/
 
     public void SoltaArmadura()
     {
@@ -68,16 +59,11 @@ public class Solta_Armadura : Controlador_Bandeirante
         facao_solto.AddForce(Vector2.right * 5, ForceMode2D.Impulse);
     }
 
-    public void EndAtira()
+    public void EndTira()
     {
-        //base._anim.SetBool("Recarrega", true);
-        base.isShooting = false;
-    }
-
-    public void EndRecarga()
-    {
-        base._anim.SetBool("Recarga", false);
+        _anim.SetTrigger("IsMoving");
+        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
         
     }
-       
+     
 }

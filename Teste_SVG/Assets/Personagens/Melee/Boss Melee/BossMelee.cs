@@ -6,29 +6,14 @@ public class BossMelee : MonoBehaviour
 {
     public Transform player;
     public float bossSpeed;
-    private bool _hit;
+    public static bool _hit;
     private Animator anim;
-    private int bossHealth = 500;
+    private int bossHealth = 100;
     private bool dead = false;
     private bool loopAttack = false;
     private bool dontWalk = false;
     public BoxCollider2D box;
     private bool chase;
-
-    // Se o jogador entrar do campo de visão do inimigo ele deixa de o perseguir
-    void OnTriggerStay2D(Collider2D col)
-    {
-        if(col.gameObject.CompareTag("Player"))
-        {
-           chase = true;
-        }
-
-        if(col.gameObject.CompareTag("PlayerHit"))
-        {
-            _hit = true;
-            Debug.Log(bossHealth);
-        }
-    }
 
     void Start()
     {
@@ -37,13 +22,12 @@ public class BossMelee : MonoBehaviour
 
     void FixedUpdate()
     {
-        _hit = BossMeleeHitBox.hit;
         if(bossHealth <= 0 && !dead)
         {
             anim.SetTrigger("Death");
             anim.SetBool("isDead", true);
             dead = true;
-            //Debug.Log("Ele morreu!");
+            BossManager.florestaBossDefeated = true;
         }
         else if(!dead)
         {
@@ -51,6 +35,7 @@ public class BossMelee : MonoBehaviour
             {
                 anim.SetTrigger("GotHit");
                 bossHealth--;
+                Debug.Log(bossHealth);
                 StartCoroutine(Stun());
             }
             else
@@ -95,6 +80,7 @@ public class BossMelee : MonoBehaviour
     {
         yield return new WaitForSeconds(1.0f);
         _hit = false;
+        anim.SetTrigger("Recharge");
     }
 
     IEnumerator LoopAttack()

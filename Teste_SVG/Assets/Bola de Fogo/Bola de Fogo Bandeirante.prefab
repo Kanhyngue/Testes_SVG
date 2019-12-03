@@ -19023,9 +19023,10 @@ GameObject:
   - component: {fileID: 468365360424504546}
   - component: {fileID: 4930809631829126867}
   - component: {fileID: 3811815709225727743}
+  - component: {fileID: 6367202891262798188}
   m_Layer: 0
   m_Name: Bola de Fogo Bandeirante
-  m_TagString: Tiro
+  m_TagString: TiroBand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19084,7 +19085,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5, y: 0.1}
+  m_Offset: {x: -0.38, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -19095,8 +19096,23 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 1}
+  m_Size: {x: 1, y: 0.48}
   m_EdgeRadius: 0
+--- !u!114 &6367202891262798188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468365360424504547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d677f38b22e659544bcf4ad016c4f581, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 15
+  hitEffect: {fileID: 5509418724583239531, guid: f3bf1520ba775ea4490addd735fa2bf6,
+    type: 3}
 --- !u!1 &468365360492748247
 GameObject:
   m_ObjectHideFlags: 0

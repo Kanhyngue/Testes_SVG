@@ -298,6 +298,13 @@ public class Player : MonoBehaviour
             Mathf.Clamp(DataSystem.health, 0, 5);
             anim.SetTrigger("GotHit");
         }
+
+        if (col.gameObject.CompareTag("TiroBand"))
+        {
+            DataSystem.health -= 1;
+            Mathf.Clamp(DataSystem.health, 0, 5);
+            anim.SetTrigger("GotHit");
+        }
     }
 
     IEnumerator SimulatePart()
