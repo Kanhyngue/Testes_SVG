@@ -741,6 +741,86 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7397083357081357344}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &649770334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 649770335}
+  - component: {fileID: 649770336}
+  m_Layer: 0
+  m_Name: Fundo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &649770335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649770334}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -20.77, y: 4.371, z: 0}
+  m_LocalScale: {x: 37.771698, y: 15.042439, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4359290623762725210}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &649770336
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649770334}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -249589451
+  m_SortingLayer: -2
+  m_SortingOrder: -4
+  m_Sprite: {fileID: 21300000, guid: e5b95c2858df87346a5a9b2cffa6d2b8, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!212 &676443068 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 6532185066457458195, guid: 8129f15201cfdeb44962c6d8ba9781be,
@@ -762,17 +842,17 @@ PrefabInstance:
     - target: {fileID: 9078536767828667818, guid: 8c42dd92b26a03942b9820001f6efcd5,
         type: 3}
       propertyPath: orthographic size
-      value: 8
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9078536767828667733, guid: 8c42dd92b26a03942b9820001f6efcd5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 61.79689
+      value: 36.686295
       objectReference: {fileID: 0}
     - target: {fileID: 9078536767828667733, guid: 8c42dd92b26a03942b9820001f6efcd5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 89.1
+      value: 14.587631
       objectReference: {fileID: 0}
     - target: {fileID: 9078536767828667733, guid: 8c42dd92b26a03942b9820001f6efcd5,
         type: 3}
@@ -2126,6 +2206,16 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1282043505}
+    - target: {fileID: 4634449484408247900, guid: 4e09182b42ca39048a230b70b0be9455,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 197.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634449484408247900, guid: 4e09182b42ca39048a230b70b0be9455,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 89.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8070757821552614906, guid: 4e09182b42ca39048a230b70b0be9455,
         type: 3}
       propertyPath: player
@@ -2141,6 +2231,12 @@ PrefabInstance:
 --- !u!1 &4359290623762725209 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5212464821122424827, guid: 4e09182b42ca39048a230b70b0be9455,
+    type: 3}
+  m_PrefabInstance: {fileID: 4359290623762725208}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4359290623762725210 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6797830800620186061, guid: 4e09182b42ca39048a230b70b0be9455,
     type: 3}
   m_PrefabInstance: {fileID: 4359290623762725208}
   m_PrefabAsset: {fileID: 0}
