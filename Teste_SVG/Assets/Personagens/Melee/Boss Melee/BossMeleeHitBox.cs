@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class BossMeleeHitBox : MonoBehaviour
 {
-    public static bool hit;
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.CompareTag("PlayerHit"))
+        if(col.gameObject.CompareTag("PlayerHit") && !BossMelee._hit)
         {
-            hit = true;
+            BossMelee._hit = true;
         }
     }
     
