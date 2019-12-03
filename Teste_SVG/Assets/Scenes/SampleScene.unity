@@ -2012,10 +2012,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 132982769, guid: 8129f15201cfdeb44962c6d8ba9781be, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1634002018}
     - target: {fileID: 5509749644047884218, guid: 8129f15201cfdeb44962c6d8ba9781be,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2154,6 +2150,30 @@ PrefabInstance:
       propertyPath: desbloqueios.Array.data[6]
       value: 
       objectReference: {fileID: 1780179604}
+    - target: {fileID: 1924436604, guid: 8129f15201cfdeb44962c6d8ba9781be, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924436604, guid: 8129f15201cfdeb44962c6d8ba9781be, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 690.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 2061909889, guid: 8129f15201cfdeb44962c6d8ba9781be, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -12.299999
+      objectReference: {fileID: 0}
+    - target: {fileID: 132982769, guid: 8129f15201cfdeb44962c6d8ba9781be, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1634002018}
+    - target: {fileID: 132982768, guid: 8129f15201cfdeb44962c6d8ba9781be, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1634002018}
+    - target: {fileID: 1501907948, guid: 8129f15201cfdeb44962c6d8ba9781be, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 389784218}
     - target: {fileID: 8805064310054378355, guid: 8129f15201cfdeb44962c6d8ba9781be,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[7].m_Target
@@ -2162,14 +2182,6 @@ PrefabInstance:
     - target: {fileID: 551446174132755789, guid: 8129f15201cfdeb44962c6d8ba9781be,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 389784218}
-    - target: {fileID: 132982768, guid: 8129f15201cfdeb44962c6d8ba9781be, type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1634002018}
-    - target: {fileID: 1501907948, guid: 8129f15201cfdeb44962c6d8ba9781be, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 389784218}
     m_RemovedComponents: []
@@ -2750,18 +2762,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PullingArea
       objectReference: {fileID: 0}
-    - target: {fileID: 1634002018, guid: 5dde692d01abbc24597d0da9a4b48417, type: 3}
-      propertyPath: nameText
-      value: 
-      objectReference: {fileID: 2029771061}
-    - target: {fileID: 1634002018, guid: 5dde692d01abbc24597d0da9a4b48417, type: 3}
-      propertyPath: dialogText
-      value: 
-      objectReference: {fileID: 980383672}
-    - target: {fileID: 1634002018, guid: 5dde692d01abbc24597d0da9a4b48417, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 1924436605}
     - target: {fileID: 7280009529068274120, guid: 5dde692d01abbc24597d0da9a4b48417,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2817,6 +2817,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1634002018, guid: 5dde692d01abbc24597d0da9a4b48417, type: 3}
+      propertyPath: nameText
+      value: 
+      objectReference: {fileID: 2029771061}
+    - target: {fileID: 1634002018, guid: 5dde692d01abbc24597d0da9a4b48417, type: 3}
+      propertyPath: dialogText
+      value: 
+      objectReference: {fileID: 980383672}
+    - target: {fileID: 1634002018, guid: 5dde692d01abbc24597d0da9a4b48417, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1924436605}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dde692d01abbc24597d0da9a4b48417, type: 3}
 --- !u!1001 &8633648794210303194
@@ -2886,6 +2898,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5229052459348976034, guid: 0ccd16928aab9e243b09c293b0059a81,
+        type: 3}
+      propertyPath: keyUpInterface
+      value: 
+      objectReference: {fileID: 1770806850}
+    - target: {fileID: 5229052459348976034, guid: 0ccd16928aab9e243b09c293b0059a81,
+        type: 3}
+      propertyPath: boxAnimator
+      value: 
+      objectReference: {fileID: 1924436605}
+    - target: {fileID: 2054056392, guid: 0ccd16928aab9e243b09c293b0059a81, type: 3}
+      propertyPath: keyUpInterface
+      value: 
+      objectReference: {fileID: 1770806850}
+    - target: {fileID: 2054056392, guid: 0ccd16928aab9e243b09c293b0059a81, type: 3}
+      propertyPath: boxAnimator
+      value: 
+      objectReference: {fileID: 1924436605}
     - target: {fileID: 5236289400654974156, guid: 0ccd16928aab9e243b09c293b0059a81,
         type: 3}
       propertyPath: keyUpInterface
@@ -2951,6 +2981,16 @@ PrefabInstance:
       propertyPath: sceneChangeBloqueio
       value: 
       objectReference: {fileID: 1941956275}
+    - target: {fileID: 1490403809707205255, guid: 0ccd16928aab9e243b09c293b0059a81,
+        type: 3}
+      propertyPath: keyUpInterface
+      value: 
+      objectReference: {fileID: 1770806850}
+    - target: {fileID: 1490403809707205255, guid: 0ccd16928aab9e243b09c293b0059a81,
+        type: 3}
+      propertyPath: boxAnimator
+      value: 
+      objectReference: {fileID: 1924436605}
     - target: {fileID: 8201679791410994523, guid: 0ccd16928aab9e243b09c293b0059a81,
         type: 3}
       propertyPath: keyUpInterface
@@ -2971,48 +3011,20 @@ PrefabInstance:
       propertyPath: sceneChangeBloqueio
       value: 
       objectReference: {fileID: 1941956275}
+    - target: {fileID: 1576319885395444116, guid: 0ccd16928aab9e243b09c293b0059a81,
+        type: 3}
+      propertyPath: keyUpInterface
+      value: 
+      objectReference: {fileID: 1770806850}
+    - target: {fileID: 1576319885395444116, guid: 0ccd16928aab9e243b09c293b0059a81,
+        type: 3}
+      propertyPath: boxAnimator
+      value: 
+      objectReference: {fileID: 1924436605}
     - target: {fileID: 1205234738477134016, guid: 0ccd16928aab9e243b09c293b0059a81,
         type: 3}
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 980000924}
-    - target: {fileID: 1576319885395444116, guid: 0ccd16928aab9e243b09c293b0059a81,
-        type: 3}
-      propertyPath: keyUpInterface
-      value: 
-      objectReference: {fileID: 1770806850}
-    - target: {fileID: 1576319885395444116, guid: 0ccd16928aab9e243b09c293b0059a81,
-        type: 3}
-      propertyPath: boxAnimator
-      value: 
-      objectReference: {fileID: 1924436605}
-    - target: {fileID: 5229052459348976034, guid: 0ccd16928aab9e243b09c293b0059a81,
-        type: 3}
-      propertyPath: keyUpInterface
-      value: 
-      objectReference: {fileID: 1770806850}
-    - target: {fileID: 5229052459348976034, guid: 0ccd16928aab9e243b09c293b0059a81,
-        type: 3}
-      propertyPath: boxAnimator
-      value: 
-      objectReference: {fileID: 1924436605}
-    - target: {fileID: 2054056392, guid: 0ccd16928aab9e243b09c293b0059a81, type: 3}
-      propertyPath: keyUpInterface
-      value: 
-      objectReference: {fileID: 1770806850}
-    - target: {fileID: 2054056392, guid: 0ccd16928aab9e243b09c293b0059a81, type: 3}
-      propertyPath: boxAnimator
-      value: 
-      objectReference: {fileID: 1924436605}
-    - target: {fileID: 1490403809707205255, guid: 0ccd16928aab9e243b09c293b0059a81,
-        type: 3}
-      propertyPath: keyUpInterface
-      value: 
-      objectReference: {fileID: 1770806850}
-    - target: {fileID: 1490403809707205255, guid: 0ccd16928aab9e243b09c293b0059a81,
-        type: 3}
-      propertyPath: boxAnimator
-      value: 
-      objectReference: {fileID: 1924436605}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccd16928aab9e243b09c293b0059a81, type: 3}
