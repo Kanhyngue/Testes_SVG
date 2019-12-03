@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     private DayNightSystem dns;
     private SceneChanger _changer;
     private ControllerPhsyicsVolume2D dash;
-    public GameObject panel;
+    public GameObject [] panels;
 
     public float maxSpeed = 8f;
     public float DashFactor = 2f;
@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
     private ParticleSystem[] _particulasNeblina;
 
     [SerializeField]
-    private GameObject Pool;
+    private Animator boxAnimator;
     public static bool gameOver = false;
 
     [Range(1, 5)]
@@ -66,6 +66,8 @@ public class Player : MonoBehaviour
         _controller = GetComponent<CharacterPlatformer2D>();
     }
 
+
+
     public void Update()
     {
         _canFireIn -= Time.deltaTime;
@@ -73,17 +75,21 @@ public class Player : MonoBehaviour
         _canDash -= Time.deltaTime;
         _canNeblina -= Time.deltaTime;
 
-      /*  Debug.Log(NeblinaTime);*/
+        /*  Debug.Log(NeblinaTime);*/
         //Debug.Log(_controller.State.IsNeblina);
 
         // Se o Jogador não estiver atacando com o machado, não estiver morto, e não estiver em algum menu ou interface então os controles ficam habilitados
-        if (!_changer.GetPanelState() && !panel.activeInHierarchy  && !Dead && _canMachado < 0 )
+        foreach (GameObject panel in panels)
         {
-            HandleInput();
+            if (!_changer.GetPanelState() && !panel.activeInHierarchy && !Dead && _canMachado < 0 && !boxAnimator.GetBool("IsOpen"))
+            {
+                HandleInput();
+                Debug.Log("InPut");
+            }
         }
 
         // Se a vida do jogador chegar a zero, ele morre
-        if(DataSystem.health <= 0)
+        if (DataSystem.health <= 0)
         {
             Dead = true; // Booleana que verifica a morte
             anim.SetBool("IsDead", true); // Animação de morte ativada
@@ -121,11 +127,6 @@ public class Player : MonoBehaviour
             }
         }
 
-        /*if(_canMachado < 0 && !isDashing)
-        {
-            _controller.EndDash(dash);
-        }*/
-
         anim.SetBool("IsGrounded", _controller.State.IsGrounded);            
         anim.SetFloat("Speed", Mathf.Abs(_controller.Velocity.x) / maxSpeed);
     }
@@ -139,11 +140,12 @@ public class Player : MonoBehaviour
             _canMachado = RateMachado;
             isMachado = false;
         }
+        
     }
 
     private void HandleInput()
     {
-        if(!anim.GetBool("Dash"))
+        if(!anim.GetBool("Dash") )
             h_Move = Input.GetAxisRaw("Horizontal");
         
         if (h_Move > 0f)
@@ -187,14 +189,10 @@ public class Player : MonoBehaviour
             _canFireIn = RateTiro;
         }
 
-        if (Input.GetButton("Machadada") && !anim.GetBool("IsCrouching"))
+        if (Input.GetButton("Machadada") && DataSystem.machadinha && !anim.GetBool("IsCrouching"))
         {
             if (_canMachado > 0)
                 return;
-            //_controller.Dashing(dash, 0f);
-            /*            _controller.SetForce(Vector2.zero);
-                        anim.SetTrigger("Machadada");
-                        _canMachado = RateMachado;*/
             isMachado = true;
         }
 
@@ -229,22 +227,23 @@ public class Player : MonoBehaviour
 
         if(Input.GetButtonDown("Cheat"))
         {
-            Debug.Log("Trocou Bedindo");
+            //Debug.Log("Trocou Bedindo");
             DataSystem.fogPower = !DataSystem.fogPower;
             DataSystem.firePower = !DataSystem.firePower;
             DataSystem.dashPower = !DataSystem.dashPower;
+            DataSystem.machadinha = !DataSystem.machadinha;
 
         }
 
         if (Input.GetButtonDown("Cachimbos"))
         {
-            Debug.Log("Porra Moises");
+            //Debug.Log("Porra Moises");
             DataSystem.cachimbos += 2;
         }
 
         if (Input.GetButtonDown("DayNightCheat"))
         {
-            Debug.Log("Mudou o dia BENINO");
+            //Debug.Log("Mudou o dia BENINO");
             dns.dayTime -= 10;
         }
     }
@@ -254,36 +253,6 @@ public class Player : MonoBehaviour
         transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
         _isFacingRight = transform.localScale.x > 0;
     }
-
-    /*private void ToggleNeblina()
-    {
-        if(isNeblina)
-        {
-            for(int i = 0; i < _particulasNeblina.Length; i++)
-            {
-
-                var main = _particulasNeblina[i].main;
-                main.simulationSpeed = playbackspeed;
-
-                _particulasNeblina[i].Play();
-
-                
-
-
-            }
-
-            StartCoroutine(SimulatePart());
-        }
-        else
-        {
-            for (int i = 0; i < _particulasNeblina.Length; i++)
-            {
-                //_particulasNeblina[i].transform.position = Pool.transform.position;
-                _particulasNeblina[i].Stop();
-                
-            }
-        }
-    }*/
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -314,9 +283,6 @@ public class Player : MonoBehaviour
         {
             var main = _particulasNeblina[i].main;
             main.simulationSpeed = 1;
-            //_particulasNeblina[i].transform.position = Pool.transform.position;
-            //_particulasNeblina[i].Simulate(1f);
-            //_particulasNeblina[i].Clear();
         }
         yield return null;
     }
@@ -344,7 +310,6 @@ public class Player : MonoBehaviour
         {
             for (int i = 0; i < _particulasNeblina.Length; i++)
             {
-                //_particulasNeblina[i].transform.position = Pool.transform.position;
                 _particulasNeblina[i].Stop();
 
             }

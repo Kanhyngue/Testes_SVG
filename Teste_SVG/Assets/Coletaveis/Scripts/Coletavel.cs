@@ -21,25 +21,28 @@ public class Coletavel : MonoBehaviour
             {
                 transform.position = pullingArea.transform.position;
                 DataSystem.chave = true;
-                
+                Paje_Controller.seletorFalaPaje++;
             }
             else if(this.gameObject.CompareTag("Dash"))
             {
                 transform.position = pullingArea.transform.position;
                 DataSystem.dashPower = true;
-                
+                Paje_Controller.seletorFalaPaje++;
+
             }
             else if(this.gameObject.CompareTag("Fire"))
             {
                 transform.position = pullingArea.transform.position;
                 DataSystem.firePower = true;
-                
+                Paje_Controller.seletorFalaPaje++;
+
             }
             else if(this.gameObject.CompareTag("Neblina"))
             {
                 transform.position = pullingArea.transform.position;
                 DataSystem.fogPower = true;
-                
+                Paje_Controller.seletorFalaPaje++;
+
             }
         }
     }

@@ -7,6 +7,7 @@ public class SceneEntrance : MonoBehaviour
     public GameObject keyUpInterface; // Icone de Interação
     public GameObject sceneChangeMessage; // Mensagem Base
     public GameObject sceneMessageFase; // Mensagens
+    public GameObject sceneChangeBloqueio; //mensagem de bloqueio, quando estiver sem a machadinha
 
     //public int cenaAtual;
     public int mudarParaCena;
@@ -44,11 +45,17 @@ public class SceneEntrance : MonoBehaviour
             SceneChanger._mudarParaCena = mudarParaCena;
             if (Input.GetButtonDown("Interacao") && SceneChanger.triggered == true && !SceneChanger.underProcess)
             {
-                //Debug.Log(sceneMessageFase);
-                //Debug.Log(mudarParaCena);
-                sceneChangeMessage.SetActive(true); // liga o painel de mensagem
-                sceneMessageFase.SetActive(true); // liga o texto "especifico"
-                SceneChanger.underProcess = true;
+                if (DataSystem.machadinha)
+                {
+                    //Debug.Log(sceneMessageFase);
+                    //Debug.Log(mudarParaCena);
+                    sceneChangeMessage.SetActive(true); // liga o painel de mensagem
+                    sceneMessageFase.SetActive(true); // liga o texto "especifico"
+                    SceneChanger.underProcess = true;
+                }else 
+                {
+                    sceneChangeBloqueio.SetActive(true);
+                }
             }
         }
     }

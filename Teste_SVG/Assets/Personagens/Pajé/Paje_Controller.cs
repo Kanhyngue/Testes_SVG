@@ -95,7 +95,7 @@ public class Paje_Controller : MonoBehaviour
                 canMove = false;
                 animator.SetBool("IsMoving", canMove);
                 animator.SetBool("IsTalking", true);
-                trigger.TriggerDialog(0);
+                trigger.TriggerDialog(seletorFalaPaje);
             }
         }
     }

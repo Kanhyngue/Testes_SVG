@@ -12,6 +12,7 @@ public class AllData
     public bool dashPowerData;
     public bool firePowerData;
     public bool fogPowerData;
+    public bool machadinhaData;
     // Cena
     public int levelData;
     public bool checkpointData;
@@ -28,6 +29,7 @@ public class AllData
         dashPowerData = dataSystem.dashPowerSave;
         firePowerData = dataSystem.firePowerSave;
         fogPowerData = dataSystem.fogPowerSave;
+        machadinhaData = dataSystem.machadinhaSave;
         // Cena
         levelData = dataSystem.levelSave;
         checkpointData = dataSystem.checkpointSave;

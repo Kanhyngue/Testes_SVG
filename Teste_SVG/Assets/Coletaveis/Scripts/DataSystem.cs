@@ -14,6 +14,7 @@ public class DataSystem : MonoBehaviour
     public bool dashPowerSave;
     public bool firePowerSave;
     public bool fogPowerSave;
+    public bool machadinhaSave;
     // Cena
     public int levelSave;
     public bool checkpointSave;
@@ -27,6 +28,7 @@ public class DataSystem : MonoBehaviour
     public static bool dashPower;
     public static bool firePower;
     public static bool fogPower;
+    public static bool machadinha;
     // Cena
     public static int level;
     public static bool checkpoint;
@@ -119,6 +121,7 @@ public class DataSystem : MonoBehaviour
         dashPowerSave = dashPower;
         firePowerSave = firePower;
         fogPowerSave = fogPower;
+        machadinhaSave = machadinha;
         // Cena
         levelSave = level;
         checkpointSave = checkpoint;
@@ -142,6 +145,7 @@ public class DataSystem : MonoBehaviour
         dashPower = data.dashPowerData;
         firePower = data.firePowerData;
         fogPower = data.fogPowerData;
+        machadinha = data.machadinhaData;
         // Cena
         level = data.levelData;
         checkpoint = data.checkpointData;

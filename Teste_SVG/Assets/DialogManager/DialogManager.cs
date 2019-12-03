@@ -47,6 +47,13 @@ public class DialogManager : MonoBehaviour
         if (sentences.Count == 0 && contador == 0)
         {
             EndDialog();
+            if (Paje_Controller.seletorFalaPaje == 0)
+            {
+                DataSystem.machadinha = true;
+                Paje_Controller.seletorFalaPaje++;
+            }
+                if (Paje_Controller.seletorFalaPaje % 2 == 0)
+                Paje_Controller.seletorFalaPaje++;
             return;
         }
 

@@ -134,8 +134,9 @@ public class CharacterPlatformer2D : MonoBehaviour
     {
         _jumpIn -= Time.deltaTime;
         _velocity.y += Parameters.Gravity * Time.deltaTime;
-        Move(Velocity * Time.deltaTime); 
-
+        Move(Velocity * Time.deltaTime);
+        //Debug.Log("_velocity" + _velocity);
+        //Debug.Log("Velocity" + Velocity);
     }
 
     private void Move(Vector2 deltaMovement)
