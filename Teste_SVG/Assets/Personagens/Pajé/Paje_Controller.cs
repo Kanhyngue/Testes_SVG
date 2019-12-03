@@ -19,7 +19,7 @@ public class Paje_Controller : MonoBehaviour
     private Animator boxAnimator;
 
     private DialogTrigger trigger;
-    public Animator animator;
+    private Animator animator;
     private bool canMove, isFacingLeft;
 
     public static int seletorFalaPaje = 0;
@@ -56,7 +56,7 @@ public class Paje_Controller : MonoBehaviour
     IEnumerator WaitRandom()
     {
         //Debug.Log("Coroutine");
-        yield return new WaitForSeconds(Random.Range(2f, 10f));  
+        yield return new WaitForSeconds(Random.Range(2f, 10f));
         Flip();
         canMove = true;
         animator.SetBool("IsMoving", canMove);
@@ -73,7 +73,7 @@ public class Paje_Controller : MonoBehaviour
 
         if ((Vector2.Distance(transform.position, new Vector2(ponto.position.x, transform.position.y)) < 0.1f))
         {
-            canMove = false; 
+            canMove = false;
             animator.SetBool("IsMoving", canMove);
             StartCoroutine(WaitRandom());
         }
@@ -87,30 +87,25 @@ public class Paje_Controller : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D entrada)
     {
-        if (Input.GetButtonDown("Interacao"))
-        {
-            canMove = false;
-            animator.SetBool("IsMoving", canMove);
-            animator.SetBool("IsTalking", true);
-            trigger.TriggerDialog(seletorFalaPaje);
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
+        if (entrada.gameObject.CompareTag("Player"))
         {
             keyUpInterface.SetActive(true);
+            if (Input.GetButtonDown("Interacao"))
+            {
+                canMove = false;
+                animator.SetBool("IsMoving", canMove);
+                animator.SetBool("IsTalking", true);
+                trigger.TriggerDialog(0);
+            }
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+
+    private void OnTriggerExit2D(Collider2D entrada)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        { 
+        if (entrada.gameObject.CompareTag("Player"))
+        {
             keyUpInterface.SetActive(false);
         }
     }
-
-
 }

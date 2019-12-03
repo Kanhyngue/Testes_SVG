@@ -9,11 +9,15 @@ public class DialogManager : MonoBehaviour
     public Text dialogText;
 
     private Queue<string> sentences;
+    private int contador = 0;
+    private string sentence = "";
 
     [SerializeField]
     private Animator animator;
 
-    
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,25 +37,42 @@ public class DialogManager : MonoBehaviour
         {
             sentences.Enqueue(sentence);
         }
-
+        contador = 0;
         DisplayNextSentence();
     }
 
 
     public void DisplayNextSentence()
     {
-        if (sentences.Count == 0)
+        if (sentences.Count == 0 && contador == 0)
         {
             EndDialog();
             return;
         }
 
-        string sentence = sentences.Dequeue();
-        StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
-
-        //Debug.Log(sentence);
+        if (contador == 0)
+        {
+            dialogText.text = "";
+            sentence = sentences.Dequeue();
+            contador++;
+        }
+        else if (contador == 1)
+        {
+            StartCoroutine(TypeSentence(sentence));            
+            contador++;
+        }
+        else if (contador == 2)
+        {
+            StopAllCoroutines();
+            dialogText.text = sentence;
+            contador = 0;
+        }
     }
+    //string sentence = sentences.Dequeue();
+
+
+    //Debug.Log(sentence);
+
 
     private void EndDialog()
     {
