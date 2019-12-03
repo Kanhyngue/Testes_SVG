@@ -8,7 +8,7 @@ public class BossMelee : MonoBehaviour
     public float bossSpeed;
     public static bool _hit;
     private Animator anim;
-    private int bossHealth = 100;
+    private int bossHealth = 150;
     private bool dead = false;
     private bool loopAttack = false;
     private bool dontWalk = false;
@@ -54,7 +54,7 @@ public class BossMelee : MonoBehaviour
                 }
                 
                 // Ataca o jogador se ele estiver perto
-                if(Vector2.Distance(transform.position, player.position) < 3.5f && !loopAttack)
+                if(Vector2.Distance(transform.position, player.position) < 4.0f && !loopAttack)
                 {
                     anim.SetBool("perseguir", false);
                     anim.SetBool("atacar", true);
