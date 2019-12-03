@@ -768,6 +768,7 @@ MonoBehaviour:
   ponto2: {fileID: 0}
   velocidade: 5
   keyUpInterface: {fileID: 0}
+  boxAnimator: {fileID: 0}
 --- !u!114 &6386078139706251601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -780,11 +781,138 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f4fe154ee81936409138cac41b78829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - name: 
-    sentences: []
-  - name: 
-    sentences: []
+  dialogs:
+  - name: "Paj\xE9"
+    sentences:
+    - Raoni, chegou a hora...
+    - "Eu vou ser sincero com voc\xEA, n\xE3o esperava que esse dia chegaria, ent\xE3o
+      me desculpe n\xE3o te preparar completamente, mas eu vejo..."
+    - Ah sim, eu vejo nos seus olhos... a sagacidade dele...
+    - "Vamos, n\xE3o h\xE1 tempo para meus devaneios. Os bandeirantes vieram, como
+      voc\xEA sabe, mas acho que eles j\xE1 se foram. Acho que j\xE1 est\xE3o em sua
+      base, ou ent\xE3o, mais longe ainda daqui."
+    - Ao menos, eu espero.
+    - "Voc\xEA sabe que com a vinda do bandeirante, tamb\xE9m h\xE1 a partida do \xEDndio."
+    - "Mas nossos irm\xE3os, amigos... nossa fam\xEDlia, Raoni, ela n\xE3o se foi
+      completamente. Nossa fam\xEDlia ainda n\xE3o pode descansar."
+    - "Tome, pegue esta machadinha. Eu mesmo a usei, muitos anos atr\xE1s, e hoje,
+      eu a entrego. Raoni, as almas de nossos irm\xE3os de tribo ainda est\xE3o aqui
+      em terra, e cabe a voc\xEA dar o descanso para eles."
+    - "Se eu pudesse, eu faria, mas esses ossos velhos n\xE3o me d\xE3o a mesma destreza
+      de outrora."
+    - "Sinto que sua jornada se inicia nos cerrados aqui perto da tribo. Voc\xEA se
+      lembra como chegar l\xE1, n\xE3o? Basta ir para o outro lado, ap\xF3s a nossa
+      casa de ora\xE7\xF5es, no topo, \xE9 l\xE1 que voc\xEA vai achar o caminho"
+    - "Eu sempre estarei aqui, caso precise de ajuda em seu caminho. E n\xE3o se esque\xE7a,
+      os esp\xEDritos s\xE3o mais fortes no escuro.\u201D"
+  - name: "Paj\xE9"
+    sentences:
+    - "V\xE1, Raoni, n\xF3s dependemos de voc\xEA."
+    - "Sinto que sua jornada se inicia nos cerrados aqui perto da tribo. Voc\xEA se
+      lembra como chegar l\xE1, n\xE3o? Basta ir para o outro lado, ap\xF3s a nossa
+      casa de ora\xE7\xF5es, no topo, \xE9 l\xE1 que voc\xEA vai achar o caminho\u201D"
+  - name: "Paj\xE9"
+    sentences:
+    - "Ah, voc\xEA retornou."
+    - "Sim, eu percebi que voc\xEA conseguiu dar o descanso para nossos irm\xE3os,
+      por\xE9m existem mais que precisam de paz."
+    - "Seu trabalho \xE9 nobre, por\xE9m \xE1rduo, filho."
+    - "N\xF3s contamos com voc\xEA, Raoni."
+    - "Vejo que voc\xEA encontrou um artefato m\xEDstico, deixado pelo pr\xF3prio
+      Deus Tup\xE3. Essa \xE9 a prova de que voc\xEA est\xE1 no caminho correto."
+    - "V\xE1 para a floresta, aqui em cima. \xC9 l\xE1 que seu caminho continua."
+    - "Eu sempre estarei aqui, caso precise de ajuda em seu caminho. E n\xE3o se esque\xE7a,
+      os esp\xEDritos s\xE3o mais fortes no escuro."
+  - name: "Paj\xE9"
+    sentences:
+    - "N\xF3s contamos com voc\xEA, Raoni."
+    - "V\xE1 para a floresta, aqui em cima. \xC9 l\xE1 que seu caminho continua. E
+      n\xE3o se esque\xE7a, os esp\xEDritos s\xE3o mais fortes no escuro."
+  - name: "Paj\xE9"
+    sentences:
+    - Vejo a tristeza em seus olhos.
+    - "Foi Ubiratan que encontrou, n\xE3o foi?"
+    - "Ah sim, uma trag\xE9dia. Ubiratan era nosso guerreiro mais forte. Foi pego
+      de surpresa, numa emboscada dos bandeirantes, enquanto buscava comida para a
+      tribo."
+    - "Lembro-me de quando voc\xEAs eram crian\xE7as, correndo pela tribo. Voc\xEAs
+      fingiam ser ca\xE7ador e on\xE7a. E se divertiam muito, ah sim..."
+    - "Mas agora, Raoni, Ubiratan descansa. Por conta de sua amizade, ele lhe ensinou
+      a lutar, lhe ensinou a ser um guerreiro, um ca\xE7ador, um bom homem."
+    - "Por conta de sua amizade, voc\xEA lhe deu o descanso. E agora ele pode ficar
+      em paz."
+    - "Como disse, seu trabalho \xE9 nobre, mas \xE1rduo."
+    - "Fique em paz, crian\xE7a, pois vejo que traz a pintura de Karai. Os deuses
+      olham por n\xF3s, e nos ajudam na jornada."
+    - "Com o poder de Karai, voc\xEA poder\xE1 iluminar a caverna que fica em nossa
+      tribo."
+    - "Voc\xEA se lembra onde ela fica, n\xE3o? Uma vez voc\xEA se perdeu l\xE1. Mas
+      hoje eu entendo. Foi l\xE1 que se encontrou."
+    - "Ela est\xE1 logo depois da nossa casa de ora\xE7\xF5es, \xE0 esquerda."
+    - Eu sempre estarei aqui, caso precise de ajuda em seu caminho.
+  - name: "Paj\xE9"
+    sentences:
+    - "Com o poder de Karai, voc\xEA poder\xE1 iluminar a caverna que fica em nossa
+      tribo."
+    - "Ela est\xE1 logo depois da nossa casa de ora\xE7\xF5es, \xE0 esquerda."
+  - name: "Paj\xE9"
+    sentences:
+    - "Voc\xEA retorna triunfante, novamente, eu vejo."
+    - "N\xF3s todos temos muito orgulho de voc\xEA, Raoni. Voc\xEA \xE9 o \xFAnico
+      que poderia dar descanso a nossa tribo. Tanto para os que foram, quanto para
+      o que ficaram."
+    - "N\xE3o se entriste\xE7a, todos agora podem ficar em paz."
+    - "Ao menos, quase todos. Raoni, ainda existem irm\xE3os no cerrado, e agora,
+      que voc\xEA conseguiu a ben\xE7\xE3o do deus Jakaira, sinto que sua jornada
+      deve prosseguir por l\xE1."
+    - "V\xE1, nossos \xFAltimos irm\xE3os ca\xEDdos est\xE3o perdidos l\xE1, e n\xF3s
+      confiamos em voc\xEA, Raoni, para dar descanso a eles."
+    - "Sim... Cada vez mais eu consigo ver em voc\xEA..."
+    - "V\xE1 para o cerrado novamente, Raoni, e depois retorne a mim. Contamos com
+      voc\xEA."
+  - name: "Paj\xE9"
+    sentences:
+    - "V\xE1, nossos \xFAltimos irm\xE3os ca\xEDdos est\xE3o perdidos no cerrado,
+      e n\xF3s confiamos em voc\xEA, Raoni, para dar descanso a eles."
+    - "Lhes d\xEA a paz, e depois me procure."
+  - name: "Paj\xE9"
+    sentences:
+    - "De novo, retorna com o cora\xE7\xE3o pesado."
+    - "Encontrou Peri, n\xE3o foi?"
+    - "Lembro-me de quando eram crian\xE7as, foi Peri quem te ensinou a ser r\xE1pido
+      como a on\xE7a, e a subir em \xE1rvores melhor do que uma."
+    - "O tempo foi passando, e a amizade de voc\xEAs s\xF3 cresceu. Mesmo quando estavam
+      brigando pela aten\xE7\xE3o de Tainara, era poss\xEDvel ver a grande amizade
+      que um nutria pelo outro."
+    - "Voc\xEA deu paz para seu velho amigo, Raoni. N\xE3o se esque\xE7a disso."
+    - "Raoni, vejo que conseguiu encontrar o que Peri havia ido buscar, e n\xE3o poderia
+      haver um momento melhor."
+    - "Peri, o nosso \xEDndio mais r\xE1pido, havia conseguido se infiltrar num acampamento
+      bandeirante, e roubar a chave de entrada de um posto deles, por\xE9m, foi percebido
+      e atacado, e acabou falecendo."
+    - "Em seu caminho para libertar a alma de nossos irm\xE3os de tribo, voc\xEA foi
+      notado pelos nossos deuses."
+    - "Tup\xE3, Karai, e Jakaira, todos lhes emprestaram seus poderes, para lhe ajudar
+      em sua jornada. Mas tem algo que eu n\xE3o lhe contei."
+    - "Voc\xEA, Raoni, \xE9 o emiss\xE1rio de Nhanderu. Por isso somente voc\xEA poderia
+      conseguir esses poderes. Por isso somente voc\xEA poderia conseguir dar a paz
+      a nossa tribo, seja em vida, seja em morte."
+    - "-Agora ou\xE7a, pois o tempo \xE9 curto. Os bandeirantes n\xE3o se foram, ainda
+      estavam aqui perto, por\xE9m conseguimos emboscar e matar todos eles. Bom, todos,
+      menos um, que fugiu para as cavernas."
+    - "Com essa chave, voc\xEA pode entrar no posto dos bandeirantes, e acabar com
+      isso."
+    - "Por favor, Raoni, fa\xE7a esta \xFAltima coisa. Voc\xEA deu a paz para nossos
+      irm\xE3os ca\xEDdos. Agora fa\xE7a o mesmo pelos vivos."
+  - name: "Paj\xE9"
+    sentences:
+    - "Agora ou\xE7a, pois o tempo \xE9 curto. Os bandeirantes n\xE3o se foram, ainda
+      estavam aqui perto, por\xE9m conseguimos emboscar e matar todos eles. Bom, todos,
+      menos um, que fugiu para as cavernas."
+    - "Com essa chave, voc\xEA pode entrar no posto dos bandeirantes, e acabar com
+      isso."
+    - "Por favor, Raoni, fa\xE7a esta \xFAltima coisa. Voc\xEA deu a paz para nossos
+      irm\xE3os ca\xEDdos. Agora fa\xE7a o mesmo pelos vivos."
 --- !u!58 &4674448703691744852
 CircleCollider2D:
   m_ObjectHideFlags: 0
