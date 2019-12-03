@@ -50,8 +50,8 @@ public class MusicChanger : MonoBehaviour
                 cena = 0;
                 AtribuirSource(cena);
 
-                hubSource.volume = 1f;
-                hubAmbient.volume = 1f;
+                hubSource.volume = .5f;
+                hubAmbient.volume = .5f;
             }
             else
             {
@@ -76,8 +76,8 @@ public class MusicChanger : MonoBehaviour
                 cena = 1;
                 AtribuirSource(cena);
 
-                cerradoSource.volume = 1f;
-                cerradoAmbient.volume = 1f;
+                cerradoSource.volume = .5f;
+                cerradoAmbient.volume = .5f;
             }
             else
             {
@@ -102,8 +102,8 @@ public class MusicChanger : MonoBehaviour
                 cena = 2;
                 AtribuirSource(cena);
 
-                florestaSource.volume = 1f;
-                florestaAmbient.volume = 1f;
+                florestaSource.volume = .5f;
+                florestaAmbient.volume = .5f;
             }
             else
             {
@@ -128,8 +128,8 @@ public class MusicChanger : MonoBehaviour
                 cena = 3;
                 AtribuirSource(cena);
 
-                cavernaSource.volume = 1f;
-                cavernaAmbient.volume = 1f;
+                cavernaSource.volume = .5f;
+                cavernaAmbient.volume = .5f;
             }
             else
             {
@@ -158,8 +158,8 @@ public class MusicChanger : MonoBehaviour
                 if(currentTime < fadeOffDuration)
                 {
                     currentTime += Time.deltaTime;
-                    hubSource.volume = Mathf.Lerp(1f, 0f, currentTime / fadeOffDuration);
-                    hubAmbient.volume = Mathf.Lerp(1f, 0f, currentTime / fadeOffDuration);
+                    hubSource.volume = Mathf.Lerp(.5f, 0f, currentTime / fadeOffDuration);
+                    hubAmbient.volume = Mathf.Lerp(.5f, 0f, currentTime / fadeOffDuration);
                 }
                 else
                 {
@@ -170,8 +170,8 @@ public class MusicChanger : MonoBehaviour
                 if(currentTime < fadeOffDuration)
                 {
                     currentTime += Time.deltaTime;
-                    cerradoSource.volume = Mathf.Lerp(1f, 0f, currentTime / fadeOffDuration);
-                    cerradoAmbient.volume = Mathf.Lerp(1f, 0f, currentTime / fadeOffDuration);
+                    cerradoSource.volume = Mathf.Lerp(.5f, 0f, currentTime / fadeOffDuration);
+                    cerradoAmbient.volume = Mathf.Lerp(.5f, 0f, currentTime / fadeOffDuration);
                 }
                 else
                 {
@@ -182,8 +182,8 @@ public class MusicChanger : MonoBehaviour
                 if(currentTime < fadeOffDuration)
                 {
                     currentTime += Time.deltaTime;
-                    florestaSource.volume = Mathf.Lerp(1f, 0f, currentTime / fadeOffDuration);
-                    florestaAmbient.volume = Mathf.Lerp(1f, 0f, currentTime / fadeOffDuration);
+                    florestaSource.volume = Mathf.Lerp(.5f, 0f, currentTime / fadeOffDuration);
+                    florestaAmbient.volume = Mathf.Lerp(.5f, 0f, currentTime / fadeOffDuration);
                 }
                 else
                 {
@@ -194,8 +194,8 @@ public class MusicChanger : MonoBehaviour
                 if(currentTime < fadeOffDuration)
                 {
                     currentTime += Time.deltaTime;
-                    cavernaSource.volume = Mathf.Lerp(1f, 0f, currentTime / fadeOffDuration);
-                    cavernaAmbient.volume = Mathf.Lerp(1f, 0f, currentTime / fadeOffDuration);
+                    cavernaSource.volume = Mathf.Lerp(.5f, 0f, currentTime / fadeOffDuration);
+                    cavernaAmbient.volume = Mathf.Lerp(.5f, 0f, currentTime / fadeOffDuration);
                 }
                 else
                 {
