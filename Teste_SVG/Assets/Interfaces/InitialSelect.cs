@@ -7,7 +7,7 @@ public class InitialSelect : MonoBehaviour
 {
     public Button initialButton;
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         initialButton.Select();
     }

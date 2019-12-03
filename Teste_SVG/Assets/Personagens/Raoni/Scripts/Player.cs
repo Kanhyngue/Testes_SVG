@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     private SceneChanger _changer;
     private ControllerPhsyicsVolume2D dash;
     public GameObject [] panels;
+    public bool canMove = true;
 
     public float maxSpeed = 8f;
     public float DashFactor = 2f;
@@ -140,7 +141,10 @@ public class Player : MonoBehaviour
     private void HandleInput()
     {
 
-        if (!_changer.GetPanelState() && !panels[0].activeInHierarchy && !panels[1].activeInHierarchy && !Dead && _canMachado < 0 && !boxAnimator.GetBool("IsOpen") && !anim.GetBool("Dash"))
+        if (!_changer.GetPanelState() && !panels[0].activeInHierarchy && 
+            !panels[1].activeInHierarchy && !Dead && _canMachado < 0 && 
+            !boxAnimator.GetCurrentAnimatorStateInfo(0).IsTag("Open") && !anim.GetBool("Dash") &&
+            canMove)
         {
 
             h_Move = Input.GetAxisRaw("Horizontal");
@@ -327,5 +331,12 @@ public class Player : MonoBehaviour
         }
         yield return null;
 
+    }
+
+    public IEnumerator MoveLeft()
+    {
+        _controller.SetHorizontalForce(Mathf.Lerp(_controller.Velocity.x, -1 * maxSpeed * DashFactor, Time.deltaTime /** movementFactor*/));
+        yield return new WaitForSeconds(1.5f);
+        _controller.SetHorizontalForce(Mathf.Lerp(_controller.Velocity.x, 0 * maxSpeed * DashFactor, Time.deltaTime /** movementFactor*/));
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine;  
 
 public class Paje_Controller : MonoBehaviour
 {
@@ -37,12 +37,12 @@ public class Paje_Controller : MonoBehaviour
         if (!boxAnimator.GetBool("IsOpen"))
         {
             animator.SetBool("IsTalking", false);
-            if ((Vector2.Distance(transform.position, new Vector2(ponto1.position.x, transform.position.y)) > 0.1f) && canMove && isFacingLeft && !boxAnimator.GetBool("IsOpen"))
+            if ((Vector2.Distance(transform.position, new Vector2(ponto1.position.x, transform.position.y)) > 0.1f) && canMove && isFacingLeft && !boxAnimator.GetCurrentAnimatorStateInfo(0).IsTag("Open"))
             {
                 //Debug.Log("Mover ponto 1");
                 MoverPara1(ponto1);
             }
-            else if ((Vector2.Distance(transform.position, new Vector2(ponto2.position.x, transform.position.y)) > 0.1f) && canMove && !isFacingLeft && !boxAnimator.GetBool("IsOpen"))
+            else if ((Vector2.Distance(transform.position, new Vector2(ponto2.position.x, transform.position.y)) > 0.1f) && canMove && !isFacingLeft && !boxAnimator.GetCurrentAnimatorStateInfo(0).IsTag("Open"))
             {
                 //Debug.Log("Mover ponto 2");
                 MoverPara1(ponto2);

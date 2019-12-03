@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Events;
 
 public class DialogManager : MonoBehaviour
 {
@@ -16,20 +15,9 @@ public class DialogManager : MonoBehaviour
 
     [SerializeField]
     private Animator animator;
+    private int fonteNPC;
 
 
-    [System.Serializable]
-    public class IntEvent : UnityEvent<int> { }
-
-
-    public IntEvent NextSentenceEvent;
-
-    private void Awake()
-    {
-
-        if (NextSentenceEvent == null)
-            NextSentenceEvent = new IntEvent();
-    }
 
     // Start is called before the first frame update
     void Start()
@@ -51,20 +39,23 @@ public class DialogManager : MonoBehaviour
             sentences.Enqueue(sentence);
         }
         contador = 0;
-        DisplayNextSentence(source);
+        fonteNPC = source;
+        StopAllCoroutines();
+        DisplayNextSentence();
     }
 
 
-    public void DisplayNextSentence(int source)
+    public void DisplayNextSentence()
     {
-        Debug.Log(source);
-        switch (source)
+        //Debug.Log(fonteNPC);
+        switch (fonteNPC)
         {
-            case 0://Pop Up
-                Debug.Log("Fonte foi pop up");
+            case 0://sem fonte
+                Debug.Log("Nenhuma fonte");
                 break;
 
             case 1://Pajé
+                //StopAllCoroutines();
                 if (sentences.Count == 0 && contador == 0)
                 {
                     EndDialog();
@@ -75,6 +66,38 @@ public class DialogManager : MonoBehaviour
                     }
                     if (Paje_Controller.seletorFalaPaje % 2 == 0)
                         Paje_Controller.seletorFalaPaje++;
+                    return;
+                }
+                switch (contador)
+                {
+                    case 0:
+                        Debug.Log(contador);
+                        //StopAllCoroutines();
+                        sentence = sentences.Dequeue();
+                        StartCoroutine(TypeSentence(sentence));
+                        contador = 1;
+                        break;
+                    case 1:
+                        Debug.Log(contador);
+                        StopAllCoroutines();
+                        dialogText.text = sentence;
+                        contador = 0;
+                        break;
+                    case 2:
+                        Debug.Log(contador);
+                        //StopAllCoroutines();
+                        contador = 0;
+                        break;
+                    default:
+                        break;
+                }
+                break;
+
+
+            case 2://Pescador
+                if (sentences.Count == 0 && contador == 0)
+                {
+                    EndDialog();                    
                     return;
                 }
 
@@ -96,8 +119,7 @@ public class DialogManager : MonoBehaviour
                     contador = 0;
                 }
                 break;
-            case 2://Pescador
-
+            case 3://Pop Up
                 break;
             default:
                 break;
@@ -126,4 +148,5 @@ public class DialogManager : MonoBehaviour
             yield return null;
         }
     }
+
 }
