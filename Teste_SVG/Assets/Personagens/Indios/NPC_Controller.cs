@@ -19,6 +19,8 @@ public class NPC_Controller : MonoBehaviour
     private Animator animator;
     private bool canMove, isFacingLeft;
 
+    public static int seletorFalaNPC;
+
     void Start()
     {
         isFacingLeft = true;
@@ -31,18 +33,20 @@ public class NPC_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if ((Vector2.Distance(transform.position, new Vector2(ponto1.position.x, transform.position.y)) > 0.1f) && canMove && isFacingLeft)
+        if (!boxAnimator.GetBool("IsOpen"))
         {
-            //Debug.Log("Mover ponto 1");
-            MoverPara1(ponto1);
+            animator.SetBool("IsTalking", false);
+            if ((Vector2.Distance(transform.position, new Vector2(ponto1.position.x, transform.position.y)) > 0.1f) && canMove && isFacingLeft && !boxAnimator.GetCurrentAnimatorStateInfo(0).IsTag("Open"))
+            {
+                //Debug.Log("Mover ponto 1");
+                MoverPara1(ponto1);
+            }
+            else if ((Vector2.Distance(transform.position, new Vector2(ponto2.position.x, transform.position.y)) > 0.1f) && canMove && !isFacingLeft && !boxAnimator.GetCurrentAnimatorStateInfo(0).IsTag("Open"))
+            {
+                //Debug.Log("Mover ponto 2");
+                MoverPara1(ponto2);
+            }
         }
-        else if ((Vector2.Distance(transform.position, new Vector2(ponto2.position.x, transform.position.y)) > 0.1f) && canMove && !isFacingLeft)
-        {
-            //Debug.Log("Mover ponto 2");
-            MoverPara1(ponto2);
-        }
-
 
     }
 
@@ -84,12 +88,13 @@ public class NPC_Controller : MonoBehaviour
         if (entrada.gameObject.CompareTag("Player"))
         {
             keyUpInterface.SetActive(true);
-            if (Input.GetButtonDown("Interacao"))
+            if (Input.GetButtonDown("Interacao") && boxAnimator.GetCurrentAnimatorStateInfo(0).IsTag("Closed"))
             {
+                //Debug.Log("INteragiu");
                 canMove = false;
                 animator.SetBool("IsMoving", canMove);
                 animator.SetBool("IsTalking", true);
-                trigger.TriggerDialog(0, 1);
+                trigger.TriggerDialog(seletorFalaNPC, 3);
             }
         }
     }

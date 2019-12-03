@@ -12,6 +12,8 @@ public class DialogManager : MonoBehaviour
     private Queue<string> sentences;
     private int contador = 0;
     private string sentence = "";
+    private int rand;
+    
 
     [SerializeField]
     private Animator animator;
@@ -34,12 +36,15 @@ public class DialogManager : MonoBehaviour
 
         sentences.Clear();
 
+        
+        
         foreach (string sentence in _dialog.sentences)
         {
             sentences.Enqueue(sentence);
         }
         contador = 0;
         fonteNPC = source;
+        Debug.Log("DialogManager");
         StopAllCoroutines();
         DisplayNextSentence();
     }
@@ -71,20 +76,17 @@ public class DialogManager : MonoBehaviour
                 switch (contador)
                 {
                     case 0:
-                        Debug.Log(contador);
                         //StopAllCoroutines();
                         sentence = sentences.Dequeue();
                         StartCoroutine(TypeSentence(sentence));
                         contador = 1;
                         break;
                     case 1:
-                        Debug.Log(contador);
                         StopAllCoroutines();
                         dialogText.text = sentence;
                         contador = 0;
                         break;
                     case 2:
-                        Debug.Log(contador);
                         //StopAllCoroutines();
                         contador = 0;
                         break;
@@ -101,25 +103,54 @@ public class DialogManager : MonoBehaviour
                     return;
                 }
 
-                if (contador == 0)
+                switch (contador)
                 {
-                    dialogText.text = "";
-                    sentence = sentences.Dequeue();
-                    contador++;
-                }
-                else if (contador == 1)
-                {
-                    StartCoroutine(TypeSentence(sentence));
-                    contador++;
-                }
-                else if (contador == 2)
-                {
-                    StopAllCoroutines();
-                    dialogText.text = sentence;
-                    contador = 0;
+                    case 0:
+                        //StopAllCoroutines();
+                        sentence = sentences.Dequeue();
+                        StartCoroutine(TypeSentence(sentence));
+                        contador = 1;
+                        break;
+                    case 1:
+                        StopAllCoroutines();
+                        dialogText.text = sentence;
+                        contador = 0;
+                        break;
+                    case 2:
+                        //StopAllCoroutines();
+                        contador = 0;
+                        break;
+                    default:
+                        break;
                 }
                 break;
-            case 3://Pop Up
+            case 3://NPC
+                if (sentences.Count == 0 && contador == 0)
+                {
+                    EndDialog();
+                    return;
+                }
+
+                switch (contador)
+                {
+                    case 0:
+                        //StopAllCoroutines();
+                        sentence = sentences.Dequeue();
+                        StartCoroutine(TypeSentence(sentence));
+                        contador = 1;
+                        break;
+                    case 1:
+                        StopAllCoroutines();
+                        dialogText.text = sentence;
+                        contador = 0;
+                        break;
+                    case 2:
+                        //StopAllCoroutines();
+                        contador = 0;
+                        break;
+                    default:
+                        break;
+                }
                 break;
             default:
                 break;

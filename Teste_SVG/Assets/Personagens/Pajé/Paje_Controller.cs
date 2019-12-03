@@ -88,7 +88,7 @@ public class Paje_Controller : MonoBehaviour
         if (entrada.gameObject.CompareTag("Player"))
         {
             keyUpInterface.SetActive(true);
-            if (Input.GetButtonDown("Interacao"))
+            if (Input.GetButtonDown("Interacao") && boxAnimator.GetCurrentAnimatorStateInfo(0).IsTag("Closed"))
             {
                 canMove = false;
                 animator.SetBool("IsMoving", canMove);

@@ -1708,23 +1708,22 @@ Transform:
   m_Father: {fileID: 4856569339250235073}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5229052459348976034
-MonoBehaviour:
+--- !u!58 &384494257
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2731185601159605660}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 103a7e8e5ee6c5641b9bd8376d5c7fda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ponto1: {fileID: 7991463840392836035}
-  ponto2: {fileID: 5338974114507246145}
-  velocidade: 2
-  keyUpInterface: {fileID: 0}
-  boxAnimator: {fileID: 0}
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 13.51
 --- !u!114 &4786334825474013170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1743,48 +1742,107 @@ MonoBehaviour:
     - "Oi Raoni! Parece que o Paj\xE9 Ubirajara estava te procurando. Ele foi at\xE9
       a sua oca, por\xE9m voc\xEA estava dormindo ainda, ent\xE3o ele preferiu n\xE3o
       te acordar."
+  - name: Tainara
+    sentences:
     - "\xC9 dif\xEDcil conviver com esses ataques bandeirantes... Mas n\xF3s temos
       que ser fortes, n\xE3o \xE9? O Paj\xE9 sabe o que \xE9 melhor pra gente."
+  - name: Tainara
+    sentences:
     - "Nossa Raoni, como voc\xEA cresceu! Ainda me lembro de quando brincava com...
       Nossa, voc\xEA cresceu muito mesmo."
+  - name: Tainara
+    sentences:
     - "Sabe, eu consigo sentir os deuses olhando por n\xF3s nesse momento dif\xEDcil.
       \xC9 como se o poder deles estivesse aqui na tribo, agora mesmo."
+  - name: Tainara
+    sentences:
     - "O Paj\xE9 disse que precisava da sua ajuda, por causa dos acontecimentos recentes."
+  - name: Tainara
+    sentences:
     - "Voc\xEA vai nos ajudar, n\xE3o vai, Raoni?"
+  - name: Tainara
+    sentences:
     - "Meu irm\xE3o foi pra floresta, e desde ent\xE3o, n\xE3o mais o vi. Mas eu o
       sinto... Isso n\xE3o pode ser bom."
+  - name: Tainara
+    sentences:
     - "Eu s\xF3 quero que as coisas acabem bem."
+  - name: Tainara
+    sentences:
     - "Agora que os bandeirantes se foram, n\xF3s podemos reconstruir. A tribo, e
       a n\xF3s mesmos."
   - name: Tainara
     sentences:
     - "O poder dos deuses fica mais forte a cada momento que passa. Eles realmente
       cuidam de n\xF3s, e conseguem sentir o momento dif\xEDcil que passamos."
+  - name: Tainara
+    sentences:
     - "Meu irm\xE3o disse que viu um bandeirante andando na caverna, mas eu n\xE3o
       acredito nele. Ele nem pode ir na caverna!"
+  - name: Tainara
+    sentences:
     - "Eu n\xE3o sei o que houve, mas parece que as coisas est\xE3o ficando melhores!"
+  - name: Tainara
+    sentences:
     - "Raoni, eu n\xE3o sinto mais o meu irm\xE3o. Foi voc\xEA, n\xE3o foi? Foi voc\xEA
       que deu a paz para ele... Obrigado."
+  - name: Tainara
+    sentences:
     - "Voc\xEA parece triste. Eu sei que o Paj\xE9 lhe deu uma tarefa dif\xEDcil,
       mas ele sabe o que \xE9 melhor para todos. Sabe, ele gosta de voc\xEA."
+  - name: Tainara
+    sentences:
     - "Eu visitei a floresta recentemente. Tudo est\xE1 mais vivo. Os p\xE1ssaros
       est\xE3o cantando mais, as formigas est\xE3o andando mais, as \xE1rvores est\xE3o
       mais verdes!"
+  - name: Tainara
+    sentences:
     - "Eu sei que as coisas est\xE3o melhorando por sua causa. Obrigado."
   - name: Tainara
     sentences:
     - "Raoni, n\xF3s encontramos bandeirantes na floresta, mas n\xE3o conseguimos
       dar um fim neles. Por favor, acabe com isso. Por n\xF3s."
+  - name: Tainara
+    sentences:
     - "O meu irm\xE3o estava certo, ent\xE3o..."
+  - name: Tainara
+    sentences:
     - "Voc\xEA fez mais alguma coisa, n\xE3o fez? Tudo parece estar ficando mais bonito,
       e mais vivo!"
+  - name: Tainara
+    sentences:
     - "Raoni, obrigado por tudo que est\xE1 fazendo."
+  - name: Tainara
+    sentences:
     - "\xC9 voc\xEA, n\xE3o \xE9? \xC9 voc\xEA que est\xE1 dando a paz para nossos
       irm\xE3os e irm\xE3s."
+  - name: Tainara
+    sentences:
     - "Minha m\xE3e me disse que sonhou com minha irm\xE3 ontem. Ela estava bem, e
       feliz, e pediu para que n\xF3s te agradec\xEAssemos... Obrigado."
+  - name: Tainara
+    sentences:
     - "S\xF3 voc\xEA pode dar um fim nisso!"
+  - name: Tainara
+    sentences:
     - "N\xF3s temos orgulho do que est\xE1 fazendo, Raoni."
+--- !u!114 &5229052459348976034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2731185601159605660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 103a7e8e5ee6c5641b9bd8376d5c7fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ponto1: {fileID: 7991463840392836035}
+  ponto2: {fileID: 5338974114507246145}
+  velocidade: 2
+  keyUpInterface: {fileID: 0}
+  boxAnimator: {fileID: 0}
 --- !u!1 &2776010413751908922
 GameObject:
   m_ObjectHideFlags: 0
@@ -2176,6 +2234,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxCollider: {fileID: 580497196265813683}
+--- !u!58 &7261423851117115479
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3812594708978797685}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 13.51
 --- !u!114 &2054056392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2211,47 +2285,89 @@ MonoBehaviour:
     - "Oi Raoni! Parece que o Paj\xE9 Ubirajara estava te procurando. Ele foi at\xE9
       a sua oca, por\xE9m voc\xEA estava dormindo ainda, ent\xE3o ele preferiu n\xE3o
       te acordar."
+  - name: Cauan
+    sentences:
     - "\xC9 dif\xEDcil conviver com esses ataques bandeirantes... Mas n\xF3s temos
       que ser fortes, n\xE3o \xE9? O Paj\xE9 sabe o que \xE9 melhor pra gente."
+  - name: Cauan
+    sentences:
     - "Nossa Raoni, como voc\xEA cresceu! Ainda me lembro de quando brincava com...
       Nossa, voc\xEA cresceu muito mesmo."
+  - name: Cauan
+    sentences:
     - "Sabe, eu consigo sentir os deuses olhando por n\xF3s nesse momento dif\xEDcil.
       \xC9 como se o poder deles estivesse aqui na tribo, agora mesmo."
+  - name: Cauan
+    sentences:
     - "O Paj\xE9 disse que precisava da sua ajuda, por causa dos acontecimentos recentes."
+  - name: Cauan
+    sentences:
     - "Voc\xEA vai nos ajudar, n\xE3o vai, Raoni?"
+  - name: Cauan
+    sentences:
     - "Meu irm\xE3o foi pra floresta, e desde ent\xE3o, n\xE3o mais o vi. Mas eu o
       sinto... Isso n\xE3o pode ser bom."
+  - name: Cauan
+    sentences:
     - "Eu s\xF3 quero que as coisas acabem bem."
+  - name: Cauan
+    sentences:
     - "Agora que os bandeirantes se foram, n\xF3s podemos reconstruir. A tribo, e
       a n\xF3s mesmos."
   - name: Cauan
     sentences:
     - "O poder dos deuses fica mais forte a cada momento que passa. Eles realmente
       cuidam de n\xF3s, e conseguem sentir o momento dif\xEDcil que passamos."
+  - name: Cauan
+    sentences:
     - "Meu irm\xE3o disse que viu um bandeirante andando na caverna, mas eu n\xE3o
       acredito nele. Ele nem pode ir na caverna!"
+  - name: Cauan
+    sentences:
     - "Eu n\xE3o sei o que houve, mas parece que as coisas est\xE3o ficando melhores!"
+  - name: Cauan
+    sentences:
     - "Raoni, eu n\xE3o sinto mais o meu irm\xE3o. Foi voc\xEA, n\xE3o foi? Foi voc\xEA
       que deu a paz para ele... Obrigado."
+  - name: Cauan
+    sentences:
     - "Voc\xEA parece triste. Eu sei que o Paj\xE9 lhe deu uma tarefa dif\xEDcil,
       mas ele sabe o que \xE9 melhor para todos. Sabe, ele gosta de voc\xEA."
+  - name: Cauan
+    sentences:
     - "Eu visitei a floresta recentemente. Tudo est\xE1 mais vivo. Os p\xE1ssaros
       est\xE3o cantando mais, as formigas est\xE3o andando mais, as \xE1rvores est\xE3o
       mais verdes!"
+  - name: Cauan
+    sentences:
     - "Eu sei que as coisas est\xE3o melhorando por sua causa. Obrigado."
   - name: Cauan
     sentences:
     - "Raoni, n\xF3s encontramos bandeirantes na floresta, mas n\xE3o conseguimos
       dar um fim neles. Por favor, acabe com isso. Por n\xF3s."
+  - name: Cauan
+    sentences:
     - "O meu irm\xE3o estava certo, ent\xE3o..."
+  - name: Cauan
+    sentences:
     - "Voc\xEA fez mais alguma coisa, n\xE3o fez? Tudo parece estar ficando mais bonito,
       e mais vivo!"
+  - name: Cauan
+    sentences:
     - "Raoni, obrigado por tudo que est\xE1 fazendo."
+  - name: Cauan
+    sentences:
     - "\xC9 voc\xEA, n\xE3o \xE9? \xC9 voc\xEA que est\xE1 dando a paz para nossos
       irm\xE3os e irm\xE3s."
+  - name: Cauan
+    sentences:
     - "Minha m\xE3e me disse que sonhou com minha irm\xE3 ontem. Ela estava bem, e
       feliz, e pediu para que n\xF3s te agradec\xEAssemos... Obrigado."
+  - name: Cauan
+    sentences:
     - "S\xF3 voc\xEA pode dar um fim nisso!"
+  - name: Cauan
+    sentences:
     - "N\xF3s temos orgulho do que est\xE1 fazendo, Raoni."
 --- !u!1 &4016058460836242308
 GameObject:
@@ -2394,6 +2510,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2, y: 0.25585592}
   m_EdgeRadius: 0
+--- !u!70 &9027647111447199651
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4200186021444900947}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.006602764, y: 5.46}
+  m_Size: {x: 1.5168228, y: 11.328912}
+  m_Direction: 0
 --- !u!1 &4443996514824621980
 GameObject:
   m_ObjectHideFlags: 0
@@ -3435,6 +3567,22 @@ Transform:
   m_Father: {fileID: 7097685035966050080}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &332520142
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7493406731407436210}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.006602764, y: 5.68}
+  m_Size: {x: 1.5168228, y: 11.328912}
+  m_Direction: 0
 --- !u!1 &7512189420859201792
 GameObject:
   m_ObjectHideFlags: 0
@@ -3517,6 +3665,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &122974214893909850
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7552639317337189333}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.006602764, y: 5.58}
+  m_Size: {x: 1.5168228, y: 11.328912}
+  m_Direction: 0
 --- !u!61 &658222454138474815
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3655,6 +3819,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &5860202759168062945
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7827462141852756208}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 13.51
 --- !u!114 &1490403809707205255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3690,47 +3870,89 @@ MonoBehaviour:
     - "Oi Raoni! Parece que o Paj\xE9 Ubirajara estava te procurando. Ele foi at\xE9
       a sua oca, por\xE9m voc\xEA estava dormindo ainda, ent\xE3o ele preferiu n\xE3o
       te acordar."
+  - name: "Piat\xE3"
+    sentences:
     - "\xC9 dif\xEDcil conviver com esses ataques bandeirantes... Mas n\xF3s temos
       que ser fortes, n\xE3o \xE9? O Paj\xE9 sabe o que \xE9 melhor pra gente."
+  - name: "Piat\xE3"
+    sentences:
     - "Nossa Raoni, como voc\xEA cresceu! Ainda me lembro de quando brincava com...
       Nossa, voc\xEA cresceu muito mesmo."
+  - name: "Piat\xE3"
+    sentences:
     - "Sabe, eu consigo sentir os deuses olhando por n\xF3s nesse momento dif\xEDcil.
       \xC9 como se o poder deles estivesse aqui na tribo, agora mesmo."
+  - name: "Piat\xE3"
+    sentences:
     - "O Paj\xE9 disse que precisava da sua ajuda, por causa dos acontecimentos recentes."
+  - name: "Piat\xE3"
+    sentences:
     - "Voc\xEA vai nos ajudar, n\xE3o vai, Raoni?"
+  - name: "Piat\xE3"
+    sentences:
     - "Meu irm\xE3o foi pra floresta, e desde ent\xE3o, n\xE3o mais o vi. Mas eu o
       sinto... Isso n\xE3o pode ser bom."
+  - name: "Piat\xE3"
+    sentences:
     - "Eu s\xF3 quero que as coisas acabem bem."
+  - name: "Piat\xE3"
+    sentences:
     - "Agora que os bandeirantes se foram, n\xF3s podemos reconstruir. A tribo, e
       a n\xF3s mesmos."
   - name: "Piat\xE3"
     sentences:
     - "O poder dos deuses fica mais forte a cada momento que passa. Eles realmente
       cuidam de n\xF3s, e conseguem sentir o momento dif\xEDcil que passamos."
+  - name: "Piat\xE3"
+    sentences:
     - "Meu irm\xE3o disse que viu um bandeirante andando na caverna, mas eu n\xE3o
       acredito nele. Ele nem pode ir na caverna!"
+  - name: "Piat\xE3"
+    sentences:
     - "Eu n\xE3o sei o que houve, mas parece que as coisas est\xE3o ficando melhores!"
+  - name: "Piat\xE3"
+    sentences:
     - "Raoni, eu n\xE3o sinto mais o meu irm\xE3o. Foi voc\xEA, n\xE3o foi? Foi voc\xEA
       que deu a paz para ele... Obrigado."
+  - name: "Piat\xE3"
+    sentences:
     - "Voc\xEA parece triste. Eu sei que o Paj\xE9 lhe deu uma tarefa dif\xEDcil,
       mas ele sabe o que \xE9 melhor para todos. Sabe, ele gosta de voc\xEA."
+  - name: "Piat\xE3"
+    sentences:
     - "Eu visitei a floresta recentemente. Tudo est\xE1 mais vivo. Os p\xE1ssaros
       est\xE3o cantando mais, as formigas est\xE3o andando mais, as \xE1rvores est\xE3o
       mais verdes!"
+  - name: "Piat\xE3"
+    sentences:
     - "Eu sei que as coisas est\xE3o melhorando por sua causa. Obrigado."
   - name: "Piat\xE3"
     sentences:
     - "Raoni, n\xF3s encontramos bandeirantes na floresta, mas n\xE3o conseguimos
       dar um fim neles. Por favor, acabe com isso. Por n\xF3s."
+  - name: "Piat\xE3"
+    sentences:
     - "O meu irm\xE3o estava certo, ent\xE3o..."
+  - name: "Piat\xE3"
+    sentences:
     - "Voc\xEA fez mais alguma coisa, n\xE3o fez? Tudo parece estar ficando mais bonito,
       e mais vivo!"
+  - name: "Piat\xE3"
+    sentences:
     - "Raoni, obrigado por tudo que est\xE1 fazendo."
+  - name: "Piat\xE3"
+    sentences:
     - "\xC9 voc\xEA, n\xE3o \xE9? \xC9 voc\xEA que est\xE1 dando a paz para nossos
       irm\xE3os e irm\xE3s."
+  - name: "Piat\xE3"
+    sentences:
     - "Minha m\xE3e me disse que sonhou com minha irm\xE3 ontem. Ela estava bem, e
       feliz, e pediu para que n\xF3s te agradec\xEAssemos... Obrigado."
+  - name: "Piat\xE3"
+    sentences:
     - "S\xF3 voc\xEA pode dar um fim nisso!"
+  - name: "Piat\xE3"
+    sentences:
     - "N\xF3s temos orgulho do que est\xE1 fazendo, Raoni."
 --- !u!70 &1090171926
 CapsuleCollider2D:
@@ -4204,6 +4426,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6386078139706251601, guid: 682825ae77d4a95448d2eb4600a7b23f,
         type: 3}
+      propertyPath: dialogs.Array.data[0].name
+      value: "Paj\xE9 Ubirajara"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6386078139706251601, guid: 682825ae77d4a95448d2eb4600a7b23f,
+        type: 3}
       propertyPath: dialogs.Array.data[0].sentences.Array.data[9]
       value: "Sinto que sua jornada se inicia nos cerrados aqui perto da tribo. Voc\xEA
         se lembra como chegar l\xE1, n\xE3o? Basta ir para o outro lado, ap\xF3s a
@@ -4217,10 +4444,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6386078139706251601, guid: 682825ae77d4a95448d2eb4600a7b23f,
         type: 3}
+      propertyPath: dialogs.Array.data[1].name
+      value: "Paj\xE9 Ubirajara"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6386078139706251601, guid: 682825ae77d4a95448d2eb4600a7b23f,
+        type: 3}
       propertyPath: dialogs.Array.data[1].sentences.Array.data[1]
       value: "Sinto que sua jornada se inicia nos cerrados aqui perto da tribo. Voc\xEA
         se lembra como chegar l\xE1, n\xE3o? Basta ir para o outro lado, ap\xF3s a
         nossa casa de ora\xE7\xF5es, no topo, \xE9 l\xE1 que voc\xEA vai achar o caminho."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6386078139706251601, guid: 682825ae77d4a95448d2eb4600a7b23f,
+        type: 3}
+      propertyPath: dialogs.Array.data[2].name
+      value: "Paj\xE9 Ubirajara"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6386078139706251601, guid: 682825ae77d4a95448d2eb4600a7b23f,
+        type: 3}
+      propertyPath: dialogs.Array.data[3].name
+      value: "Paj\xE9 Ubirajara"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6386078139706251601, guid: 682825ae77d4a95448d2eb4600a7b23f,
+        type: 3}
+      propertyPath: dialogs.Array.data[4].name
+      value: "Paj\xE9 Ubirajara"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6386078139706251601, guid: 682825ae77d4a95448d2eb4600a7b23f,
+        type: 3}
+      propertyPath: dialogs.Array.data[5].name
+      value: "Paj\xE9 Ubirajara"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6386078139706251601, guid: 682825ae77d4a95448d2eb4600a7b23f,
+        type: 3}
+      propertyPath: dialogs.Array.data[6].name
+      value: "Paj\xE9 Ubirajara"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6386078139706251601, guid: 682825ae77d4a95448d2eb4600a7b23f,
+        type: 3}
+      propertyPath: dialogs.Array.data[7].name
+      value: "Paj\xE9 Ubirajara"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6386078139706251601, guid: 682825ae77d4a95448d2eb4600a7b23f,
+        type: 3}
+      propertyPath: dialogs.Array.data[8].name
+      value: "Paj\xE9 Ubirajara"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6386078139706251601, guid: 682825ae77d4a95448d2eb4600a7b23f,
+        type: 3}
+      propertyPath: dialogs.Array.data[9].name
+      value: "Paj\xE9 Ubirajara"
       objectReference: {fileID: 0}
     - target: {fileID: 4744484400513727255, guid: 682825ae77d4a95448d2eb4600a7b23f,
         type: 3}
@@ -4332,8 +4604,7 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.9751364
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3459674222140052094, guid: 682825ae77d4a95448d2eb4600a7b23f, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 682825ae77d4a95448d2eb4600a7b23f, type: 3}
 --- !u!4 &7935463424001539803 stripped
 Transform:
@@ -4358,11 +4629,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: indio_generico_2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9182804232126087780, guid: 5a866588c85209d4080e4db6c20d9622,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7957212950023247677, guid: 5a866588c85209d4080e4db6c20d9622,
         type: 3}
@@ -4562,7 +4828,7 @@ PrefabInstance:
     - target: {fileID: 8598023144317194939, guid: 5a866588c85209d4080e4db6c20d9622,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 1.5250001
+      value: 1.524
       objectReference: {fileID: 0}
     - target: {fileID: 7390237706121593259, guid: 5a866588c85209d4080e4db6c20d9622,
         type: 3}
@@ -4581,15 +4847,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a866588c85209d4080e4db6c20d9622, type: 3}
---- !u!1 &7827462141852756208 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9182804232126087780, guid: 5a866588c85209d4080e4db6c20d9622,
-    type: 3}
-  m_PrefabInstance: {fileID: 1427470190499064468}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9053035247064710569 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7957212950023247677, guid: 5a866588c85209d4080e4db6c20d9622,
+    type: 3}
+  m_PrefabInstance: {fileID: 1427470190499064468}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4200186021444900947 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2991914615093277383, guid: 5a866588c85209d4080e4db6c20d9622,
+    type: 3}
+  m_PrefabInstance: {fileID: 1427470190499064468}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7827462141852756208 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9182804232126087780, guid: 5a866588c85209d4080e4db6c20d9622,
     type: 3}
   m_PrefabInstance: {fileID: 1427470190499064468}
   m_PrefabAsset: {fileID: 0}
@@ -5314,11 +5586,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: indio_generico_1
       objectReference: {fileID: 0}
-    - target: {fileID: 9182804232126087780, guid: 1d068f08a6a32584f8b2d0bc0d715c58,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7957212950023247677, guid: 1d068f08a6a32584f8b2d0bc0d715c58,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5536,15 +5803,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d068f08a6a32584f8b2d0bc0d715c58, type: 3}
+--- !u!1 &3812594708978797685 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9182804232126087780, guid: 1d068f08a6a32584f8b2d0bc0d715c58,
+    type: 3}
+  m_PrefabInstance: {fileID: 5442267530177760785}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2732385897145522476 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7957212950023247677, guid: 1d068f08a6a32584f8b2d0bc0d715c58,
     type: 3}
   m_PrefabInstance: {fileID: 5442267530177760785}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3812594708978797685 stripped
+--- !u!1 &7552639317337189333 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 9182804232126087780, guid: 1d068f08a6a32584f8b2d0bc0d715c58,
+  m_CorrespondingSourceObject: {fileID: 2546376615888905668, guid: 1d068f08a6a32584f8b2d0bc0d715c58,
     type: 3}
   m_PrefabInstance: {fileID: 5442267530177760785}
   m_PrefabAsset: {fileID: 0}
@@ -5685,6 +5958,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: India
       objectReference: {fileID: 0}
+    - target: {fileID: 9182804232126087780, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7957212950023247677, guid: bc91a15d511969c47869715ca9be0961,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5740,6 +6018,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4428494904126883402, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5957780845084360472, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5486803348390211736, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018270490602869663, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4983428222277077172, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965667265111177811, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803434649860875461, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089355446508841166, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 1815998452566593968, guid: bc91a15d511969c47869715ca9be0961,
         type: 3}
       propertyPath: m_LocalRotation.z
@@ -5754,6 +6072,56 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.0061935754
+      objectReference: {fileID: 0}
+    - target: {fileID: 616527803653919308, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 272377322660669786, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 55476213088940331, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 11169643485072331, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283719517056292023, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411324446935465743, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3027269993320890555, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045505368034225663, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895799583735432162, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4743351135984336939, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8453405862986433290, guid: bc91a15d511969c47869715ca9be0961,
         type: 3}
@@ -5774,6 +6142,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9984029
+      objectReference: {fileID: 0}
+    - target: {fileID: 2044433788262081646, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 670703326861828493, guid: bc91a15d511969c47869715ca9be0961,
         type: 3}
@@ -5804,6 +6177,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.061836064
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354728250206515841, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1625965797868460554, guid: bc91a15d511969c47869715ca9be0961,
         type: 3}
@@ -5855,6 +6233,16 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.9856567
       objectReference: {fileID: 0}
+    - target: {fileID: 2391156757220567611, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2388468639268402205, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 2705621289179680186, guid: bc91a15d511969c47869715ca9be0961,
         type: 3}
       propertyPath: m_LocalRotation.z
@@ -5865,17 +6253,103 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.999824
       objectReference: {fileID: 0}
+    - target: {fileID: 6368594469554397550, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435920828707658593, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635034560918828489, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7861265600725699010, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7010321624409175049, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2139856593873495342, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1334233001373712311, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1394852250623591089, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 653846477311380413, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 927530318393720117, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 262439383318291422, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 267909772049547385, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 328094662703976242, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118426051580730195, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618603090730938715, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492922907979044131, guid: bc91a15d511969c47869715ca9be0961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc91a15d511969c47869715ca9be0961, type: 3}
---- !u!4 &3811578116796971205 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7957212950023247677, guid: bc91a15d511969c47869715ca9be0961,
-    type: 3}
-  m_PrefabInstance: {fileID: 6523676397474672632}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2731185601159605660 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9182804232126087780, guid: bc91a15d511969c47869715ca9be0961,
+    type: 3}
+  m_PrefabInstance: {fileID: 6523676397474672632}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7493406731407436210 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4428494904126883402, guid: bc91a15d511969c47869715ca9be0961,
+    type: 3}
+  m_PrefabInstance: {fileID: 6523676397474672632}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3811578116796971205 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7957212950023247677, guid: bc91a15d511969c47869715ca9be0961,
     type: 3}
   m_PrefabInstance: {fileID: 6523676397474672632}
   m_PrefabAsset: {fileID: 0}
@@ -5969,15 +6443,15 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 7243324766535440047, guid: 82a2865042df8e847a26fc7e19ec1b73,
     type: 3}
---- !u!1 &153810330045372133 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6445959545180567485, guid: 82a2865042df8e847a26fc7e19ec1b73,
-    type: 3}
-  m_PrefabInstance: {fileID: 6581685004724953432}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7879853374744901017 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3894500176700658881, guid: 82a2865042df8e847a26fc7e19ec1b73,
+    type: 3}
+  m_PrefabInstance: {fileID: 6581685004724953432}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &153810330045372133 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6445959545180567485, guid: 82a2865042df8e847a26fc7e19ec1b73,
     type: 3}
   m_PrefabInstance: {fileID: 6581685004724953432}
   m_PrefabAsset: {fileID: 0}
@@ -6866,15 +7340,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b21514b24e248ce4db002c142dd30573, type: 3}
---- !u!4 &5325129842233166960 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4343765295314880070, guid: b21514b24e248ce4db002c142dd30573,
-    type: 3}
-  m_PrefabInstance: {fileID: 8479872263184321078}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &419078532765495029 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8106007989450745027, guid: b21514b24e248ce4db002c142dd30573,
+    type: 3}
+  m_PrefabInstance: {fileID: 8479872263184321078}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5325129842233166960 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4343765295314880070, guid: b21514b24e248ce4db002c142dd30573,
     type: 3}
   m_PrefabInstance: {fileID: 8479872263184321078}
   m_PrefabAsset: {fileID: 0}
@@ -7702,15 +8176,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a24a2715b68803d47b6bd182f1558b96, type: 3}
---- !u!1 &194604724479788532 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9182804232126087780, guid: a24a2715b68803d47b6bd182f1558b96,
-    type: 3}
-  m_PrefabInstance: {fileID: 9069264747688314768}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1418971675150078125 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7957212950023247677, guid: a24a2715b68803d47b6bd182f1558b96,
+    type: 3}
+  m_PrefabInstance: {fileID: 9069264747688314768}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &194604724479788532 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9182804232126087780, guid: a24a2715b68803d47b6bd182f1558b96,
     type: 3}
   m_PrefabInstance: {fileID: 9069264747688314768}
   m_PrefabAsset: {fileID: 0}

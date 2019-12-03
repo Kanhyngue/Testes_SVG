@@ -22,12 +22,14 @@ public class Coletavel : MonoBehaviour
                 transform.position = pullingArea.transform.position;
                 DataSystem.chave = true;
                 Paje_Controller.seletorFalaPaje++;
+                NPC_Controller.seletorFalaNPC++;
             }
             else if(this.gameObject.CompareTag("Dash"))
             {
                 transform.position = pullingArea.transform.position;
                 DataSystem.dashPower = true;
                 Paje_Controller.seletorFalaPaje++;
+                NPC_Controller.seletorFalaNPC++;
 
             }
             else if(this.gameObject.CompareTag("Fire"))
@@ -42,6 +44,7 @@ public class Coletavel : MonoBehaviour
                 transform.position = pullingArea.transform.position;
                 DataSystem.fogPower = true;
                 Paje_Controller.seletorFalaPaje++;
+                NPC_Controller.seletorFalaNPC++;
 
             }
         }
