@@ -3412,7 +3412,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2564792422332809406
 Transform:
   m_ObjectHideFlags: 0
@@ -7582,16 +7582,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1617094705642331351}
     m_Modifications:
-    - target: {fileID: 2737424895777667737, guid: ef9015f6421c1a7499358ab47d80987c,
-        type: 3}
-      propertyPath: m_Name
-      value: Porta Aberta
-      objectReference: {fileID: 0}
-    - target: {fileID: 2737424895777667737, guid: ef9015f6421c1a7499358ab47d80987c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -3489631310514214412, guid: ef9015f6421c1a7499358ab47d80987c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7645,6 +7635,16 @@ PrefabInstance:
     - target: {fileID: -3489631310514214412, guid: ef9015f6421c1a7499358ab47d80987c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2737424895777667737, guid: ef9015f6421c1a7499358ab47d80987c,
+        type: 3}
+      propertyPath: m_Name
+      value: Porta Aberta
+      objectReference: {fileID: 0}
+    - target: {fileID: 2737424895777667737, guid: ef9015f6421c1a7499358ab47d80987c,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4714538392196278306, guid: ef9015f6421c1a7499358ab47d80987c,
@@ -7937,12 +7937,12 @@ PrefabInstance:
     - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_BlendStyleIndex
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -8529,6 +8529,11 @@ PrefabInstance:
       propertyPath: m_PointLightQuality
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &8016140197607532577 stripped
@@ -8637,6 +8642,11 @@ PrefabInstance:
     - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_PointLightQuality
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -9057,12 +9067,12 @@ PrefabInstance:
     - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_BlendStyleIndex
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
@@ -10479,11 +10489,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1617094705642331351}
     m_Modifications:
-    - target: {fileID: -6271029340725008851, guid: 531d716e7adb0c84a993b3310a03571e,
-        type: 3}
-      propertyPath: m_Name
-      value: Porta Fechada
-      objectReference: {fileID: 0}
     - target: {fileID: 4708978572150281752, guid: 531d716e7adb0c84a993b3310a03571e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10538,6 +10543,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6271029340725008851, guid: 531d716e7adb0c84a993b3310a03571e,
+        type: 3}
+      propertyPath: m_Name
+      value: Porta Fechada
       objectReference: {fileID: 0}
     - target: {fileID: 517302101098140542, guid: 531d716e7adb0c84a993b3310a03571e,
         type: 3}
