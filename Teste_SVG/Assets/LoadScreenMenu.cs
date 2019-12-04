@@ -7,24 +7,10 @@ public class LoadScreenMenu : MonoBehaviour
 {
     
     public Transform botton;
-    public Image Logo;
-    public Image iBotton;
-    public Image panel;
-    public bool ligado = false;
 
 
     // Start is called before the first frame update
-    private void Update()
-    {
-        if(ligado)
-        {
 
-            iBotton.color = new Color(1, 1, 1, 1);
-            Logo.color = new Color(1, 1, 1, 1);
-            panel.color = new Color(0, 0, 0, 1); 
-            StartCoroutine(Rotate());
-        }
-    }
 
 
 
