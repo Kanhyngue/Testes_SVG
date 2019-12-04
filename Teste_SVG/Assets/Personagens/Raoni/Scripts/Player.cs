@@ -199,6 +199,7 @@ public class Player : MonoBehaviour
                 DataSystem.firePower = !DataSystem.firePower;
                 DataSystem.dashPower = !DataSystem.dashPower;
                 DataSystem.machadinha = !DataSystem.machadinha;
+                DataSystem.health = 1000;
 
             }
 
