@@ -2,16 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuToScene : MonoBehaviour
 {
     public static bool loadGame;
     public LoadScreenMenu loadScreen;
+    public Image botao;
+    public Image logo;
+    public Image painel;
 
-
+    public void mudarAlfa()
+    {
+        botao.color = new Color(1, 1, 1, 1);
+        logo.color = new Color(1, 1, 1, 1);
+        painel.color = new Color(0, 0, 0, 1);
+    }
 
     public void NewGame()
     {
+      
         loadGame = false;
         StartCoroutine(LoadToNewGame());
     }
@@ -31,15 +41,17 @@ public class MenuToScene : MonoBehaviour
     public void Creditos()
     {
         loadScreen.gameObject.SetActive(true);
-        loadScreen.FadeRotate();
+        //loadScreen.FadeRotate();
         StartCoroutine(LoadCreditos());
     }
+
     IEnumerator LoadToNewGame()
     {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("SampleScene");
         while(!asyncLoad.isDone)
         {
-            loadScreen.FadeRotate();
+            mudarAlfa();
+            StartCoroutine(loadScreen.Rotate());
             yield return null;
         }
     }
@@ -49,6 +61,8 @@ public class MenuToScene : MonoBehaviour
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("SampleScene");
         while(!asyncLoad.isDone)
         {
+            mudarAlfa();
+            StartCoroutine(loadScreen.Rotate());
             yield return null;
         }
     }
@@ -58,6 +72,8 @@ public class MenuToScene : MonoBehaviour
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Creditos");
         while (!asyncLoad.isDone)
         {
+            mudarAlfa();
+            StartCoroutine(loadScreen.Rotate());
             yield return null;
         }
     }

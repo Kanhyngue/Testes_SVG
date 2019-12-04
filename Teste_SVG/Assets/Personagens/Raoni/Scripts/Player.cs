@@ -195,11 +195,12 @@ public class Player : MonoBehaviour
             if (Input.GetButtonDown("Cheat"))
             {
                 Debug.Log("Trocou Bedindo");
-                DataSystem.fogPower = !DataSystem.fogPower;
-                DataSystem.firePower = !DataSystem.firePower;
-                DataSystem.dashPower = !DataSystem.dashPower;
-                DataSystem.machadinha = !DataSystem.machadinha;
-
+                DataSystem.fogPower = true;
+                DataSystem.firePower = true;
+                DataSystem.dashPower = true;
+                DataSystem.machadinha = true;
+                DataSystem.chave = true;
+                DataSystem.health = 1000;
             }
 
             if (Input.GetButtonDown("Cachimbos"))
@@ -261,19 +262,19 @@ public class Player : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.CompareTag("Espinhos"))
+        if(col.gameObject.CompareTag("Espinhos") && DataSystem.health < 1000)
         {
             DataSystem.health = 0;
         }
 
-        if(col.gameObject.CompareTag("HitInimigo"))
+        if(col.gameObject.CompareTag("HitInimigo") && DataSystem.health < 1000)
         {
             DataSystem.health -= 1;
             Mathf.Clamp(DataSystem.health, 0, 5);
             anim.SetTrigger("GotHit");
         }
 
-        if (col.gameObject.CompareTag("TiroBand"))
+        if (col.gameObject.CompareTag("TiroBand") && DataSystem.health < 1000)
         {
             DataSystem.health -= 1;
             Mathf.Clamp(DataSystem.health, 0, 5);
@@ -303,10 +304,6 @@ public class Player : MonoBehaviour
                 main.simulationSpeed = playbackspeed;
 
                 _particulasNeblina[i].Play();
-
-
-
-
             }
 
             StartCoroutine(SimulatePart());

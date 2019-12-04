@@ -89,7 +89,7 @@ public class Controlador_Bandeirante : MonoBehaviour
                     if (canShoot < 0)
                     {
                         _anim.SetBool("IsRunning", true);
-                        p_pos = new Vector3(player.position.x, 0.9663032f, 0f);
+                        p_pos = new Vector3(player.position.x, transform.position.y, 0f);
                         canShoot = 10f;
                     }
                     break;
@@ -112,15 +112,15 @@ public class Controlador_Bandeirante : MonoBehaviour
                             _anim.SetBool("IsRunning", false);
                             _anim.SetTrigger("Atira");
                             isShooting = true;
-                            canShoot = 20;
+                            canShoot = 10;
                         }
                     }
 
                     if (canShoot < 0)
                     {
                         _anim.SetBool("IsRunning", true);
-                        p_pos = new Vector3(player.position.x, 0.9663032f, 0f);
-                        canShoot = 20;
+                        p_pos = new Vector3(player.position.x, transform.position.y, 0f);
+                        canShoot = 10;
                     }
                     break;
 
@@ -143,15 +143,15 @@ public class Controlador_Bandeirante : MonoBehaviour
                             _anim.SetBool("IsRunning", false);
                             _anim.SetTrigger("Atira");
                             isShooting = true;
-                            canShoot = 20;
+                            canShoot = 10;
                         }
                     }
 
                     if (canShoot < 0)
                     {
                         _anim.SetBool("IsRunning", true);
-                        p_pos = new Vector3 (player.position.x, 0.9663032f, 0f);
-                        canShoot = 20;
+                        p_pos = new Vector3 (player.position.x, transform.position.y, 0f);
+                        canShoot = 10;
                     }
                     break;
 
@@ -180,7 +180,7 @@ public class Controlador_Bandeirante : MonoBehaviour
                     if (canShoot < 0)
                     {
                         _anim.SetBool("IsRunning", true);
-                        p_pos = new Vector3(player.position.x, 0.9663032f, 0f);
+                        p_pos = new Vector3(player.position.x, transform.position.y, 0f);
                         canShoot = 10;
                     }
                     break;
@@ -285,7 +285,7 @@ public class Controlador_Bandeirante : MonoBehaviour
 
     private void checkPlayerOver()
     {
-        if (player.transform.position.y >= 4.5f && ((player.transform.position.x - transform.position.x) <= 1.5f) )
+        if (player.transform.position.y >= 33.0f && ((player.transform.position.x - transform.position.x) <= 1.5f) )
         {
             if (_anim.GetCurrentAnimatorStateInfo(0).IsTag("Idle"))
             {
