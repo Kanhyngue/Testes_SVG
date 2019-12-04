@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &3525666374960666460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2210580505571848439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38086a772d0eab346a143506b97f412a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ranged: {fileID: 3525666374200618036}
 --- !u!50 &20698968
 Rigidbody2D:
   serializedVersion: 4
@@ -34,6 +21,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &3525666374960666460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2210580505571848439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38086a772d0eab346a143506b97f412a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ranged: {fileID: 3525666374200618036}
 --- !u!1 &3525666374200618038
 GameObject:
   m_ObjectHideFlags: 0
@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   braco: {fileID: 2210580504495315191}
-  enemyHealth: 20
+  enemyHealth: 5
   vel: 10
   projetil: {fileID: 5543271714820597723, guid: 0ad074cf382b1ab49b7bfd6e5d5e5153,
     type: 3}
@@ -109,20 +109,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3525666374200618035}
     m_Modifications:
-    - target: {fileID: 3332700707399245619, guid: 89a8ac8688aea58429c41ed2589a25c6,
+    - target: {fileID: 3332700706329939489, guid: 89a8ac8688aea58429c41ed2589a25c6,
         type: 3}
-      propertyPath: m_Name
-      value: Boss_Ranged
+      propertyPath: m_LocalPosition.x
+      value: -1.615
       objectReference: {fileID: 0}
-    - target: {fileID: 3332700707399245619, guid: 89a8ac8688aea58429c41ed2589a25c6,
+    - target: {fileID: 3332700706329939489, guid: 89a8ac8688aea58429c41ed2589a25c6,
         type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3332700707399245619, guid: 89a8ac8688aea58429c41ed2589a25c6,
-        type: 3}
-      propertyPath: m_TagString
-      value: Inimigo
+      propertyPath: m_LocalPosition.y
+      value: 0.176
       objectReference: {fileID: 0}
     - target: {fileID: 3332700707399245615, guid: 89a8ac8688aea58429c41ed2589a25c6,
         type: 3}
@@ -179,20 +174,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3332700707399245619, guid: 89a8ac8688aea58429c41ed2589a25c6,
+        type: 3}
+      propertyPath: m_Name
+      value: Boss_Ranged
+      objectReference: {fileID: 0}
+    - target: {fileID: 3332700707399245619, guid: 89a8ac8688aea58429c41ed2589a25c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3332700707399245619, guid: 89a8ac8688aea58429c41ed2589a25c6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Inimigo
+      objectReference: {fileID: 0}
     - target: {fileID: 8517062560348699727, guid: 89a8ac8688aea58429c41ed2589a25c6,
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3332700706329939489, guid: 89a8ac8688aea58429c41ed2589a25c6,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.615
-      objectReference: {fileID: 0}
-    - target: {fileID: 3332700706329939489, guid: 89a8ac8688aea58429c41ed2589a25c6,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.176
       objectReference: {fileID: 0}
     - target: {fileID: 3332700706286221108, guid: 89a8ac8688aea58429c41ed2589a25c6,
         type: 3}
@@ -230,7 +230,8 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 1.6666666
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3332700707399245618, guid: 89a8ac8688aea58429c41ed2589a25c6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 89a8ac8688aea58429c41ed2589a25c6, type: 3}
 --- !u!1 &2210580505571848439 stripped
 GameObject:

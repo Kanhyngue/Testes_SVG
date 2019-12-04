@@ -67,6 +67,8 @@ public class Ranged_Tiro : MonoBehaviour
                     isFacingLeft = transform.localScale.x > 0;
                 }
         }
+        if (_anim.GetCurrentAnimatorStateInfo(0).IsTag("Morto") && _anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
+            this.gameObject.SetActive(false);
     }
     //
     public void Atira()
