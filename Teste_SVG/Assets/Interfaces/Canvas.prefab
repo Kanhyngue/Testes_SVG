@@ -7926,8 +7926,9 @@ MonoBehaviour:
   confirmacao: {fileID: 1003801010}
   curiosidadesPanel: {fileID: 2573128749773578389}
   opcoesPanel: {fileID: 4954136945223276267}
-  boxAnimator: {fileID: 0}
-  PopUp: {fileID: 0}
+  boxAnimator: {fileID: 1924436605}
+  PopUp: {fileID: 7137102011358103565}
+  bloqueio: {fileID: 1941956275}
 --- !u!114 &4134826338844565205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9988,31 +9989,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 5041168867033873569, guid: 2f01289b66397bb4b97483aedee25e52,
-        type: 3}
-      propertyPath: m_Navigation.m_Mode
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5041168867033873569, guid: 2f01289b66397bb4b97483aedee25e52,
-        type: 3}
-      propertyPath: m_Navigation.m_SelectOnLeft
-      value: 
-      objectReference: {fileID: 5509749642447359969}
-    - target: {fileID: 5041168867033873569, guid: 2f01289b66397bb4b97483aedee25e52,
-        type: 3}
-      propertyPath: m_Colors.m_SelectedColor.r
-      value: 0.9747988
-      objectReference: {fileID: 0}
-    - target: {fileID: 5041168867033873569, guid: 2f01289b66397bb4b97483aedee25e52,
-        type: 3}
-      propertyPath: m_Colors.m_SelectedColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5041168867033873569, guid: 2f01289b66397bb4b97483aedee25e52,
-        type: 3}
-      propertyPath: m_Colors.m_SelectedColor.b
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5041168866901588187, guid: 2f01289b66397bb4b97483aedee25e52,
         type: 3}
       propertyPath: m_Navigation.m_Mode
@@ -10034,6 +10010,31 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5041168866901588187, guid: 2f01289b66397bb4b97483aedee25e52,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041168867033873569, guid: 2f01289b66397bb4b97483aedee25e52,
+        type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041168867033873569, guid: 2f01289b66397bb4b97483aedee25e52,
+        type: 3}
+      propertyPath: m_Navigation.m_SelectOnLeft
+      value: 
+      objectReference: {fileID: 5509749642447359969}
+    - target: {fileID: 5041168867033873569, guid: 2f01289b66397bb4b97483aedee25e52,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 0.9747988
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041168867033873569, guid: 2f01289b66397bb4b97483aedee25e52,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041168867033873569, guid: 2f01289b66397bb4b97483aedee25e52,
         type: 3}
       propertyPath: m_Colors.m_SelectedColor.b
       value: 0
@@ -10101,6 +10102,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5509749643552313784}
     m_Modifications:
+    - target: {fileID: 6625609726806653415, guid: f2a881d34f0e3de43b9274feacd55d4c,
+        type: 3}
+      propertyPath: m_Name
+      value: Vida 1
+      objectReference: {fileID: 0}
     - target: {fileID: -8670065852210751618, guid: f2a881d34f0e3de43b9274feacd55d4c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10171,11 +10177,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 26.124998
       objectReference: {fileID: 0}
-    - target: {fileID: 6625609726806653415, guid: f2a881d34f0e3de43b9274feacd55d4c,
-        type: 3}
-      propertyPath: m_Name
-      value: Vida 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1743663584451509947, guid: f2a881d34f0e3de43b9274feacd55d4c,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -10213,6 +10214,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5509749643552313784}
     m_Modifications:
+    - target: {fileID: 6625609726806653415, guid: f2a881d34f0e3de43b9274feacd55d4c,
+        type: 3}
+      propertyPath: m_Name
+      value: Vida 2
+      objectReference: {fileID: 0}
     - target: {fileID: -8670065852210751618, guid: f2a881d34f0e3de43b9274feacd55d4c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10283,11 +10289,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 26.124998
       objectReference: {fileID: 0}
-    - target: {fileID: 6625609726806653415, guid: f2a881d34f0e3de43b9274feacd55d4c,
-        type: 3}
-      propertyPath: m_Name
-      value: Vida 2
-      objectReference: {fileID: 0}
     - target: {fileID: 1743663584451509947, guid: f2a881d34f0e3de43b9274feacd55d4c,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -10325,6 +10326,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5509749643552313784}
     m_Modifications:
+    - target: {fileID: 6625609726806653415, guid: f2a881d34f0e3de43b9274feacd55d4c,
+        type: 3}
+      propertyPath: m_Name
+      value: Vida 5
+      objectReference: {fileID: 0}
     - target: {fileID: -8670065852210751618, guid: f2a881d34f0e3de43b9274feacd55d4c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10395,11 +10401,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 26.124998
       objectReference: {fileID: 0}
-    - target: {fileID: 6625609726806653415, guid: f2a881d34f0e3de43b9274feacd55d4c,
-        type: 3}
-      propertyPath: m_Name
-      value: Vida 5
-      objectReference: {fileID: 0}
     - target: {fileID: 1743663584451509947, guid: f2a881d34f0e3de43b9274feacd55d4c,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -10437,6 +10438,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5509749643552313784}
     m_Modifications:
+    - target: {fileID: 6625609726806653415, guid: f2a881d34f0e3de43b9274feacd55d4c,
+        type: 3}
+      propertyPath: m_Name
+      value: Vida 4
+      objectReference: {fileID: 0}
     - target: {fileID: -8670065852210751618, guid: f2a881d34f0e3de43b9274feacd55d4c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10507,11 +10513,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 26.124998
       objectReference: {fileID: 0}
-    - target: {fileID: 6625609726806653415, guid: f2a881d34f0e3de43b9274feacd55d4c,
-        type: 3}
-      propertyPath: m_Name
-      value: Vida 4
-      objectReference: {fileID: 0}
     - target: {fileID: 1743663584451509947, guid: f2a881d34f0e3de43b9274feacd55d4c,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -10549,6 +10550,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5509749643552313784}
     m_Modifications:
+    - target: {fileID: 6625609726806653415, guid: f2a881d34f0e3de43b9274feacd55d4c,
+        type: 3}
+      propertyPath: m_Name
+      value: Vida 3
+      objectReference: {fileID: 0}
     - target: {fileID: -8670065852210751618, guid: f2a881d34f0e3de43b9274feacd55d4c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10618,11 +10624,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 26.124998
-      objectReference: {fileID: 0}
-    - target: {fileID: 6625609726806653415, guid: f2a881d34f0e3de43b9274feacd55d4c,
-        type: 3}
-      propertyPath: m_Name
-      value: Vida 3
       objectReference: {fileID: 0}
     - target: {fileID: 1743663584451509947, guid: f2a881d34f0e3de43b9274feacd55d4c,
         type: 3}

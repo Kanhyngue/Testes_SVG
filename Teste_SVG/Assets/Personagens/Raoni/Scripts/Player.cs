@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     private float _normalizedHorizontalSpeed;
     private float h_Move;
     private bool Dead = false;
-    private bool isNeblina, isMachado = false;
+    private bool isNeblina;
     private float _canFireIn, _canMachado, _canDash, _canNeblina, _dashTime, _neblinaTime;
 
     private CharacterPlatformer2D _controller;
@@ -159,7 +159,8 @@ public class Player : MonoBehaviour
             {
                 if (_canMachado > 0)
                     return;
-                isMachado = true;
+                anim.SetTrigger("Machadada");
+                _canMachado = RateMachado;
             }
 
             if (Input.GetButtonDown("Dash") && DataSystem.dashPower)

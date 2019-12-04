@@ -17,13 +17,15 @@ public class MenuPause : MonoBehaviour
     private bool exitConfirmation = false;
     private bool opcoesConfirmation = false;
     private bool curiosidadesConfirmation = false;
+    [SerializeField]
+    private GameObject bloqueio;
 
     void LateUpdate()
     {
         // Enquanto a condição for falsa, o jogo espera que o jogador aperte o botão de pause
         if(!menuActive)
         {
-            if (Input.GetKeyDown(KeyCode.Escape) && !Player.gameOver && boxAnimator.GetCurrentAnimatorStateInfo(0).IsTag("Closed") && !PopUp.activeInHierarchy) // se o jogador apertar o botão de pause e ele não estiver morto o jogo pausa
+            if (Input.GetKeyDown(KeyCode.Escape) && !Player.gameOver && boxAnimator.GetCurrentAnimatorStateInfo(0).IsTag("Closed") && !PopUp.activeInHierarchy && !bloqueio.activeInHierarchy) // se o jogador apertar o botão de pause e ele não estiver morto o jogo pausa
             {
                 Time.timeScale = 0.0001f; // time scale é colocado bem baixo para diminuir a velocidade de renderização
                 menuPause.SetActive(true); // Painel contendo a interface de pause é ativado
