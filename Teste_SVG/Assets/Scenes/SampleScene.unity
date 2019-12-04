@@ -523,11 +523,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
-    - target: {fileID: 9078536767828667818, guid: 8c42dd92b26a03942b9820001f6efcd5,
-        type: 3}
-      propertyPath: orthographic size
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 9078536767828667733, guid: 8c42dd92b26a03942b9820001f6efcd5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -582,6 +577,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9078536767828667818, guid: 8c42dd92b26a03942b9820001f6efcd5,
+        type: 3}
+      propertyPath: orthographic size
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 980289838, guid: 8c42dd92b26a03942b9820001f6efcd5, type: 3}
       propertyPath: hubAmbient
@@ -2750,18 +2750,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PullingArea
       objectReference: {fileID: 0}
-    - target: {fileID: 1634002018, guid: 5dde692d01abbc24597d0da9a4b48417, type: 3}
-      propertyPath: nameText
-      value: 
-      objectReference: {fileID: 2029771061}
-    - target: {fileID: 1634002018, guid: 5dde692d01abbc24597d0da9a4b48417, type: 3}
-      propertyPath: dialogText
-      value: 
-      objectReference: {fileID: 980383672}
-    - target: {fileID: 1634002018, guid: 5dde692d01abbc24597d0da9a4b48417, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 1924436605}
     - target: {fileID: 7280009529068274120, guid: 5dde692d01abbc24597d0da9a4b48417,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2817,6 +2805,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1634002018, guid: 5dde692d01abbc24597d0da9a4b48417, type: 3}
+      propertyPath: nameText
+      value: 
+      objectReference: {fileID: 2029771061}
+    - target: {fileID: 1634002018, guid: 5dde692d01abbc24597d0da9a4b48417, type: 3}
+      propertyPath: dialogText
+      value: 
+      objectReference: {fileID: 980383672}
+    - target: {fileID: 1634002018, guid: 5dde692d01abbc24597d0da9a4b48417, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1924436605}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dde692d01abbc24597d0da9a4b48417, type: 3}
 --- !u!1001 &8633648794210303194
