@@ -126,25 +126,14 @@ public class Player : MonoBehaviour
         anim.SetFloat("Speed", Mathf.Abs(_controller.Velocity.x) / maxSpeed);
     }
 
-    public void LateUpdate()
-    {
-        if (isMachado)
-        {
-            _controller.SetForce(Vector2.zero);
-            anim.SetTrigger("Machadada");
-            _canMachado = RateMachado;
-            isMachado = false;
-        }
-        
-    }
 
     private void HandleInput()
     {
 
         if (!_changer.GetPanelState() && !panels[0].activeInHierarchy && 
-            !panels[1].activeInHierarchy && !Dead && _canMachado < 0 && 
-            !boxAnimator.GetCurrentAnimatorStateInfo(0).IsTag("Open") && !anim.GetBool("Dash") &&
-            canMove)
+            !panels[1].activeInHierarchy && !Dead && _canMachado < 0 &&
+             _canFireIn < 0 &&!boxAnimator.GetCurrentAnimatorStateInfo(0).IsTag("Open") && 
+            !anim.GetBool("Dash") && canMove)
         {
 
             h_Move = Input.GetAxisRaw("Horizontal");

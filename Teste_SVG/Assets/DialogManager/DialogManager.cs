@@ -178,6 +178,7 @@ public class DialogManager : MonoBehaviour
             dialogText.text += letter;
             yield return null;
         }
+        contador = 0;
     }
 
 }
