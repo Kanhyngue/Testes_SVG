@@ -7,9 +7,9 @@ public class MusicChanger : MonoBehaviour
     // Variáveis AudioSource da Ambientação
     public AudioSource hubAmbient, cerradoAmbient, florestaAmbient, cavernaAmbient;
     // Variáveis AudioSource de música
-    public AudioSource hubSource, cerradoSource, florestaSource, cavernaSource;
+    public AudioSource hubSource, cerradoSource, florestaSource, cavernaSource, bossMeleeMusic, bossRangeMusic, bossfinalMusic;
     // Cenários
-    public GameObject hub, cerrado, floresta, caverna;
+    public GameObject hub, cerrado, floresta, caverna, bossMelee, bossRanged, arenaFinal;
     // Duração do FadeOff
     public float fadeOffDuration;
     // Timer do fade off
@@ -66,10 +66,22 @@ public class MusicChanger : MonoBehaviour
                 else if(cena == 3)
                 {
                     FadeMusic(cena);
-                }     
+                }
+                else if (cena == 4)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 5)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 6)
+                {
+                    FadeMusic(cena);
+                }
             }
         }
-        else if(cerrado.activeSelf && cena != 1)
+        else if(cerrado.activeSelf && cena != 1 && !bossRanged.activeSelf)
         {
             if(change)
             {
@@ -93,9 +105,21 @@ public class MusicChanger : MonoBehaviour
                 {
                     FadeMusic(cena);
                 }
+                else if (cena == 4)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 5)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 6)
+                {
+                    FadeMusic(cena);
+                }
             }
         }
-        else if(floresta.activeSelf && cena != 2)
+        else if(floresta.activeSelf && cena != 2 && !bossMelee.activeSelf)
         {
             if(change)
             {
@@ -116,6 +140,18 @@ public class MusicChanger : MonoBehaviour
                     FadeMusic(cena);
                 }
                 else if(cena == 3)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 4)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 5)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 6)
                 {
                     FadeMusic(cena);
                 }
@@ -142,6 +178,132 @@ public class MusicChanger : MonoBehaviour
                     FadeMusic(cena);
                 }
                 else if(cena == 2)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 4)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 5)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 6)
+                {
+                    FadeMusic(cena);
+                }
+            }
+        }
+        else if (arenaFinal.activeSelf && cena != 4)
+        {
+            if (change)
+            {
+                cena = 4;
+                AtribuirSource(cena);
+
+                cavernaSource.volume = .5f;
+                cavernaAmbient.volume = .5f;
+            }
+            else
+            {
+                if (cena == 0)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 1)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 2)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 3)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 5)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 6)
+                {
+                    FadeMusic(cena);
+                }
+            }
+        }
+        else if (bossMelee.activeSelf && cena != 5)
+        {
+            if (change)
+            {
+                cena = 5;
+                AtribuirSource(cena);
+
+                cavernaSource.volume = .5f;
+                cavernaAmbient.volume = .5f;
+            }
+            else
+            {
+                if (cena == 0)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 1)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 2)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 3)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 4)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 6)
+                {
+                    FadeMusic(cena);
+                }
+            }
+        }
+        else if (bossRanged.activeSelf && cena != 6)
+        {
+            if (change)
+            {
+                cena = 6;
+                AtribuirSource(cena);
+
+                cavernaSource.volume = .5f;
+                cavernaAmbient.volume = .5f;
+            }
+            else
+            {
+                if (cena == 0)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 1)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 2)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 3)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 4)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 5)
                 {
                     FadeMusic(cena);
                 }
@@ -202,6 +364,42 @@ public class MusicChanger : MonoBehaviour
                     StartCoroutine(Delay());
                 }
             break;
+            case 4:
+                if (currentTime < fadeOffDuration)
+                {
+                    currentTime += Time.deltaTime;
+                    cavernaSource.volume = Mathf.Lerp(.5f, 0f, currentTime / fadeOffDuration);
+                    cavernaAmbient.volume = Mathf.Lerp(.5f, 0f, currentTime / fadeOffDuration);
+                }
+                else
+                {
+                    StartCoroutine(Delay());
+                }
+            break;
+            case 5:
+                if (currentTime < fadeOffDuration)
+                {
+                    currentTime += Time.deltaTime;
+                    cavernaSource.volume = Mathf.Lerp(.5f, 0f, currentTime / fadeOffDuration);
+                    cavernaAmbient.volume = Mathf.Lerp(.5f, 0f, currentTime / fadeOffDuration);
+                }
+                else
+                {
+                    StartCoroutine(Delay());
+                }
+            break;
+            case 6:
+                if (currentTime < fadeOffDuration)
+                {
+                    currentTime += Time.deltaTime;
+                    cavernaSource.volume = Mathf.Lerp(.5f, 0f, currentTime / fadeOffDuration);
+                    cavernaAmbient.volume = Mathf.Lerp(.5f, 0f, currentTime / fadeOffDuration);
+                }
+                else
+                {
+                    StartCoroutine(Delay());
+                }
+            break;
             default:
                 // não faz porra nenhuma.
             break;
@@ -218,6 +416,9 @@ public class MusicChanger : MonoBehaviour
                 cerradoSource.Stop();
                 florestaSource.Stop();
                 cavernaSource.Stop();
+                bossMeleeMusic.Stop();
+                bossRangeMusic.Stop();
+                bossfinalMusic.Stop();
                 
                 hubAmbient.Play();
                 cerradoAmbient.Stop();
@@ -231,6 +432,9 @@ public class MusicChanger : MonoBehaviour
                 hubSource.Stop();
                 florestaSource.Stop();
                 cavernaSource.Stop();
+                bossMeleeMusic.Stop();
+                bossRangeMusic.Stop();
+                bossfinalMusic.Stop();
 
                 hubAmbient.Stop();
                 cerradoAmbient.Play();
@@ -244,6 +448,9 @@ public class MusicChanger : MonoBehaviour
                 cerradoSource.Stop();
                 hubSource.Stop();
                 cavernaSource.Stop();
+                bossMeleeMusic.Stop();
+                bossRangeMusic.Stop();
+                bossfinalMusic.Stop();
 
                 hubAmbient.Stop();
                 cerradoAmbient.Stop();
@@ -257,6 +464,9 @@ public class MusicChanger : MonoBehaviour
                 cerradoSource.Stop();
                 florestaSource.Stop();
                 hubSource.Stop();
+                bossMeleeMusic.Stop();
+                bossRangeMusic.Stop();
+                bossfinalMusic.Stop();
 
                 hubAmbient.Stop();
                 cerradoAmbient.Stop();
@@ -265,11 +475,61 @@ public class MusicChanger : MonoBehaviour
 
                 currentTime = 0f;
             break;
+            case 4:
+                cavernaSource.Stop();
+                cerradoSource.Stop();
+                florestaSource.Stop();
+                hubSource.Stop();
+                bossMeleeMusic.Stop();
+                bossRangeMusic.Stop();
+                bossfinalMusic.Play();
+
+                hubAmbient.Stop();
+                cerradoAmbient.Stop();
+                florestaAmbient.Stop();
+                cavernaSource.Stop();
+
+                currentTime = 0f;
+            break;
+            case 5:
+                cavernaSource.Stop();
+                cerradoSource.Stop();
+                florestaSource.Stop();
+                hubSource.Stop();
+                bossMeleeMusic.Play();
+                bossRangeMusic.Stop();
+                bossfinalMusic.Stop();
+
+                hubAmbient.Stop();
+                cerradoAmbient.Stop();
+                florestaAmbient.Stop();
+                cavernaSource.Stop();
+
+                currentTime = 0f;
+            break;
+            case 6:
+                cavernaSource.Stop();
+                cerradoSource.Stop();
+                florestaSource.Stop();
+                hubSource.Stop();
+                bossMeleeMusic.Stop();
+                bossRangeMusic.Play();
+                bossfinalMusic.Stop();
+
+                hubAmbient.Stop();
+                cerradoAmbient.Stop();
+                florestaAmbient.Stop();
+                cavernaSource.Stop();
+                currentTime = 0f;
+            break;
             default:
                 hubSource.Stop();
                 cerradoSource.Stop();
                 florestaSource.Stop();
                 cavernaSource.Stop();
+                bossMeleeMusic.Stop();
+                bossRangeMusic.Stop();
+                bossfinalMusic.Stop();
 
                 hubAmbient.Stop();
                 cerradoAmbient.Stop();
