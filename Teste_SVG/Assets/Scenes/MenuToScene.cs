@@ -12,6 +12,7 @@ public class MenuToScene : MonoBehaviour
 
     public void NewGame()
     {
+        loadScreen.ligado = true;
         loadGame = false;
         StartCoroutine(LoadToNewGame());
     }
@@ -50,6 +51,7 @@ public class MenuToScene : MonoBehaviour
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("SampleScene");
         while(!asyncLoad.isDone)
         {
+            
             StartCoroutine(loadScreen.Rotate());
             yield return null;
         }
