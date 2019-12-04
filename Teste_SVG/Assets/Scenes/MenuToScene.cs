@@ -13,6 +13,11 @@ public class MenuToScene : MonoBehaviour
         StartCoroutine(LoadToNewGame());
     }
 
+    public void ExitGame() 
+    {
+        Application.Quit();
+    }
+
     public void Continue()
     {
         loadGame = true;
@@ -21,7 +26,7 @@ public class MenuToScene : MonoBehaviour
 
     IEnumerator LoadToNewGame()
     {
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(1);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("SampleScene");
         while(!asyncLoad.isDone)
         {
             yield return null;
@@ -30,7 +35,7 @@ public class MenuToScene : MonoBehaviour
 
     IEnumerator LoadToExistingGame()
     {
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(1);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("SampleScene");
         while(!asyncLoad.isDone)
         {
             yield return null;
