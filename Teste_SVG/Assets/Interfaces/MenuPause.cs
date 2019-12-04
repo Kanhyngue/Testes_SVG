@@ -9,6 +9,10 @@ public class MenuPause : MonoBehaviour
     public GameObject confirmacao;
     public GameObject curiosidadesPanel;
     public GameObject opcoesPanel;
+    [SerializeField]
+    private Animator boxAnimator;
+    [SerializeField]
+    private GameObject PopUp; 
     private bool menuActive = false;
     private bool exitConfirmation = false;
     private bool opcoesConfirmation = false;
@@ -19,7 +23,7 @@ public class MenuPause : MonoBehaviour
         // Enquanto a condição for falsa, o jogo espera que o jogador aperte o botão de pause
         if(!menuActive)
         {
-            if(Input.GetKeyDown(KeyCode.Escape) && !Player.gameOver) // se o jogador apertar o botão de pause e ele não estiver morto o jogo pausa
+            if (Input.GetKeyDown(KeyCode.Escape) && !Player.gameOver && boxAnimator.GetCurrentAnimatorStateInfo(0).IsTag("Closed") && !PopUp.activeInHierarchy) // se o jogador apertar o botão de pause e ele não estiver morto o jogo pausa
             {
                 Time.timeScale = 0.0001f; // time scale é colocado bem baixo para diminuir a velocidade de renderização
                 menuPause.SetActive(true); // Painel contendo a interface de pause é ativado

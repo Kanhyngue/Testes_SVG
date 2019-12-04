@@ -1686,7 +1686,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &758945352
 Transform:
   m_ObjectHideFlags: 0
@@ -1695,7 +1695,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 758945351}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 36.67244, y: -91.73379, z: -6070.6157}
+  m_LocalPosition: {x: -134, y: -90, z: -6070.6157}
   m_LocalScale: {x: 16.862822, y: 16.862822, z: 67.45129}
   m_Children:
   - {fileID: 1296882480}
@@ -3975,7 +3975,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: -94}
+  m_AnchoredPosition: {x: 0, y: -94}
   m_SizeDelta: {x: 200, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1501907950
@@ -5611,7 +5611,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 406.82996}
+  m_AnchoredPosition: {x: -0.00024414062, y: 690.53}
   m_SizeDelta: {x: -1309, y: -813.66003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1924436607
@@ -6108,7 +6108,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00022888184, y: -0}
+  m_AnchoredPosition: {x: -0.00022888184, y: -12.299999}
   m_SizeDelta: {x: 484.9, y: 22.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2061909891
@@ -6167,7 +6167,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2089064907
 Transform:
   m_ObjectHideFlags: 0
@@ -6176,7 +6176,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2089064906}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 306, y: -91.73379, z: -6070.6157}
+  m_LocalPosition: {x: 134, y: -90, z: -6070.6157}
   m_LocalScale: {x: 16.862822, y: 16.862822, z: 67.45129}
   m_Children:
   - {fileID: 1504139404}
@@ -7926,6 +7926,8 @@ MonoBehaviour:
   confirmacao: {fileID: 1003801010}
   curiosidadesPanel: {fileID: 2573128749773578389}
   opcoesPanel: {fileID: 4954136945223276267}
+  boxAnimator: {fileID: 0}
+  PopUp: {fileID: 0}
 --- !u!114 &4134826338844565205
 MonoBehaviour:
   m_ObjectHideFlags: 0
