@@ -3412,7 +3412,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2564792422332809406
 Transform:
   m_ObjectHideFlags: 0
@@ -6193,16 +6193,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tocha_Chao (14)
       objectReference: {fileID: 0}
-    - target: {fileID: 7883510258133161127, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.017100671
-      objectReference: {fileID: 0}
-    - target: {fileID: 7883510258133161127, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9998538
-      objectReference: {fileID: 0}
     - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_Color.g
@@ -6238,6 +6228,16 @@ PrefabInstance:
       propertyPath: m_PointLightQuality
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7883510258133161127, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.017100671
+      objectReference: {fileID: 0}
+    - target: {fileID: 7883510258133161127, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9998538
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &2529106043555097432 stripped
@@ -6253,11 +6253,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2564792422332809406}
     m_Modifications:
-    - target: {fileID: 843797831877768346, guid: 149f765691fda9749a3ca05e14df3c20,
-        type: 3}
-      propertyPath: m_Name
-      value: Inimigo_Ranged_Container (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 6641252854646812839, guid: 149f765691fda9749a3ca05e14df3c20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6312,6 +6307,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 843797831877768346, guid: 149f765691fda9749a3ca05e14df3c20,
+        type: 3}
+      propertyPath: m_Name
+      value: Inimigo_Ranged_Container (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 149f765691fda9749a3ca05e14df3c20, type: 3}
@@ -6408,11 +6408,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2564792422332809406}
     m_Modifications:
-    - target: {fileID: 843797831877768346, guid: 149f765691fda9749a3ca05e14df3c20,
-        type: 3}
-      propertyPath: m_Name
-      value: Inimigo_Ranged_Container (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 6641252854646812839, guid: 149f765691fda9749a3ca05e14df3c20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6468,6 +6463,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 843797831877768346, guid: 149f765691fda9749a3ca05e14df3c20,
+        type: 3}
+      propertyPath: m_Name
+      value: Inimigo_Ranged_Container (4)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 149f765691fda9749a3ca05e14df3c20, type: 3}
 --- !u!4 &5003047599801023740 stripped
@@ -6483,11 +6483,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8809738227539835495}
     m_Modifications:
-    - target: {fileID: 3340382116077849357, guid: 8482541f6910a5b4ca9153cca57a7f48,
-        type: 3}
-      propertyPath: m_Name
-      value: EnemyMelee (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 3340382116077849353, guid: 8482541f6910a5b4ca9153cca57a7f48,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6543,6 +6538,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3340382116077849357, guid: 8482541f6910a5b4ca9153cca57a7f48,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemyMelee (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 3340382116077849354, guid: 8482541f6910a5b4ca9153cca57a7f48,
         type: 3}
       propertyPath: box
@@ -6569,11 +6569,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2564792422332809406}
     m_Modifications:
-    - target: {fileID: 843797831877768346, guid: 149f765691fda9749a3ca05e14df3c20,
-        type: 3}
-      propertyPath: m_Name
-      value: Inimigo_Ranged_Container (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 6641252854646812839, guid: 149f765691fda9749a3ca05e14df3c20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6628,6 +6623,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 843797831877768346, guid: 149f765691fda9749a3ca05e14df3c20,
+        type: 3}
+      propertyPath: m_Name
+      value: Inimigo_Ranged_Container (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 149f765691fda9749a3ca05e14df3c20, type: 3}
@@ -6834,16 +6834,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tocha_Chao (16)
       objectReference: {fileID: 0}
-    - target: {fileID: 7883510258133161127, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.028406823
-      objectReference: {fileID: 0}
-    - target: {fileID: 7883510258133161127, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9995965
-      objectReference: {fileID: 0}
     - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_Color.g
@@ -6878,6 +6868,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PointLightQuality
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7883510258133161127, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.028406823
+      objectReference: {fileID: 0}
+    - target: {fileID: 7883510258133161127, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9995965
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
@@ -7014,11 +7014,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8809738227539835495}
     m_Modifications:
-    - target: {fileID: 3340382116077849357, guid: 8482541f6910a5b4ca9153cca57a7f48,
-        type: 3}
-      propertyPath: m_Name
-      value: EnemyMelee (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 3340382116077849353, guid: 8482541f6910a5b4ca9153cca57a7f48,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7074,6 +7069,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3340382116077849357, guid: 8482541f6910a5b4ca9153cca57a7f48,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemyMelee (5)
+      objectReference: {fileID: 0}
     - target: {fileID: 3340382116077849354, guid: 8482541f6910a5b4ca9153cca57a7f48,
         type: 3}
       propertyPath: box
@@ -7100,11 +7100,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2564792422332809406}
     m_Modifications:
-    - target: {fileID: 843797831877768346, guid: 149f765691fda9749a3ca05e14df3c20,
-        type: 3}
-      propertyPath: m_Name
-      value: Inimigo_Ranged_Container (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 6641252854646812839, guid: 149f765691fda9749a3ca05e14df3c20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7160,6 +7155,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 843797831877768346, guid: 149f765691fda9749a3ca05e14df3c20,
+        type: 3}
+      propertyPath: m_Name
+      value: Inimigo_Ranged_Container (5)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 149f765691fda9749a3ca05e14df3c20, type: 3}
 --- !u!4 &7299043235614159877 stripped
@@ -7175,11 +7175,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8809738227539835495}
     m_Modifications:
-    - target: {fileID: 3340382116077849357, guid: 8482541f6910a5b4ca9153cca57a7f48,
-        type: 3}
-      propertyPath: m_Name
-      value: EnemyMelee
-      objectReference: {fileID: 0}
     - target: {fileID: 3340382116077849353, guid: 8482541f6910a5b4ca9153cca57a7f48,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7235,6 +7230,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3340382116077849357, guid: 8482541f6910a5b4ca9153cca57a7f48,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemyMelee
+      objectReference: {fileID: 0}
     - target: {fileID: 3340382116077849354, guid: 8482541f6910a5b4ca9153cca57a7f48,
         type: 3}
       propertyPath: box
@@ -7261,11 +7261,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2564792422332809406}
     m_Modifications:
-    - target: {fileID: 843797831877768346, guid: 149f765691fda9749a3ca05e14df3c20,
-        type: 3}
-      propertyPath: m_Name
-      value: Inimigo_Ranged_Container (7)
-      objectReference: {fileID: 0}
     - target: {fileID: 6641252854646812839, guid: 149f765691fda9749a3ca05e14df3c20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7321,6 +7316,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 843797831877768346, guid: 149f765691fda9749a3ca05e14df3c20,
+        type: 3}
+      propertyPath: m_Name
+      value: Inimigo_Ranged_Container (7)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 149f765691fda9749a3ca05e14df3c20, type: 3}
 --- !u!4 &7047268106064137411 stripped
@@ -7336,11 +7336,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3414309800380161006}
     m_Modifications:
-    - target: {fileID: -5514664511981194042, guid: b411776994616604b85b0f2a071131c1,
-        type: 3}
-      propertyPath: m_Name
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: -5000425488339544488, guid: b411776994616604b85b0f2a071131c1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7411,6 +7406,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.566204
       objectReference: {fileID: 0}
+    - target: {fileID: -5514664511981194042, guid: b411776994616604b85b0f2a071131c1,
+        type: 3}
+      propertyPath: m_Name
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: -6625429522233934048, guid: b411776994616604b85b0f2a071131c1,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -7447,11 +7447,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7484066463234090218}
     m_Modifications:
-    - target: {fileID: 6581767500443606634, guid: 4cdb8093923f1904488ca4a90f86507d,
-        type: 3}
-      propertyPath: m_Name
-      value: Cachimbo (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7506,6 +7501,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606634, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_Name
+      value: Cachimbo (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cdb8093923f1904488ca4a90f86507d, type: 3}
@@ -7613,11 +7613,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7484066463234090218}
     m_Modifications:
-    - target: {fileID: 6581767500443606634, guid: 4cdb8093923f1904488ca4a90f86507d,
-        type: 3}
-      propertyPath: m_Name
-      value: Cachimbo
-      objectReference: {fileID: 0}
     - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7672,6 +7667,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606634, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_Name
+      value: Cachimbo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cdb8093923f1904488ca4a90f86507d, type: 3}
@@ -9038,11 +9038,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2564792422332809406}
     m_Modifications:
-    - target: {fileID: 843797831877768346, guid: 149f765691fda9749a3ca05e14df3c20,
-        type: 3}
-      propertyPath: m_Name
-      value: Inimigo_Ranged_Container (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 6641252854646812839, guid: 149f765691fda9749a3ca05e14df3c20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9098,6 +9093,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 843797831877768346, guid: 149f765691fda9749a3ca05e14df3c20,
+        type: 3}
+      propertyPath: m_Name
+      value: Inimigo_Ranged_Container (3)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 149f765691fda9749a3ca05e14df3c20, type: 3}
 --- !u!4 &1244193776927044786 stripped
@@ -9113,11 +9113,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8809738227539835495}
     m_Modifications:
-    - target: {fileID: 3340382116077849357, guid: 8482541f6910a5b4ca9153cca57a7f48,
-        type: 3}
-      propertyPath: m_Name
-      value: EnemyMelee (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 3340382116077849353, guid: 8482541f6910a5b4ca9153cca57a7f48,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9173,6 +9168,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3340382116077849357, guid: 8482541f6910a5b4ca9153cca57a7f48,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemyMelee (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 3340382116077849354, guid: 8482541f6910a5b4ca9153cca57a7f48,
         type: 3}
       propertyPath: box
@@ -9199,11 +9199,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3414309800380161006}
     m_Modifications:
-    - target: {fileID: -1844517581494636762, guid: 5360fbda5bb56264b8fbb38dd62fdca1,
-        type: 3}
-      propertyPath: m_Name
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -1521121644059045286, guid: 5360fbda5bb56264b8fbb38dd62fdca1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9274,6 +9269,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.566204
       objectReference: {fileID: 0}
+    - target: {fileID: -1844517581494636762, guid: 5360fbda5bb56264b8fbb38dd62fdca1,
+        type: 3}
+      propertyPath: m_Name
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: -7658432028899063923, guid: 5360fbda5bb56264b8fbb38dd62fdca1,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -9310,11 +9310,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2564792422332809406}
     m_Modifications:
-    - target: {fileID: 843797831877768346, guid: 149f765691fda9749a3ca05e14df3c20,
-        type: 3}
-      propertyPath: m_Name
-      value: Inimigo_Ranged_Container (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 6641252854646812839, guid: 149f765691fda9749a3ca05e14df3c20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9370,6 +9365,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 843797831877768346, guid: 149f765691fda9749a3ca05e14df3c20,
+        type: 3}
+      propertyPath: m_Name
+      value: Inimigo_Ranged_Container (6)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 149f765691fda9749a3ca05e14df3c20, type: 3}
 --- !u!4 &982872706963369305 stripped
@@ -9385,11 +9385,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8809738227539835495}
     m_Modifications:
-    - target: {fileID: 3340382116077849357, guid: 8482541f6910a5b4ca9153cca57a7f48,
-        type: 3}
-      propertyPath: m_Name
-      value: EnemyMelee (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 3340382116077849353, guid: 8482541f6910a5b4ca9153cca57a7f48,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9444,6 +9439,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340382116077849357, guid: 8482541f6910a5b4ca9153cca57a7f48,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemyMelee (1)
       objectReference: {fileID: 0}
     - target: {fileID: 3340382116077849354, guid: 8482541f6910a5b4ca9153cca57a7f48,
         type: 3}
@@ -9546,11 +9546,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2564792422332809406}
     m_Modifications:
-    - target: {fileID: 843797831877768346, guid: 149f765691fda9749a3ca05e14df3c20,
-        type: 3}
-      propertyPath: m_Name
-      value: Inimigo_Ranged_Container (8)
-      objectReference: {fileID: 0}
     - target: {fileID: 6641252854646812839, guid: 149f765691fda9749a3ca05e14df3c20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9606,6 +9601,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 843797831877768346, guid: 149f765691fda9749a3ca05e14df3c20,
+        type: 3}
+      propertyPath: m_Name
+      value: Inimigo_Ranged_Container (8)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 149f765691fda9749a3ca05e14df3c20, type: 3}
 --- !u!4 &322440511638029548 stripped
@@ -9621,11 +9621,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8809738227539835495}
     m_Modifications:
-    - target: {fileID: 3340382116077849357, guid: 8482541f6910a5b4ca9153cca57a7f48,
-        type: 3}
-      propertyPath: m_Name
-      value: EnemyMelee (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 3340382116077849353, guid: 8482541f6910a5b4ca9153cca57a7f48,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9680,6 +9675,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340382116077849357, guid: 8482541f6910a5b4ca9153cca57a7f48,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemyMelee (6)
       objectReference: {fileID: 0}
     - target: {fileID: 3340382116077849354, guid: 8482541f6910a5b4ca9153cca57a7f48,
         type: 3}
@@ -9787,11 +9787,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8809738227539835495}
     m_Modifications:
-    - target: {fileID: 3340382116077849357, guid: 8482541f6910a5b4ca9153cca57a7f48,
-        type: 3}
-      propertyPath: m_Name
-      value: EnemyMelee (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 3340382116077849353, guid: 8482541f6910a5b4ca9153cca57a7f48,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9847,6 +9842,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3340382116077849357, guid: 8482541f6910a5b4ca9153cca57a7f48,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemyMelee (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 3340382116077849354, guid: 8482541f6910a5b4ca9153cca57a7f48,
         type: 3}
       propertyPath: box
@@ -9873,11 +9873,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2564792422332809406}
     m_Modifications:
-    - target: {fileID: 8032012078736903464, guid: 1ef1cfb0b644c75419d7840e586ac461,
-        type: 3}
-      propertyPath: m_Name
-      value: SoundTracingCaverna
-      objectReference: {fileID: 0}
     - target: {fileID: 4996575097865773161, guid: 1ef1cfb0b644c75419d7840e586ac461,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9932,6 +9927,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8032012078736903464, guid: 1ef1cfb0b644c75419d7840e586ac461,
+        type: 3}
+      propertyPath: m_Name
+      value: SoundTracingCaverna
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ef1cfb0b644c75419d7840e586ac461, type: 3}
@@ -10068,11 +10068,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2564792422332809406}
     m_Modifications:
-    - target: {fileID: 843797831877768346, guid: 149f765691fda9749a3ca05e14df3c20,
-        type: 3}
-      propertyPath: m_Name
-      value: Inimigo_Ranged_Container
-      objectReference: {fileID: 0}
     - target: {fileID: 6641252854646812839, guid: 149f765691fda9749a3ca05e14df3c20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10128,6 +10123,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 843797831877768346, guid: 149f765691fda9749a3ca05e14df3c20,
+        type: 3}
+      propertyPath: m_Name
+      value: Inimigo_Ranged_Container
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 149f765691fda9749a3ca05e14df3c20, type: 3}
 --- !u!4 &3213413075928171948 stripped
@@ -10143,11 +10143,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7484066463234090218}
     m_Modifications:
-    - target: {fileID: 6581767500443606634, guid: 4cdb8093923f1904488ca4a90f86507d,
-        type: 3}
-      propertyPath: m_Name
-      value: Cachimbo (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10203,6 +10198,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606634, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_Name
+      value: Cachimbo (2)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cdb8093923f1904488ca4a90f86507d, type: 3}
 --- !u!4 &3003156903553002806 stripped
@@ -10218,11 +10218,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7484066463234090218}
     m_Modifications:
-    - target: {fileID: 6581767500443606634, guid: 4cdb8093923f1904488ca4a90f86507d,
-        type: 3}
-      propertyPath: m_Name
-      value: Cachimbo (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 6581767500443606628, guid: 4cdb8093923f1904488ca4a90f86507d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10277,6 +10272,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581767500443606634, guid: 4cdb8093923f1904488ca4a90f86507d,
+        type: 3}
+      propertyPath: m_Name
+      value: Cachimbo (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cdb8093923f1904488ca4a90f86507d, type: 3}
@@ -10417,11 +10417,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Porta Fechada
-      objectReference: {fileID: 0}
-    - target: {fileID: -6271029340725008851, guid: 531d716e7adb0c84a993b3310a03571e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4708978572150281752, guid: 531d716e7adb0c84a993b3310a03571e,
         type: 3}
@@ -10579,16 +10574,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tocha_Chao (19)
       objectReference: {fileID: 0}
-    - target: {fileID: 7883510258133161127, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.017100671
-      objectReference: {fileID: 0}
-    - target: {fileID: 7883510258133161127, guid: 5d867e7fdd161824f9f1f4cae203b456,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9998538
-      objectReference: {fileID: 0}
     - target: {fileID: 7519834759762962656, guid: 5d867e7fdd161824f9f1f4cae203b456,
         type: 3}
       propertyPath: m_Color.g
@@ -10624,6 +10609,16 @@ PrefabInstance:
       propertyPath: m_PointLightQuality
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7883510258133161127, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.017100671
+      objectReference: {fileID: 0}
+    - target: {fileID: 7883510258133161127, guid: 5d867e7fdd161824f9f1f4cae203b456,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9998538
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d867e7fdd161824f9f1f4cae203b456, type: 3}
 --- !u!4 &6448176867872408570 stripped
@@ -10639,11 +10634,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3414309800380161006}
     m_Modifications:
-    - target: {fileID: 6445959545180567485, guid: 80384b1f016cb904fb1648c21518076a,
-        type: 3}
-      propertyPath: m_Name
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3894500176700658881, guid: 80384b1f016cb904fb1648c21518076a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10714,6 +10704,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.566204
       objectReference: {fileID: 0}
+    - target: {fileID: 6445959545180567485, guid: 80384b1f016cb904fb1648c21518076a,
+        type: 3}
+      propertyPath: m_Name
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -6289925218191385278, guid: 80384b1f016cb904fb1648c21518076a,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -10745,11 +10740,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3414309800380161006}
     m_Modifications:
-    - target: {fileID: -4054368272339313267, guid: a304493857a3cca43a801647506bb6b7,
-        type: 3}
-      propertyPath: m_Name
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 7680948922530996085, guid: a304493857a3cca43a801647506bb6b7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10819,6 +10809,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.566204
+      objectReference: {fileID: 0}
+    - target: {fileID: -4054368272339313267, guid: a304493857a3cca43a801647506bb6b7,
+        type: 3}
+      propertyPath: m_Name
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8480228736050783489, guid: a304493857a3cca43a801647506bb6b7,
         type: 3}
