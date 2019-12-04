@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MenuToScene : MonoBehaviour
 {
     public static bool loadGame;
-
+    public LoadScreenMenu loadScreen;
     public void NewGame()
     {
         loadGame = false;
@@ -29,6 +29,7 @@ public class MenuToScene : MonoBehaviour
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("SampleScene");
         while(!asyncLoad.isDone)
         {
+            loadScreen.FadeRotate();
             yield return null;
         }
     }
