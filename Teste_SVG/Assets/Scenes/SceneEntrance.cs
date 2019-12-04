@@ -45,7 +45,7 @@ public class SceneEntrance : MonoBehaviour
             SceneChanger._mudarParaCena = mudarParaCena;
             if (Input.GetButtonDown("Interacao") && SceneChanger.triggered == true && !SceneChanger.underProcess)
             {
-                if (DataSystem.machadinha)
+                if (DataSystem.machadinha || mudarParaCena == 4 || mudarParaCena == 0)
                 {
                     //Debug.Log(sceneMessageFase);
                     //Debug.Log(mudarParaCena);
