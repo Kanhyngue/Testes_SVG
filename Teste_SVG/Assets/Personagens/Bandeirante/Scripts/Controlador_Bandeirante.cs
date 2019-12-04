@@ -10,7 +10,6 @@ public class Controlador_Bandeirante : MonoBehaviour
     protected bool canReload = false;
     private bool fase1 = true;
 
-
     [SerializeField]
     private Transform[] posicoesFase2;
 
@@ -37,6 +36,8 @@ public class Controlador_Bandeirante : MonoBehaviour
 
     [SerializeField]
     private float ShootRate = 10f;
+    [SerializeField]
+    private MenuToScene mngr;
 
     // Start is called before the first frame update
     void Start()
@@ -305,5 +306,10 @@ public class Controlador_Bandeirante : MonoBehaviour
         }
         _anim.SetBool("IsMoving", true);
 
+    }
+
+    public void Morreu()
+    {
+        mngr.Creditos();
     }
 }

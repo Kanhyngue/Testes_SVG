@@ -7,6 +7,9 @@ public class MenuToScene : MonoBehaviour
 {
     public static bool loadGame;
     public LoadScreenMenu loadScreen;
+
+
+
     public void NewGame()
     {
         loadGame = false;
@@ -24,6 +27,12 @@ public class MenuToScene : MonoBehaviour
         StartCoroutine(LoadToExistingGame());
     }
 
+
+    public void Creditos()
+    {
+        loadScreen.FadeRotate();
+        StartCoroutine(LoadCreditos());
+    }
     IEnumerator LoadToNewGame()
     {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("SampleScene");
@@ -38,6 +47,15 @@ public class MenuToScene : MonoBehaviour
     {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("SampleScene");
         while(!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+    }
+
+    IEnumerator LoadCreditos()
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Creditos");
+        while (!asyncLoad.isDone)
         {
             yield return null;
         }
