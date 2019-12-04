@@ -29,20 +29,29 @@ public class LoadScreenMenu : MonoBehaviour
         imgBotton = botton.GetComponent<Image>();
         transformButton = botton.GetComponent<Transform>();
         imgLogo = logo.GetComponent<Image>();
+
     }
 
+
+
     // Update is called once per frame
+    private void Update()
+    {
 
+        //.CrossFadeAlpha(1.0f, 2.0f, false);
 
-    public void FadeRotate()
+        transformButton.transform.Rotate(Vector3.forward * Time.deltaTime * velocidade * -1);
+    }
+
+    /*public void FadeRotate()
     {
         foreach(GameObject obj in desativar)
         {
             obj.SetActive(false);
         }
-        //transformButton.transform.Rotate(Vector3.forward * Time.deltaTime * velocidade * -1);
+        transformButton.transform.Rotate(Vector3.forward * Time.deltaTime * velocidade * -1);
         imgBotton.CrossFadeAlpha(1, 2.0f, false);
-    }
+    }*/
 
 
 }

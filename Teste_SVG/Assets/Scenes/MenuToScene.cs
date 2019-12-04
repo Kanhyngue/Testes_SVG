@@ -31,15 +31,16 @@ public class MenuToScene : MonoBehaviour
     public void Creditos()
     {
         loadScreen.gameObject.SetActive(true);
-        loadScreen.FadeRotate();
+        //loadScreen.FadeRotate();
         StartCoroutine(LoadCreditos());
     }
+
     IEnumerator LoadToNewGame()
     {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("SampleScene");
         while(!asyncLoad.isDone)
         {
-            loadScreen.FadeRotate();
+            //loadScreen.FadeRotate();
             yield return null;
         }
     }
