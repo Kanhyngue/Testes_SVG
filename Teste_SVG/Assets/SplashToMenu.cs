@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 
 public class SplashToMenu : MonoBehaviour
 {
@@ -20,7 +20,7 @@ public class SplashToMenu : MonoBehaviour
         if (!videoPlayer.isPlaying)
         {
             Debug.Log("acabou");
-            EditorSceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("Menu");
         }
     }
 
