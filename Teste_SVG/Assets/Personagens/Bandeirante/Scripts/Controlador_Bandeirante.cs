@@ -49,6 +49,8 @@ public class Controlador_Bandeirante : MonoBehaviour
     void Update()
     {
         checkPlayerOver();
+        if (_anim.GetCurrentAnimatorStateInfo(0).IsTag("Mortinho"))
+            StartCoroutine(OnCompleteDeathkAnimation());
 
         if ((HP > 0 && HP <= 5) && !fase1 && !_anim.GetCurrentAnimatorStateInfo(0).IsTag("Defesa"))
         {
@@ -306,6 +308,12 @@ public class Controlador_Bandeirante : MonoBehaviour
         }
         _anim.SetBool("IsMoving", true);
 
+    }
+    IEnumerator OnCompleteDeathkAnimation()
+    {
+        if (_anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
+            Morreu();
+        yield return null;
     }
 
     public void Morreu()

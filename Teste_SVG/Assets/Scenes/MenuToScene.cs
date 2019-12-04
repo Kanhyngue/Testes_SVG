@@ -30,6 +30,7 @@ public class MenuToScene : MonoBehaviour
 
     public void Creditos()
     {
+        loadScreen.gameObject.SetActive(true);
         loadScreen.FadeRotate();
         StartCoroutine(LoadCreditos());
     }

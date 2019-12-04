@@ -65,9 +65,7 @@ public class Solta_Armadura : Controlador_Bandeirante
         transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
         
     }
+
     
-    public void Morto()
-    {
-        Morreu();
-    }
+
 }
