@@ -40,7 +40,7 @@ public class MenuToScene : MonoBehaviour
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("SampleScene");
         while(!asyncLoad.isDone)
         {
-            //loadScreen.FadeRotate();
+            StartCoroutine(loadScreen.Rotate());
             yield return null;
         }
     }
@@ -50,6 +50,7 @@ public class MenuToScene : MonoBehaviour
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("SampleScene");
         while(!asyncLoad.isDone)
         {
+            StartCoroutine(loadScreen.Rotate());
             yield return null;
         }
     }
@@ -59,6 +60,7 @@ public class MenuToScene : MonoBehaviour
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Creditos");
         while (!asyncLoad.isDone)
         {
+            StartCoroutine(loadScreen.Rotate());
             yield return null;
         }
     }

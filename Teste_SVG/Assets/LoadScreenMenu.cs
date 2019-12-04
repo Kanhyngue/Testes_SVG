@@ -6,41 +6,23 @@ using UnityEngine.UI;
 public class LoadScreenMenu : MonoBehaviour
 {
     [SerializeField]
-    private GameObject botton;
+    private Transform botton;
 
-    [SerializeField]
-    private GameObject logo;
 
-    [SerializeField]
-    private GameObject[] desativar;
-
-    [SerializeField]
-    private float velocidade;
-
-    private Image imgBotton;
-
-    private Image imgLogo;
-
-    private Transform transformButton;
 
     // Start is called before the first frame update
-    void Awake()
-    {
-        imgBotton = botton.GetComponent<Image>();
-        transformButton = botton.GetComponent<Transform>();
-        imgLogo = logo.GetComponent<Image>();
 
-    }
 
 
 
     // Update is called once per frame
-    private void Update()
+    public IEnumerator Rotate()
     {
 
         //.CrossFadeAlpha(1.0f, 2.0f, false);
 
-        transformButton.transform.Rotate(Vector3.forward * Time.deltaTime * velocidade * -1);
+        botton.transform.Rotate(Vector3.forward * Time.deltaTime * 10 * -1);
+        yield return null;
     }
 
     /*public void FadeRotate()
