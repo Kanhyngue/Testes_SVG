@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 575914293}
   - component: {fileID: 575914296}
   - component: {fileID: 575914295}
+  - component: {fileID: 244944358169847420}
   - component: {fileID: 575914294}
   m_Layer: 0
   m_Name: Rendering
@@ -101,6 +102,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &244944358169847420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575914292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9ceebe193386e14480c13aba6506f82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mySelf: {fileID: 8187524373438588715}
 --- !u!61 &575914294
 BoxCollider2D:
   m_ObjectHideFlags: 0
