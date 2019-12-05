@@ -124,7 +124,37 @@ public class DialogManager : MonoBehaviour
                         break;
                 }
                 break;
+
             case 3://NPC
+                if (sentences.Count == 0 && contador == 0)
+                {
+                    EndDialog();
+                    return;
+                }
+
+                switch (contador)
+                {
+                    case 0:
+                        //StopAllCoroutines();
+                        sentence = sentences.Dequeue();
+                        StartCoroutine(TypeSentence(sentence));
+                        contador = 1;
+                        break;
+                    case 1:
+                        StopAllCoroutines();
+                        dialogText.text = sentence;
+                        contador = 0;
+                        break;
+                    case 2:
+                        //StopAllCoroutines();
+                        contador = 0;
+                        break;
+                    default:
+                        break;
+                }
+                break;
+
+            case 4://popup
                 if (sentences.Count == 0 && contador == 0)
                 {
                     EndDialog();

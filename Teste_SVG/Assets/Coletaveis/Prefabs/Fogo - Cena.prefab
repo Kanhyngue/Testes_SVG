@@ -9718,6 +9718,7 @@ GameObject:
   - component: {fileID: 8316684295756103862}
   - component: {fileID: 3492655094190579335}
   - component: {fileID: 5198410562087794122}
+  - component: {fileID: -5325742053503458493}
   m_Layer: 0
   m_Name: Fogo - Cena
   m_TagString: Fire
@@ -9801,3 +9802,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pullingArea: {fileID: 0}
+  cachimboArea: 0
+--- !u!114 &-5325742053503458493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8316684295756103863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f4fe154ee81936409138cac41b78829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogs:
+  - name: Dica
+    sentences:
+    - "Voc\xEA encontrou o poder de Karai, aperte \"Z\" ou \"J\" para usar a Bola
+      de Fogo."

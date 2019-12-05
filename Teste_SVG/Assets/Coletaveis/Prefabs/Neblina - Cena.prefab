@@ -4815,6 +4815,7 @@ GameObject:
   - component: {fileID: 886714646857241500}
   - component: {fileID: 4411800185140709362}
   - component: {fileID: 7852837322384782048}
+  - component: {fileID: -9143035190117507797}
   m_Layer: 0
   m_Name: Neblina - Cena
   m_TagString: Neblina
@@ -4898,6 +4899,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pullingArea: {fileID: 0}
+  cachimboArea: 0
+--- !u!114 &-9143035190117507797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886714646857241501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f4fe154ee81936409138cac41b78829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogs:
+  - name: Dica
+    sentences:
+    - "Voc\xEA encontrou o poder de Jakaira, aperte \"C\" ou \"L\" para usar a Neblina."
 --- !u!1 &5692421557202675389
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,14 @@ public class Coletavel : MonoBehaviour
     public int cachimboArea; // 0 até 2 -> HUB | 3 até 7 -> Cerrado | 8 até 11 -> Floresta | 12 até 15 -> Caverna
     private bool collected = false;
 
+    private DialogTrigger dialog;
+
+
+    private void Start()
+    {
+        dialog = GetComponent<DialogTrigger>();
+    }
+
     private void Update()
     {
         if (this.gameObject.CompareTag("Cachimbo") && !collected)
@@ -32,6 +40,10 @@ public class Coletavel : MonoBehaviour
                 transform.position = pullingArea.transform.position;
                 DataSystem.cachimbos[cachimboArea] = true;
                 ColetavelUI.activated = true;
+                if(DataSystem.cachimbosColetados == 0)
+                {
+                    dialog.TriggerDialog(0, 4);
+                }
                 
             }
             else if(this.gameObject.CompareTag("Chave"))
@@ -40,6 +52,7 @@ public class Coletavel : MonoBehaviour
                 DataSystem.chave = true;
                 Paje_Controller.seletorFalaPaje = 8;
                 NPC_Controller.seletorFalaNPC++;
+                dialog.TriggerDialog(0, 4);
             }
             else if(this.gameObject.CompareTag("Dash"))
             {
@@ -47,13 +60,16 @@ public class Coletavel : MonoBehaviour
                 DataSystem.dashPower = true;
                 Paje_Controller.seletorFalaPaje = 2;
                 NPC_Controller.seletorFalaNPC++;
-
+                //dialog.dialogs[0].name = "Dica";
+                //dialog.dialogs[0].sentences[0] = "Você encontrou o poder de Tupã, aperte 'X' ou 'K' para usar o Dash";
+                dialog.TriggerDialog(0, 4);
             }
             else if(this.gameObject.CompareTag("Fire"))
             {
                 transform.position = pullingArea.transform.position;
                 DataSystem.firePower = true;
                 Paje_Controller.seletorFalaPaje = 4;
+                dialog.TriggerDialog(0, 4);
 
             }
             else if(this.gameObject.CompareTag("Neblina"))
@@ -62,6 +78,7 @@ public class Coletavel : MonoBehaviour
                 DataSystem.fogPower = true;
                 Paje_Controller.seletorFalaPaje = 6;
                 NPC_Controller.seletorFalaNPC++;
+                dialog.TriggerDialog(0, 4);
 
             }
         }

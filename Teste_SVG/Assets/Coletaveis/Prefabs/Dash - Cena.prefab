@@ -4915,6 +4915,7 @@ GameObject:
   - component: {fileID: 7782351391290139334}
   - component: {fileID: 3071530898034873721}
   - component: {fileID: 2824897783284142221}
+  - component: {fileID: 2491134023800489123}
   m_Layer: 0
   m_Name: Dash - Cena
   m_TagString: Dash
@@ -4998,6 +4999,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pullingArea: {fileID: 0}
+  cachimboArea: 0
+--- !u!114 &2491134023800489123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7782351391290139335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f4fe154ee81936409138cac41b78829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogs:
+  - name: Dica
+    sentences:
+    - "Voc\xEA encontrou o poder de Tup\xE3, aperte \"X\" ou \"K\" para usar o Dash."
 --- !u!1 &7782351392749574831
 GameObject:
   m_ObjectHideFlags: 0
