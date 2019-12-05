@@ -29,6 +29,9 @@ public class Player : MonoBehaviour
     public float RateDash = 2f;
     public float RateNeblina = 2f;
 
+    [SerializeField]
+    private GameObject menuPause;
+
     [SerializeField] 
     private Animator anim;
 
@@ -81,7 +84,9 @@ public class Player : MonoBehaviour
 
         // Se o Jogador não estiver atacando com o machado, não estiver morto, e não estiver em algum menu ou interface então os controles ficam habilitados
 
-        HandleInput();
+        
+        if (!menuPause.activeInHierarchy)
+            HandleInput();
 
         // Se a vida do jogador chegar a zero, ele morre
         if (DataSystem.health <= 0)
