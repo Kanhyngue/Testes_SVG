@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4805899994462787722}
   m_Layer: 2
   m_Name: Inimigo_Ranged_Container
-  m_TagString: EditorOnly
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,7 +153,8 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8604027119866792939, guid: da5539ac8b5edb840a5f8ea7763a1b70, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: da5539ac8b5edb840a5f8ea7763a1b70, type: 3}
 --- !u!1 &1096092949438337881 stripped
 GameObject:

@@ -283,7 +283,6 @@ GameObject:
   - component: {fileID: 8187524373438588716}
   - component: {fileID: 2619126039607822455}
   - component: {fileID: 2177247741426180929}
-  - component: {fileID: 354613003}
   m_Layer: 8
   m_Name: Boss_Melee
   m_TagString: Untagged
@@ -375,21 +374,6 @@ PolygonCollider2D:
       - {x: 0.9082775, y: -0.22445679}
       - {x: 0.8991461, y: 0.95142365}
 --- !u!114 &2177247741426180929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8187524373438588715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0994e9ce29dab6e439c84f78c4b38467, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  bossSpeed: 2
-  box: {fileID: 575914294}
---- !u!114 &354613003
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

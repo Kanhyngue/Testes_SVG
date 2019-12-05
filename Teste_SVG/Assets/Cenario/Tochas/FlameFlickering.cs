@@ -28,7 +28,7 @@
          _lightSource = GetComponent<Light2D>();
          if (_lightSource == null || _lightSource.enabled == false)
          {
-            Debug.LogError("Flicker script must have a Light Component on the same GameObject or must be enabled.");
+            //Debug.LogError("Flicker script must have a Light Component on the same GameObject or must be enabled.");
             return;
          }
          else
