@@ -16,6 +16,19 @@ public class PlayerSounds : MonoBehaviour
     private AudioClip[] pedraClips;
     [SerializeField]
     private AudioClip[] umidoClips;
+    [SerializeField]
+    private AudioClip[] morte;
+    [SerializeField]
+    private AudioClip attack;
+    [SerializeField]
+    private AudioClip dash;
+    [SerializeField]
+    private AudioClip fire;
+    [SerializeField]
+    private AudioClip neblina;
+    [SerializeField]
+    private AudioClip[] damage;
+
 
     private AudioSource audioSource;
 
@@ -28,6 +41,52 @@ public class PlayerSounds : MonoBehaviour
     {
         AudioClip clip = GetRandomClip();
         audioSource.PlayOneShot(clip);
+    }
+
+    private void Dead() 
+    {
+        AudioClip clip = GetRandomDeathClip();
+        audioSource.PlayOneShot(clip);
+    }
+
+    private void Attack()
+    {
+        AudioClip clip = attack;
+        audioSource.PlayOneShot(clip);
+    }
+
+    private void Dash()
+    {
+        AudioClip clip = dash;
+        audioSource.PlayOneShot(clip);
+    }
+
+    private void Fire()
+    {
+        AudioClip clip = fire;
+        audioSource.PlayOneShot(clip);
+    }
+
+    private void Neblina()
+    {
+        AudioClip clip = neblina;
+        audioSource.PlayOneShot(clip);
+    }
+
+    private void Damage()
+    {
+        AudioClip clip = GetRandomDamageClip();
+        audioSource.PlayOneShot(clip);
+    }
+
+    private AudioClip GetRandomDamageClip()
+    {
+        return damage[UnityEngine.Random.Range(0, damage.Length)];
+    }
+
+    private AudioClip GetRandomDeathClip()
+    {
+        return morte[UnityEngine.Random.Range(0,morte.Length)];
     }
 
     private AudioClip GetRandomClip()
