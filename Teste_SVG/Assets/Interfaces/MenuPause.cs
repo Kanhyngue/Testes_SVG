@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 public class MenuPause : MonoBehaviour
 {
     public GameObject menuPause;
+    public GameObject panelPause;
     public GameObject confirmacao;
     public GameObject curiosidadesPanel;
     public GameObject opcoesPanel;
+    public GameObject botaoDialog;
     [SerializeField]
     private Animator boxAnimator;
     [SerializeField]
@@ -19,7 +21,6 @@ public class MenuPause : MonoBehaviour
     private bool curiosidadesConfirmation = false;
     [SerializeField]
     private GameObject bloqueio;
-
     void LateUpdate()
     {
         // Enquanto a condição for falsa, o jogo espera que o jogador aperte o botão de pause
@@ -29,6 +30,7 @@ public class MenuPause : MonoBehaviour
             {
                 Time.timeScale = 0.0001f; // time scale é colocado bem baixo para diminuir a velocidade de renderização
                 menuPause.SetActive(true); // Painel contendo a interface de pause é ativado
+                botaoDialog.SetActive(false);
                 menuActive = true; // condição que indica que o jogo está pausado é tornado verdadeiro
 
                 if(!exitConfirmation)
@@ -50,7 +52,7 @@ public class MenuPause : MonoBehaviour
         else
         {
             // SE enquanto o jogo estiver pausado o jogador apertar no botão para despausar, logo o jogo despausa
-            if(Input.GetKeyDown(KeyCode.Escape)) // Botão ESC para despausar
+            if (Input.GetKeyDown(KeyCode.Escape) && panelPause.activeInHierarchy) // Botão ESC para despausar
             {
                 Continuar(); // Método para sair do menu de pause é colocado em execução
                 
@@ -63,6 +65,8 @@ public class MenuPause : MonoBehaviour
     {
         Time.timeScale = 1f; // time scale retorna ao normal
         menuPause.SetActive(false); // painel contendo a interface de pausa é desativado
+        curiosidadesPanel.SetActive(false);
+        botaoDialog.SetActive(true);
         menuActive = false; // condição para otimização do script torna-se falsa
         exitConfirmation = false;
         opcoesConfirmation = false;

@@ -211,7 +211,45 @@ public class Player : MonoBehaviour
             if (Input.GetButtonDown("Cachimbos"))
             {
                 //Debug.Log("Porra Moises");
-                //DataSystem.cachimbos += 2;
+                switch (DataSystem.cachimbosColetados)
+                {
+                    case 0:
+                        DataSystem.cachimbos[0] = true;
+                        DataSystem.cachimbos[1] = true;
+                        break;
+                    case 2:
+                        DataSystem.cachimbos[2] = true;
+                        DataSystem.cachimbos[3] = true;
+                        break;
+                    case 4:
+                        DataSystem.cachimbos[4] = true;
+                        DataSystem.cachimbos[5] = true;
+                        break;
+                    case 6:
+                        DataSystem.cachimbos[6] = true;
+                        DataSystem.cachimbos[7] = true;
+                        break;
+                    case 8:
+                        DataSystem.cachimbos[8] = true;
+                        DataSystem.cachimbos[9] = true;
+                        break;
+                    case 10:
+                        DataSystem.cachimbos[10] = true;
+                        DataSystem.cachimbos[11] = true;
+                        break;
+                    case 12:
+                        DataSystem.cachimbos[12] = true;
+                        DataSystem.cachimbos[13] = true;
+                        break;
+                    case 14:
+                        DataSystem.cachimbos[14] = true;
+                        DataSystem.cachimbos[15] = true;
+                        break;
+                    default:
+                        break;
+                }
+
+                Debug.Log(DataSystem.cachimbosColetados);
             }
 
             if (Input.GetButtonDown("Crouch"))
