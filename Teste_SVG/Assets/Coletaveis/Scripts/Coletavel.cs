@@ -38,14 +38,14 @@ public class Coletavel : MonoBehaviour
             {
                 transform.position = pullingArea.transform.position;
                 DataSystem.chave = true;
-                Paje_Controller.seletorFalaPaje++;
+                Paje_Controller.seletorFalaPaje = 8;
                 NPC_Controller.seletorFalaNPC++;
             }
             else if(this.gameObject.CompareTag("Dash"))
             {
                 transform.position = pullingArea.transform.position;
                 DataSystem.dashPower = true;
-                Paje_Controller.seletorFalaPaje++;
+                Paje_Controller.seletorFalaPaje = 2;
                 NPC_Controller.seletorFalaNPC++;
 
             }
@@ -53,14 +53,14 @@ public class Coletavel : MonoBehaviour
             {
                 transform.position = pullingArea.transform.position;
                 DataSystem.firePower = true;
-                Paje_Controller.seletorFalaPaje++;
+                Paje_Controller.seletorFalaPaje = 4;
 
             }
             else if(this.gameObject.CompareTag("Neblina"))
             {
                 transform.position = pullingArea.transform.position;
                 DataSystem.fogPower = true;
-                Paje_Controller.seletorFalaPaje++;
+                Paje_Controller.seletorFalaPaje = 6;
                 NPC_Controller.seletorFalaNPC++;
 
             }
