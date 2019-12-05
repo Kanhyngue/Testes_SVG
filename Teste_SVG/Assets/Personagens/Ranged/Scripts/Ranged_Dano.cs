@@ -13,6 +13,11 @@ public class Ranged_Dano : MonoBehaviour
         {
             ranged.Dano();
         }
+
+        if (collision.gameObject.CompareTag("Tiro") && !ranged.hit)
+        {
+            ranged.Dano();
+        }
     }
 
     public void Tiro()

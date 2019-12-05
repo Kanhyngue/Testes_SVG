@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 112000000, guid: ac93749bab800cd4d9e417545096d9c0,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -463,6 +463,58 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9856576
+      objectReference: {fileID: 0}
+    - target: {fileID: 275141133, guid: a6061adc0ffc3b045b04861fd37136f3, type: 3}
+      propertyPath: morte.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 275141133, guid: a6061adc0ffc3b045b04861fd37136f3, type: 3}
+      propertyPath: damage.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 275141133, guid: a6061adc0ffc3b045b04861fd37136f3, type: 3}
+      propertyPath: morte
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 275141133, guid: a6061adc0ffc3b045b04861fd37136f3, type: 3}
+      propertyPath: morte.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: b82f568304df293448f1bdcd1e0d07d6, type: 3}
+    - target: {fileID: 275141133, guid: a6061adc0ffc3b045b04861fd37136f3, type: 3}
+      propertyPath: morte.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3cca574d766aa8146970a945a69f1ce8, type: 3}
+    - target: {fileID: 275141133, guid: a6061adc0ffc3b045b04861fd37136f3, type: 3}
+      propertyPath: morte.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7576d67cc544a8343a87a8e23927f7f0, type: 3}
+    - target: {fileID: 275141133, guid: a6061adc0ffc3b045b04861fd37136f3, type: 3}
+      propertyPath: attack
+      value: 
+      objectReference: {fileID: 8300000, guid: 50c15e9df285a274eba54862c715856c, type: 3}
+    - target: {fileID: 275141133, guid: a6061adc0ffc3b045b04861fd37136f3, type: 3}
+      propertyPath: dash
+      value: 
+      objectReference: {fileID: 8300000, guid: a2da5c6f3f3f9ce4c986497c2d549f27, type: 3}
+    - target: {fileID: 275141133, guid: a6061adc0ffc3b045b04861fd37136f3, type: 3}
+      propertyPath: fire
+      value: 
+      objectReference: {fileID: 8300000, guid: 4122fdeca05f54145ab7913bdd6f9218, type: 3}
+    - target: {fileID: 275141133, guid: a6061adc0ffc3b045b04861fd37136f3, type: 3}
+      propertyPath: neblina
+      value: 
+      objectReference: {fileID: 8300000, guid: 306346201b76b8346b0e5d9b729798af, type: 3}
+    - target: {fileID: 275141133, guid: a6061adc0ffc3b045b04861fd37136f3, type: 3}
+      propertyPath: damage.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9cc43cebc67db1347a74f350da4cf927, type: 3}
+    - target: {fileID: 275141133, guid: a6061adc0ffc3b045b04861fd37136f3, type: 3}
+      propertyPath: damage.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4092538ac50d09146b5b2bd12154e833, type: 3}
+    - target: {fileID: 275141133, guid: a6061adc0ffc3b045b04861fd37136f3, type: 3}
+      propertyPath: damage.Array.data[2]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6061adc0ffc3b045b04861fd37136f3, type: 3}
