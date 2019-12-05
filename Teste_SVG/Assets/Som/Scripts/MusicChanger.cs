@@ -7,7 +7,7 @@ public class MusicChanger : MonoBehaviour
     // Variáveis AudioSource da Ambientação
     public AudioSource hubAmbient, cerradoAmbient, florestaAmbient, cavernaAmbient;
     // Variáveis AudioSource de música
-    public AudioSource hubSource, cerradoSource, florestaSource, cavernaSource, bossMeleeMusic, bossRangeMusic, bossfinalMusic;
+    public AudioSource hubSource, cerradoSource, florestaSource, cavernaSource, bossMeleeMusic, bossRangeMusic, bossfinalMusic, playerDeathStinger;
     // Cenários
     public GameObject hub, cerrado, floresta, caverna, bossMelee, bossRanged, arenaFinal;
     // Duração do FadeOff
@@ -43,7 +43,7 @@ public class MusicChanger : MonoBehaviour
     // ----- Método para verificar a cena atual ativada ----- //
     void VerificarCena()
     {
-        if(hub.activeSelf && cena != 0)
+        if(hub.activeSelf && cena != 0 && !Player.gameOver)
         {
             if(change)
             {
@@ -79,9 +79,13 @@ public class MusicChanger : MonoBehaviour
                 {
                     FadeMusic(cena);
                 }
+                else if (cena == 7)
+                {
+                    FadeMusic(cena);
+                }
             }
         }
-        else if(cerrado.activeSelf && cena != 1 && !bossRanged.activeSelf)
+        else if(cerrado.activeSelf && cena != 1 && !bossRanged.activeSelf && !Player.gameOver)
         {
             if(change)
             {
@@ -117,9 +121,13 @@ public class MusicChanger : MonoBehaviour
                 {
                     FadeMusic(cena);
                 }
+                else if (cena == 7)
+                {
+                    FadeMusic(cena);
+                }
             }
         }
-        else if(floresta.activeSelf && cena != 2 && !bossMelee.activeSelf)
+        else if(floresta.activeSelf && cena != 2 && !bossMelee.activeSelf && !Player.gameOver)
         {
             if(change)
             {
@@ -155,9 +163,13 @@ public class MusicChanger : MonoBehaviour
                 {
                     FadeMusic(cena);
                 }
+                else if (cena == 7)
+                {
+                    FadeMusic(cena);
+                }
             }
         }
-        else if(caverna.activeSelf && cena != 3)
+        else if(caverna.activeSelf && cena != 3 && !Player.gameOver)
         {
             if(change)
             {
@@ -193,9 +205,13 @@ public class MusicChanger : MonoBehaviour
                 {
                     FadeMusic(cena);
                 }
+                else if (cena == 7)
+                {
+                    FadeMusic(cena);
+                }
             }
         }
-        else if (arenaFinal.activeSelf && cena != 4)
+        else if (arenaFinal.activeSelf && cena != 4 && !Player.gameOver)
         {
             if (change)
             {
@@ -230,9 +246,13 @@ public class MusicChanger : MonoBehaviour
                 {
                     FadeMusic(cena);
                 }
+                else if (cena == 7)
+                {
+                    FadeMusic(cena);
+                }
             }
         }
-        else if (floresta.activeSelf && bossMelee.activeSelf && cena != 5)
+        else if (floresta.activeSelf && bossMelee.activeSelf && cena != 5 && !Player.gameOver)
         {
             if (change)
             {
@@ -267,9 +287,13 @@ public class MusicChanger : MonoBehaviour
                 {
                     FadeMusic(cena);
                 }
+                else if (cena == 7)
+                {
+                    FadeMusic(cena);
+                }
             }
         }
-        else if (cerrado.activeSelf && bossRanged.activeSelf && cena != 6)
+        else if (cerrado.activeSelf && bossRanged.activeSelf && cena != 6 && !Player.gameOver)
         {
             if (change)
             {
@@ -301,6 +325,51 @@ public class MusicChanger : MonoBehaviour
                     FadeMusic(cena);
                 }
                 else if (cena == 5)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 7)
+                {
+                    FadeMusic(cena);
+                }
+            }
+        }
+        else if (Player.gameOver && cena != 7)
+        {
+            if (change)
+            {
+                cena = 7;
+                AtribuirSource(cena);
+
+               playerDeathStinger.volume = .5f;
+            }
+            else
+            {
+                if (cena == 0)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 1)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 2)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 3)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 4)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 5)
+                {
+                    FadeMusic(cena);
+                }
+                else if (cena == 6)
                 {
                     FadeMusic(cena);
                 }
@@ -394,6 +463,17 @@ public class MusicChanger : MonoBehaviour
                     StartCoroutine(Delay());
                 }
             break;
+            case 7:
+                if (currentTime < fadeOffDuration)
+                {
+                    currentTime += Time.deltaTime;
+                    playerDeathStinger.volume = Mathf.Lerp(.5f, 0f, currentTime / fadeOffDuration);
+                }
+                else
+                {
+                    StartCoroutine(Delay());
+                }
+                break;
             default:
                 // não faz porra nenhuma.
             break;
@@ -413,6 +493,7 @@ public class MusicChanger : MonoBehaviour
                 bossMeleeMusic.Stop();
                 bossRangeMusic.Stop();
                 bossfinalMusic.Stop();
+                playerDeathStinger.Stop();
                 
                 hubAmbient.Play();
                 cerradoAmbient.Stop();
@@ -429,6 +510,7 @@ public class MusicChanger : MonoBehaviour
                 bossMeleeMusic.Stop();
                 bossRangeMusic.Stop();
                 bossfinalMusic.Stop();
+                playerDeathStinger.Stop();
 
                 hubAmbient.Stop();
                 cerradoAmbient.Play();
@@ -445,6 +527,7 @@ public class MusicChanger : MonoBehaviour
                 bossMeleeMusic.Stop();
                 bossRangeMusic.Stop();
                 bossfinalMusic.Stop();
+                playerDeathStinger.Stop();
 
                 hubAmbient.Stop();
                 cerradoAmbient.Stop();
@@ -461,6 +544,7 @@ public class MusicChanger : MonoBehaviour
                 bossMeleeMusic.Stop();
                 bossRangeMusic.Stop();
                 bossfinalMusic.Stop();
+                playerDeathStinger.Stop();
 
                 hubAmbient.Stop();
                 cerradoAmbient.Stop();
@@ -477,6 +561,7 @@ public class MusicChanger : MonoBehaviour
                 bossMeleeMusic.Stop();
                 bossRangeMusic.Stop();
                 bossfinalMusic.Play();
+                playerDeathStinger.Stop();
 
                 hubAmbient.Stop();
                 cerradoAmbient.Stop();
@@ -493,6 +578,7 @@ public class MusicChanger : MonoBehaviour
                 bossMeleeMusic.Play();
                 bossRangeMusic.Stop();
                 bossfinalMusic.Stop();
+                playerDeathStinger.Stop();
 
                 hubAmbient.Stop();
                 cerradoAmbient.Stop();
@@ -509,6 +595,7 @@ public class MusicChanger : MonoBehaviour
                 bossMeleeMusic.Stop();
                 bossRangeMusic.Play();
                 bossfinalMusic.Stop();
+                playerDeathStinger.Stop();
 
                 hubAmbient.Stop();
                 cerradoAmbient.Stop();
@@ -516,6 +603,22 @@ public class MusicChanger : MonoBehaviour
                 cavernaSource.Stop();
                 currentTime = 0f;
             break;
+            case 7:
+                cavernaSource.Stop();
+                cerradoSource.Stop();
+                florestaSource.Stop();
+                hubSource.Stop();
+                bossMeleeMusic.Stop();
+                bossRangeMusic.Stop();
+                bossfinalMusic.Stop();
+                playerDeathStinger.Play();
+
+                hubAmbient.Stop();
+                cerradoAmbient.Stop();
+                florestaAmbient.Stop();
+                cavernaSource.Stop();
+                currentTime = 0f;
+                break;
             default:
                 hubSource.Stop();
                 cerradoSource.Stop();
@@ -524,6 +627,7 @@ public class MusicChanger : MonoBehaviour
                 bossMeleeMusic.Stop();
                 bossRangeMusic.Stop();
                 bossfinalMusic.Stop();
+                playerDeathStinger.Stop();
 
                 hubAmbient.Stop();
                 cerradoAmbient.Stop();
