@@ -11,5 +11,8 @@ public class InitialSelect : MonoBehaviour
     {
         initialButton.Select();
     }
-
+    public void Inital()
+    {
+        initialButton.Select();
+    }
 }

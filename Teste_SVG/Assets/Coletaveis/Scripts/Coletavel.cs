@@ -44,7 +44,18 @@ public class Coletavel : MonoBehaviour
                 {
                     dialog.TriggerDialog(0, 4);
                 }
-                
+                else
+                if (DataSystem.cachimbosColetados == 1 || DataSystem.cachimbosColetados == 3 || DataSystem.cachimbosColetados == 5 || DataSystem.cachimbosColetados == 4
+                    || DataSystem.cachimbosColetados == 4 || DataSystem.cachimbosColetados == 4 || DataSystem.cachimbosColetados == 4)
+                {
+                    dialog.TriggerDialog(1, 4);
+                }
+                else if ( DataSystem.cachimbosColetados == 14)
+                {
+                    dialog.TriggerDialog(2, 4);
+                }
+
+
             }
             else if(this.gameObject.CompareTag("Chave"))
             {
