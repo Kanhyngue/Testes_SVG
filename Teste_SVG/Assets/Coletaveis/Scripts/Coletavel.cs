@@ -5,6 +5,23 @@ using UnityEngine;
 public class Coletavel : MonoBehaviour
 {
     public Transform pullingArea;
+    public int cachimboArea; // 0 até 2 -> HUB | 3 até 7 -> Cerrado | 8 até 11 -> Floresta | 12 até 15 -> Caverna
+    private bool collected = false;
+
+    private void Update()
+    {
+        if (this.gameObject.CompareTag("Cachimbo") && !collected)
+        {
+            for (int i = 0; i < DataSystem.cachimbos.Length; i++)
+            {
+                if (DataSystem.cachimbos[i] && cachimboArea == i)
+                {
+                    transform.position = pullingArea.transform.position;
+                    collected = true;
+                }
+            }
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -13,7 +30,7 @@ public class Coletavel : MonoBehaviour
             if(this.gameObject.CompareTag("Cachimbo"))
             {
                 transform.position = pullingArea.transform.position;
-                DataSystem.cachimbos++;
+                DataSystem.cachimbos[cachimboArea] = true;
                 ColetavelUI.activated = true;
                 
             }

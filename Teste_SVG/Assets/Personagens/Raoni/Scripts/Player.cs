@@ -205,8 +205,8 @@ public class Player : MonoBehaviour
 
             if (Input.GetButtonDown("Cachimbos"))
             {
-                Debug.Log("Porra Moises");
-                DataSystem.cachimbos += 2;
+                //Debug.Log("Porra Moises");
+                //DataSystem.cachimbos += 2;
             }
 
             if (Input.GetButtonDown("Crouch"))

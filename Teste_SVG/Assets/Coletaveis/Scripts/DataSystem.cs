@@ -9,7 +9,7 @@ public class DataSystem : MonoBehaviour
 
     // Variáveis que serão Salvas
     // Coletáveis
-    public int cachimboSave;
+    public bool[] cachimboSave = new bool[16];
     public bool chaveSave;
     public bool dashPowerSave;
     public bool firePowerSave;
@@ -22,8 +22,8 @@ public class DataSystem : MonoBehaviour
     public int healthSave;
 
     // Variavéis Recipiente dos valores in-game runtime
-    // Coletáveis
-    public static int cachimbos;
+    // Coletáveis blic string[] myArrayName = new string[4];
+    public static bool[] cachimbos = new bool[16];
     public static bool chave;
     public static bool dashPower;
     public static bool firePower;
@@ -116,7 +116,23 @@ public class DataSystem : MonoBehaviour
     {
         // Armazena e atualiza a quantidade de cachimbos logo antes de realizar o Save
         // Coletáveis
-        cachimboSave = cachimbos;
+        cachimboSave[0] = cachimbos[0];
+        cachimboSave[1] = cachimbos[1];
+        cachimboSave[2] = cachimbos[2];
+        cachimboSave[3] = cachimbos[3];
+        cachimboSave[4] = cachimbos[4];
+        cachimboSave[5] = cachimbos[5];
+        cachimboSave[6] = cachimbos[6];
+        cachimboSave[7] = cachimbos[7];
+        cachimboSave[8] = cachimbos[8];
+        cachimboSave[9] = cachimbos[9];
+        cachimboSave[10] = cachimbos[10];
+        cachimboSave[11] = cachimbos[11];
+        cachimboSave[12] = cachimbos[12];
+        cachimboSave[13] = cachimbos[13];
+        cachimboSave[14] = cachimbos[14];
+        cachimboSave[15] = cachimbos[15];
+
         chaveSave = chave;
         dashPowerSave = dashPower;
         firePowerSave = firePower;
@@ -140,7 +156,23 @@ public class DataSystem : MonoBehaviour
 
         //Informações coletadas do objeto 'data' e atribuidas as variaveis locais
         // Coletáveis
-        cachimbos = data.cachimbosData;
+        cachimbos[0] = data.cachimbosData[0];
+        cachimbos[1] = data.cachimbosData[1];
+        cachimbos[2] = data.cachimbosData[2];
+        cachimbos[3] = data.cachimbosData[3];
+        cachimbos[4] = data.cachimbosData[4];
+        cachimbos[5] = data.cachimbosData[5];
+        cachimbos[6] = data.cachimbosData[6];
+        cachimbos[7] = data.cachimbosData[7];
+        cachimbos[8] = data.cachimbosData[8];
+        cachimbos[9] = data.cachimbosData[9];
+        cachimbos[10] = data.cachimbosData[10];
+        cachimbos[11] = data.cachimbosData[11];
+        cachimbos[12] = data.cachimbosData[12];
+        cachimbos[13] = data.cachimbosData[13];
+        cachimbos[14] = data.cachimbosData[14];
+        cachimbos[15] = data.cachimbosData[15];
+
         chave = data.chaveData;
         dashPower = data.dashPowerData;
         firePower = data.firePowerData;

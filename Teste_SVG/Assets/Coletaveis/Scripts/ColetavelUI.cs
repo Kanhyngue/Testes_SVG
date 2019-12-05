@@ -8,17 +8,15 @@ public class ColetavelUI : MonoBehaviour
     public Text cachimboText;
     public Transform panel;
     public static bool activated = false;
-
-    private float sizeX;
-    private bool resize = false;
     private float waitTime;
     public RectTransform panelTransform;
-
+    private int cachimbosQuant;
 
     [SerializeField] private GameObject[] desbloqueios;
 
     void Start()
     {
+        panelTransform.anchoredPosition = new Vector2(-170f, panelTransform.anchoredPosition.y);
         waitTime = 3f;
         //       anim = GetComponent<Animator>();
     }
@@ -30,7 +28,7 @@ public class ColetavelUI : MonoBehaviour
         //Debug.Log(waitTime);
         if (activated)
         {
-            cachimboText.text = DataSystem.cachimbos + " / 16";
+            cachimboText.text = cachimbosQuant + " / 16";
             SlideIn();
         }
 
@@ -39,47 +37,59 @@ public class ColetavelUI : MonoBehaviour
             SlideOut();
         }
 
-        if (DataSystem.cachimbos == 2)
+
+        cachimbosQuant = 0;
+
+        for (int i = 0; i < DataSystem.cachimbos.Length; i++)
+        {
+            if (DataSystem.cachimbos[i])
+            {
+                cachimbosQuant++;
+            }
+        }
+
+        if (cachimbosQuant == 2)
         {
             desbloqueios[0].SetActive(true);
         }
 
 
-        if (DataSystem.cachimbos == 4)
+        if (cachimbosQuant == 4)
         {
             desbloqueios[1].SetActive(true);
         }
 
 
-        if (DataSystem.cachimbos == 6)
+        if (cachimbosQuant == 6)
         {
             desbloqueios[2].SetActive(true);
         }
 
 
-        if (DataSystem.cachimbos == 8)
+        if (cachimbosQuant == 8)
         {
             desbloqueios[3].SetActive(true);
         }
 
 
-        if (DataSystem.cachimbos == 10)
+        if (cachimbosQuant == 10)
         {
             desbloqueios[4].SetActive(true);
         }
 
 
-        if (DataSystem.cachimbos == 12)
+        if (cachimbosQuant == 12)
         {
             desbloqueios[5].SetActive(true);
         }
 
 
-        if (DataSystem.cachimbos == 16)
+        if (cachimbosQuant == 16)
         {
             desbloqueios[6].SetActive(true);
         }
 
+        
     }
 
 
