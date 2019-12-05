@@ -30,6 +30,7 @@ public class DataSystem : MonoBehaviour
     public static bool fogPower;
     public static bool machadinha;
     // Cena
+    public static int cachimbosColetados;
     public static int level;
     public static bool checkpoint;
     // Player

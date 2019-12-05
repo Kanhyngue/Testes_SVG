@@ -45,6 +45,7 @@ public class ColetavelUI : MonoBehaviour
             if (DataSystem.cachimbos[i])
             {
                 cachimbosQuant++;
+                DataSystem.cachimbosColetados = cachimbosQuant;
             }
         }
 
@@ -108,33 +109,6 @@ public class ColetavelUI : MonoBehaviour
             activated = false;
         }
     }
-
-        
-    /*void Resizer()
-    
-    /* if(!resize)
-     {
-         panel.transform.localScale = new Vector2(Mathf.Clamp(sizeX, 0f, 1f), 1.0f);
-         sizeX += 0.1f;
-     }
-     else
-     {
-         panel.transform.localScale = new Vector2(Mathf.Clamp(sizeX, 0f, 1f), 1.0f);
-         sizeX -= 0.1f;
-     }
-
-
-     if(sizeX >= 1.0f)
-     {
-         StartCoroutine(Desresizer());
-     }
-     else if(sizeX <= 0.1f)
-     {
-         sizeX = 0.0f;
-         resize = false;
-         activated = false;
-     }*/
-
 
     void SlideOut()
     {
