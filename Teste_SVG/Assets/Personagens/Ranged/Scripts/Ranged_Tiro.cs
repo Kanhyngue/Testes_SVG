@@ -27,6 +27,9 @@ public class Ranged_Tiro : MonoBehaviour
     [SerializeField]
     private Transform player;
 
+    [SerializeField]
+    private bool boss;
+
 
 
     private void Start()
@@ -43,6 +46,11 @@ public class Ranged_Tiro : MonoBehaviour
             _anim.SetTrigger("Death");
             _anim.SetBool("isDead", true);
             dead = true;
+
+            if (boss)
+            {
+                BossManager.cerradoBossDefeated = true;
+            }
             //Debug.Log("Ele morreu!");
         }
         else if (!dead)
