@@ -11,7 +11,7 @@
      public float Strength;
      public bool StopFlickering;
  
-     private UnityEngine.Experimental.Rendering.LWRP.Light2D _lightSource;
+     private UnityEngine.Experimental.Rendering.Universal.Light2D _lightSource;
      private float _baseIntensity;
      private bool _flickering;
  
@@ -25,7 +25,7 @@
  
      public void Start()
      {
-         _lightSource = GetComponent<Light2D>();
+         _lightSource = GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>();
          if (_lightSource == null || _lightSource.enabled == false)
          {
             //Debug.LogError("Flicker script must have a Light Component on the same GameObject or must be enabled.");

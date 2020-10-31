@@ -5,7 +5,7 @@ using UnityEngine.Experimental.Rendering.LWRP;
 
 public class FlameHour : MonoBehaviour
 {
-    public UnityEngine.Experimental.Rendering.LWRP.Light2D _lightSource;
+    public UnityEngine.Experimental.Rendering.Universal.Light2D _lightSource;
     public ParticleSystem fireParticle, smokeParticle;
 
     public bool programacaoHoraria;

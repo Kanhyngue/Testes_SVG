@@ -7,12 +7,12 @@ public class TochaIgnition : MonoBehaviour
 {
     private Animator anim;
     public ParticleSystem fireParticle, smokeParticle;
-    private UnityEngine.Experimental.Rendering.LWRP.Light2D tochaLight;
+    private UnityEngine.Experimental.Rendering.Universal.Light2D tochaLight;
 
     void Start()
     {
         anim = GetComponent<Animator>();
-        tochaLight = GetComponentInChildren<UnityEngine.Experimental.Rendering.LWRP.Light2D>();
+        tochaLight = GetComponentInChildren<UnityEngine.Experimental.Rendering.Universal.Light2D>();
         smokeParticle.Stop();
         fireParticle.Stop();
     }

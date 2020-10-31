@@ -6,11 +6,11 @@ using UnityEngine.Experimental.Rendering.LWRP;
 public class LightSystem : MonoBehaviour
 {
     public GameObject caverna;
-    private UnityEngine.Experimental.Rendering.LWRP.Light2D lightGeral;
+    private UnityEngine.Experimental.Rendering.Universal.Light2D lightGeral;
 
     void Start()
     {
-        lightGeral = GetComponent<UnityEngine.Experimental.Rendering.LWRP.Light2D>();
+        lightGeral = GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>();
     }
 
     // Update is called once per frame

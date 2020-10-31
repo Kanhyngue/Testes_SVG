@@ -7,7 +7,7 @@ public class OcclusionCulling2D : MonoBehaviour
 {
 
     public SpriteRenderer render;
-    public UnityEngine.Experimental.Rendering.LWRP.Light2D _lightSource;
+    public UnityEngine.Experimental.Rendering.Universal.Light2D _lightSource;
 
     public void Start()
      {

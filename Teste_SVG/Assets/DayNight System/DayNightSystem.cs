@@ -6,7 +6,7 @@ using UnityEngine.Experimental.Rendering.LWRP;
 public class DayNightSystem : MonoBehaviour
 {
     // Classes públicas
-    public UnityEngine.Experimental.Rendering.LWRP.Light2D globalLight; // Luz 2D GLOBAL
+    public UnityEngine.Experimental.Rendering.Universal.Light2D globalLight; // Luz 2D GLOBAL
 
     public SpriteRenderer daySkybox, nightSkybox, twilightSkybox, morningSkybox; // Renderers dos Sprites das Skybox
 
